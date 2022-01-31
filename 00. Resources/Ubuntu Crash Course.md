@@ -68,3 +68,10 @@ sudo systemctl disable nginx
 
 # Disk Management
 
+Disk drives under **UNIX**-like operating systems are accessible via a pseudo-file system at **/dev**. Typically, if we have just one SATA hard disk drive in our system, it will be accessible via the **/dev/sda file**. The last letter (**a** in the given example) denotes the order of the device (**a** for the first, **b** for the second, etc.). Usually, the hard disk is split into one or more partitions. They are shown as numbers after the name of the disk. For example, the first partition of the first disk will be named **/dev/sda1**.
+
+One way, to list all connected disk drives (or block devices) with their partitions is to use the **lsblk** command
+
+![image](https://user-images.githubusercontent.com/34960418/151803821-99126aec-9bf6-45b6-a53d-3df6d6089fbf.png)
+
+
