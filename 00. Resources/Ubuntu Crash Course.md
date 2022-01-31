@@ -74,4 +74,47 @@ One way, to list all connected disk drives (or block devices) with their partiti
 
 ![image](https://user-images.githubusercontent.com/34960418/151803821-99126aec-9bf6-45b6-a53d-3df6d6089fbf.png)
 
+To manage the partitions of the third disk drive, execute:
+
+```bash
+sudo fdisk /dev/sdc
+```
+
+Linux distributions support many file systems. Two of the most popular ones are **EXT4** and **XFS**. To create an **EXT4** file system on the first partition of the third disk drive, execute: 
+
+```bash
+sudo mkfs.ext4 /dev/sdc1
+```
+
+The file system must be mounted to an empty folder before usage. To create a folder, execute:
+
+```bash
+sudo mkdir /data
+```
+
+To delete an empty folder, execute:
+
+```
+sudo rmdir /data
+```
+
+To mount a file system, for example the one created earlier, execute:
+
+```bash
+sudo mount /dev/sdc1 /data
+```
+
+To unmount a file system by its partition name, execute:
+
+```bash
+sudo umount /dev/sdc1
+```
+
+Or unmount it by its mount point, execute:
+
+```bash
+sudo umount /data
+```
+
+
 
