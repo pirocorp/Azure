@@ -116,5 +116,16 @@ Or unmount it by its mount point, execute:
 sudo umount /data
 ```
 
+For automounting file system on boot, add a record to a file - **/etc/fstab**. Open the file with one of the popular text editors, for example:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Add a line like the following:
+
+```
+/dev/sdc1      /data      ext4      defaults      0     0
+```
 
 
