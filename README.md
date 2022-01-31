@@ -5,4 +5,4 @@
 
 # Guides
 
-[Ubuntu Crash Course](".\00. Resources\Ubuntu Crash Course.md")
+[Ubuntu Crash Course]("./00. Resources/Ubuntu Crash Course.md")
