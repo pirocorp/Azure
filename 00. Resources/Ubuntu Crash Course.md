@@ -128,4 +128,10 @@ Add a line like the following:
 /dev/sdc1      /data      ext4      defaults      0     0
 ```
 
+A **good practice** is to test the file's correctness **before rebooting**. Do test with:
 
+```bash
+sudo mount -a
+```
+
+* Those commands apply to all **UNIX**-like operating systems
