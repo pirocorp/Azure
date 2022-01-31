@@ -24,4 +24,4 @@ sudo apt-get install nginx
 
 * All above commands are prefixed with the **sudo**. It gives the user temporary super-powers required to alter the system’s state,  like software management, service management, hardware management, etc.
 
-** Different Linux distributions may use different types of repositories with a different set of commands. Even package names, for the same software, may be different.
+* Different Linux distributions may use different types of repositories with a different set of commands. Even package names, for the same software, may be different.
