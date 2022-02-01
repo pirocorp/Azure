@@ -245,6 +245,8 @@ Free command-line utility, installed additionally. Requires **PowerShell** (**5.
 Action-AzTargetResource
 ```
 
+For example, to create a resource group:
 
-
-
+```powershell
+New-AzResourceGroup -Name RG-Demo -Location WestEurope
+```
