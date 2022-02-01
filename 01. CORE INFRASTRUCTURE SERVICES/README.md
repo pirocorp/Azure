@@ -76,7 +76,7 @@ Three different types of Azure Subscriptions
 
 ### Resource Groups and Resources
 
-Resource groups are within a particular location (region) when created. All the resources in a group should share the same lifecycle. They are deployed, updated, and deleted together. Each resource can only exist in one resource group. An Azure resource can be added or removed to a resource group at any time or moved from one resource group to another group. A resource group can contain resources in different regions or be used to scope access control for administrative actions. A resource can interact with resources in other resource groups.
+Resource groups are within a particular location (region) when created. All the resources in a group should share the same lifecycle. They are deployed, updated, and deleted together. Each resource can only exist in one resource group. An Azure resource can be added or removed to a resource group at any time or moved from one resource group to another group. A resource group can contain resources in different regions, can scope access control for administrative actions. A resource can interact with resources in other resource groups.
 
 
 
