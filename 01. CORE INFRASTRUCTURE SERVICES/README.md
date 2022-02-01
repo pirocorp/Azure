@@ -92,3 +92,22 @@ Combinations of Azure services and related products.
 - **Internet of Things** - Azure IoT Central, Azure IoT Hub, Azure IoT Edge, etc.
 - **Big Data and Analytics** - HDInsight, Azure Data Lake Analytics, Azure Databricks, etc.
 - **Artificial Intelligence** - Azure Machine Learning, Azure Cognitive Search, etc.
+
+# Azure Marketplace 
+
+Azure Marketplace is the central place that offers tested and approved appliances. Solutions range from open-source container platforms to threat detection to the blockchain. Provision end-to-end solutions quickly and reliably.
+
+# [Always Free Products and Services](https://azure.microsoft.com/en-us/free/)
+
+- Resource Groups
+- Virtual Networks (up to 50)
+- Load Balancers (Basic)
+- Azure Active Directory (Basic)
+- Network Security Groups
+- Free-tier Web Apps (up to 10)
+
+
+
+
+
+
