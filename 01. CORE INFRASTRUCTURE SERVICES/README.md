@@ -235,3 +235,16 @@ az group create --name RG-Demo --location westeurope
 ```
 
 Most properties have long (**--name**) and short (**-n**) form
+
+
+## [Azure PowerShell Module](https://docs.microsoft.com/en-us/powershell/azure)
+
+Free command-line utility, installed additionally. Requires **PowerShell** (**5.1+**) or **PowerShell Core** (**6.x+**). Supported on **Windows**, **Linux**, and **macOS**. Actions on resources are available through separate commands.
+
+```powershell
+Action-AzTargetResource
+```
+
+
+
+
