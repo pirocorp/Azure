@@ -278,7 +278,7 @@ az group create --name %RESOURCE_GROUP% --location %LOCATION%
 Individual lines in a multi-line command are separated with ```^```
 
 ```cmd
-az group create --name %RESOURCE_GROUP% ^
+C:\> az group create --name %RESOURCE_GROUP% ^
 More? --location %LOCATION%
 ```
 
@@ -300,5 +300,18 @@ Individual lines in a multi-line command are separated with ```\```
 $ az group create --name $RESOURCE_GROUP \
 >> --location $LOCATION
 ```
+
+## PowerShell (Core)
+
+- Case in-sensitive shell available in Windows, Linux, and macOS
+- Usually, tab completion is available
+- Environment variables are declared and used like:
+
+```bash
+$LOCATION="westeurope"
+$RESOURCE_GROUP="RG-Demo-PS"
+New-AzResourceGroup -Name $RESOURCE_GROUP -Location $LOCATION
+```
+Individual lines in a multi-line command are separated with ```````
 
 
