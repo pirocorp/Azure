@@ -78,8 +78,17 @@ Three different types of Azure Subscriptions
 
 Resource groups are within a particular location (region) when created. All the resources in a group should share the same lifecycle. They are deployed, updated, and deleted together. Each resource can only exist in one resource group. An Azure resource can be added or removed to a resource group at any time or moved from one resource group to another. A resource group can contain resources in different regions, can scope access control for administrative actions. A resource can interact with resources in other resource groups.
 
+# Azure Services
 
+- **Compute** - Virtual Machines, Virtual Machine Scale Sets, App Services, etc.
+- **Networking** - Virtual Networks, Load Balancers, VPN Gateways, etc.
+- **Storage** - Storage Accounts, Recovery Services, etc.
+- **Database** - Azure CosmosDB, Azure SQL, Azure Synapse Analytics (SQL Data Warehouses), etc.
 
+# [Azure Solutions](https://azure.microsoft.com/en-us/solutions/)
 
+Combinations of Azure services and related products.
 
-
+- **Internet of Things** - Azure IoT Central, Azure IoT Hub, Azure IoT Edge, etc.
+- **Big Data and Analytics** - HDInsight, Azure Data Lake Analytics, Azure Databricks, etc.
+- **Artificial Intelligence** - Azure Machine Learning, Azure Cognitive Search, etc.
