@@ -28,8 +28,17 @@ Based on who operates (owns) the cloud, who has access to the cloud services.
 - Cloud providers make computing resources available to clients, usually in the form of virtual machines. 
 - Computing resources are available to users as a service.
 - Users can scale the resources that they deploy.  Multiple users share the same physical resources.
-- Cloud providers usu make resource offerings at different costs and follow a utility pricing model (typically calculated by the hour).
+- Cloud providers make resource offerings at different costs and follow a utility pricing model (typically calculated by the hour).
 
+
+## Platform as a Service (PaaS)
+
+Provides a software platform without the complexity of purchasing, installing, and maintaining the underlying hardware and software. It can be a database server, web server, etc. A web-based user interfaces for using and configuring the platform. Multitenant architecture in which multiple concurrent users utilize the same tools. Built-in mechanisms enable the platform to scale dynamically to meet demand. Pricing is based on usage(for example, execution time).
+
+
+## Software as a Service (SaaS)
+
+The cloud provider manages the infrastructure, the platform, and the software itself. Software service is consumed through a web-based client. Software is tended from a central location by the cloud provider. The software delivering model is a one-to-many model. The cloud provider handles software upgrades and patches. Pricing is based on a monthly or annual subscription fee.
 
 
 
