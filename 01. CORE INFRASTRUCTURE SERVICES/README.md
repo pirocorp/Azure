@@ -261,8 +261,23 @@ Collections of libraries for programming languages. Used to build applications t
 Available both on **App Store** and **Google Play**. Monitor the health and status of Azure resources. Quickly diagnose and fix issues. Run commands to manage Azure resources.
 
 
+# Consoles Crash Course
 
+## CMD
 
+- This is the classic command-line interface of Windows
+- Usually, no Tab completion of commands and arguments
+- Environment variables are declared and used like:
 
+```cmd
+set LOCATION=westeurope
+set RESOURCE_GROUP=RG-Demo-CMD
+az group create --name %RESOURCE_GROUP% --location %LOCATION% 
+```
 
+Individual lines in a multi-line command are separated with ^
 
+```cmd
+C:\> az group create --name %RESOURCE_GROUP% ^
+More? --location %LOCATION%
+```
