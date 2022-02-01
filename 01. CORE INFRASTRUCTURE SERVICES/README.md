@@ -275,9 +275,30 @@ set RESOURCE_GROUP=RG-Demo-CMD
 az group create --name %RESOURCE_GROUP% --location %LOCATION% 
 ```
 
-Individual lines in a multi-line command are separated with ^
+Individual lines in a multi-line command are separated with ```^```
 
 ```cmd
 az group create --name %RESOURCE_GROUP% ^
 More? --location %LOCATION%
 ```
+
+## Bash
+
+- Case sensitive shell available in most Unix-like OSes 
+- Usually, tab completion is available
+- Environment variables are declared and used like:
+
+```bash
+LOCATION=westeurope
+RESOURCE_GROUP=RG-Demo-Bash
+az group create --name $RESOURCE_GROUP --location $LOCATION 
+```
+
+Individual lines in a multi-line command are separated with ```\```
+
+```bash
+$ az group create --name $RESOURCE_GROUP \
+>> --location $LOCATION
+```
+
+
