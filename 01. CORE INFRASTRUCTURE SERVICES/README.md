@@ -205,7 +205,22 @@ The size of the virtual machine determines. How many data disks can be attached 
 
 - Nice-looking and responsive web UI
 - Offers full control over all services
-- Suitable for execution of single non-repetitive tasks
+- Suitable for the execution of single non-repetitive tasks
 - Accessible from anywhere and on any connected device
 - Most modern browsers are supported (Microsoft Edge, Safari, Chrome, Firefox, and Internet Explorer 11)
 - Available via [portal.azure.com](https://portal.azure.com/)
+
+
+
+## [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
+
+- An interactive, authenticated, browser-accessible shell for managing Azure resources
+- Supports both **Bash** or **PowerShell** modes
+- Can be started from the Azure Portal or via [shell.azure.com](https://shell.azure.com)
+- Integrated **code editor** and many other tools
+- Requires **Azure Files**(Regular costs apply) share to persist the home folder
+
+
+
+
+
