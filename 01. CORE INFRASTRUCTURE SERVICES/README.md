@@ -173,7 +173,7 @@ Each service is accessed through a storage account
 - Replication options vary, but include **Locally-redundant storage (LRS)**,** Geo-redundant storage (GRS)**, etc.
 - All data in the storage account is encrypted on the service side.
 
-[Azure Managed Disks](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview)
+## [Azure Managed Disks](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview)
 
 - The main advantage over the unmanaged disks is that there is no need to create separate storage accounts to hold the VHDs.
 - The azure-managed disk is a virtual hard disk (VHD).
