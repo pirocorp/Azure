@@ -62,8 +62,6 @@ The cloud provider manages the infrastructure, the platform, and the software it
 - **Resources** - Resources are manageable items available through Azure.
 
 
-![image](https://user-images.githubusercontent.com/34960418/151974223-780a11e1-4f66-4d91-9941-5597566195e3.png)
-
 
 
 
