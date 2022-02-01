@@ -120,6 +120,17 @@ Azure Marketplace is the central place that offers tested and approved appliance
 - For partial hours, Azure charges only for the minutes used
 - Storage is priced and charged separately
 
+### Resources Created with Virtual Machines
+
+- Virtual Machine
+- One or More Disk(s)
+- Network Interface
+- Virtual Network
+- Network Security Group
+- Public IP Address*
+- Storage Account*
+
+
 ### [Virtual Machines Series](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/)
 
 - A-Series - Entry-level VMs for dev/test. Suitable for entry level workloads like development and test
@@ -134,14 +145,5 @@ Azure Marketplace is the central place that offers tested and approved appliance
 - Mv2-Series - Largest memory optimized virtual machines. 
 - N-Series - GPU enabled virtual machines. Compute and graphics-intensive workloads, deep learning, and predictive analytics. 
 
-Resources Created with Virtual Machines
 
-- Virtual Machine
-- One or More Disk(s)
-- Network Interface
-- Virtual Network
-- Network Security Group
-- Public IP Address*
-- Storage Account*
-
-
+## [Virtual Networks (VNet)](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
