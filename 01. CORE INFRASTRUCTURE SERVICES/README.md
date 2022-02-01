@@ -133,3 +133,15 @@ Azure Marketplace is the central place that offers tested and approved appliance
 - M-Series - Memory optimized virtual machines. Memory optimized and are ideal for heavy in-memory workloads such as SAP HANA. 
 - Mv2-Series - Largest memory optimized virtual machines. 
 - N-Series - GPU enabled virtual machines. Compute and graphics-intensive workloads, deep learning, and predictive analytics. 
+
+Resources Created with Virtual Machines
+
+- Virtual Machine
+- One or More Disk(s)
+- Network Interface
+- Virtual Network
+- Network Security Group
+- Public IP Address*
+- Storage Account*
+
+
