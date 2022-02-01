@@ -152,3 +152,23 @@ Azure Marketplace is the central place that offers tested and approved appliance
 
 
 ## [Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)
+
+Azure Storage is a managed service providing cloud storage. It is **highly available**, **secure**, **durable**, **scalable**, and **redundant**.
+
+- **Azure Blobs**: A massively scalable object store for text and binary data. Also includes support for big data analytics.
+- **Azure Files**: Managed file shares for cloud or on-premises deployments.
+- **Azure Queues**: A messaging store for reliable messaging between application components.
+- **Azure Tables**: A NoSQL store for schemaless storage of structured data.
+- **Azure Disks**: Block-level storage volumes for Azure VMs.
+
+Each service is accessed through a storage account
+
+
+[Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+
+- Names must be between **3 and 24 characters** in length and may contain **numbers** and **lowercase** letters only. Must be **globally unique**.
+- Multiple types, but **General-purpose v2** is recommended.
+- **Standard** and **premium** performance tiers are offered.
+- **Hot**, **cool**, and **archive** access tiers are available.
+- Replication options vary, but include **Locally-redundant storage (LRS)**,** Geo-redundant storage (GRS)**, etc.
+- All data in the storage account is encrypted on the service side.
