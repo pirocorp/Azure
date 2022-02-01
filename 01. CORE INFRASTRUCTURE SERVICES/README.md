@@ -42,7 +42,7 @@ The cloud provider manages the infrastructure, the platform, and the software it
 
 ![image](https://user-images.githubusercontent.com/34960418/151972193-c25b0531-818e-4ace-938b-d256245bfca8.png)
 
-## Building Blocks
+## [Building Blocks](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 **Geographies** - A discrete market, typically containing **two or more regions**, preserves data residency and compliance boundaries.
 
