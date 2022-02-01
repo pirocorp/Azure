@@ -182,6 +182,22 @@ Each service is accessed through a storage account
 - Disk roles include **OS Disk**, **Temporary Disk**, and **Data Disk**.
 
 
+### OS Disk
+
+Every virtual machine has one attached operating system disk. That OS disk has a pre-installed OS selected during VM creation. This disk contains the boot volume. It has a maximum capacity of 4,095 GiB.
+
+
+### Temporary Disk
+
+Every VM contains a temporary, **not a managed disk**. The temporary disk is for storing data such as pages or swap files. Data on the temp disk may be lost during a maintenance event. On Azure Linux VMs, the temporary disk is **/dev/sdb** by default. On Windows VMs, the temporary disk is **D:** by default. During a successful standard reboot of the VM, the data on the temporary disk will persist.
+
+
+### [Data Disks](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types)
+
+Data disks are managed disks. They store application data or other data we need to keep. They are registered as SCSI drives and labeled with a letter of our choice. Each data disk has a maximum capacity of **32,767 GiB** (**Standard HDD**, **Standard SSD**, and **Premium SSD**) or **65,536 GiB** (**Ultra SSD**). 
+
+The size of the virtual machine determines. How many data disks can be attached to it. And the type of storage that hosts the disks.
+
 
 
 
