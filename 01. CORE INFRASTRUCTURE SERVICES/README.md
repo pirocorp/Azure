@@ -61,6 +61,24 @@ The cloud provider manages the infrastructure, the platform, and the software it
 - **Resource Groups** - Resource groups are used for separating resources in terms of logical or billing level.
 - **Resources** - Resources are manageable items available through Azure.
 
+### Azure Subscriptions
+
+Azure Subscription is the **billing unit**. They are used to separate Azure environments by financial and administrative logic.
+
+**Management groups** manage multiple subscriptions.
+
+Three different types of Azure Subscriptions
+  - Sponsored Subscriptions
+    - [Azure Free Account](https://azure.microsoft.com/en-us/free)
+    - [Azure for Students](https://azure.microsoft.com/en-us/free/students)
+  - Pay-As-You-Go
+  - Enterprise Agreement
+
+### Resource Groups and Resources
+
+Resource groups are within a particular location (region) when created. All the resources in a group should share the same lifecycle. They are deployed, updated, and deleted together. Each resource can only exist in one resource group. An Azure resource can be added or removed to a resource group at any time or moved from one resource group to another group. A resource group can contain resources in different regions or be used to scope access control for administrative actions. A resource can interact with resources in other resource groups.
+
+
 
 
 
