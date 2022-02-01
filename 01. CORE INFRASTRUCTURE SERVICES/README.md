@@ -164,7 +164,7 @@ Azure Storage is a managed service providing cloud storage. It is **highly avail
 Each service is accessed through a storage account
 
 
-[Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+## [Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
 
 - Names must be between **3 and 24 characters** in length and may contain **numbers** and **lowercase** letters only. Must be **globally unique**.
 - Multiple types, but **General-purpose v2** is recommended.
