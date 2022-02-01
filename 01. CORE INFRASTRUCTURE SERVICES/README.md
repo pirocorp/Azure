@@ -38,5 +38,9 @@ Provides a software platform without the complexity of purchasing, installing, a
 The cloud provider manages the infrastructure, the platform, and the software itself. Software service is consumed through a web-based client. Software is tended from a central location by the cloud provider. The software delivering model is a one-to-many model. The cloud provider handles software upgrades and patches. Pricing is based on a monthly or annual subscription fee.
 
 
+# Azure Architecture
+
+![image](https://user-images.githubusercontent.com/34960418/151972193-c25b0531-818e-4ace-938b-d256245bfca8.png)
+
 
 
