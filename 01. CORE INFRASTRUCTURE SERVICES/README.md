@@ -42,5 +42,14 @@ The cloud provider manages the infrastructure, the platform, and the software it
 
 ![image](https://user-images.githubusercontent.com/34960418/151972193-c25b0531-818e-4ace-938b-d256245bfca8.png)
 
+## Building Blocks
+
+**Geographies** - A discrete market, typically containing **two or more regions**, preserves data residency and compliance boundaries.
+
+**Regions** - **Set of datacenters** deployed within a latency-defined perimeter and connected through a dedicated regional **low-latency network**.
+
+**Availability Zones** - Physically **separate locations** within an Azure region. Each Availability Zone is made up of **one or more data centers** equipped with independent power, cooling, and networking.
+
+![image](https://user-images.githubusercontent.com/34960418/151972315-20af874e-ad2f-4885-8eae-59d82843552a.png)
 
 
