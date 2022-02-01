@@ -307,11 +307,14 @@ $ az group create --name $RESOURCE_GROUP \
 - Usually, tab completion is available
 - Environment variables are declared and used like:
 
-```bash
+```powershell
 $LOCATION="westeurope"
 $RESOURCE_GROUP="RG-Demo-PS"
 New-AzResourceGroup -Name $RESOURCE_GROUP -Location $LOCATION
 ```
 Individual lines in a multi-line command are separated with ``` ` ```
 
-
+```powershell
+PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP ` 
+>> -Location $LOCATION
+```
