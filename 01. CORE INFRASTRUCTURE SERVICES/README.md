@@ -199,5 +199,13 @@ Data disks are managed disks. They store application data or other data we need 
 The size of the virtual machine determines. How many data disks can be attached to it. And the type of storage that hosts the disks.
 
 
+# Management Tools
 
+## [Azure Portal](https://docs.microsoft.com/en-us/azure/azure-portal/)
 
+- Nice-looking and responsive web UI
+- Offers full control over all services
+- Suitable for execution of single non-repetitive tasks
+- Accessible from anywhere and on any connected device
+- Most modern browsers are supported (Microsoft Edge, Safari, Chrome, Firefox, and Internet Explorer 11)
+- Available via [portal.azure.com](https://portal.azure.com/)
