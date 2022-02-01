@@ -312,6 +312,6 @@ $LOCATION="westeurope"
 $RESOURCE_GROUP="RG-Demo-PS"
 New-AzResourceGroup -Name $RESOURCE_GROUP -Location $LOCATION
 ```
-Individual lines in a multi-line command are separated with ```````
+Individual lines in a multi-line command are separated with ``` ` ```
 
 
