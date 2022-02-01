@@ -53,3 +53,17 @@ The cloud provider manages the infrastructure, the platform, and the software it
 ![image](https://user-images.githubusercontent.com/34960418/151972315-20af874e-ad2f-4885-8eae-59d82843552a.png)
 
 
+## Azure Administration Levels
+
+- **Account** - An account is needed to use Microsoft services. A single account can be in multiple tenants.
+- **Tenant** - Tenant is created when you create your first Azure subscription. New Azure Active Directory is created with the new tenant. 
+- **Subscription** - Can have multiple subscriptions under the same tenant.
+- **Resource Groups** - Resource groups are used for separating resources in terms of logical or billing level.
+- **Resources** - Resources are manageable items available through Azure.
+
+
+![image](https://user-images.githubusercontent.com/34960418/151974223-780a11e1-4f66-4d91-9941-5597566195e3.png)
+
+
+
+
