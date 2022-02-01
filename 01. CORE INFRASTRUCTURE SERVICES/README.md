@@ -107,7 +107,29 @@ Azure Marketplace is the central place that offers tested and approved appliance
 - Free-tier Web Apps (up to 10)
 
 
+# Core Services
 
+## [Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/)
 
+- Offer various predefined configurations of CPU, RAM, HDD, etc.
+- Every configuration exposes some limits as well
+- Both Windows and Linux are supported
+- Can be created from publicly available image or our own image
+- License fees **may apply** based on the chosen OS
+- Azure charges an hourly price based on the VM’s size and operating system
+- For partial hours, Azure charges only for the minutes used
+- Storage is priced and charged separately
 
+### [Virtual Machines Series](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/)
 
+- A-Series - Entry-level VMs for dev/test. Suitable for entry level workloads like development and test
+- Bs-Series - Economical burstable VMs. Development and test servers.
+- D-Series - General purpose compute. Suitable for most production workloads.
+- E-Series - Optimized for in-memory hyper-threaded applications. Optimized for heavy in-memory applications such as SAP HANA.
+- F-Series - Compute optimized virtual machines. Optimized for compute intensive workloads.
+- G-Series - Memory and storage optimized virtual machines. Suitable for large databases (relational or NoSQL) and data warehousing solutions.
+- H-Series - High Performance Computing virtual machines. Optimized for HPC applications driven by memory bandwidth (HB) or intensive computation (HC)
+- Ls-Series - Storage optimized virtual machines. Low latency, directly mapped local NVMe storage.
+- M-Series - Memory optimized virtual machines. Memory optimized and are ideal for heavy in-memory workloads such as SAP HANA. 
+- Mv2-Series - Largest memory optimized virtual machines. 
+- N-Series - GPU enabled virtual machines. Compute and graphics-intensive workloads, deep learning, and predictive analytics. 
