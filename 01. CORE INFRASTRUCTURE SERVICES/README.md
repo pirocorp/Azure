@@ -25,10 +25,7 @@ Based on who operates (owns) the cloud, who has access to the cloud services.
 
 ## **Infrastructure as a Service (IaaS)**
   
-- Cloud providers make computing resources available to clients, usually in the form of virtual machines. 
-- Computing resources are available to users as a service.
-- Users can scale the resources that they deploy.  Multiple users share the same physical resources.
-- Cloud providers make resource offerings at different costs and follow a utility pricing model (typically calculated by the hour).
+Cloud providers make computing resources available to clients, usually in the form of virtual machines. Computing resources are available to users as a service. Users can scale deployed resources. Multiple users share the same physical resources. Cloud providers make resource offerings at different costs and follow a utility pricing model (typically calculated by the hour).
 
 
 ## Platform as a Service (PaaS)
