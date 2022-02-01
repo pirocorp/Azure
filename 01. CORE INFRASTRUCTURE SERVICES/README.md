@@ -18,3 +18,13 @@ Based on who operates (owns) the cloud, who has access to the cloud services.
 - **Private** - An organization owns a cloud infrastructure. The cloud environment is procured, set up, operated, and maintained by the organization. Infrastructure is accessible to specific users via the intranet. End users are sharing resources. The organization defines security and terms of use. 
 
 - **Hybrid** - Infrastructure includes an owned private cloud and a leased public cloud. The organization uses its private cloud most of the time. Only when needed, offload tasks and data to the public cloud. This process is known as cloud bursting. For dealing with regulatory requirements can be used cloud bursting.
+
+# Types of Cloud Services
+
+![image](https://user-images.githubusercontent.com/34960418/151966995-26e0dd04-35c8-4693-819c-c2c87566cfff.png)
+
+
+
+
+
+
