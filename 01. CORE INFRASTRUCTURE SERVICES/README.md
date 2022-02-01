@@ -211,7 +211,6 @@ The size of the virtual machine determines. How many data disks can be attached 
 - Available via [portal.azure.com](https://portal.azure.com/)
 
 
-
 ## [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
 
 - An interactive, authenticated, browser-accessible shell for managing Azure resources
@@ -221,6 +220,18 @@ The size of the virtual machine determines. How many data disks can be attached 
 - Requires **Azure Files**(Regular costs apply) share to persist the home folder
 
 
+## [Azure CLI](https://docs.microsoft.com/en-us/cli/azure)
 
+Free command-line utility, installed additionally. Supported **Windows** (**+WSL**), **Linux**, **macOS**, and **Docker**. Actions are triggered via **commands (nouns)**, **sub-commands (verbs)**, and **properties**.
 
+```bash
+az noun verb --properties [...]
+```
 
+For example, to create a **resource group**
+
+```bash
+az group create --name RG-Demo --location westeurope
+```
+
+Most properties have long (**--name**) and short (**-n**) form
