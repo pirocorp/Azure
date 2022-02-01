@@ -147,3 +147,5 @@ Azure Marketplace is the central place that offers tested and approved appliance
 
 
 ## [Virtual Networks (VNet)](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+
+**Virtual Network** (**VNet**) is a fundamental building block for a private network in Azure. Enables many Azure resources to communicate with each other, the internet, and on-premise networks. During creation, we must specify a custom IP **address space**. **Subnets** enable us to segment a virtual network. VNet scope is to a single **region**/location and **subscription**. Network traffic can be filtered via **network security groups**. There is **no charge** for using Azure VNet.
