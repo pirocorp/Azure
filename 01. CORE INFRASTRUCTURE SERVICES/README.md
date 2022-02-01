@@ -251,12 +251,12 @@ For example, to create a resource group:
 New-AzResourceGroup -Name RG-Demo -Location WestEurope
 ```
 
-[Azure (Unified) SDKs](https://aka.ms/azurecom-sdk-dl-net)
+## [Azure (Unified) SDKs](https://aka.ms/azurecom-sdk-dl-net)
 
 Collections of libraries for programming languages. Used to build applications that manage and interact with Azure services. Unified SDKs focus on consistency, familiarity, and language idiomaticity. Unified SDKs support .NET, Java, JavaScript, and Python. For new projects, Unified SDKs are the recommended way.
 
 
-[Azure Mobile App](https://azure.microsoft.com/en-us/features/azure-portal/mobile-app/)
+## [Azure Mobile App](https://azure.microsoft.com/en-us/features/azure-portal/mobile-app/)
 
 Available both on **App Store** and **Google Play**. Monitor the health and status of Azure resources. Quickly diagnose and fix issues. Run commands to manage Azure resources.
 
