@@ -278,6 +278,6 @@ az group create --name %RESOURCE_GROUP% --location %LOCATION%
 Individual lines in a multi-line command are separated with ^
 
 ```cmd
-C:\> az group create --name %RESOURCE_GROUP% ^
+az group create --name %RESOURCE_GROUP% ^
 More? --location %LOCATION%
 ```
