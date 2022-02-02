@@ -368,3 +368,6 @@ Once deployment is complete click on **Go to resource** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/152125946-a58dcc98-f6ad-4f1c-b3e9-756eccf9313f.png)
 
+This is the newly created virtual machine
+
+![image](https://user-images.githubusercontent.com/34960418/152126367-ce5397bf-d0ff-4a3d-bb4c-6269eaa23f0d.png)
