@@ -512,16 +512,23 @@ sudo fdisk /dev/sdc
 
 
 Create a new partition. When in the program, hit the following sequence of keys: 
-- n – to create a new partition
-- p – to create a primary partition
-- 1 – to set partition number to 1
-- Enter key – to confirm the first sector
-- Enter key again – to confirm the last sector
-- w – to write the changes and exit
+- **n** – to create a new partition
+- **p** – to create a primary partition
+- **1** – to set partition number to 1
+- **Enter** key – to confirm the first sector
+- **Enter** key again – to confirm the last sector
+- **w** – to write the changes and exit
 
 ![image](https://user-images.githubusercontent.com/34960418/152156099-a3bf269e-dc52-4222-85d3-83f9987d0d03.png)
 
 
+Check again the situation with the disks:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152156708-fd0f285f-55a8-4ceb-9e9e-72893f611bc6.png)
 
 
 
