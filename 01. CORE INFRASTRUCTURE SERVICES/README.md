@@ -347,3 +347,7 @@ Click on the **size** option. Explore the available VM sizes. Select something s
 
 ![image](https://user-images.githubusercontent.com/34960418/152123564-f28979c4-f60d-4fac-abe9-4560e5a0e214.png)
 
+For **authentication type** select the **password** option. In the **username** field enter for example **demouser**. **Password** must comply with the following, length between 12 and 72 characters, must have three of the following: 1 lower case, 1 upper case, 1 number, and 1 special character, must not include reserved words or unsupported characters. Enter for example **DemoPassword-2022**.
+
+![image](https://user-images.githubusercontent.com/34960418/152124144-12a72842-37c8-4874-8298-f5af63d062a4.png)
+
