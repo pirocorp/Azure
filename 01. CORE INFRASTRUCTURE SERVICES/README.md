@@ -513,7 +513,7 @@ sudo fdisk /dev/sdc
 
 Create a new partition.
 
-![image](https://user-images.githubusercontent.com/34960418/152155844-60061c15-a5ae-4e9e-b5cd-c85a21d69c1a.png)
+![image](https://user-images.githubusercontent.com/34960418/152156099-a3bf269e-dc52-4222-85d3-83f9987d0d03.png)
 
 
 
