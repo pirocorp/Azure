@@ -360,7 +360,9 @@ Click on the **Create** button to initiate the creation process
 
 ![image](https://user-images.githubusercontent.com/34960418/152125366-fc4782c1-47fe-49f7-8e82-ee63a224b8e6.png)
 
+Now, we can sit and watch the **deployment** process. It will finish in 30 or so seconds
 
+![image](https://user-images.githubusercontent.com/34960418/152125625-6434100a-a742-40fa-8c0b-db7460a40319.png)
 
 
 
