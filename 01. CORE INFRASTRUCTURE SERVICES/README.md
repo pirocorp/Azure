@@ -13,6 +13,7 @@
  - [Azure the Console Way](#azure-the-console-way)
    - [Create а Simple Solution with Azure CLI](#create-%D0%B0-simple-solution-with-azure-cli)
    - [Create a Simple Solution with PowerShell](#create-simple-solution-with-powershell)
+ - [Clean Up](#clean-up)
 
 
 # Cloud Building Blocks
@@ -1032,5 +1033,5 @@ sudo mount -a
 It will try to mount all filesystems that exist in the **/etc/fstab** file. If you do not see any error, then you are good to go.
 
 
-
+# Clean Up
 
