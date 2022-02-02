@@ -413,5 +413,7 @@ Depending on your host operating system and the available software, you must eit
 ssh demouser@<public-ip-address>
 ```
 
+Here we can execute standard Linux commands ```like``` ```ps```, ```top```, ```ls```, ```free```, ```uname```, etc.
+
 ![image](https://user-images.githubusercontent.com/34960418/152133761-ac8a2fc6-6cf3-4afe-aecb-cc2fe4a04906.png)
 
