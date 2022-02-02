@@ -395,3 +395,6 @@ Virtual machine **overview** has the details about its size, public, and private
 
 ![image](https://user-images.githubusercontent.com/34960418/152130981-c33618e6-eea5-463f-b0e0-81c5bd676228.png)
 
+The **monitoring** tab has a few charts that show how the machine is performing.
+
+![image](https://user-images.githubusercontent.com/34960418/152131766-c6d56797-bd41-456e-942b-821b8f1a57da.png)
