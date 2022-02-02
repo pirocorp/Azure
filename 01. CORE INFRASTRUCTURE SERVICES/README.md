@@ -619,3 +619,28 @@ In the list of groups, click on the **RG-Demo-2** group. List resources created 
 ![image](https://user-images.githubusercontent.com/34960418/152164823-d0c66cdd-eedc-49ef-86ce-4381674838e8.png)
 
 ## Connect to the VM (Windows)
+
+In the **Resource group** overview, find the virtual machine VM-Windows-2012 and click on it.
+
+![image](https://user-images.githubusercontent.com/34960418/152170677-3416f4d2-832e-413f-8082-31a126fd051e.png)
+
+Click on the **Connect** command in the top-left of the **Overview** screen and select **RDP** from the list.
+
+![image](https://user-images.githubusercontent.com/34960418/152171033-e7445dc9-bea1-4c0d-acd1-736435c06f5a.png)
+
+Click on the **Download RDP File** button to download the connection information and initiate a connection.
+
+![image](https://user-images.githubusercontent.com/34960418/152171120-aabdfc23-e08a-4185-a018-f294ab8f6814.png)
+
+A warning will appear saying that there is an issue with the certificate of the remote machine. Confirm with **Connect**.
+
+![image](https://user-images.githubusercontent.com/34960418/152171426-d37ada99-d479-4253-91c9-60c127f63ebf.png)
+
+Enter the credentials used during the creation process and confirm with **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/152171803-a7af1df9-7164-461a-b11b-ed2d58173ac7.png)
+
+Another certificate related warning will appear, confirm with **Yes**
+
+![image](https://user-images.githubusercontent.com/34960418/152171899-f97032f9-9071-4ed5-bd7d-daa21e327e2c.png)
+
