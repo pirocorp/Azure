@@ -1035,3 +1035,18 @@ It will try to mount all filesystems that exist in the **/etc/fstab** file. If y
 
 # Clean Up
 
+
+## Azure Cli
+
+```cmd
+az group delete --name RG-Demo-1 --yes --no-wait
+az group delete --name RG-Demo-2 --yes --no-wait
+az group delete --name RG-Demo-3 --yes --no-wait
+az group delete --name RG-Demo-4 --yes --no-wait
+```
+
+## Azure PowerShell
+
+```powershell
+Get-AzResourceGroup RG-Demo-* | Remove-AzResourceGroup -Force
+```
