@@ -318,3 +318,27 @@ Individual lines in a multi-line command are separated with ``` ` ```
 PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP ` 
 >> -Location $LOCATION
 ```
+
+
+# Create a Linux (Ubuntu-based) VM (from Azure Portal)
+
+Let’s create an **Ubuntu 20.04** machine with all settings by default 
+
+Go to the home view if you are not there. In the search box start typing virtual machines. When you see the option Virtual machines, click on it. 
+
+![image](https://user-images.githubusercontent.com/34960418/152121856-b152f7b7-586e-4b3d-a807-cdd48c6ec891.png)
+
+
+Click on the + **Create** button and select **Virtual machine** in the drop-down list
+
+![image](https://user-images.githubusercontent.com/34960418/152122077-ac35b768-98a2-4ce5-b58c-efb216dfd825.png)
+
+Select your **subscription** if not selected. In the **resource group** section click on **create new**. Enter a name, for example **RG-Demo-1** and hit **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/152122518-d070aeb4-9f52-47ea-90d1-f3af944648d3.png)
+
+
+
+
+
+
