@@ -322,14 +322,13 @@ PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP `
 
 # Create a Linux (Ubuntu-based) VM (Azure Portal)
 
-Let’s create an **Ubuntu 20.04** machine with all settings by default 
+Let’s create an **Ubuntu 20.04** machine with all settings by default.
 
-Go to the home view if you are not there. In the search box start typing virtual machines. When you see the option Virtual machines, click on it. 
+Go to the home view if you are not there. In the search box, start typing virtual machines. When you see the Virtual machines option, click on it.
 
 ![image](https://user-images.githubusercontent.com/34960418/152121856-b152f7b7-586e-4b3d-a807-cdd48c6ec891.png)
 
-
-Click on the + **Create** button and select **Virtual machine** in the drop-down list
+Click on the **+ Create** button and select **Virtual machine** in the drop-down list.
 
 ![image](https://user-images.githubusercontent.com/34960418/152122077-ac35b768-98a2-4ce5-b58c-efb216dfd825.png)
 
