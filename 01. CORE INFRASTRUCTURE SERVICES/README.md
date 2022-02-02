@@ -501,3 +501,20 @@ lsblk
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/152145117-6d6a7cdc-7394-466b-8af8-ab7a3625d3d2.png)
+
+
+You should see now that there is a new device – **sdc**. Now, let’s issue set of commands to make the disk usable. Start the disk **partitioning** program:
+
+```bash
+sudo fdisk /dev/sdc
+```
+![image](https://user-images.githubusercontent.com/34960418/152145640-fa545145-937f-4dc4-9e33-3c91ac57db53.png)
+
+
+Create a new partition.
+![image](https://user-images.githubusercontent.com/34960418/152155844-60061c15-a5ae-4e9e-b5cd-c85a21d69c1a.png)
+
+
+
+
+
