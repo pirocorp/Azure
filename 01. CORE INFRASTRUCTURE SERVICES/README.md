@@ -459,4 +459,7 @@ Click on the **Inbound security rules** under the **Settings** section. Click on
 
 ![image](https://user-images.githubusercontent.com/34960418/152138912-a00dd1e3-ca64-43cd-93df-46f8f3fc0f90.png)
 
+Change the **Destination port ranges** value to **80**. Set the **Protocol** selector to **TCP**. In the **Name** field enter for example **HTTP-Port-80**. Click on the **Add** button to confirm.
+
+![image](https://user-images.githubusercontent.com/34960418/152139456-83f554dd-d5ee-4ae4-a3b1-8a2b14d183ff.png)
 
