@@ -332,38 +332,38 @@ Click on the **+ Create** button and select **Virtual machine** in the drop-down
 
 ![image](https://user-images.githubusercontent.com/34960418/152122077-ac35b768-98a2-4ce5-b58c-efb216dfd825.png)
 
-Select your **subscription** if not selected. In the **resource group** section click on **create new**. Enter a name, for example **RG-Demo-1** and hit **OK**.
+Select your **subscription** if not selected. In the **resource group** section, click on **create new**. Enter a name, for example, **RG-Demo-1** and hit **OK**.
 
 ![image](https://user-images.githubusercontent.com/34960418/152122518-d070aeb4-9f52-47ea-90d1-f3af944648d3.png)
 
-For **virtual machine name** enter **VM-Demo-Ubuntu-1**. It must be unique for the resource group. In the **region** drop-down select something closer to your location, for example **(Europe) West Europe**. In the **image** drop-down select **Ubuntu Server 20.04 LTS - Gen 2**.
+For **virtual machine name** enter **VM-Demo-Ubuntu-1**. It must be unique for the resource group. In the **region** drop-down, select something closer to your location, for example, **(Europe) West Europe**. In the **image** drop-down select **Ubuntu Server 20.04 LTS - Gen 2**.
 
 ![image](https://user-images.githubusercontent.com/34960418/152123162-39cdf162-2015-45e1-9565-effdc677fe21.png)
 
-Click on the **size** option. Explore the available VM sizes. Select something smaller, for example **B1s**. Then click on the **select** button.
+Click on the **size** option. Explore the available VM sizes. Select something smaller, for example, **B1s**. Then click on the **select** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/152123508-6f4364e7-78ed-429f-a2f6-dcf6b896b894.png)
 
 ![image](https://user-images.githubusercontent.com/34960418/152123564-f28979c4-f60d-4fac-abe9-4560e5a0e214.png)
 
-For **authentication type** select the **password** option. In the **username** field enter for example **demouser**. **Password** must comply with the following, length between 12 and 72 characters, must have three of the following: 1 lower case, 1 upper case, 1 number, and 1 special character, must not include reserved words or unsupported characters. Enter for example **DemoPassword-2022**.
+For **authentication type** select the **password** option. In the **username** field enter for example **demouser**. **Password** must comply with the following, a length between 12 and 72 characters, must have three of the following: one lower case, one upper case, one number, and one special character, must not include reserved words or unsupported characters. Enter for example, **DemoPassword-2022**.
 
 ![image](https://user-images.githubusercontent.com/34960418/152124144-12a72842-37c8-4874-8298-f5af63d062a4.png)
 
-Hit the **Review + create** button to examine what we are about to create
+Hit the **Review + create** button to examine what we are creating.
 
 ![image](https://user-images.githubusercontent.com/34960418/152124582-abe92a04-ec10-4c63-a619-bcebd81e90a7.png)
 
 
-Click on the **Create** button to initiate the creation process
+Click on the **Create** button to initiate the creation process.
 
 ![image](https://user-images.githubusercontent.com/34960418/152125366-fc4782c1-47fe-49f7-8e82-ee63a224b8e6.png)
 
-Now, we can sit and watch the **deployment** process. It will finish in 30 or so seconds
+Now, we can sit and watch the **deployment** process. It will finish in 30 or so seconds.
 
 ![image](https://user-images.githubusercontent.com/34960418/152125625-6434100a-a742-40fa-8c0b-db7460a40319.png)
 
-Once deployment is complete click on **Go to resource** button.
+Once deployment is complete click, on the **Go to resource** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/152125946-a58dcc98-f6ad-4f1c-b3e9-756eccf9313f.png)
 
@@ -371,16 +371,16 @@ This is the newly created virtual machine.
 
 ![image](https://user-images.githubusercontent.com/34960418/152126367-ce5397bf-d0ff-4a3d-bb4c-6269eaa23f0d.png)
 
-Go to **Home** screent. Click on **Resource groups** option in the **Azure services** section.
+Go to the **Home** screen. Click on the **Resource groups** option in the **Azure services** section.
 
 ![image](https://user-images.githubusercontent.com/34960418/152126771-ccb6d293-bab4-43ae-b141-5cd3e3bd95e2.png)
 
-In the list of groups click on the **RG-Demo-1**S group.
+In the list of groups, click on the **RG-Demo-1** group.
 
 ![image](https://user-images.githubusercontent.com/34960418/152126951-52f5fe08-ffcd-430a-84ca-b1eb37986b20.png)
 
 
-Now, we can see the full list of resources created together with our virtual machine
+Those are all resources created together with our virtual machine.
 
 ![image](https://user-images.githubusercontent.com/34960418/152127091-1b20f1f2-a2b7-4084-bd58-1ffba781f94f.png)
 
