@@ -398,3 +398,20 @@ Virtual machine **overview** has the details about its size, public, and private
 The **monitoring** tab has a few charts that show how the machine is performing.
 
 ![image](https://user-images.githubusercontent.com/34960418/152131766-c6d56797-bd41-456e-942b-821b8f1a57da.png)
+
+Click on the **Connect** command in the top-left part of the **Overview** screen and select the **SSH** option from the list.
+
+![image](https://user-images.githubusercontent.com/34960418/152132449-cbf70e36-9d06-42a0-be3f-34622c820f49.png)
+
+Examine the provided instructions. As you can see, they suppose that we are using a key pair to connect to the VM. In the current situation, we will use username and password pair instead. 
+
+![image](https://user-images.githubusercontent.com/34960418/152132708-5a0cae39-c89a-41f8-bfce-151191038583.png)
+
+Depending on your host operating system and the available software, you must either start an SSH client (like **PuTTY**) or open a terminal window (if running on **Linux**, **macOS**, or **Windows 10** with **OpenSSH** client installed). To connect to the VM, execute this:
+
+```bash
+ssh demouser@<public-ip-address>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152133761-ac8a2fc6-6cf3-4afe-aecb-cc2fe4a04906.png)
+
