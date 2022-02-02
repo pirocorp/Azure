@@ -726,3 +726,53 @@ az group --help
 ![image](https://user-images.githubusercontent.com/34960418/152182813-b1246104-926f-41fb-9c17-b45caa0b67f3.png)
 
 
+For help for a specific action like **create**, execute:
+
+```powershell
+az group create --help
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152183453-6d048e83-4429-4064-afc0-0a6b0f9db460.png)
+
+
+To create the resource group, execute:
+
+```powershell
+az group create --name RG-Demo-3 --location westeurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152183727-7e587389-2a01-4c35-81f0-6e02b38f1551.png)
+
+
+Create the VM with a command like this (do not execute it yet):
+
+```powershell
+az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --size Standard_B1s
+```
+
+With the short form of the parameters, the above will become:
+
+```powershell
+az vm create -n VM-Ubuntu -g RG-Demo-3 --image UbuntuLTS --size Standard_B1s
+```
+
+As you can see, not every parameter has a short variant. Which form we will use is a matter of personal preference. Let’s extend the command with username and password. The final command will look like this:
+
+```powershell
+az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --size Standard_B1s --admin-username demouser --admin-password DemoPassword-2022
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152184705-8b904dd0-292f-4096-84a6-bf0cef459786.png)
+
+
+After a successful execution, which will take a while, we can ask for all resources in the resource group:
+
+```powershell
+az resource list --resource-group RG-Demo-3
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152185499-b02f4942-6f3d-4d58-b5fb-38cf66f851e1.png)
+
+
+
+
