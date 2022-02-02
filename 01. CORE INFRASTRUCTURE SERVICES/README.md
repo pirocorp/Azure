@@ -832,3 +832,5 @@ The site must be reachable now. Test with:
 ```bash
 curl 40.68.135.75
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/152189503-44b23bbd-f1a8-48cb-86e0-49a4df41e6b0.png)
