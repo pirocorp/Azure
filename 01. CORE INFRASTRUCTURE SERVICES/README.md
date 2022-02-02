@@ -394,7 +394,7 @@ Those are all resources created together with the virtual machine.
 ![image](https://user-images.githubusercontent.com/34960418/152127091-1b20f1f2-a2b7-4084-bd58-1ffba781f94f.png)
 
 
-# Connect to the VM
+## Connect to the VM
 
 In the resource group overview, find the virtual machine **VM-Demo-Ubuntu-1** and click on it.
 
@@ -454,7 +454,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-# Adjust the security
+## Adjust the security
 
 Return to the **resource group** in the **Azure Portal**. Find the **VM-Demo-Ubuntu-1-nsg** security group created during the virtual machine deployment and click on it.
 
@@ -477,7 +477,7 @@ Now, switch back to the browser tab with the error and hit **refresh**. You shou
 
 ![image](https://user-images.githubusercontent.com/34960418/152140039-d9f0d2ca-59aa-4291-a5e5-dec95bc40bf5.png)
 
-# Add additional disk
+## Add additional disk
 
 Return to the shell session or re-establish a new one. Let’s check what disk devices are available and how they are utilized:
 
