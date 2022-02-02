@@ -11,7 +11,7 @@
   - [Adjust the security (Windows)](#adjust-the-security-windows)
   - [Add additional disk (Windows)](#add-additional-disk-windows)
  - [Azure the Console Way](#azure-the-console-way)
-   - [Create а Simple Solution with Azure CLI]
+   - [Create а Simple Solution with Azure CLI](#create-%D0%B0-simple-solution-with-azure-cli)
 
 
 # Cloud Building Blocks
