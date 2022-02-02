@@ -952,3 +952,18 @@ New-AzResourceGroup -Name RG-Demo-4 -Location WestEurope
 ![image](https://user-images.githubusercontent.com/34960418/152194166-65956d37-9ca9-42b2-9719-7dcc1ac2fdea.png)
 
 
+Create the VM (same as with the Azure CLI earlier) with:
+
+```powershell
+New-AzVM -Name "VM-Ubuntu" -Location "WestEurope" -ResourceGroupName "RG-Demo-4" `
+-Size "Standard_B1s" -Credential (Get-Credential) -Image "UbuntuLTS"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152194872-f97af08b-fa1e-4939-8ae5-74987cee0c75.png)
+
+
+
+
+
+
+
