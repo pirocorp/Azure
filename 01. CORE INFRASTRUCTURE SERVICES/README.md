@@ -10,7 +10,8 @@
   - [Install a web server (Windows)](#install-a-web-server-windows)
   - [Adjust the security (Windows)](#adjust-the-security-windows)
   - [Add additional disk (Windows)](#add-additional-disk-windows)
- - [Azure the Console Way]()
+ - [Azure the Console Way](#azure-the-console-way)
+   - [Create а Simple Solution with Azure CLI]
 
 
 # Cloud Building Blocks
@@ -705,7 +706,7 @@ Start the **New Simple Volume Wizard** and follow the instructions. After a whil
 
 # Azure the Console Way
 
-
+## Create а Simple Solution with Azure CLI
 
 
 
