@@ -916,3 +916,19 @@ sudo mount -a
 ```
 
 It will try to mount all filesystems that exist in the /etc/fstab file. If you do not see any error, then you are good to go.
+
+
+### Clean up with Azure CLI
+
+```bash
+az group delete --name RG-Demo-3 --yes
+```
+
+If you don’t want to wait while the group and the resources are being deleted, can modify the command to:
+
+```bash
+az group delete --name RG-Demo-3 --yes --no-wait
+```
+
+
+## Create Simple Solution with PowerShell
