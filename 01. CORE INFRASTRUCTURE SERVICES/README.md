@@ -710,7 +710,7 @@ Start the **New Simple Volume Wizard** and follow the instructions. After a whil
 
 Before we can do anything with our **Azure** subscription from **Azure CLI**, we must login first:
 
-```powershell
+```cmd
 az login
 ```
 
@@ -719,7 +719,7 @@ az login
 
 Let’s create a simple but complete set of resources from the **Azure CLI**. Creating a resource group and a Linux-based VM, installing a web server, and opening a port. First, we need to get familiar with some of the commands provided by the **Azure CLI**. To ask for help for the **group** command, we must execute:
 
-```powershell
+```cmd
 az group --help
 ```
 
@@ -728,7 +728,7 @@ az group --help
 
 For help for a specific action like **create**, execute:
 
-```powershell
+```cmd
 az group create --help
 ```
 
@@ -737,7 +737,7 @@ az group create --help
 
 To create the resource group, execute:
 
-```powershell
+```cmd
 az group create --name RG-Demo-3 --location westeurope
 ```
 
@@ -746,19 +746,19 @@ az group create --name RG-Demo-3 --location westeurope
 
 Create the VM with a command like this (do not execute it yet):
 
-```powershell
+```cmd
 az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --size Standard_B1s
 ```
 
 With the short form of the parameters, the above will become:
 
-```powershell
+```cmd
 az vm create -n VM-Ubuntu -g RG-Demo-3 --image UbuntuLTS --size Standard_B1s
 ```
 
 As you can see, not every parameter has a short variant. Which form we will use is a matter of personal preference. Let’s extend the command with username and password. The final command will look like this:
 
-```powershell
+```cmd
 az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --size Standard_B1s --admin-username demouser --admin-password DemoPassword-2022
 ```
 
@@ -767,7 +767,7 @@ az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --siz
 
 After a successful execution, which will take a while, ask for all resources in the resource group:
 
-```powershell
+```cmd
 az resource list --resource-group RG-Demo-3
 ```
 
@@ -775,8 +775,16 @@ az resource list --resource-group RG-Demo-3
 
 The output by default is formatted as JSON, but can ask for a different format:
 
-```powershell
+```cmd
 az resource list --resource-group RG-Demo-3 --output table
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/152186178-e00f38bb-ec03-42a0-9975-d63e506c232c.png)
+
+Furthermore, can ask for particular fields:
+
+```cmd
+az resource list --resource-group RG-Demo-3 --query [].[name,type] --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152186644-d53a952d-732e-40a8-8351-eecaa6f08add.png)
