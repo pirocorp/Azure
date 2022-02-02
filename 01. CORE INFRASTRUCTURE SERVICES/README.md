@@ -4,6 +4,8 @@
 - [Connect to the VM](#connect-to-the-vm)
 - [Adjust the security](#adjust-the-security)
 - [Add additional disk](#add-additional-disk)
+- [Create a Windwos VM](#create-a-windows-vm)
+
 
 # Cloud Building Blocks
 
