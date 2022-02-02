@@ -708,6 +708,11 @@ Start the **New Simple Volume Wizard** and follow the instructions. After a whil
 
 ## Create а Simple Solution with Azure CLI
 
+Before we can do anything with our **Azure** subscription from **Azure CLI**, we must login first:
 
+```powershell
+az login
+```
 
+![image](https://user-images.githubusercontent.com/34960418/152181844-91b5e4c0-a250-4a52-8481-8eaee4b979b2.png)
 
