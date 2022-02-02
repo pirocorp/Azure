@@ -971,7 +971,7 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152190412-70d1f8b5-ada5-4ee1-8c27-6320bc350a0d.png)
 
 
-You should see now that there is a new device – sdc. Now, let’s issue set of commands to make the disk usable. Start the disk partitioning program:
+You should see now that there is a new device – **sdc**. Now, let’s issue set of commands to make the disk usable. Start the disk partitioning program:
 
 ```bash
 sudo fdisk /dev/sdc
@@ -1011,7 +1011,7 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152192012-f3c73de9-10b9-43c4-a819-d673dae204db.png)
 
 
-For the disk to be auto mounted after a reboot, must change the /etc/fstab file. Be very careful with this file if it gets corrupted, the system won’t boot. To modify the /etc/fstab file we can invoke the nano text editor:
+For the disk to be auto mounted after a reboot, must change the **/etc/fstab** file. Be very careful with this file if it gets corrupted, the system won’t boot. To modify the **/etc/fstab** file we can invoke the nano text editor:
 
 ```bash
 sudo nano /etc/fstab
@@ -1023,13 +1023,13 @@ Use the arrow keys to go to the last (empty) line. Enter the following text:
 /dev/sdc1    /disk   ext4   defaults   0  0
 ```
 
-Hit Ctr+O and then the Enter key to confirm. Exit with Ctrl+X. A way to test if everything with the /etc/fstab file is okay is to issue the following command:
+Hit **Ctr+O** and then the Enter key to confirm. Exit with **Ctrl+X**. A way to test if everything with the /etc/fstab file is okay is to issue the following command:
 
 ```bash
 sudo mount -a
 ```
 
-It will try to mount all filesystems that exist in the /etc/fstab file. If you do not see any error, then you are good to go.
+It will try to mount all filesystems that exist in the **/etc/fstab** file. If you do not see any error, then you are good to go.
 
 
 
