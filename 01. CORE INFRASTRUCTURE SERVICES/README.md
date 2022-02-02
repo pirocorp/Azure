@@ -511,7 +511,13 @@ sudo fdisk /dev/sdc
 ![image](https://user-images.githubusercontent.com/34960418/152145640-fa545145-937f-4dc4-9e33-3c91ac57db53.png)
 
 
-Create a new partition.
+Create a new partition. When in the program, hit the following sequence of keys: 
+- n – to create a new partition
+- p – to create a primary partition
+- 1 – to set partition number to 1
+- Enter key – to confirm the first sector
+- Enter key again – to confirm the last sector
+- w – to write the changes and exit
 
 ![image](https://user-images.githubusercontent.com/34960418/152156099-a3bf269e-dc52-4222-85d3-83f9987d0d03.png)
 
