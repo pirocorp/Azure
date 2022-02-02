@@ -470,7 +470,11 @@ Change the **Destination port ranges** value to **80**. Set the **Protocol** sel
 ![image](https://user-images.githubusercontent.com/34960418/152139456-83f554dd-d5ee-4ae4-a3b1-8a2b14d183ff.png)
 ![image](https://user-images.githubusercontent.com/34960418/152139790-900ba6a4-c462-4048-9d4f-434419221e83.png)
 
-
 Now, switch back to the browser tab with the error and hit **refresh**. You should see the default **NGINX** web page.
 
 ![image](https://user-images.githubusercontent.com/34960418/152140039-d9f0d2ca-59aa-4291-a5e5-dec95bc40bf5.png)
+
+# Add additional disk
+
+
+
