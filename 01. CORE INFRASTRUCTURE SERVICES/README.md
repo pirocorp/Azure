@@ -380,7 +380,7 @@ In the list of groups, click on the **RG-Demo-1** group.
 ![image](https://user-images.githubusercontent.com/34960418/152126951-52f5fe08-ffcd-430a-84ca-b1eb37986b20.png)
 
 
-Those are all resources created together with our virtual machine.
+Those are all resources created together with the virtual machine.
 
 ![image](https://user-images.githubusercontent.com/34960418/152127091-1b20f1f2-a2b7-4084-bd58-1ffba781f94f.png)
 
