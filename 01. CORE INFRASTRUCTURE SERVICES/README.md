@@ -3,7 +3,7 @@
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
   - [Connect to the VM (Linux)](#connect-to-the-vm)
   - [Adjust the security (Linux)](#adjust-the-security)
-  - [Add additional disk (Linux))](#add-additional-disk)
+  - [Add additional disk (Linux)](#add-additional-disk)
 - [Create a Windwos VM](#create-a-windows-vm)
   - [Connect to the VM (Windows)](#connect-to-the-vm-windows)
   - [Install a web server (Windows)](#install-a-web-server-windows)
