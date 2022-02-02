@@ -384,3 +384,14 @@ Those are all resources created together with the virtual machine.
 
 ![image](https://user-images.githubusercontent.com/34960418/152127091-1b20f1f2-a2b7-4084-bd58-1ffba781f94f.png)
 
+
+# Connect to the VM
+
+In the resource group overview, find the virtual machine **VM-Demo-Ubuntu-1** and click on it.
+
+![image](https://user-images.githubusercontent.com/34960418/152130062-66f90e3c-7b2f-4ba0-9d13-57ae49f0756d.png)
+
+Virtual machine **overview** has the details about its size, public, and private IP addresses, etc. Most of the information is in the **Properties** tab.
+
+![image](https://user-images.githubusercontent.com/34960418/152130981-c33618e6-eea5-463f-b0e0-81c5bd676228.png)
+
