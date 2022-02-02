@@ -765,14 +765,18 @@ az vm create --name VM-Ubuntu --resource-group RG-Demo-3 --image UbuntuLTS --siz
 ![image](https://user-images.githubusercontent.com/34960418/152184705-8b904dd0-292f-4096-84a6-bf0cef459786.png)
 
 
-After a successful execution, which will take a while, we can ask for all resources in the resource group:
+After a successful execution, which will take a while, ask for all resources in the resource group:
 
 ```powershell
 az resource list --resource-group RG-Demo-3
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/152185499-b02f4942-6f3d-4d58-b5fb-38cf66f851e1.png)
+![image](https://user-images.githubusercontent.com/34960418/152185759-8fc90050-2d65-4fe3-8da9-493856829b65.png)
 
+The output by default is formatted as JSON, but can ask for a different format:
 
+```powershell
+az resource list --resource-group RG-Demo-3 --output table
+```
 
-
+![image](https://user-images.githubusercontent.com/34960418/152186178-e00f38bb-ec03-42a0-9975-d63e506c232c.png)
