@@ -685,4 +685,27 @@ Return to the RDP session or re-establish a new one. Let’s check-in **Disk Man
 ![image](https://user-images.githubusercontent.com/34960418/152177981-3816d356-890c-4a8c-927a-cf20074fab9d.png)
 
 
+Return to the **Azure portal**. Go to the **VM-Windows-2012** virtual machine. Click on the **Disks** command in the **Settings** section. Click on **+ Create and attach a new disk** button under the **Data disks** section. For **Disk name** enter **VM-Windows-2012_DataDisk**. You can change **Storage type** and **Size**. Select for example **Standard SSD** for storage type and **16 GiB** for size. Confirm with the **Save** button (top left).
+
+![image](https://user-images.githubusercontent.com/34960418/152179119-3bad56ba-3495-4035-a175-de626bd56000.png)
+
+After a while saving process will finish. Return to the resource group and hit **Refresh** button to see the new resource. 
+
+![image](https://user-images.githubusercontent.com/34960418/152179374-5c5fbf27-1cb2-41a3-8b4c-9f1588cc0c31.png)
+
+Return to the RDP session or if you closed it, establish a new one. Start the **Disk Management** tool if not started. There you will see the new disk. It will appear as **Disk 2**. Click on it and choose **Initialize Disk** from the context menu. Confirm with the **OK** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/152180058-5eb4ca00-c293-4d02-8959-891ab634e4fa.png)
+
+Start the **New Simple Volume Wizard** and follow the instructions. After a while, a new **NTFS** drive with the letter **F:** will appear.
+
+![image](https://user-images.githubusercontent.com/34960418/152180208-9629bdd1-7685-41e7-89bc-350c74a9f73d.png)
+
+
+
+
+
+
+
+
 
