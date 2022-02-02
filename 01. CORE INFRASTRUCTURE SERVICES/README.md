@@ -716,3 +716,12 @@ az login
 
 ![image](https://user-images.githubusercontent.com/34960418/152181844-91b5e4c0-a250-4a52-8481-8eaee4b979b2.png)
 
+
+Let’s create a simple but complete set of resources from the **Azure CLI**. Creating a resource group and a Linux-based VM, installing a web server, and opening a port. First, we need to get familiar with some of the commands provided by the **Azure CLI**. To ask for help for the **group** command, we must execute:
+
+![image](https://user-images.githubusercontent.com/34960418/152182813-b1246104-926f-41fb-9c17-b45caa0b67f3.png)
+
+
+```powershell
+az group --help
+```
