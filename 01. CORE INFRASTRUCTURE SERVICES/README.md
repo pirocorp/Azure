@@ -454,3 +454,9 @@ Return to the **resource group** in the **Azure Portal**. Find the **VM-Demo-Ubu
 The **Overview** has two sections – **Inbound security rules** and **Outbound security rules**. They are like a summary (overview) of how the security group is configured.
 
 ![image](https://user-images.githubusercontent.com/34960418/152138119-1e7f8af8-bdc0-4bc3-9526-58880d828e01.png)
+
+Click on the **Inbound security rules** under the **Settings** section. Click on the **Default rules** button to hide the default security rules. Only the one for **SSH** remains, created during the machine deployment. Now click on the **+ Add** button to add one more rule.
+
+![image](https://user-images.githubusercontent.com/34960418/152138912-a00dd1e3-ca64-43cd-93df-46f8f3fc0f90.png)
+
+
