@@ -613,6 +613,7 @@ Sit back and watch the deployment process. After a while, between one and two mi
 
 ![image](https://user-images.githubusercontent.com/34960418/152164143-f8fdcb8f-9dcc-4d60-9951-9c86312930c8.png)
 
+In the list of groups, click on the **RG-Demo-2** group. List resources created together with our virtual machine.
 
-
+![image](https://user-images.githubusercontent.com/34960418/152164823-d0c66cdd-eedc-49ef-86ce-4381674838e8.png)
 
