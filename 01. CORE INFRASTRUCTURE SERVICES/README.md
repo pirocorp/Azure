@@ -320,7 +320,7 @@ PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP `
 ```
 
 
-# Create a Linux (Ubuntu-based) VM (from Azure Portal)
+# Create a Linux (Ubuntu-based) VM (Azure Portal)
 
 Let’s create an **Ubuntu 20.04** machine with all settings by default 
 
