@@ -578,4 +578,16 @@ It will try to mount all filesystems that exist in the /etc/fstab file. If you d
 
 # Create a Windows VM
 
+Will create the **resource group** first, and then the VM. 
+
+Select **Resource groups** from the **Azure services** section and hit the **+ Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/152160587-ee03f79f-7f0d-4488-938c-aff601b9586f.png)
+
+
+Select the appropriate **Subscription** if you have more than one. For **Resource group** name enter **RG-Demo-2** In the **Region** drop-down select **(Europe) West Europe**. Click on the **Review + create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/152161052-9ed257ca-12e3-41c6-ade6-989acaaf75e0.png)
+
+
 
