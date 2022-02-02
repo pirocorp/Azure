@@ -709,7 +709,7 @@ Start the **New Simple Volume Wizard** and follow the instructions. After a whil
 
 ## Create а Simple Solution with Azure CLI
 
-Before we can do anything with our **Azure** subscription from **Azure CLI**, we must login first:
+Before doing anything with **Azure** subscription from **Azure CLI**, log in first:
 
 ```bash
 az login
@@ -933,3 +933,22 @@ az group delete --name RG-Demo-3 --yes --no-wait
 
 
 ## Create Simple Solution with PowerShell
+
+Before doing anything with **Azure** subscription from **PowerShell**, log in first:
+
+```powershell
+Connect-AzAccount
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152193972-c1fe0c84-ace4-414e-ac8d-b09c60da988a.png)
+
+
+To create the resource group, execute:
+
+```powershell
+New-AzResourceGroup -Name RG-Demo-4 -Location WestEurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152194166-65956d37-9ca9-42b2-9719-7dcc1ac2fdea.png)
+
+
