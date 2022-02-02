@@ -671,3 +671,6 @@ Change the **Destination port ranges** value to **80**. Set the **Protocol** sel
 
 ![image](https://user-images.githubusercontent.com/34960418/152176013-f541747d-c2b8-46e2-b741-8f262e924cad.png)
 
+Now, switch back to the browser tab with the error and hit refresh. You should see the default IIS web page.
+
+![image](https://user-images.githubusercontent.com/34960418/152176321-0195e7c0-312b-4320-9d47-dfa87947d26f.png)
