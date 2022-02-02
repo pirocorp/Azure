@@ -417,3 +417,22 @@ Here we can execute standard Linux commands ```like``` ```ps```, ```top```, ```l
 
 ![image](https://user-images.githubusercontent.com/34960418/152133761-ac8a2fc6-6cf3-4afe-aecb-cc2fe4a04906.png)
 
+
+# Install a web server
+
+Because this is a **standard Ubuntu** installation, we can add software as if we are working on a “regular” VM. 
+
+Let’s refresh the repositories information, upgrade installed packages, and then install the **nginx** web server. 
+
+```sh
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y nginx
+```
+
+
+
+
+
+
+
