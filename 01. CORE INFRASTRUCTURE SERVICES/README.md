@@ -485,7 +485,9 @@ lsblk
 
 ![image](https://user-images.githubusercontent.com/34960418/152141474-0bd56bf7-fb37-4c4a-8700-a4633b46d60e.png)
 
+We can see that there are two disk drives – sda (operating system is there) and sdb (temp disk). Let’s return to the portal. Go to the **VM-Demo-Ubuntu-1** virtual machine. Click on the **Disks** command in the **Settings** section. Click on **+ Create and attach a new disk** button under **Data disks** section. For Disk name enter **VM-Demo-Ubuntu-1_disk2**. You can change **Storage type** and **Size**. Select for example **Standard SSD** for storage type and **16 GiB** for size. Confirm with the **Save** button (top left).
 
+![image](https://user-images.githubusercontent.com/34960418/152144099-66e61bfa-aa95-4ad9-9ff9-3bc9474a6df7.png)
 
 
 
