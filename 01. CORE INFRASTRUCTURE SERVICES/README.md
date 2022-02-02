@@ -12,7 +12,7 @@
   - [Add additional disk (Windows)](#add-additional-disk-windows)
  - [Azure the Console Way](#azure-the-console-way)
    - [Create а Simple Solution with Azure CLI](#create-%D0%B0-simple-solution-with-azure-cli)
-   - [Create a Simple Solution with PowerShell](create-simple-solution-with-powershell)
+   - [Create a Simple Solution with PowerShell](#create-simple-solution-with-powershell)
 
 
 # Cloud Building Blocks
