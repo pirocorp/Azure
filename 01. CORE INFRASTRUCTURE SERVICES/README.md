@@ -477,5 +477,16 @@ Now, switch back to the browser tab with the error and hit **refresh**. You shou
 
 # Add additional disk
 
+Return to the shell session or re-establish a new one. Let’s check what disk devices are available and how they are utilized:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152141474-0bd56bf7-fb37-4c4a-8700-a4633b46d60e.png)
+
+
+
+
 
 
