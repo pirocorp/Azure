@@ -465,3 +465,6 @@ Change the **Destination port ranges** value to **80**. Set the **Protocol** sel
 ![image](https://user-images.githubusercontent.com/34960418/152139790-900ba6a4-c462-4048-9d4f-434419221e83.png)
 
 
+Now, switch back to the browser tab with the error and hit **refresh**. You should see the default **NGINX** web page.
+
+![image](https://user-images.githubusercontent.com/34960418/152140039-d9f0d2ca-59aa-4291-a5e5-dec95bc40bf5.png)
