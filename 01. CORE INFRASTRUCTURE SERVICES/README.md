@@ -540,7 +540,7 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152156708-fd0f285f-55a8-4ceb-9e9e-72893f611bc6.png)
 
 
-We can see that we have a partition. Let’s create a file system there:
+Let’s create a file system in the newly created partition there:
 
 ```bash
 sudo mkfs.ext4 /dev/sdc1
