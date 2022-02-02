@@ -337,8 +337,9 @@ Select your **subscription** if not selected. In the **resource group** section 
 
 ![image](https://user-images.githubusercontent.com/34960418/152122518-d070aeb4-9f52-47ea-90d1-f3af944648d3.png)
 
+For **virtual machine name** enter **VM-Demo-Ubuntu-1**. It must be unique for the resource group. In the **region** drop-down select something closer to your location, for example **(Europe) West Europe**. In the **image** drop-down select **Ubuntu Server 20.04 LTS - Gen 2**.
 
-
+![image](https://user-images.githubusercontent.com/34960418/152123162-39cdf162-2015-45e1-9565-effdc677fe21.png)
 
 
 
