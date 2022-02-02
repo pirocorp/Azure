@@ -531,4 +531,19 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152156708-fd0f285f-55a8-4ceb-9e9e-72893f611bc6.png)
 
 
+We can see that we have a partition. Let’s create a file system there:
+
+```bash
+sudo mkfs.ext4 /dev/sdc1
+```
+
+Our new disk is ready to be mounted and used. First, we will create a folder, and then we will mount it:
+
+```bash
+sudo mkdir /disk
+sudo mount /dev/sdc1 /disk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152157358-9b2e2b6c-7d58-4da5-96f1-549b0ebecf53.png)
+
 
