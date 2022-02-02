@@ -341,5 +341,9 @@ For **virtual machine name** enter **VM-Demo-Ubuntu-1**. It must be unique for t
 
 ![image](https://user-images.githubusercontent.com/34960418/152123162-39cdf162-2015-45e1-9565-effdc677fe21.png)
 
+Click on the **size** option. Explore the available VM sizes. Select something smaller, for example **B1s**. Then click on the **select** button.
 
+![image](https://user-images.githubusercontent.com/34960418/152123508-6f4364e7-78ed-429f-a2f6-dcf6b896b894.png)
+
+![image](https://user-images.githubusercontent.com/34960418/152123564-f28979c4-f60d-4fac-abe9-4560e5a0e214.png)
 
