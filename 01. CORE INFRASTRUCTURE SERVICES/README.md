@@ -5,7 +5,7 @@
   - [Adjust the security (Linux)](#adjust-the-security)
   - [Add additional disk (Linux))](#add-additional-disk)
 - [Create a Windwos VM](#create-a-windows-vm)
-  - [Connect to the VM (Windows)](connect-to-the-vm-windows)
+  - [Connect to the VM (Windows)](#connect-to-the-vm-windows)
 
 
 # Cloud Building Blocks
