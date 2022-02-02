@@ -1,3 +1,9 @@
+# Jump to practical guides
+
+[Create a Linux (Ubuntu-based) VM (Azure Portal)](https://github.com/pirocorp/Azure/tree/main/01.%20CORE%20INFRASTRUCTURE%20SERVICES#create-a-linux-ubuntu-based-vm-azure-portal)
+[Connect to the VM](https://github.com/pirocorp/Azure/tree/main/01.%20CORE%20INFRASTRUCTURE%20SERVICES#connect-to-the-vm)
+[Adjust the security](https://github.com/pirocorp/Azure/tree/main/01.%20CORE%20INFRASTRUCTURE%20SERVICES#adjust-the-security)
+
 # Cloud Building Blocks
 
 - **Infrastructure** - Physical resources in the data center of the cloud service provider (CSP) – servers, storage, network equipment, software
