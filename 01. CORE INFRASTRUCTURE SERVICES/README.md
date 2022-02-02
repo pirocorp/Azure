@@ -485,10 +485,19 @@ lsblk
 
 ![image](https://user-images.githubusercontent.com/34960418/152141474-0bd56bf7-fb37-4c4a-8700-a4633b46d60e.png)
 
-We can see that there are two disk drives – sda (operating system is there) and sdb (temp disk). Let’s return to the portal. Go to the **VM-Demo-Ubuntu-1** virtual machine. Click on the **Disks** command in the **Settings** section. Click on **+ Create and attach a new disk** button under **Data disks** section. For Disk name enter **VM-Demo-Ubuntu-1_disk2**. You can change **Storage type** and **Size**. Select for example **Standard SSD** for storage type and **16 GiB** for size. Confirm with the **Save** button (top left).
+We can see that there are two disk drives – sda (operating system is there) and sdb (temp disk). Let’s return to the portal. Go to the **VM-Demo-Ubuntu-1** virtual machine. Click on the **Disks** command in the **Settings** section. Click on **+ Create and attach a new disk** button under the **Data disks** section. For Disk name enter: **VM-Demo-Ubuntu-1_disk2**. You can change **Storage type** and **Size**. Select **Standard SSD** for storage type and **16 GiB** for size. Confirm with the **Save** button (top left).
 
 ![image](https://user-images.githubusercontent.com/34960418/152144099-66e61bfa-aa95-4ad9-9ff9-3bc9474a6df7.png)
 
 
+After a while saving process will finish. Return to the resource group and hit **Refresh** button to see the new resource.
 
+![image](https://user-images.githubusercontent.com/34960418/152144810-88a547e5-6d1e-4156-afba-e630d0054639.png)
 
+Return to the console session or if you closed it, establish a new one. Check again what disks are available with:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152145117-6d6a7cdc-7394-466b-8af8-ab7a3625d3d2.png)
