@@ -430,7 +430,7 @@ sudo apt-get upgrade
 sudo apt-get install -y nginx
 ```
 
-Check if the web server is running:
+Check if the webserver is running:
 
 ```bash
 systemctl status nginx
@@ -438,6 +438,19 @@ systemctl status nginx
 
 ![image](https://user-images.githubusercontent.com/34960418/152135987-07cb2114-b073-4e90-a46e-774115681634.png)
 
+If it is not running, we could start and enable (autostart on reboot) it with (skip it if the above showed **running**):
 
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
 
+# Adjust the security
 
+Return to the **resource group** in the **Azure Portal**. Find the **VM-Demo-Ubuntu-1-nsg** security group created during the virtual machine deployment and click on it.
+
+![image](https://user-images.githubusercontent.com/34960418/152137044-d767c746-67b6-4ebc-8ee3-e638185d68e1.png)
+
+The **Overview** has two sections – **Inbound security rules** and **Outbound security rules**. They are like a summary (overview) of how the security group is configured.
+
+![image](https://user-images.githubusercontent.com/34960418/152138119-1e7f8af8-bdc0-4bc3-9526-58880d828e01.png)
