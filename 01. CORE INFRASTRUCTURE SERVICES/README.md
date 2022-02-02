@@ -368,6 +368,20 @@ Once deployment is complete click on **Go to resource** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/152125946-a58dcc98-f6ad-4f1c-b3e9-756eccf9313f.png)
 
-This is the newly created virtual machine
+This is the newly created virtual machine.
 
 ![image](https://user-images.githubusercontent.com/34960418/152126367-ce5397bf-d0ff-4a3d-bb4c-6269eaa23f0d.png)
+
+Go to **Home** screent. Click on **Resource groups** option in the **Azure services** section.
+
+![image](https://user-images.githubusercontent.com/34960418/152126771-ccb6d293-bab4-43ae-b141-5cd3e3bd95e2.png)
+
+In the list of groups click on the **RG-Demo-1**S group.
+
+![image](https://user-images.githubusercontent.com/34960418/152126951-52f5fe08-ffcd-430a-84ca-b1eb37986b20.png)
+
+
+Now, we can see the full list of resources created together with our virtual machine
+
+![image](https://user-images.githubusercontent.com/34960418/152127091-1b20f1f2-a2b7-4084-bd58-1ffba781f94f.png)
+
