@@ -7,7 +7,7 @@
 - [Create a Windwos VM](#create-a-windows-vm)
   - [Connect to the VM (Windows)](#connect-to-the-vm-windows)
   - [Install a web server (Windows)](#install-a-web-server-windows)
-  - [Adjust the security (Windows)]()
+  - [Adjust the security (Windows)](#adjust-the-security-windows)
 
 
 # Cloud Building Blocks
