@@ -409,7 +409,7 @@ Examine the provided instructions. As you can see, they suppose that we are usin
 
 Depending on your host operating system and the available software, you must either start an SSH client (like **PuTTY**) or open a terminal window (if running on **Linux**, **macOS**, or **Windows 10** with **OpenSSH** client installed). To connect to the VM, execute this:
 
-```cmd
+```powershell
 ssh demouser@<public-ip-address>
 ```
 
