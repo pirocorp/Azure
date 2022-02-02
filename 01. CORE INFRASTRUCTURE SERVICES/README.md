@@ -3,6 +3,7 @@
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
 - [Connect to the VM](#connect-to-the-vm)
 - [Adjust the security](#adjust-the-security)
+- [Add additional disk](#add-additional-disk)
 
 # Cloud Building Blocks
 
