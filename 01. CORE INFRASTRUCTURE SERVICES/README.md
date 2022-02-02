@@ -544,6 +544,12 @@ sudo mkdir /disk
 sudo mount /dev/sdc1 /disk
 ```
 
+If we ask again for information about the block devices, we will see that our disk (partition) is mounted:
+
+```bash
+lsblk
+```
+
 ![image](https://user-images.githubusercontent.com/34960418/152157358-9b2e2b6c-7d58-4da5-96f1-549b0ebecf53.png)
 
 
