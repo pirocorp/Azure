@@ -553,3 +553,27 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152157358-9b2e2b6c-7d58-4da5-96f1-549b0ebecf53.png)
 
 
+For the disk to be auto mounted after a reboot, must change the **/etc/fstab** file. Be very careful with this file if it gets corrupted, the system won’t boot. To modify the **/etc/fstab** file we can invoke the nano text editor:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Use the arrow keys to go to the last (empty) line. Enter the following text:
+
+```
+/dev/sdc1    /disk   ext4   defaults   0  0
+```
+
+Hit **Ctr+O** and then the **Enter** key to confirm. Exit with **Ctrl+X**. A way to test if everything with the **/etc/fstab** file is okay is to issue the following command:
+
+```bash
+sudo mount -a
+```
+
+It will try to mount all filesystems that exist in the /etc/fstab file. If you do not see any error, then you are good to go.
+
+
+
+
+
