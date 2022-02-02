@@ -794,3 +794,41 @@ Or with some additional formatting:
 ```bash
 az resource list --resource-group RG-Demo-3 --query "[].{Name:name,Type:type}" --output table
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/152187156-16129109-b75b-422e-b5f0-bbc59c63c455.png)
+
+
+Get the VM’s public IP address with:
+
+```bash
+az vm show --name VM-Ubuntu --resource-group RG-Demo-3 --show-details --query [publicIps] --output tsv
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152187341-1a99e5d2-930a-4202-9d12-296eb632d6fd.png)
+
+
+Connect to VM’s public IP address with ssh with:
+
+```bash
+ssh demouser@40.68.135.75
+```
+
+Refresh the repositories information, upgrade installed packages, and install the nginx web server with these commands. Use the sudo in front of every command above because of higher privileges needed to modify the system configuration.
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y nginx
+```
+
+Return to host machine. The site is not reachable from the outside, open a port with:
+
+```bash
+az vm open-port --name VM-Ubuntu --resource-group RG-Demo-3 --port 80
+```
+
+The site must be reachable now. Test with:
+
+```bash
+curl 40.68.135.75
+```
