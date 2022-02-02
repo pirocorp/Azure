@@ -9,6 +9,7 @@
   - [Connect to the VM (Windows)](#connect-to-the-vm-windows)
   - [Install a web server (Windows)](#install-a-web-server-windows)
   - [Adjust the security (Windows)](#adjust-the-security-windows)
+  - [Add additional disk (Windows)](#add-additional-disk-windows)
 
 
 # Cloud Building Blocks
@@ -675,3 +676,12 @@ Change the **Destination port ranges** value to **80**. Set the **Protocol** sel
 Now, switch back to the browser tab with the error and hit refresh. You should see the default IIS web page.
 
 ![image](https://user-images.githubusercontent.com/34960418/152176321-0195e7c0-312b-4320-9d47-dfa87947d26f.png)
+
+
+# Add additional disk (Windows)
+
+
+
+
+
+
