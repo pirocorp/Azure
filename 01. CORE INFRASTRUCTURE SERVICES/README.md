@@ -351,7 +351,17 @@ For **authentication type** select the **password** option. In the **username** 
 
 ![image](https://user-images.githubusercontent.com/34960418/152124144-12a72842-37c8-4874-8298-f5af63d062a4.png)
 
-Hit the **review + create** button to examine what we are about to create
-
+Hit the **Review + create** button to examine what we are about to create
 
 ![image](https://user-images.githubusercontent.com/34960418/152124582-abe92a04-ec10-4c63-a619-bcebd81e90a7.png)
+
+
+Click on the **Create** button to initiate the creation process
+
+![image](https://user-images.githubusercontent.com/34960418/152125366-fc4782c1-47fe-49f7-8e82-ee63a224b8e6.png)
+
+
+
+
+
+
