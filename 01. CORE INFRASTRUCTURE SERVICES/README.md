@@ -424,7 +424,7 @@ Because this is a **standard Ubuntu** installation, we can add software as if we
 
 Let’s refresh the repositories information, upgrade installed packages, and then install the **nginx** web server. 
 
-```sh
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -y nginx
