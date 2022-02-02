@@ -788,3 +788,9 @@ az resource list --resource-group RG-Demo-3 --query [].[name,type] --output tabl
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/152186644-d53a952d-732e-40a8-8351-eecaa6f08add.png)
+
+Or with some additional formatting:
+
+```bash
+az resource list --resource-group RG-Demo-3 --query "[].{Name:name,Type:type}" --output table
+```
