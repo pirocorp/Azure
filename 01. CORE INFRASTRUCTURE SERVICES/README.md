@@ -663,5 +663,11 @@ Open the **Internet Explorer** browser and navigate to ```http://localhost```. T
 ![image](https://user-images.githubusercontent.com/34960418/152173688-1df79ff8-49eb-4635-af3f-e9e82396fe80.png)
 
 ## Adjust the security (Windows)
+Return to the **resource group** in the **Azure Portal**. Find the **VM-Windows-2012-nsg** security group created during the virtual machine deployment and click on it. In the **Overview**, there are two sections – **Inbound security rules** and **Outbound security rules**. They are like a summary (overview) of how the security group is configured. Click on the **Inbound security rules** under the **Settings** section. Click on the** Default rules** button to hide the default security rules. Only the one for **RDP** remains. It was created during the machine deployment. Now click on the **+ Add** button to add one more rule. 
 
+![image](https://user-images.githubusercontent.com/34960418/152175501-6389d8b4-54b2-4c08-9d5e-33ed79b1a557.png)
+
+Change the **Destination port ranges** value to **80**. Set the **Protocol** selector to **TCP**. In the **Name**, field enters **HTTP-Port-80**. Click on the **Add** button to confirm.
+
+![image](https://user-images.githubusercontent.com/34960418/152176013-f541747d-c2b8-46e2-b741-8f262e924cad.png)
 
