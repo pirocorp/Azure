@@ -834,3 +834,50 @@ curl 40.68.135.75
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/152189503-44b23bbd-f1a8-48cb-86e0-49a4df41e6b0.png)
+
+
+Add Additional Disk via the Azure CLI 
+
+```bash
+az vm disk attach --vm-name VM-Ubuntu --resource-group RG-Demo-3 --name VM-Ubuntu_Disk2 --size-gb 16 --sku Standard_LRS --new
+```
+
+Connect to VM’s public IP address with ssh with:
+
+```bash
+ssh demouser@40.68.135.75
+```
+
+Check what disks are available with:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152190412-70d1f8b5-ada5-4ee1-8c27-6320bc350a0d.png)
+
+
+You should see now that there is a new device – sdc. Now, let’s issue set of commands to make the disk usable. Start the disk partitioning program:
+
+```bash
+sudo fdisk /dev/sdc
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152190639-8c849690-794e-42eb-a4b5-ec587c651d48.png)
+
+
+Check again the situation with the disks:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152190768-271150ad-e11f-4a29-9ec3-0b6dfa1947bc.png)
+
+
+Let’s create a file system in the newly created partition there:
+
+```bash
+sudo mkfs.ext4 /dev/sdc1
+```
+
