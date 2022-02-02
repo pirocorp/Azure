@@ -646,3 +646,21 @@ Another certificate related warning will appear, confirm with **Yes**
 ![image](https://user-images.githubusercontent.com/34960418/152171899-f97032f9-9071-4ed5-bd7d-daa21e327e2c.png)
 
 ## Install a web server (Windows)
+
+Let’s install the **IIS** web server. Start a **PowerShell** session with the **Run as administration** option. Execute the following command (**-Restart** at the end can be skipped in this situation):
+
+```powershell
+Add-WindowsFeature -Name Web-Server -IncludeManagementTools -Restart
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152173296-9cc6661f-a7c5-4f74-bf3e-c0d171c6396e.png)
+
+There are other ways to achieve the same. For example, using the **Server Manager** and **Add Roles and Features** option. 
+
+Open the **Internet Explorer** browser and navigate to ```http://localhost```. The default site should appear. If you return to your host machine and try to reach the site from the outside, an error will be returned.
+
+![image](https://user-images.githubusercontent.com/34960418/152173688-1df79ff8-49eb-4635-af3f-e9e82396fe80.png)
+
+## Adjust the security (Windows)
+
+
