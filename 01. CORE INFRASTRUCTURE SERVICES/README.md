@@ -590,4 +590,29 @@ Select the appropriate **Subscription** if you have more than one. For **Resourc
 ![image](https://user-images.githubusercontent.com/34960418/152161052-9ed257ca-12e3-41c6-ade6-989acaaf75e0.png)
 
 
+If all looks good, proceed by clicking the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/152161284-8dfc753e-68c6-4280-9aaf-b68c2ea75c42.png)
+
+
+After Resource group creation, in the **Search** box (top of the screen), type **Marketplace** and hit the Enter key. Then click on **Compute** item in **Categories**. Find **Windows Server** and click on it. In the **Select a plan** drop-down select, **[smalldisk] Windows Server 2012 R2 Datacenter**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/152162931-b3c0cff5-b97f-40c8-a942-615c6593e15a.png)
+
+
+Select the appropriate **Subscription**. In the **Resource group** drop-down select **RG-Demo-2**. For **Virtual machine name** enter **VM-Windows-2012**. Click on **Select size**. Select the **B1s** size (**B1ms** or **B2** will be better, but will incur more expenses) and click on the **Select** button. In the **Username** field enter **DemoUser**. For a password use for example **DemoPassword-2022**. Click on the **Review + create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/152163843-c89326e9-0070-43ee-8869-f5db5273a509.png)
+
+
+Click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/152163941-a11fd173-d98f-4747-be51-7c3bc5844603.png)
+
+Sit back and watch the deployment process. After a while, between one and two minutes, the machine will be ready
+
+![image](https://user-images.githubusercontent.com/34960418/152164143-f8fdcb8f-9dcc-4d60-9951-9c86312930c8.png)
+
+
+
 
