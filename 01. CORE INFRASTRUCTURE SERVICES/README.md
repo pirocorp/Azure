@@ -1,10 +1,11 @@
 # Jump to practical guides
 
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
-  - [Connect to the VM](#connect-to-the-vm)
-  - [Adjust the security](#adjust-the-security)
-  - [Add additional disk](#add-additional-disk)
+  - [Connect to the VM (Linux)](#connect-to-the-vm)
+  - [Adjust the security (Linux)](#adjust-the-security)
+  - [Add additional disk (Linux))](#add-additional-disk)
 - [Create a Windwos VM](#create-a-windows-vm)
+  - [Connect to the VM (Windows)]()
 
 
 # Cloud Building Blocks
@@ -617,3 +618,4 @@ In the list of groups, click on the **RG-Demo-2** group. List resources created 
 
 ![image](https://user-images.githubusercontent.com/34960418/152164823-d0c66cdd-eedc-49ef-86ce-4381674838e8.png)
 
+## Connect to the VM (Windows)
