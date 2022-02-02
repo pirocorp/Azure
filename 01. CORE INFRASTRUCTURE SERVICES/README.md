@@ -422,7 +422,7 @@ Here we can execute standard Linux commands ```like``` ```ps```, ```top```, ```l
 
 Because this is a **standard Ubuntu** installation, we can add software as if we are working on a “regular” VM. 
 
-Let’s refresh the repositories information, upgrade installed packages, and then install the **nginx** web server. 
+Refresh the repositories information, upgrade installed packages, and install the **nginx** web server with these commands. Use the **sudo** in front of every command above because of higher privileges needed to modify the system configuration.
 
 ```bash
 sudo apt-get update
@@ -430,8 +430,13 @@ sudo apt-get upgrade
 sudo apt-get install -y nginx
 ```
 
+Check if the web server is running:
 
+```bash
+systemctl status nginx
+```
 
+![image](https://user-images.githubusercontent.com/34960418/152135987-07cb2114-b073-4e90-a46e-774115681634.png)
 
 
 
