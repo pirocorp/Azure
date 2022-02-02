@@ -680,8 +680,9 @@ Now, switch back to the browser tab with the error and hit refresh. You should s
 
 # Add additional disk (Windows)
 
+Return to the RDP session or re-establish a new one. Let’s check-in **Disk Management** what disk devices are available and how they are utilized. We can see that there are two disk drives – **Disk 0** (C: - the operating system is installed there) and **Disk 1** (D: - temp disk).
 
-
+![image](https://user-images.githubusercontent.com/34960418/152177981-3816d356-890c-4a8c-927a-cf20074fab9d.png)
 
 
 
