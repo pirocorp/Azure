@@ -364,6 +364,7 @@ Now, we can sit and watch the **deployment** process. It will finish in 30 or so
 
 ![image](https://user-images.githubusercontent.com/34960418/152125625-6434100a-a742-40fa-8c0b-db7460a40319.png)
 
+Once deployment is complete click on **Go to resource** button.
 
-
+![image](https://user-images.githubusercontent.com/34960418/152125946-a58dcc98-f6ad-4f1c-b3e9-756eccf9313f.png)
 
