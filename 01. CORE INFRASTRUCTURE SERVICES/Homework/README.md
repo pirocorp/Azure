@@ -55,7 +55,71 @@ Connect to VM’s public IP address with ssh with:
 ssh homeuser@20.123.151.220
 ```
 
+Check what disks are available with:
 
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152348003-19f69bf3-c7b6-4460-8de4-517368584263.png)
+
+
+Partition disk:
+
+```bash
+sudo fdisk /dev/sdc
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152348192-7429bde4-916d-4aea-b2d8-6d937298053a.png)
+
+
+Check again the situation with the disks:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152348328-544a86de-cbde-4e3b-9168-cb4f614e5390.png)
+
+
+Create a file system in the newly created partition there:
+
+```bash
+sudo mkfs.ext4 /dev/sdc1
+```
+
+Mount the disk:
+
+```bash
+sudo mkdir /disk
+sudo mount /dev/sdc1 /disk
+```
+
+Check again the situation with the disks:
+
+```bash
+lsblk
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152348678-2056ca99-8b0d-4905-bfd6-30a3fe876a43.png)
+
+
+To make disk auto-mountable on reboot, change the **/etc/fstab** file
+
+```bash
+sudo nano /etc/fstab
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152349108-b7c5df8e-41e3-411e-9c6a-32c2f535860c.png)
+
+
+Test if everything with the **/etc/fstab** file is okay:
+
+```bash
+sudo mount -a
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152349271-56f5a4d8-d8a9-4b80-921d-b9e34a1ee8fe.png)
 
 
 
