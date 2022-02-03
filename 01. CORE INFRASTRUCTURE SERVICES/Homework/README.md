@@ -167,4 +167,10 @@ curl http://localhost:8080
 ![image](https://user-images.githubusercontent.com/34960418/152352103-fa26b563-5074-4e9a-ab64-8e5f36b9aa95.png)
 
 
+Modify index page to include my SoftUni ID
 
+```bash
+sudo nano /var/www/html/index.html
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152352581-510b0f6a-8896-418e-ab18-ce4792df5bd1.png)
