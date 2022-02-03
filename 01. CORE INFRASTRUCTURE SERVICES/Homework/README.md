@@ -34,3 +34,12 @@ az vm image list --publisher Canonical --offer 0001-com-ubuntu-server-focal --lo
 ![image](https://user-images.githubusercontent.com/34960418/152344264-fe86c7a6-bec4-4ca9-b2e9-eaa9831286ec.png)
 
 
+Create VM:
+
+```bash
+az vm create --name VM-Ubuntu-20.04 --resource-group Homework --image Canonical:0001-com-ubuntu-server-focal:20_04-lts:latest --size Standard_B1s --admin-username homeuser --admin-password HomePassword-2022 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152346356-ff99c85a-fdce-47c6-8757-b0274dc2e4f4.png)
+
+
