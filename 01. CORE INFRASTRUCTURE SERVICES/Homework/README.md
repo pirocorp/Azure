@@ -173,4 +173,4 @@ Modify index page to include my SoftUni ID
 sudo nano /var/www/html/index.html
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/152352581-510b0f6a-8896-418e-ab18-ce4792df5bd1.png)
+![image](https://user-images.githubusercontent.com/34960418/152353407-dd54adaf-2b21-43ac-9b35-4b0842768678.png)
