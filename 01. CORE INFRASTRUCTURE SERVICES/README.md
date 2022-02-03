@@ -1,5 +1,5 @@
 # Jump to practical guides
-
+- [Consoles Crash Course](#consoles-crash-course)
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
   - [Connect to the VM (Linux)](#connect-to-the-vm)
   - [Install a web server (Linux)](#install-a-web-server)
