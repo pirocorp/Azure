@@ -1050,3 +1050,6 @@ az group delete --name RG-Demo-4 --yes --no-wait
 ```powershell
 Get-AzResourceGroup RG-Demo-* | Remove-AzResourceGroup -Force
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/152208823-8555427f-f6c0-44c7-bece-7c5e4ceb1106.png)
+
