@@ -196,3 +196,9 @@ curl http://20.123.151.220:8080
 
 ![image](https://user-images.githubusercontent.com/34960418/152354336-f05a0558-781a-4f08-9c72-364f0d38af2b.png)
 
+
+Clean UP
+
+```bash
+az group delete --name Homework --yes --no-wait
+```
