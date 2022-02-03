@@ -174,3 +174,25 @@ sudo nano /var/www/html/index.html
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/152353407-dd54adaf-2b21-43ac-9b35-4b0842768678.png)
+
+
+Return to host. 
+
+```bash
+exit
+```
+
+Open port 8080
+
+```bash
+az vm open-port --name VM-Ubuntu-20.04 --resource-group Homework --port 8080
+```
+
+The site must be reachable now. Test with:
+
+```bash
+curl http://20.123.151.220:8080
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152354336-f05a0558-781a-4f08-9c72-364f0d38af2b.png)
+
