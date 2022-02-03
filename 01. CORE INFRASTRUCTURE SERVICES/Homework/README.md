@@ -130,6 +130,7 @@ sudo apt install apache2
 ```
 
 Check with the systemd init system to make sure the service is running by typing:
+
 ```bash
 sudo systemctl status apache2
 ```
@@ -137,6 +138,33 @@ sudo systemctl status apache2
 ![image](https://user-images.githubusercontent.com/34960418/152350134-ef470a85-8efd-4110-ad5c-efb3bd7baae6.png)
 
 
+[Change listening port](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04)
+
+```bash
+sudo nano /etc/apache2/ports.conf
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152351092-8e0acba3-476a-4a1f-9f79-f1e9cc40bf7c.png)
+
+```bash
+sudo nano /etc/apache2/sites-enabled/000-default.conf
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152351472-13df0836-51d2-46d4-9135-96a2944b6730.png)
+
+
+Restart apache server
+```bash
+sudo systemctl restart apache2
+```
+
+Check that apache listens on port 8080
+
+```bash
+curl http://localhost:8080
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152352103-fa26b563-5074-4e9a-ab64-8e5f36b9aa95.png)
 
 
 
