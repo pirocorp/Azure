@@ -43,4 +43,20 @@ az vm create --name VM-Ubuntu-20.04 --resource-group Homework --image Canonical:
 ![image](https://user-images.githubusercontent.com/34960418/152346487-685ebf89-50a5-4f31-85bc-2c1d621660e3.png)
 
 
+Add Additional Disk:
+
+```bash
+az vm disk attach --vm-name VM-Ubuntu-20.04 --resource-group Homework --name VM-Ubuntu-20.04_Disk2 --size-gb 20 --sku Standard_LRS --new --output table
+```
+
+Connect to VM’s public IP address with ssh with:
+
+```bash
+ssh homeuser@20.123.151.220
+```
+
+
+
+
+
 
