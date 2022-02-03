@@ -1,5 +1,4 @@
 # Jump to practical guides
-- [Consoles Crash Course](#consoles-crash-course)
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
   - [Connect to the VM (Linux)](#connect-to-the-vm)
   - [Install a web server (Linux)](#install-a-web-server)
@@ -11,6 +10,7 @@
   - [Adjust the security (Windows)](#adjust-the-security-windows)
   - [Add additional disk (Windows)](#add-additional-disk-windows)
  - [Azure the Console Way](#azure-the-console-way)
+   - [Consoles Crash Course](#consoles-crash-course) 
    - [Create а Simple Solution with Azure CLI](#create-%D0%B0-simple-solution-with-azure-cli)
    - [Create a Simple Solution with PowerShell](#create-simple-solution-with-powershell)
  - [Clean Up](#clean-up)
@@ -278,64 +278,6 @@ Collections of libraries for programming languages. Used to build applications t
 
 Available both on **App Store** and **Google Play**. Monitor the health and status of Azure resources. Quickly diagnose and fix issues. Run commands to manage Azure resources.
 
-
-# Consoles Crash Course
-
-## CMD
-
-- This is the classic command-line interface of Windows
-- Usually, no Tab completion of commands and arguments
-- Environment variables are declared and used like:
-
-```cmd
-set LOCATION=westeurope
-set RESOURCE_GROUP=RG-Demo-CMD
-az group create --name %RESOURCE_GROUP% --location %LOCATION% 
-```
-
-Individual lines in a multi-line command are separated with ```^```
-
-```cmd
-C:\> az group create --name %RESOURCE_GROUP% ^
-More? --location %LOCATION%
-```
-
-## Bash
-
-- Case sensitive shell available in most Unix-like OSes 
-- Usually, tab completion is available
-- Environment variables are declared and used like:
-
-```bash
-LOCATION=westeurope
-RESOURCE_GROUP=RG-Demo-Bash
-az group create --name $RESOURCE_GROUP --location $LOCATION 
-```
-
-Individual lines in a multi-line command are separated with ```\```
-
-```bash
-$ az group create --name $RESOURCE_GROUP \
->> --location $LOCATION
-```
-
-## PowerShell (Core)
-
-- Case in-sensitive shell available in Windows, Linux, and macOS
-- Usually, tab completion is available
-- Environment variables are declared and used like:
-
-```powershell
-$LOCATION="westeurope"
-$RESOURCE_GROUP="RG-Demo-PS"
-New-AzResourceGroup -Name $RESOURCE_GROUP -Location $LOCATION
-```
-Individual lines in a multi-line command are separated with ``` ` ```
-
-```powershell
-PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP ` 
->> -Location $LOCATION
-```
 
 
 # Create a Linux (Ubuntu-based) VM (Azure Portal)
@@ -707,6 +649,65 @@ Start the **New Simple Volume Wizard** and follow the instructions. After a whil
 
 
 # Azure the Console Way
+
+## Consoles Crash Course
+
+### CMD
+
+- This is the classic command-line interface of Windows
+- Usually, no Tab completion of commands and arguments
+- Environment variables are declared and used like:
+
+```cmd
+set LOCATION=westeurope
+set RESOURCE_GROUP=RG-Demo-CMD
+az group create --name %RESOURCE_GROUP% --location %LOCATION% 
+```
+
+Individual lines in a multi-line command are separated with ```^```
+
+```cmd
+C:\> az group create --name %RESOURCE_GROUP% ^
+More? --location %LOCATION%
+```
+
+### Bash
+
+- Case sensitive shell available in most Unix-like OSes 
+- Usually, tab completion is available
+- Environment variables are declared and used like:
+
+```bash
+LOCATION=westeurope
+RESOURCE_GROUP=RG-Demo-Bash
+az group create --name $RESOURCE_GROUP --location $LOCATION 
+```
+
+Individual lines in a multi-line command are separated with ```\```
+
+```bash
+$ az group create --name $RESOURCE_GROUP \
+>> --location $LOCATION
+```
+
+### PowerShell (Core)
+
+- Case in-sensitive shell available in Windows, Linux, and macOS
+- Usually, tab completion is available
+- Environment variables are declared and used like:
+
+```powershell
+$LOCATION="westeurope"
+$RESOURCE_GROUP="RG-Demo-PS"
+New-AzResourceGroup -Name $RESOURCE_GROUP -Location $LOCATION
+```
+Individual lines in a multi-line command are separated with ``` ` ```
+
+```powershell
+PS C:\> New-AzResourceGroup -Name $RESOURCE_GROUP ` 
+>> -Location $LOCATION
+```
+
 
 ## Create а Simple Solution with Azure CLI
 
