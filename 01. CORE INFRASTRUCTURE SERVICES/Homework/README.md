@@ -121,6 +121,22 @@ sudo mount -a
 
 ![image](https://user-images.githubusercontent.com/34960418/152349271-56f5a4d8-d8a9-4b80-921d-b9e34a1ee8fe.png)
 
+Install the apache2 package
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install apache2
+```
+
+Check with the systemd init system to make sure the service is running by typing:
+```bash
+sudo systemctl status apache2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/152350134-ef470a85-8efd-4110-ad5c-efb3bd7baae6.png)
+
+
 
 
 
