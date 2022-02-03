@@ -2,10 +2,10 @@
 
 Utilizing what was discussed and shown during the lecture, try to do the following:
 1.	Create an Ubuntu Server 20.04 based virtual machine using the B1s size or similar
-2.	Add a second hard disk with 20 GB in size, format it with a file system (i.e. EXT4) and mount it
+2.	Add a second hard disk with 20 GB in size, format it with a file system (EXT4), and mount it
 3.	Install Apache web server and make sure it is started and set to start automatically on boot
 4.	Adjust the configuration of Apache to make it listen on port 8080 instead of port 80
-5.	Make sure that the service is accessible from Internet
+5.	Make sure that the service is accessible from the Internet
 6.	Create a simple index.html page that displays your SoftUni ID 
 
 # Soluttion
@@ -49,7 +49,7 @@ Add Additional Disk:
 az vm disk attach --vm-name VM-Ubuntu-20.04 --resource-group Homework --name VM-Ubuntu-20.04_Disk2 --size-gb 20 --sku Standard_LRS --new --output table
 ```
 
-Connect to VM’s public IP address with ssh with:
+Connect to VM’s public IP address with ssh:
 
 ```bash
 ssh homeuser@20.123.151.220
@@ -72,8 +72,7 @@ sudo fdisk /dev/sdc
 
 ![image](https://user-images.githubusercontent.com/34960418/152348192-7429bde4-916d-4aea-b2d8-6d937298053a.png)
 
-
-Check again the situation with the disks:
+Check the situation with the disks:
 
 ```bash
 lsblk
@@ -95,7 +94,7 @@ sudo mkdir /disk
 sudo mount /dev/sdc1 /disk
 ```
 
-Check again the situation with the disks:
+Check the situation with the disks:
 
 ```bash
 lsblk
@@ -104,7 +103,7 @@ lsblk
 ![image](https://user-images.githubusercontent.com/34960418/152348678-2056ca99-8b0d-4905-bfd6-30a3fe876a43.png)
 
 
-To make disk auto-mountable on reboot, change the **/etc/fstab** file
+Change the **/etc/fstab** file to make disk auto-mountable on reboot.
 
 ```bash
 sudo nano /etc/fstab
@@ -153,12 +152,12 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf
 ![image](https://user-images.githubusercontent.com/34960418/152351472-13df0836-51d2-46d4-9135-96a2944b6730.png)
 
 
-Restart apache server
+Restart Apache server
 ```bash
 sudo systemctl restart apache2
 ```
 
-Check that apache listens on port 8080
+Check that Apache listens on port 8080
 
 ```bash
 curl http://localhost:8080
