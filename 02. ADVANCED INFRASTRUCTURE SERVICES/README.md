@@ -129,13 +129,44 @@ For **Name** enter **p11lb-back-pool**. In the **Virtual network** drop-down lis
 
 ![image](https://user-images.githubusercontent.com/34960418/153203341-97819d3c-4a88-45e5-939e-7ab68e9e0f70.png)
 
+
 Slecet both **p11vm1** and **p11vm2** VMs and click **Add** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/153203647-e912562c-7c95-4d57-88f7-ed43ea96a29b.png)
 
+
 Add these VMs to the backend pool. Select both VMs and click the **Add** button.
 
-![image](https://user-images.githubusercontent.com/34960418/153204298-c8936768-bfb5-4e5c-8cbc-091e63a5cd1d.png)
+![image](https://user-images.githubusercontent.com/34960418/153205131-b977f571-6148-47c4-8710-b9d5d6ea7d66.png)
+
+
+Next, go to **Health probes**. Click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153205361-0d5f3622-0bf2-4c11-8f4b-b50e119cd839.png)
+
+
+For **Name** enter **p11lb-health**, accept the default values and click on **Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153205610-a950a322-33a0-43ac-b73d-fdaa061b7a6d.png)
+
+
+Next, go to the **Load balancing rules** section in the menu. Click on the **+ Add** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/153206010-882ad6c0-f23d-49a8-a219-37af8b48fb14.png)
+
+
+In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select from drop-down menu **p11lb-config**. From **Backend pool** drop-down select **p11lb-back-pool**. In the **Port** field enter **80**. For **Backend port** field enter **80**. In **Health probe** drop-down select **p11lb-health**. Click **Add** button.
+
+
+![image](https://user-images.githubusercontent.com/34960418/153207382-8a430515-642d-4fc9-b138-9231ff65c27d.png)
+
+
+Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
+
+
+
+
+
 
 
 
