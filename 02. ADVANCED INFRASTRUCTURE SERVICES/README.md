@@ -181,7 +181,8 @@ In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select f
 Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
 
 
-## Two VMs in an Availability Set (Azure CLI)
+
+## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)
 
 
 
