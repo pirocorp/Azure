@@ -1,7 +1,7 @@
 # TOC
 
 - [Virtual Machines](#virtual-machines)
-  - [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group)
+  - [Two VMs in an Availability Set (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
   - [Virtual Machine Scale Sets](#virtual-machine-scale-sets)
   - [Cloud Init](#cloud-init)
 - [Networking](#networking)
