@@ -133,7 +133,9 @@ Slecet both **p11vm1** and **p11vm2** VMs and click **Add** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/153203647-e912562c-7c95-4d57-88f7-ed43ea96a29b.png)
 
+Now these VMs can be added to backend pool. Slect both VMs and click **Add** button.
 
+![image](https://user-images.githubusercontent.com/34960418/153204298-c8936768-bfb5-4e5c-8cbc-091e63a5cd1d.png)
 
 
 
