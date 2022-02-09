@@ -14,6 +14,10 @@
 
 # Virtual Machines
 
+## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group
+
+### Azure Portal
+
 ## [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/)
 
 Create and manage a group of identical, load-balanced, and autoscaled VMs. Easy to create and manage multiple VMs. Provides high availability and application resiliency. Applications can automatically scale as resource demand changes. Works at large-scale.
