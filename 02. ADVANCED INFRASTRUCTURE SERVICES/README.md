@@ -329,6 +329,19 @@ az group delete --name RG-Demo-P1-1 --yes --no-wait
 ```
 
 
+## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
