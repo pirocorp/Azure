@@ -334,13 +334,206 @@ az group delete --name RG-Demo-P1-1 --yes --no-wait
 ## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)
 
 
-If using the tool on-premise
+If using the tool on-premise. If using the **Azure Cloud Shell**, this is not necessary.
 
 ```powershell
 Connect-AzAccount
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/153220487-cc7e3478-60f4-4281-a43c-9674e47a78c9.png)
+
+
+### Resource group
+
+Creating a resource group is done with
+
+```poweshell
+$LO = "westeurope"
+$RG = "RG-Demo-P1-1"
+New-AzResourceGroup -Name $RG -Location $LO
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153220961-88414397-c52f-4955-97ff-931bb7e2afa2.png)
+
+
+### Network security group
+
+First, create the network security group rules
+
+```powershell
+$rule1 = New-AzNetworkSecurityRuleConfig -Name Port_22 -Access Allow -Protocol Tcp `
+-Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * `
+-DestinationAddressPrefix * -DestinationPortRange 22
+$rule2 = New-AzNetworkSecurityRuleConfig -Name Port_80 -Access Allow -Protocol Tcp `
+-Direction Inbound -Priority 110 -SourceAddressPrefix * -SourcePortRange * `
+-DestinationAddressPrefix * -DestinationPortRange 80
+```
+
+And then the security group
+
+```powershell
+$nsg = New-AzNetworkSecurityGroup -Name "p11sg" -ResourceGroupName $RG -Location $LO `
+-SecurityRules $rule1,$rule2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153221706-e9980039-d0b1-4797-8f59-b9e81fbee6ee.png)
+
+
+### Virtual network
+
+First, define the subnet
+
+```powershell
+$S1 = New-AzVirtualNetworkSubnetConfig -Name 'default' -AddressPrefix '10.0.0.0/24' `
+-NetworkSecurityGroup $nsg
+```
+
+Then, the network itself
+
+```powershell
+$VN = New-AzVirtualNetwork -Name 'p11vnet' -ResourceGroupName $RG `
+-AddressPrefix '10.0.0.0/16' -Location $LO -Subnet $S1
+```
+
+Now, it is time to define the two network interface cards
+
+```powershell
+$N1 = New-AzNetworkInterface -Name 'p11nic1' -ResourceGroupName $RG -Location $LO `
+-Subnet $VN.Subnets[0]
+$N2 = New-AzNetworkInterface -Name 'p11nic2' -ResourceGroupName $RG -Location $LO `
+-Subnet $VN.Subnets[0]
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153222475-fcbf09d4-7c58-46c9-af8e-53036a927b23.png)
+
+
+### Virtual machines
+
+Create the availability set
+
+```powershell
+$AS = New-AzAvailabilitySet -Name "p11as" -ResourceGroupName $RG -Location $LO -Sku Aligned `
+-PlatformFaultDomainCount 2 -PlatformUpdateDomainCount 2
+```
+
+Store the credentials for the two virtual machines, for example **demouser** / **DemoPassword-2022**
+
+```powershell
+$CR = Get-Credential
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153223207-fe84b130-093a-4e71-9e6b-6d7164c46c75.png)
+
+
+Store the contents of the provision file in a variable
+
+```powershell
+$CD = Get-Content -Raw cloud-init.yaml
+```
+
+Create virtual machine configuration for the first machine
+
+```powershell
+$VC = New-AzVMConfig -VMName 'p11vm1' -VMSize 'Standard_B1s' -AvailabilitySetId $AS.Id | `
+Set-AzVMOperatingSystem -Linux -ComputerName 'p11vm1' -Credential $CR `
+-CustomData $CD | Set-AzVMSourceImage -PublisherName 'Canonical' `
+-Offer 'UbuntuServer' -Skus '18.04-LTS' -Version latest | Add-AzVMNetworkInterface -Id $N1.Id
+```
+
+Then, the machine itself
+
+```powershell
+New-AzVM -ResourceGroupName $RG -Location $LO -VM $VC
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153223981-6ded203d-fdf4-42d8-97e4-82e73448e73d.png)
+
+
+Same procedure for the second one – configuration
+
+```powershell
+$VC = New-AzVMConfig -VMName 'p11vm2' -VMSize 'Standard_B1s' -AvailabilitySetId $AS.Id | `
+Set-AzVMOperatingSystem -Linux -ComputerName 'p11vm2' -Credential $CR `
+-CustomData $CD | Set-AzVMSourceImage -PublisherName 'Canonical' `
+-Offer 'UbuntuServer' -Skus '18.04-LTS' -Version latest | Add-AzVMNetworkInterface -Id $N2.Id
+```
+
+And then the machine
+
+```powershell
+New-AzVM -ResourceGroupName $RG -Location $LO -VM $VC
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153224582-916d88a5-80e4-4c62-baa0-db8d804f3f17.png)
+
+
+### Load balancer
+
+Define the public IP address
+
+```powershell
+$LBIP = New-AzPublicIpAddress -Name 'p11lb-ip' -ResourceGroupName $RG `
+-Location $LO -AllocationMethod Dynamic -Sku Basic
+```
+
+
+Then, the front-end part of the load balancer
+
+```powershell
+$LBFE = New-AzLoadBalancerFrontendIpConfig -Name 'p11lb-fe' -PublicIpAddress $LBIP
+```
+
+
+Define the back-end pool
+
+```powershell
+$LBBE = New-AzLoadBalancerBackendAddressPoolConfig -Name 'p11lb-be'
+```
+
+
+The health probe as well
+
+```powershell
+$LBHP = New-AzLoadBalancerProbeConfig -Name 'p11lb-hp' -Protocol tcp -Port 80 `
+-IntervalInSeconds 5 -ProbeCount 2
+```
+
+
+The rule can be created with this command
+
+```powershell
+$LBRL = New-AzLoadBalancerRuleConfig -Name 'p11lb-rule' -FrontendIpConfiguration $LBFE `
+-BackendAddressPool $LBBE -Protocol Tcp -FrontendPort 80 -BackendPort 80 -Probe $LBHP
+```
+
+
+And finally, the load balancer
+
+```powershell
+$LB = New-AzLoadBalancer -Name 'p11lb' -ResourceGroupName $RG -Location $LO `
+-FrontendIpConfiguration $LBFE -BackendAddressPool $LBBE -Probe $LBHP -LoadBalancingRule $LBRL
+```
+
+
+One last step remains, we must assign the network adapters to the back-end pool
+
+```powershell
+$N1.IpConfigurations[0].LoadBalancerBackendAddressPools = $LBBE
+$N1 | Set-AzNetworkInterface
+$N2.IpConfigurations[0].LoadBalancerBackendAddressPools = $LBBE
+$N2 | Set-AzNetworkInterface
+```
+
+
+Get the public IP address of the load balancer
+
+```powershell
+Get-AzPublicIPAddress -Name 'p11lb-ip' -ResourceGroupName $RG | Select IpAddress
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153226264-fd52ca89-3df5-4957-9bf2-96ec1e6f03e6.png)
+
+![image](https://user-images.githubusercontent.com/34960418/153226365-e4e5493d-da28-49b5-99b5-c2d80276ea30.png)
 
 
 
