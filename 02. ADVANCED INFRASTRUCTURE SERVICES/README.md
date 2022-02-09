@@ -18,6 +18,7 @@
   - [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
   - [Virtual Machine Scale Set (Azure CLI)](#virtual-machine-scale-set-azure-cli)
   - [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
+  - [Blob + Files (Azure Portal)]()
 
 # Virtual Machines
 
@@ -952,3 +953,6 @@ And navigate in a browser tab to this URL ```http://<public ip>/index.php```
 ```powershell
 Get-AzResourceGroup RG-Demo-P1-2 | Remove-AzResourceGroup -Force
 ```
+
+## BLOB + Files (Azure Portal)
+
