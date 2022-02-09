@@ -63,6 +63,14 @@ https://<storage-acc>.blob.core.windows.net/<container>/<blob>
 
 ## [Azure Files](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction)
 
+Fully managed file shares in the cloud accessible via **SMB**. Can be mounted concurrently by cloud or on-premise deployments. Azure Files can be cached on Windows Servers with **Azure File Sync**.
+
+Azure File **URI**
+
+```
+https://<storage-acc>.file.core.windows.net/<share>/<dir>/<file>
+```
+
 ## [Storage Access](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-manage)
 
 ## [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
