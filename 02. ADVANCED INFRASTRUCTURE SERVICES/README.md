@@ -1,8 +1,8 @@
 # TOC
 
 - [Virtual Machines](#virtual-machines)
-  - [Virtual Machine Scale Sets](#virtual-machine-scale-sets)
   - [Cloud Init](#cloud-init)
+  - [Virtual Machine Scale Sets](#virtual-machine-scale-sets)  
   - [Two VMs in an Availability Set (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
   - [Two VMs in an Availability Set (Azure CLI)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-cli)
 - [Networking](#networking)
@@ -16,10 +16,6 @@
 
 # Virtual Machines
 
-## [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/)
-
-Create and manage a group of identical, load-balanced, and autoscaled VMs. Easy to create and manage multiple VMs. Provides high availability and application resiliency. Applications can automatically scale as resource demand changes. Works at large-scale.
-
 ## [Cloud Init](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init)
 
 Configure a virtual machine or virtual machine scale sets at provisioning time. Scripts run on first boot once the resources have been provisioned. It is a widely used approach to customize Linux VMs. Installs packages and writes files, or configures users and security. Uses YAML.
@@ -32,6 +28,10 @@ package_upgrade: true
 packages:
   - httpd
 ```
+
+## [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/)
+
+Create and manage a group of identical, load-balanced, and autoscaled VMs. Easy to create and manage multiple VMs. Provides high availability and application resiliency. Applications can automatically scale as resource demand changes. Works at large-scale.
 
 
 ## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)
@@ -181,8 +181,17 @@ In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select f
 Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
 
 
-
 ## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)
+
+
+
+
+
+
+
+
+
+
 
 
 
