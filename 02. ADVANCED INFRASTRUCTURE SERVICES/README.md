@@ -82,3 +82,5 @@ Two 512-bit storage account access keys are automatically created. They are used
 Used for granting granular access to resources.
 
 ## [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+
+Free tool to easily manage Azure cloud storage resources. Available for Windows, Linux, and macOS. Accessible, intuitive, feature-rich graphical user interface. Can work also disconnected from the cloud or offline with local emulators.
