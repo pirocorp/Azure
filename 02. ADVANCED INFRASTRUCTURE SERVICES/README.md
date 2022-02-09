@@ -23,6 +23,14 @@ Go to Resource groups. And create a new resource group ```RG-Demo-P1-1``` in the
 
 ![image](https://user-images.githubusercontent.com/34960418/153183982-59348949-01b7-4c09-bab1-1507c426c8b9.png)
 
+Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Virtual Network** and hit **Enter**. Then click on the **Create** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/153184378-7498d8f0-f8c9-4923-84e2-d23b86f027e3.png)
+
+
+For name enter ```p11vnet```. Ensure that the **Region** is set to **West Europe**.
+
+![image](https://user-images.githubusercontent.com/34960418/153184958-c53215a1-b68d-4053-8771-3d0b2d0e108c.png)
 
 
 
