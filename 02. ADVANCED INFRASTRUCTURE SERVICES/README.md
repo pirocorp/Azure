@@ -157,8 +157,8 @@ Next, go to the **Load balancing rules** section in the menu. Click on the **+ A
 
 In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select from drop-down menu **p11lb-config**. From **Backend pool** drop-down select **p11lb-back-pool**. In the **Port** field enter **80**. For **Backend port** field enter **80**. In **Health probe** drop-down select **p11lb-health**. Click **Add** button.
 
+![image](https://user-images.githubusercontent.com/34960418/153209891-110830a6-4c13-459f-b0bc-a3d97449904d.png)
 
-![image](https://user-images.githubusercontent.com/34960418/153207382-8a430515-642d-4fc9-b138-9231ff65c27d.png)
 
 
 Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
