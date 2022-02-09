@@ -322,7 +322,11 @@ az network public-ip show --name p11lb-ip --resource-group RG-Demo-P1-1 --query 
 ![image](https://user-images.githubusercontent.com/34960418/153218756-b217f58b-551c-467a-8ca1-9c4242751566.png)
 
 
+### Clean Up
 
+```bash
+az group delete --name RG-Demo-P1-1 --yes --no-wait
+```
 
 
 
