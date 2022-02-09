@@ -1,7 +1,16 @@
 # TOC
 
 - [Virtual Machines](#virtual-machines)
-  - []()
+  - [Virtual Machine Scale Sets](#virtual-machine-scale-sets)
+  - [Cloud Init](#cloud-init)
+- [Networking](#networking)
+  - [Networking (Security Groups)](#networking-security-groups)
+  - [Networking (Load Balancer)](#networking-load-balancer)
+- [Storage](#storage)
+  - [Azure Blob Storage](#azure-blob-storage)
+  - [Azure Files](#azure-files)
+  - [Storage Access](#storage-access)
+  - [Azure Storage Explorer](#azure-storage-explorer)
 
 # Virtual Machines
 
