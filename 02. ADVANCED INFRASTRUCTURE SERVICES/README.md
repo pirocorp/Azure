@@ -654,26 +654,43 @@ If using the tool on-premise. Not necessary with Azure Cloud Shell.
 az login
 ```
 
+### Resource group
+
+First create a resource group
+
+```bash
+az group create --name RG-Demo-P1-2 --location westeurope
+```
+
+### Virtual machine scale set
+
+Create a virtual machine scale set
+
+```bash
+az vmss create --resource-group RG-Demo-P1-2 --name vss --image UbuntuLTS --vm-sku Standard_B1s --instance-count 2 --upgrade-policy-mode automatic --custom-data cloud-init.yaml --authentication-type password --admin-username demouser --admin-password DemoPassword-2022 --output table
+```
+
+Create a load balancer rule
+
+```bash
+az network lb rule create --resource-group RG-Demo-P1-2 --name vss-lb-rule --lb-name vssLB --backend-pool-name vssLBBEPool --backend-port 80 --frontend-ip-name loadBalancerFrontEnd   --frontend-port 80 --protocol tcp --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153239506-e40cbaec-d301-4166-ab55-9c9434e653fe.png)
 
 
+Get the public IP address of the load balancer
+
+```bash
+az network public-ip show --resource-group RG-Demo-P1-2 --name vssLBPublicIP --query [ipAddress] --output tsv
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153239721-4bdd6220-b4f6-476c-9657-8b8c346ab327.png)
 
 
+And paste it into a browser window
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/34960418/153239890-f885da3a-935a-42fc-af6c-0c98031e5004.png)
 
 
 
