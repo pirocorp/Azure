@@ -538,6 +538,30 @@ Get-AzPublicIPAddress -Name 'p11lb-ip' -ResourceGroupName $RG | Select IpAddress
 ![image](https://user-images.githubusercontent.com/34960418/153226365-e4e5493d-da28-49b5-99b5-c2d80276ea30.png)
 
 
+### Clean UP
+
+```powershell
+Get-AzResourceGroup RG-Demo-P1-1 | Remove-AzResourceGroup -Force
+```
+
+
+## Virtual Machine Scale Set (Azure Portal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
