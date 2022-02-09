@@ -996,3 +996,29 @@ Click on the newly created container
 Now, we can upload one or more files to it. Click on the **Upload** button. Click on the **Browse** button and select one or more files, then click on **Open**. Finally, click on **Upload**.
 
 ![image](https://user-images.githubusercontent.com/34960418/153254830-6fccecc8-cec0-42a9-8f6b-ac960ed304bf.png)
+
+
+### Files
+
+Return to the storage account. Click on the **File shares** option. Click on the **+ File share** button to create one.
+
+![image](https://user-images.githubusercontent.com/34960418/153255411-013eb646-237c-4ff7-872f-966bcb3d902f.png)
+
+
+For **Name** enter **share**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/153255735-14c83500-b457-4dce-a13c-68293151ad83.png)
+
+
+Click on the **share**
+
+![image](https://user-images.githubusercontent.com/34960418/153255961-4f05472b-e8c7-405a-ae91-bd01a405e476.png)
+
+
+Then click on the Upload button to upload a file.
+
+![image](https://user-images.githubusercontent.com/34960418/153256120-e1c9862e-ae66-4499-bd18-50258a1e1045.png)
+![image](https://user-images.githubusercontent.com/34960418/153256181-6a483d0e-9b13-4564-8dd6-0c4d095ef1d4.png)
+
+
+### Storage Explorer
