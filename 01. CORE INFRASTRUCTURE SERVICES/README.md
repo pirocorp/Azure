@@ -1,3 +1,10 @@
+# TOC
+- [Cloud Building Blocks](#cloud-building-blocks)
+- [Types of Cloud Computing]()
+- [Types of Cloud Services]()
+- [Azure Architecture]()
+- [Azure Services]()
+
 # Jump to practical guides
 - [Create a Linux (Ubuntu-based) VM (Azure Portal)](#create-a-linux-ubuntu-based-vm-azure-portal)
   - [Connect to the VM (Linux)](#connect-to-the-vm)
@@ -14,7 +21,6 @@
    - [Create а Simple Solution with Azure CLI](#create-%D0%B0-simple-solution-with-azure-cli)
    - [Create a Simple Solution with PowerShell](#create-simple-solution-with-powershell)
  - [Clean Up](#clean-up)
-
 
 # Cloud Building Blocks
 
