@@ -40,9 +40,15 @@ Create and manage a group of identical, load-balanced, and autoscaled VMs. Easy 
 
 Go to [Azure Portal](https://portal.azure.com)
 
+
+### Resource group
+
 Go to Resource groups. And create a new resource group ```RG-Demo-P1-1``` in the ```West Europe``` region.
 
 ![image](https://user-images.githubusercontent.com/34960418/153183982-59348949-01b7-4c09-bab1-1507c426c8b9.png)
+
+
+### Virtual network
 
 Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Virtual Network** and hit **Enter**. Then click on the **Create** button. 
 
@@ -64,6 +70,8 @@ Finally, click on the **Create** button
 ![image](https://user-images.githubusercontent.com/34960418/153186036-ae9bc590-2e3c-4512-ad0b-58843c11f34b.png)
 
 
+### Network security group
+
 Return to the resource group and click on the **+ Create** button to add new resources. In the search field enter **Network security group** and hit **Enter**. Then click on the **Create** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/153186369-f30690d9-066c-4571-82b2-ecefaf87f7c1.png)
@@ -79,9 +87,16 @@ Once the deployment is done click on the **Go to resource** button. In the **Set
 ![image](https://user-images.githubusercontent.com/34960418/153189803-d34e1d79-c6eb-45cd-94a7-2efb54cfc44f.png)
 
 
+
+### Security rules
+
 In the **Settings** section click on the **Inbound security rules** to add two rules. Click on the **+ Add** button. Change **Destination port ranges** to **22**. Change **Protocol** to **TCP**. In the **Name** field enter **Port_22**. Click on the **Add** button. Repeat the procedure once again but change **22** to **80**.
 
 ![image](https://user-images.githubusercontent.com/34960418/153190888-82d84d83-7e3c-4a07-b361-4348e4778aab.png)
+
+
+
+### Virtual machines
 
 Return to the resource group and click on the **+ Add** button to add new resources. Select **Ubuntu Server 18.04 LTS** from the list of popular resources. Leave **Subscription** and **Resource group** as they are. In the **Virtual machine name** enter **p11vm1**. Set the **Region** to **West Europe**. For **Availability options** set **Availability set**. Click on the **Create new** under the **Availability set**. Change the **Size** to **Standard B1S**. Select **Password** as **Authentication type**. Enter ```demouser``` as **Username**. For **Password** set for example ```DemoPassword-2022```. In the **Public inbound ports** section select **None**. Click on the **Next: Disks button**. 
 
@@ -125,6 +140,9 @@ Both VMs must be accessible from their public IPs.
 
 ![image](https://user-images.githubusercontent.com/34960418/153199441-0174f918-2978-4d4f-8c44-d8404a9ed01c.png)
 
+
+
+### Load balancer
 
 Add a load balancer in front of the VMs. Return to the resource group and click on the **+ Create** button to add new resources. In the search field, enter Load Balancer and hit Enter. Then click on the Create button.
 
@@ -549,12 +567,13 @@ Get-AzResourceGroup RG-Demo-P1-1 | Remove-AzResourceGroup -Force
 ## Virtual Machine Scale Set (Azure Portal)
 
 
+Navigate to [Azure Portal](https://portal.azure.com).
 
 
+Go to **Resource groups**. Create new resource group **RG-Demo-P1-2** in the **West Europe** region.
 
 
-
-
+![image](https://user-images.githubusercontent.com/34960418/153229201-3f01ed5e-dd20-4790-8874-cd695a162549.png)
 
 
 
