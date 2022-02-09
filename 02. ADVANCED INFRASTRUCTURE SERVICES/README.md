@@ -19,6 +19,9 @@
 
 Go to [Azure Portal](https://portal.azure.com)
 
+Go to Resource groups. And create a new resource group ```RG-Demo-P1-1``` in the ```West Europe``` region.
+
+![image](https://user-images.githubusercontent.com/34960418/153183982-59348949-01b7-4c09-bab1-1507c426c8b9.png)
 
 
 
