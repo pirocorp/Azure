@@ -115,6 +115,30 @@ In the **Resource group** drop down select **RG-Demo-P1-1**. In the **Name** fie
 ![image](https://user-images.githubusercontent.com/34960418/153200982-b5f790c4-7a8a-4fcc-af66-45b76451ef0b.png)
 
 
+Click on **+ Add a frontend IP configuration**. In the Name field enter **p11lb-config**. For Public IP address click on **Create new** button. In the **Public IP address name** enter **p11lb-ip**. Click **OK** button. Then click **Add** button. And finaly click on **Review + Create** and then on **Create** buttons.
+
+![image](https://user-images.githubusercontent.com/34960418/153201928-d31663a8-ad77-4f42-badd-141bf5c6a1aa.png)
+
+
+Once the deployment is done click on the **Go to resource** button. In the **Settings** section click on the **Backend pools**. Then click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153202683-afd42aee-9555-4a0b-b466-8bd29126712f.png)
+
+
+For **Name** enter **p11lb-back-pool**. In the **Virtual network** drop-down list select the **p11vnet** created earlier. Change **Associated to** to **Virtual machines**. In the Virtual machines section click **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153203341-97819d3c-4a88-45e5-939e-7ab68e9e0f70.png)
+
+Slecet both **p11vm1** and **p11vm2** VMs and click **Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153203647-e912562c-7c95-4d57-88f7-ed43ea96a29b.png)
+
+
+
+
+
+
+
 
 
 
