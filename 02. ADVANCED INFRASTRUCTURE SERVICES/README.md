@@ -575,25 +575,28 @@ Get-AzResourceGroup RG-Demo-P1-1 | Remove-AzResourceGroup -Force
 
 ## Virtual Machine Scale Set (Azure Portal)
 
-
 Navigate to [Azure Portal](https://portal.azure.com).
 
 
-Go to **Resource groups**. Create new resource group **RG-Demo-P1-2** in the **West Europe** region.
+### Resource group
 
+Go to **Resource groups**. Create new resource group **RG-Demo-P1-2** in the **West Europe** region.
 
 ![image](https://user-images.githubusercontent.com/34960418/153229201-3f01ed5e-dd20-4790-8874-cd695a162549.png)
 
 
+### Virtual machines scale set
+
+Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Virtual machine scale set** and press **Enter**. Then click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153231307-4150c7e0-78c9-48c7-a8ee-352eb73c0baa.png)
 
 
 
+For the **Virtual machine scale set name** enter **vss**. Make sure that Make sure that West Europe is selected in the Region field is selected in the **Region** field. From the list of Operating system disk **images** choose **Ubuntu Server 18.04 LTS**. Set instance **size** to **Standard B1s**. For **Authentication type** select **Password**. In the **Username** field enter **demouser**. For password use **DemoPassword-2022**. Click on the **Next: Disks button**.
 
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/34960418/153232871-f3da206e-867a-4d2d-9035-9c4b3809ce7f.png)
 
 
 
