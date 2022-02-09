@@ -38,6 +38,9 @@ Leave the address space as it is. Make sure that it is **10.0.0.0/16**, and for 
 ![image](https://user-images.githubusercontent.com/34960418/153185856-20df7c37-b747-4192-9442-590172a6034a.png)
 
 
+Finally, click on the **Create** button
+
+![image](https://user-images.githubusercontent.com/34960418/153186036-ae9bc590-2e3c-4512-ad0b-58843c11f34b.png)
 
 
 
