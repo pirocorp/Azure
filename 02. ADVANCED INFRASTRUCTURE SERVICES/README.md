@@ -73,4 +73,12 @@ https://<storage-acc>.file.core.windows.net/<share>/<dir>/<file>
 
 ## [Storage Access](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-manage)
 
+**Access Keys**
+
+Two 512-bit storage account access keys are automatically created. They are used for authorized access to a storage account via SAS. They can be rotated and regenerated without interruption to applications. The storage account key is like the root password for a storage account. Avoid distributing, hard-coding, or saving it anywhere in plaintext.
+
+**Shared Access Signature (SAS)**
+
+Used for granting granular access to resources.
+
 ## [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
