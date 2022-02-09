@@ -209,7 +209,9 @@ If using the tool on-premise, if using the **Azure Cloud Shell**, this is not ne
 az login
 ```
 
-### Creating a resource group is done with
+### Resource group
+
+Creating a resource group is done with
 
 ```bash
 az group create --name RG-Demo-P1-1 --location westeurope --output table
@@ -220,11 +222,16 @@ az group create --name RG-Demo-P1-1 --location westeurope --output table
 
 ### Network security group
 
+Create the network security group
+
 ```bash
 az network nsg create --name p11sg --resource-group RG-Demo-P1-1 --output table
 ```
 
+
 ### Security rules
+
+Then, add both inbound rules
 
 ```bash
 az network nsg rule create --name Port_22 --nsg-name p11sg --resource-group RG-Demo-P1-1 --access Allow --protocol tcp --direction inbound --priority 100 --destination-port-range 22 --output table
@@ -232,6 +239,8 @@ az network nsg rule create --name Port_80 --nsg-name p11sg --resource-group RG-D
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/153213020-cf19fe82-2eef-4610-9eec-86bb009653c3.png)
+
+
 
 ### Virtual network
 
