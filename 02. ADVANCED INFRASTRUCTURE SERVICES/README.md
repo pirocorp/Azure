@@ -253,6 +253,81 @@ Prepare the **cloud init** file. Using an editor, open an empty file and store t
 ![image](https://user-images.githubusercontent.com/34960418/153214891-febcd51f-6600-4086-8d81-8b0e97ded9c4.png)
 
 
+Create the first machine
+
+```bash
+az vm create --name p11vm1 --resource-group RG-Demo-P1-1 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password DemoPassword-2022 --custom-data cloud-init.yaml --nics p11nic1 --availability-set p11as --verbose
+```
+
+And, then the second one
+
+```bash
+az vm create --name p11vm2 --resource-group RG-Demo-P1-1 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password DemoPassword-2022 --custom-data cloud-init.yaml --nics p11nic2 --availability-set p11as --verbose --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153216692-573cdff7-bfca-4bbb-96a5-a11b3b2b9c10.png)
+
+
+### Load balancer
+
+Create a public IP address for our load balancer
+
+```bash
+az network public-ip create --name p11lb-ip --resource-group RG-Demo-P1-1 --allocation-method dynamic --output table
+```
+
+Then, the load balancer itself
+
+```bash
+az network lb create --name p11lb --resource-group RG-Demo-P1-1 --frontend-ip-name p11lb-fe --backend-pool-name p11lb-be --public-ip-address p11lb-ip --output table
+```
+
+Next step is to create a health probe
+
+```bash
+az network lb probe create --name p11lb-hp --lb-name p11lb --resource-group RG-Demo-P1-1 --protocol tcp --port 80 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153217476-574103d0-3843-4f4a-b361-7eadd68d0564.png)
+
+
+Create balancing rule as well
+
+```bash
+az network lb rule create --name p11lb-rule --lb-name p11lb --resource-group RG-Demo-P1-1 --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name p11lb-fe --backend-pool-name p11lb-be --probe-name p11lb-hp --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153217916-8480e5a2-fbda-4287-a9c9-c4e21d6ecaf9.png)
+
+
+Update IP configurations of both virtual network adapters. The first or default IP configuration is named **ipconfig1** for both adapters.
+
+
+```bash
+az network nic ip-config update --name ipconfig1 --resource-group RG-Demo-P1-1 --nic-name p11nic1 --lb-name p11lb --lb-address-pools p11lb-be --output table
+az network nic ip-config update --name ipconfig1 --resource-group RG-Demo-P1-1 --nic-name p11nic2 --lb-name p11lb --lb-address-pools p11lb-be --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153218444-bda06385-bfad-4f6b-8f2a-564790558fe2.png)
+
+Get the public IP address of the load balancer
+
+```bash
+az network public-ip show --name p11lb-ip --resource-group RG-Demo-P1-1 --query [ipAddress] --output tsv
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153218646-b1c445eb-b9aa-477d-83cb-c1e7c2663716.png)
+
+
+![image](https://user-images.githubusercontent.com/34960418/153218756-b217f58b-551c-467a-8ca1-9c4242751566.png)
+
+
+
+
+
+
+
+
 
 
 
