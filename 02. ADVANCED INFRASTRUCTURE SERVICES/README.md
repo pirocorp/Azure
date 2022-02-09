@@ -8,6 +8,7 @@
   - [Two VMs in an Availability Set (Azure PS)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-ps)
   - [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
   - [Virtual Machine Scale Set (Azure CLI)](#virtual-machine-scale-set-azure-cli)
+  - [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
 - [Networking](#networking)
   - [Networking (Security Groups)](#networking-security-groups)
   - [Networking (Load Balancer)](#networking-load-balancer)
@@ -645,8 +646,8 @@ Once the deployment is done, click on the **Go to resource** button. Get the pub
 
 
 
-## Virtual Machine Scale Set (Azure CLI)
 
+## Virtual Machine Scale Set (Azure CLI)
 
 If using the tool on-premise. Not necessary with Azure Cloud Shell.
 
@@ -694,6 +695,8 @@ And paste it into a browser window
 
 
 
+
+## Virtual Machine Scale Set (Azure PS)
 
 
 
