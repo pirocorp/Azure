@@ -364,6 +364,7 @@ First, create the network security group rules
 $rule1 = New-AzNetworkSecurityRuleConfig -Name Port_22 -Access Allow -Protocol Tcp `
 -Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * `
 -DestinationAddressPrefix * -DestinationPortRange 22
+
 $rule2 = New-AzNetworkSecurityRuleConfig -Name Port_80 -Access Allow -Protocol Tcp `
 -Direction Inbound -Priority 110 -SourceAddressPrefix * -SourcePortRange * `
 -DestinationAddressPrefix * -DestinationPortRange 80
@@ -400,6 +401,7 @@ Now, it is time to define the two network interface cards
 ```powershell
 $N1 = New-AzNetworkInterface -Name 'p11nic1' -ResourceGroupName $RG -Location $LO `
 -Subnet $VN.Subnets[0]
+
 $N2 = New-AzNetworkInterface -Name 'p11nic2' -ResourceGroupName $RG -Location $LO `
 -Subnet $VN.Subnets[0]
 ```
