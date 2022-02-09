@@ -694,13 +694,199 @@ And paste it into a browser window
 ![image](https://user-images.githubusercontent.com/34960418/153239890-f885da3a-935a-42fc-af6c-0c98031e5004.png)
 
 
+### Clean Up
+
+```bash
+az group delete --name RG-Demo-P1-2 --yes --no-wait
+```
+
 
 
 ## Virtual Machine Scale Set (Azure PS)
 
 
+If using the tool on-premise. Not necessary with Azure Cloud Shell.
+
+```powershell
+Connect-AzAccount
+```
 
 
+### Resource group
+
+Create variables for the resource group and location
+
+```powershell
+$RG = 'RG-Demo-P1-2'
+$LO = 'westeurope'
+New-AzResourceGroup -ResourceGroupName $RG -Location $LO
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153244735-4626a250-4fd7-4883-a595-c20531540406.png)
+
+
+### Network security group
+
+Prepare the rules and the network security group
+
+```powershell
+$rule1 = New-AzNetworkSecurityRuleConfig -Name Port_22 -Access Allow -Protocol Tcp `
+-Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * `
+-DestinationAddressPrefix * -DestinationPortRange 22
+$rule2 = New-AzNetworkSecurityRuleConfig -Name Port_80 -Access Allow -Protocol Tcp `
+-Direction Inbound -Priority 110 -SourceAddressPrefix * -SourcePortRange * `
+-DestinationAddressPrefix * -DestinationPortRange 80
+$NSG = New-AzNetworkSecurityGroup -Name "NSG" -ResourceGroupName $RG `
+-Location $LO -SecurityRules $rule1,$rule2
+```
+
+### Virtual network
+
+Create the subnet
+
+```powershell
+$S1 = New-AzVirtualNetworkSubnetConfig -Name VNET1-S1 `
+-AddressPrefix 10.0.0.0/24 -NetworkSecurityGroup $NSG
+```
+
+create the network itself
+
+```powershell
+$NET = New-AzVirtualNetwork -ResourceGroupName $RG -Location $LO -Name VNET1 `
+-AddressPrefix 10.0.0.0/16 -Subnet $S1
+```
+
+
+### Load balancer
+
+First, the IP address
+
+```powershell
+$LBIP = New-AzPublicIpAddress -ResourceGroupName $RG -Location $LO `
+-Name 'LB-IP' -AllocationMethod Dynamic
+```
+
+Then, the front-end configuration
+
+```powershell
+$LBFE = New-AzLoadBalancerFrontendIpConfig -Name 'LB-FE' -PublicIpAddress $LBIP
+```
+
+Next, the back-end configuration
+
+```powershell
+$LBBE = New-AzLoadBalancerBackendAddressPoolConfig -Name 'LB-BE'
+```
+
+The health probe
+
+```powershell
+$LBHP = New-AzLoadBalancerProbeConfig -Name 'LB-HP' -Protocol tcp -Port 80 `
+-IntervalInSeconds 5 -ProbeCount 2
+```
+
+The load balancing rule
+
+```powershell
+$LBRL = New-AzLoadBalancerRuleConfig -Name 'LB-RULE' -FrontendIpConfiguration $LBFE `
+-BackendAddressPool $LBBE -Protocol Tcp -FrontendPort 80 -BackendPort 80 -Probe $LBHP
+```
+
+And the load balancer itself
+
+```powershell
+$LB = New-AzLoadBalancer -Name 'LB' -ResourceGroupName $RG -Location $LO `
+-FrontendIpConfiguration $LBFE -BackendAddressPool $LBBE -Probe $LBHP -LoadBalancingRule $LBRL
+```
+
+### Virtual machine scale set
+
+IP configuration
+
+```powershell
+$VSSIPC = New-AzVmssIpConfig -Name 'VSSIPCONF' -Primary $true -SubnetId $NET.Subnets[0].Id `
+-LoadBalancerBackendAddressPoolsId $LBBE.Id
+```
+
+Scale set configuration
+
+```powershell
+$VSSCONF = New-AzVmssConfig -Location $LO -SkuCapacity 2 -SkuName Standard_B1s `
+-UpgradePolicyMode Automatic
+```
+
+Storage profile
+
+```powershell
+Set-AzVmssStorageProfile $VSSCONF -ImageReferencePublisher Canonical `
+-ImageReferenceOffer UbuntuServer -ImageReferenceSku '18.04-LTS' `
+-ImageReferenceVersion latest -OsDiskCreateOption FromImage
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153247211-01e634fe-c4e9-48be-924e-530f9c2716d9.png)
+
+
+OS profile 
+
+```powershell
+Set-AzVmssOsProfile $VSSCONF -AdminUsername 'demouser' -AdminPassword 'DemoPassword-2021' `
+-ComputerNamePrefix 'VM'
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153247433-45c4643f-b4b9-4cb7-93fa-b81606e1646e.png)
+
+
+Networking configuration
+
+```powershell
+Add-AzVmssNetworkInterfaceConfiguration -VirtualMachineScaleSet $VSSCONF -Name 'VSSNETCONF' `
+-Primary $true -IPConfiguration $VSSIPC
+```
+
+And finally, we initiate the scale set creation
+
+```powershell
+$vmss = New-AzVmss -ResourceGroupName $RG -Name 'VSS' -VirtualMachineScaleSet $VSSCONF
+```
+
+
+Continue with the provision process. For this to happen, prepare a custom configuration. Upload somewhere the script
+
+```powershell
+$customConfig = @{
+  "fileUris" = (,"http://tuionui.com/custom-script.sh");
+  "commandToExecute" = "bash custom-script.sh"
+}
+```
+
+Script content
+
+![image](https://user-images.githubusercontent.com/34960418/153248285-709851ba-796d-4d92-aaec-66083f825b67.png)
+
+
+And then, install an extension that will push the configuration
+
+```powershell
+$vmss = Add-AzVmssExtension -VirtualMachineScaleSet $vmss -Name "customScript" `
+-Publisher "Microsoft.Azure.Extensions" -Type "CustomScript" `
+-TypeHandlerVersion 2.0 -Setting $customConfig
+```
+
+In order to initiate the installation process,  update the scale set
+
+```powershell
+Update-AzVmss -ResourceGroupName $RG -Name "VSS" -VirtualMachineScaleSet $vmss
+```
+
+Once updated, get the public IP address with
+
+```powershell
+Get-AzPublicIPAddress -Name 'LB-IP' -ResourceGroupName $RG | Select IpAddress
+```
+
+And navigate in a browser tab to this URL ```http://<public ip>/index.php```
+
+![image](https://user-images.githubusercontent.com/34960418/153249409-43aaa4c5-ca3b-42ca-989d-40a97ca5f4ef.png)
 
 
 
