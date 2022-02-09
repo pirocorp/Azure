@@ -183,14 +183,74 @@ Return to the **Overview** of the load balancer. Copy the **Public IP address** 
 
 ## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)
 
+If using the tool on-premise, if using the **Azure Cloud Shell**, this is not necessary.
+
+```bash
+az login
+```
+
+### Creating a resource group is done with
+
+```bash
+az group create --name RG-Demo-P1-1 --location westeurope --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153212484-e4aadbba-789f-4850-9358-76ec470af6d2.png)
 
 
+### Network security group
+
+```bash
+az network nsg create --name p11sg --resource-group RG-Demo-P1-1 --output table
+```
+
+### Security rules
+
+```bash
+az network nsg rule create --name Port_22 --nsg-name p11sg --resource-group RG-Demo-P1-1 --access Allow --protocol tcp --direction inbound --priority 100 --destination-port-range 22 --output table
+az network nsg rule create --name Port_80 --nsg-name p11sg --resource-group RG-Demo-P1-1 --access Allow --protocol tcp --direction inbound --priority 110 --destination-port-range 80 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153213020-cf19fe82-2eef-4610-9eec-86bb009653c3.png)
+
+### Virtual network
+
+Create the virtual network
+
+```bash
+az network vnet create --name p11vnet --resource-group RG-Demo-P1-1 --output table
+```
+
+And the subnet
+
+```bash
+az network vnet subnet create --name default --vnet-name p11vnet --resource-group RG-Demo-P1-1 --address-prefix 10.0.0.0/24 --network-security-group p11sg  --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153213634-ddcf353c-c149-44fb-9b90-543f1ee59a6d.png)
+
+Create both virtual network adapters:
+
+```bash
+az network nic create --name p11nic1 --resource-group RG-Demo-P1-1 --vnet-name p11vnet --subnet default --output table
+az network nic create --name p11nic2 --resource-group RG-Demo-P1-1 --vnet-name p11vnet --subnet default --output table
+```
 
 
+### Virtual machines
+
+Create the availability set
+
+```bash
+az vm availability-set create --name p11as --resource-group RG-Demo-P1-1 --platform-fault-domain-count 2 --platform-update-domain-count 2 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153214421-34e30b6d-0990-4543-87f9-d739991824c2.png)
 
 
+Prepare the **cloud init** file. Using an editor, open an empty file and store the code in a file named **cloud-init.yaml**
 
-
+![image](https://user-images.githubusercontent.com/34960418/153214891-febcd51f-6600-4086-8d81-8b0e97ded9c4.png)
 
 
 
