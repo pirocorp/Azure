@@ -4,6 +4,7 @@
   - [Virtual Machine Scale Sets](#virtual-machine-scale-sets)
   - [Cloud Init](#cloud-init)
   - [Two VMs in an Availability Set (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
+  - [Two VMs in an Availability Set (Azure CLI)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-cli)
 - [Networking](#networking)
   - [Networking (Security Groups)](#networking-security-groups)
   - [Networking (Load Balancer)](#networking-load-balancer)
@@ -177,9 +178,13 @@ In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select f
 
 ![image](https://user-images.githubusercontent.com/34960418/153209891-110830a6-4c13-459f-b0bc-a3d97449904d.png)
 
-
-
 Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
+
+
+## Two VMs in an Availability Set (Azure CLI)
+
+
+
 
 # Networking
 
