@@ -638,9 +638,9 @@ Click on the **Review + create** button. Finally, click the **Create** button.
 ![image](https://user-images.githubusercontent.com/34960418/153236142-b8958e68-e6bc-4860-ae28-7f36191c7ced.png)
 
 
+Once the deployment is done, click on the **Go to resource** button. Get the public IP address and paste it into a browser window, a web site should be seen.
 
-
-
+![image](https://user-images.githubusercontent.com/34960418/153236947-2d983e10-838e-475f-a418-f92cabd57ce5.png)
 
 
 
