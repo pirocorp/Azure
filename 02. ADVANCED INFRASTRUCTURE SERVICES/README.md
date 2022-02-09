@@ -330,10 +330,17 @@ az group delete --name RG-Demo-P1-1 --yes --no-wait
 ```
 
 
+
 ## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)
 
 
+If using the tool on-premise
 
+```powershell
+Connect-AzAccount
+```
+
+![image](https://user-images.githubusercontent.com/34960418/153220487-cc7e3478-60f4-4281-a43c-9674e47a78c9.png)
 
 
 
