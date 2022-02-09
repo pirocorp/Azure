@@ -592,13 +592,24 @@ Enter the resource group and click on the **+ Create** button to add new resourc
 ![image](https://user-images.githubusercontent.com/34960418/153231307-4150c7e0-78c9-48c7-a8ee-352eb73c0baa.png)
 
 
-
-For the **Virtual machine scale set name** enter **vss**. Make sure that Make sure that West Europe is selected in the Region field is selected in the **Region** field. From the list of Operating system disk **images** choose **Ubuntu Server 18.04 LTS**. Set instance **size** to **Standard B1s**. For **Authentication type** select **Password**. In the **Username** field enter **demouser**. For password use **DemoPassword-2022**. Click on the **Next: Disks button**.
-
+For the **Virtual machine scale set name** enter **vss**. Make sure that Make sure that West Europe is selected in the Region field is selected in the **Region** field. From the list of Operating system disk **images** choose **Ubuntu Server 18.04 LTS**. Set instance **size** to **Standard B1s**. For **Authentication type** select **Password**. In the **Username** field enter **demouser**. For password use **DemoPassword-2022**. Click on the **Next: Disks button**. Click again on the **Next: Networking** button.
 
 ![image](https://user-images.githubusercontent.com/34960418/153232871-f3da206e-867a-4d2d-9035-9c4b3809ce7f.png)
 
 
+Edit the proposed network / nic settings by clicking the **pencil** icon.
+
+![image](https://user-images.githubusercontent.com/34960418/153233789-18abd80f-7e97-4bba-922e-d72459f86c75.png)
+
+
+Change the** Public inbound ports** to **Allow selected ports**. Select port** HTTP (80)** and **SSH (22)** in the **Select inbound ports** drop-down list. Confirm with the **OK** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/153234239-edddd8ba-809f-4987-93ff-c777803d9afe.png)
+
+
+Set the **Use a load balancer** option to **Yes**. Accept the default settings for the load balancer. Click on the **Next: Scaling** button
+
+![image](https://user-images.githubusercontent.com/34960418/153234829-b7dbf389-dd41-4652-8a02-c23fc6a0afe1.png)
 
 
 
