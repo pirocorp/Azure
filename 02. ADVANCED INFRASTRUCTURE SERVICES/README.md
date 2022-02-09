@@ -18,7 +18,7 @@
   - [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
   - [Virtual Machine Scale Set (Azure CLI)](#virtual-machine-scale-set-azure-cli)
   - [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
-  - [Blob + Files (Azure Portal)]()
+  - [Blob + Files (Azure Portal)](#blob--files-azure-portal)
 
 # Virtual Machines
 
