@@ -5,18 +5,22 @@
 
 # Virtual Machines
 
-# [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/)
+## [Virtual Machine Scale Sets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/)
 
-# [Cloud Init](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init)
+## [Cloud Init](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init)
 
-# [Networking (Security Groups)](https://docs.microsoft.com/en-us/azure/virtual-network/security-overview)
+# Networking
 
-# [Networking (Load Balancer)](https://docs.microsoft.com/en-us/azure/load-balancer/)
+## [Networking (Security Groups)](https://docs.microsoft.com/en-us/azure/virtual-network/security-overview)
 
-# [Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+## [Networking (Load Balancer)](https://docs.microsoft.com/en-us/azure/load-balancer/)
 
-# [Azure Files](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction)
+# Storage
 
-# [Storage Access](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-manage)
+## [Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
 
-# [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+## [Azure Files](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction)
+
+## [Storage Access](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-manage)
+
+## [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
