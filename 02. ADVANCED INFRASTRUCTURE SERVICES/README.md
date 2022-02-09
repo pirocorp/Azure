@@ -645,6 +645,13 @@ Once the deployment is done, click on the **Go to resource** button. Get the pub
 
 
 
+## Virtual Machine Scale Set (Azure CLI)
+
+
+
+
+
+
 
 
 
