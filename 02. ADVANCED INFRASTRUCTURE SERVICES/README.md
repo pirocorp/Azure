@@ -102,8 +102,17 @@ Both VMs must be accessible from their public IPs.
 
 ![image](https://user-images.githubusercontent.com/34960418/153199465-16989bc3-ddac-4a3b-9bcc-16d67c50138a.png)
 
-
 ![image](https://user-images.githubusercontent.com/34960418/153199441-0174f918-2978-4d4f-8c44-d8404a9ed01c.png)
+
+
+Add a load balancer in front of the VMs. Return to the resource group and click on the **+ Create** button to add new resources. In the search field, enter Load Balancer and hit Enter. Then click on the Create button.
+
+![image](https://user-images.githubusercontent.com/34960418/153200122-2cddbcf4-7945-42f5-a6bc-142975585fcf.png)
+
+
+In the **Resource group** drop down select **RG-Demo-P1-1**. In the **Name** field enter **p11lb**. Set the **Region** to **West Europe**. Make sure that **SKU** is set to **Basic** and **Type** is set to **Public**. Click on **Next : Frontend IP configuration** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153200982-b5f790c4-7a8a-4fcc-af66-45b76451ef0b.png)
 
 
 
