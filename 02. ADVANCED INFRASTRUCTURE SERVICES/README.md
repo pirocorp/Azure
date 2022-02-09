@@ -956,3 +956,27 @@ Get-AzResourceGroup RG-Demo-P1-2 | Remove-AzResourceGroup -Force
 
 ## BLOB + Files (Azure Portal)
 
+### Resource group
+
+Go to **Resource groups**. Create new resource group **RG-Demo-P1-3** in the **West Europe** region. 
+
+![image](https://user-images.githubusercontent.com/34960418/153252343-ab62df59-a0a4-47ea-a0c0-70092721735f.png)
+
+
+### Storage account 
+
+
+Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Storage account** and hit **Enter**. Then click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153252583-c62e6195-80b3-43e7-81bc-bc17690b9b18.png)
+
+
+For name enter something unique, for example **sadvzaze**. Set the Location to **West Europe**. Leave all other values as they are and click on the **Review + create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153253086-e0fc06f6-8e33-411f-8e6f-77d74c9cce90.png)
+
+
+
+
+
+
