@@ -612,6 +612,37 @@ Set the **Use a load balancer** option to **Yes**. Accept the default settings f
 ![image](https://user-images.githubusercontent.com/34960418/153234829-b7dbf389-dd41-4652-8a02-c23fc6a0afe1.png)
 
 
+Leave **Instance count** to **2**. Accept the other scaling options defaults and click on the **Next: Management** button. Accept the default values and click on the **Next: Health** button. Click on the **Next: Advanced** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153235407-a2239b61-1cbf-4843-936c-12d7329cc108.png)
+
+
+In the Custom data field paste:
+
+```yaml
+#cloud-config
+package_upgrade: true
+packages:
+  - apache2
+  - php
+write_files:
+  - path: /var/www/html/index.php
+    content: |
+      Hello from <b><?php echo gethostname(); ?></b>
+runcmd:
+  - systemctl restart apache2
+```
+
+Click on the **Review + create** button. Finally, click the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153236142-b8958e68-e6bc-4860-ae28-7f36191c7ced.png)
+
+
+
+
+
+
+
 
 
 
