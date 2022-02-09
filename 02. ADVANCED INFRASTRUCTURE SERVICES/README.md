@@ -645,8 +645,37 @@ Once the deployment is done, click on the **Go to resource** button. Get the pub
 
 
 
-
 ## Virtual Machine Scale Set (Azure CLI)
+
+
+If using the tool on-premise. Not necessary with Azure Cloud Shell.
+
+```bash
+az login
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
