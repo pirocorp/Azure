@@ -76,6 +76,23 @@ Do not change proposed values in the **Virtual network**, **subnet**, and **Publ
 
 ![image](https://user-images.githubusercontent.com/34960418/153194960-3d372482-2971-4f0f-a5bf-c8bf37fcb323.png)
 
+In the **Cloud init** section paste (be sure the keep the formatting incl. empty spaces) the following yaml:
+
+```yaml
+#cloud-config
+package_upgrade: true 
+packages:
+  - apache2
+  - php
+write_files:
+  - path: /var/www/html/index.php
+    content: |
+      Hello from <b><?php echo gethostname(); ?></b>
+runcmd:
+  - systemctl restart apache2
+```
+
+**Cloud init** run on first boot once the resources have been provisioned. ```package_upgrade``` -  will execute ```apt-get update``` and ```apt-get upgrade```. ```packages``` clause specifies packages to be installed (```apt install apache2``` and ```apt install php```). ```write_files``` will create files in path with given content. ```runcmd``` will execute given commands in given order (```systemctl restart apache2```).
 
 
 
