@@ -6,6 +6,7 @@
   - [Two VMs in an Availability Set (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
   - [Two VMs in an Availability Set (Azure CLI)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-cli)
   - [Two VMs in an Availability Set (Azure PS)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-ps)
+  - [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
 - [Networking](#networking)
   - [Networking (Security Groups)](#networking-security-groups)
   - [Networking (Load Balancer)](#networking-load-balancer)
