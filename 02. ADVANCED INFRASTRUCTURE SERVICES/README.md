@@ -988,3 +988,11 @@ For **Name** enter **blobs** and click on **Create**.
 ![image](https://user-images.githubusercontent.com/34960418/153254033-b2c13fe0-3646-4674-9ea0-56122cfd9740.png)
 
 
+Click on the newly created container
+
+![image](https://user-images.githubusercontent.com/34960418/153254314-1a1ae132-9520-469e-87b1-912b5d5649c7.png)
+
+
+Now, we can upload one or more files to it. Click on the **Upload** button. Click on the **Browse** button and select one or more files, then click on **Open**. Finally, click on **Upload**.
+
+![image](https://user-images.githubusercontent.com/34960418/153254830-6fccecc8-cec0-42a9-8f6b-ac960ed304bf.png)
