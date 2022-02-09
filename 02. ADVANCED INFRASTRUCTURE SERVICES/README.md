@@ -971,12 +971,20 @@ Enter the resource group and click on the **+ Create** button to add new resourc
 ![image](https://user-images.githubusercontent.com/34960418/153252583-c62e6195-80b3-43e7-81bc-bc17690b9b18.png)
 
 
-For name enter something unique, for example **sadvzaze**. Set the Location to **West Europe**. Leave all other values as they are and click on the **Review + create** button.
+For name enter something unique, for example **sadvzaze**. Set the Location to **West Europe**. Leave all other values as they are and click on the **Review + create** button. Then click on the **Create** button. 
 
 ![image](https://user-images.githubusercontent.com/34960418/153253086-e0fc06f6-8e33-411f-8e6f-77d74c9cce90.png)
 
 
+### BLOB
+
+Enter (navigate to) the account you just created. Click on the **Containers** section. Click on the **+ Container** button to create new one. 
+
+![image](https://user-images.githubusercontent.com/34960418/153253837-1aebcf88-61db-4d6b-bf7d-7a96e5efde6f.png)
 
 
+For **Name** enter **blobs** and click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/153254033-b2c13fe0-3646-4674-9ea0-56122cfd9740.png)
 
 
