@@ -947,3 +947,8 @@ And navigate in a browser tab to this URL ```http://<public ip>/index.php```
 ![image](https://user-images.githubusercontent.com/34960418/153249409-43aaa4c5-ca3b-42ca-989d-40a97ca5f4ef.png)
 
 
+### Clean up
+
+```powershell
+Get-AzResourceGroup RG-Demo-P1-2 | Remove-AzResourceGroup -Force
+```
