@@ -1118,9 +1118,9 @@ Select **Add role assignment**.
 ![image](https://user-images.githubusercontent.com/34960418/153395569-4022b5ae-63fa-4d92-a563-5b6ed88d11db.png)
 
 
-In the search filed enter **Virtual Machine Contributor**. And click on **Next** button.
+In the search filed enter **Virtual Machine Contributor**. Select the Virtual Machine Contributor role. And click on **Next** button.
 
-![image](https://user-images.githubusercontent.com/34960418/153396045-6f461c92-78c6-490e-beca-902dd9060c65.png)
+![image](https://user-images.githubusercontent.com/34960418/153396790-739379dd-5cc1-4aeb-bd3d-cd0c5bcc92fa.png)
 
 
 Click on **Select members**.
@@ -1133,5 +1133,16 @@ Choose newly created user AzE User. And click on button **Select**.
 ![image](https://user-images.githubusercontent.com/34960418/153396557-92ebd09a-d4c8-4c16-853a-44ab9c191d41.png)
 
 
+Click on **Review + assign** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153397081-e00c4aab-a6fc-40b1-acbe-44e0accd5c7f.png)
 
 
+Repeat procedure for **Virtual Machine User Login** role. Return to AzE User's Azure portal.
+
+![image](https://user-images.githubusercontent.com/34960418/153398034-bcd9e0cb-870b-413c-a40b-fa04540a7fd1.png)
+
+
+Check for subscriptions. 
+
+![image](https://user-images.githubusercontent.com/34960418/153398582-056628ae-46a2-432b-b85b-179a3872e574.png)
