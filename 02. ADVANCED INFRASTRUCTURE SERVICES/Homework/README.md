@@ -36,6 +36,22 @@ Set-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "Hello world from host
 7. Go back to your list of scale set instances and use the Run command on each VM in the scale set.
 
 
-![image](https://user-images.githubusercontent.com/34960418/153449249-18fdf0d8-13b5-4126-a421-f0f129b1f69b.png)
+![image](https://user-images.githubusercontent.com/34960418/153454929-f4ff67a6-34de-4f62-a900-f41d09bc3af1.png)
 
+![image](https://user-images.githubusercontent.com/34960418/153455159-01227468-2097-4efd-b6fd-c8ea580e6cd6.png)
+
+![image](https://user-images.githubusercontent.com/34960418/153455932-779fe7e2-e88f-4eca-bd38-26e9cdf75f72.png)
+
+
+
+### Open port 80
+
+Open port 80 on your scale set by adding an inbound rule to your network security group (NSG). If Not Open.
+
+![image](https://user-images.githubusercontent.com/34960418/153457280-51db2e8c-c242-42da-9e32-c0afac8e2d84.png)
+
+
+### Enjoy 
+
+![image](https://user-images.githubusercontent.com/34960418/153457696-894bccf6-71e5-4d9f-bc0a-55adfd5a3325.png)
 
