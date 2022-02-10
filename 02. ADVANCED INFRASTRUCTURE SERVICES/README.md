@@ -1207,7 +1207,7 @@ For Lock name enter **rg-lock**. Set the **Lock type** to **Delete**. In the **N
 ![image](https://user-images.githubusercontent.com/34960418/153407003-1e0bf3ee-c58f-4e62-bad9-b9914cd914f9.png)
 
 
-Try to delete the RG. 
+Try to delete the RG. In order to delete the resource, first delete the lock.
 
 ![image](https://user-images.githubusercontent.com/34960418/153407158-53dc28fc-98e2-482c-8136-425de7475a1a.png)
 
