@@ -31,6 +31,7 @@
   - [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
 - [Blob + Files (Azure Portal)](#blob--files-azure-portal)
 - [Security](#security-1)
+  - [Create New User](#create-new-user)
 
 # Virtual Machines
 
@@ -1081,7 +1082,7 @@ Navigate to the storage account and explore its contents.
 
 # Security
 
-## Create new user
+## Create New User
 
 Enter **Users** in the search field, then hit the **Enter** key. Click on the **+ New user** button
 
