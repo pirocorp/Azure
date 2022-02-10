@@ -94,6 +94,47 @@ Used for granting granular access to resources.
 
 Free tool to easily manage Azure cloud storage resources. Available for Windows, Linux, and macOS. Accessible, intuitive, feature-rich graphical user interface. Can work also disconnected from the cloud or offline with local emulators.
 
+# Security
+
+
+## [Users and Groups](https://docs.microsoft.com/en-us/azure/active-directory/)
+
+Azure AD is used to give users access to Azure resources. Each user has an **identity**. User ID, a password, and other properties form the identity. Users also have one or more directory roles assigned. Groups are used to manage larger groups of users. External (**guest users**) can be added via an invitation email.
+
+
+## [Policies](https://docs.microsoft.com/en-us/azure/governance/policy/)
+
+**Azure Policy** evaluates resources in Azure by comparing the properties of those resources to business rules. Enforcement of every **policy definition** depends on conditions. A **policy assignment** is a policy definition set to take place within a specific scope. 
+
+An **initiative definition** is a collection of policy definitions. An **initiative assignment** is an initiative definition given to a particular scope. 
+
+Both policies and initiative definitions have **parameters**.
+
+
+## [Role-based Access Control (RBAC)](https://docs.microsoft.com/en-us/azure/role-based-access-control/)
+
+Azure role-based access control (Azure **RBAC**) is a system that provides fine-grained access management of Azure resources. Using Azure **RBAC**, you can segregate duties within your team and grant only the amount of access to users that they need to perform their jobs. 
+
+RBAC consists of four main elements: 
+
+- The **security principle** represents an identity (user, group, app).
+- A **role** defines how the security principal can interact with a resource.
+- The **scope** defines the level at which the role is applied.
+- **Role assignments** – role assigned to a principal at a scope.
+
+Some of the **built-in** roles are **Owner**, **Contributor**, and **Reader**. Role assignments are **additive**.
+
+
+## [Resource Locks](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
+
+They are used to prevent accidental deletion or modification of a resource. Can set lock level either to **CanNotDelete** or **ReadOnly**. Its children inherit locks applied to a parent. The most restrictive lock in the inheritance takes precedence.
+
+
+## [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/)
+
+Centralize application secrets. Securely store secrets and keys. Monitor access and use. Simplified administration of application secrets. Integratable with other Azure services. Two pricing tiers – **Standard** and **Premium**.
+
+
 
 # Demos
 
