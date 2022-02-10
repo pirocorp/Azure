@@ -1100,7 +1100,7 @@ Now, the new account which will be ```azeuser@<domain>.onmicrosoft.com``` can be
 
 Open new browser window in private mode and navigate to [portal.azure.com](https://portal.azure.com). Enter the account name. Next you will be asked to change the password. Once you are in the portal, you will notice that the new user is not assigned to a subscription.
 
-
+![image](https://user-images.githubusercontent.com/34960418/153394290-ddfef215-d852-489c-b448-45277e0ba367.png)
 
 
 
