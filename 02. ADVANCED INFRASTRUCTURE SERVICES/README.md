@@ -32,6 +32,7 @@
 - [Blob + Files (Azure Portal)](#blob--files-azure-portal)
 - [Security](#security-1)
   - [Create New User](#create-new-user)
+  - [RBAC](#rbac)
 
 # Virtual Machines
 
@@ -1102,6 +1103,35 @@ Now, the new account which will be ```azeuser@<domain>.onmicrosoft.com``` can be
 Open new browser window in private mode and navigate to [portal.azure.com](https://portal.azure.com). Enter the account name. Next you will be asked to change the password. Once you are in the portal, you will notice that the new user is not assigned to a subscription.
 
 ![image](https://user-images.githubusercontent.com/34960418/153394290-ddfef215-d852-489c-b448-45277e0ba367.png)
+
+
+
+## RBAC
+
+Return to the session with your main user. In the search field enter **Subscription** and hit **Enter**. Go to **Access control (IAM)**. Switch to **Role assignments**. Click on the **+ Add** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/153395202-f5851378-605b-46bd-a46c-8de1a1faa8ef.png)
+
+
+Select **Add role assignment**.
+
+![image](https://user-images.githubusercontent.com/34960418/153395569-4022b5ae-63fa-4d92-a563-5b6ed88d11db.png)
+
+
+In the search filed enter **Virtual Machine Contributor**. And click on **Next** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153396045-6f461c92-78c6-490e-beca-902dd9060c65.png)
+
+
+Click on **Select members**.
+
+![image](https://user-images.githubusercontent.com/34960418/153396256-5d603d87-ee38-4af1-b3bf-6b073555a550.png)
+
+
+Choose newly created user AzE User. And click on button **Select**.
+
+![image](https://user-images.githubusercontent.com/34960418/153396557-92ebd09a-d4c8-4c16-853a-44ab9c191d41.png)
+
 
 
 
