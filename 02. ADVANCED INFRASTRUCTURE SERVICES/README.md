@@ -1081,4 +1081,26 @@ Navigate to the storage account and explore its contents.
 
 # Security
 
+## Create new user
+
+Enter **Users** in the search field, then hit the **Enter** key. Click on the **+ New user** button
+
+![image](https://user-images.githubusercontent.com/34960418/153392477-7348d4f6-a6cd-4d67-af59-356fb6be755e.png)
+
+
+In the **User name** field enter something, for example **azeuser**. For **Name** enter **AzE User**. Select the Let me create the password option. Then for **Initial password** enter something (up to 16 symbols), for example **Password-2022**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/153392971-ffcba912-1d27-48a4-b94a-766e1b78e3bc.png)
+
+
+Now, the new account which will be ```azeuser@<domain>.onmicrosoft.com``` can be used for login. 
+
+![image](https://user-images.githubusercontent.com/34960418/153393456-dfccdc13-3b61-432d-b224-f2251116713e.png)
+
+
+Open new browser window in private mode and navigate to [portal.azure.com](https://portal.azure.com). Enter the account name. Next you will be asked to change the password. Once you are in the portal, you will notice that the new user is not assigned to a subscription.
+
+
+
+
 
