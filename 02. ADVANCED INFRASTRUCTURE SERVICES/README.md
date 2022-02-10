@@ -34,6 +34,7 @@
   - [Create New User](#create-new-user)
   - [RBAC](#rbac)
   - [Policies](#policies-1)
+  - [Locks](#locks)
 
 # Virtual Machines
 
@@ -1192,7 +1193,23 @@ Only sizes allowed by policy are displayed.
 ![image](https://user-images.githubusercontent.com/34960418/153405257-5f27e7f3-61dd-4fd8-bceb-1b951705f412.png)
 
 
+## Locks
 
+Locks are an effective prevention mechanism against deleting resources by a mistake.
+
+Let’s navigate to Resource group **RG-Demo-P1-1**. Scroll down to the **Settings** section. There is the **Locks** command, click on it. Click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153406610-5bcf12c9-296c-474a-8402-d68705cbe9d0.png)
+
+
+For Lock name enter **rg-lock**. Set the **Lock type** to **Delete**. In the **Notes** field enter **Do not delete this RG**. Click on the **OK** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153407003-1e0bf3ee-c58f-4e62-bad9-b9914cd914f9.png)
+
+
+Try to delete the RG. 
+
+![image](https://user-images.githubusercontent.com/34960418/153407158-53dc28fc-98e2-482c-8136-425de7475a1a.png)
 
 
 
