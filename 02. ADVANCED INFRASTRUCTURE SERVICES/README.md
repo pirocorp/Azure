@@ -49,6 +49,7 @@
   - [RBAC](#rbac)
   - [Policies](#policies-1)
   - [Locks](#locks)
+- [ARM Templates](#arm-templates)
 
 # Virtual Machines
 
@@ -1311,5 +1312,22 @@ Try to delete the RG. In order to delete the resource, first delete the lock.
 ![image](https://user-images.githubusercontent.com/34960418/153407158-53dc28fc-98e2-482c-8136-425de7475a1a.png)
 
 
+# ARM Templates
+
+Go to the **Home** view. In the search bar enter **Deploy a custom template** and hit **Enter**. Type **wordpress** in the **Select a template (disclaimer)** drop-down. Select the **wordpress-single-vm-ubuntu** item.
+
+![image](https://user-images.githubusercontent.com/34960418/153424023-6fba58a9-5899-4f8b-8544-a1cfa85ec40c.png)
 
 
+Click on the **Select template** button.
+
+![image](https://user-images.githubusercontent.com/34960418/153424191-02bc5513-2fab-48bd-8b66-eafe493f8b89.png)
+
+
+Fill in the required fields. Click on **Create new** under the **Resource group** and for **Name** enter **RG-Template**. For **Region** choose **West Europe**. Set **Vm Dns Name** to **azewp**. In **Admin Username** enter **demouser**. For **My Sql Password** set **DemoPassword-2022**. Enter **Standard_B1s** for **Vm Size**. Set **Authentication Type** to **password**. Enter **DemoPassword-2022** in the **Admin Password Or Key** field. Click on the **Review + create** button. Finally, click on the **Create** button to start the deployment process. Sit back and watch the deployment. After the deployment finishes, click on the **Go to resource group** button.
+
+
+![image](https://user-images.githubusercontent.com/34960418/153425065-6f1d6a16-8e7d-4011-a92e-1bd660f264ca.png)
+
+
+Navigate to the virtual machine and copy either the **Public IP address**, or the **DNS name**. If all went according to the plan, we should see the welcome page of **Apache**.
