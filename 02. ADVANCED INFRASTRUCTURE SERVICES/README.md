@@ -33,6 +33,7 @@
 - [Security](#security-1)
   - [Create New User](#create-new-user)
   - [RBAC](#rbac)
+  - [Policies](#policies-1)
 
 # Virtual Machines
 
@@ -1146,3 +1147,53 @@ Repeat procedure for **Virtual Machine User Login** role. Return to AzE User's A
 Check for subscriptions. 
 
 ![image](https://user-images.githubusercontent.com/34960418/153398582-056628ae-46a2-432b-b85b-179a3872e574.png)
+
+
+
+## Policies
+
+Go to Home view with regular user. In the search bar enter **Policy** and hit **Enter**. Go to **Definitions**. Filter the **Category** to **Compute** only. Click on the **Allowed virtual machine SKUs**. 
+
+![image](https://user-images.githubusercontent.com/34960418/153402798-daf5c09c-788d-41d1-bcda-6fc37fd72f8c.png)
+
+
+Click on the **Assign** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/153402910-edd7ea41-27f8-4298-9270-9d5ca826deb5.png)
+
+
+In **scope** choose both **subscription** and **resource group**. Click **Select**.
+
+![image](https://user-images.githubusercontent.com/34960418/153403412-ac4e3ca2-4057-45fd-8a82-657ac7c2f065.png)
+
+
+In the **Assignment name** append **only B1S**. Click on **Next**.
+
+![image](https://user-images.githubusercontent.com/34960418/153403935-c2f88676-6138-4834-bd44-7936a90827fa.png)
+
+
+In the **Allowed SKUs** select **Standard_B1s** and **Standard_B1ls**. Click **Review + create**. Finally, click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/153404346-a28aeb7a-d289-4777-bf80-4d8db7a668e6.png)
+
+
+Return to **Assignments** in the **Policies**. New policy assignment should be there.
+
+![image](https://user-images.githubusercontent.com/34960418/153404698-0be79fdb-4f40-468b-9ceb-f2c25ccece23.png)
+
+
+Go to the resource group and create a VM of different size. Click on **See all sizes**.
+
+![image](https://user-images.githubusercontent.com/34960418/153405028-781a1307-69c1-4887-9b3b-93eb74d1c141.png)
+
+
+Only sizes allowed by policy are displayed.
+
+![image](https://user-images.githubusercontent.com/34960418/153405257-5f27e7f3-61dd-4fd8-bceb-1b951705f412.png)
+
+
+
+
+
+
+
