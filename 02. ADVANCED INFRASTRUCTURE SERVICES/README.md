@@ -227,9 +227,7 @@ Total Cost of Ownership Calculator is a free online tool provided by Microsoft. 
 Can logically organize Azure resources by using tags. Each tag consists of a name and a value pair. Each resource can have a maximum of 50 tag name/value pairs. Not all resource types support tags. The length of the tag name is limited to 512 (128 for storage accounts) characters. A tag value is limited to 256 characters. Tags applied to the resource group are not inherited by the resources.
 
 
-
-
-
+---
 
 # Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)
 
