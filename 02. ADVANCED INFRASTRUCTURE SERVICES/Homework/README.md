@@ -9,7 +9,7 @@ Start from [here](https://docs.microsoft.com/en-us/azure/virtual-machines/window
 
 ## Virtual machines scale set
 
-![image](https://user-images.githubusercontent.com/34960418/153447677-cbdf44b3-e75d-494a-869d-42171d0bd03c.png)
+![image](https://user-images.githubusercontent.com/34960418/153451591-b4326603-0df5-46d8-8523-41439f37fefe.png)
 
 ![image](https://user-images.githubusercontent.com/34960418/153447770-d349b783-a83c-4d97-9c49-199f206a945b.png)
 
