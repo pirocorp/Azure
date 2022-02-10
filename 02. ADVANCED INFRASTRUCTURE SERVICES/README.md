@@ -28,6 +28,9 @@
   - [Pricing Calculator](#pricing-calculator)
   - [Total Cost of Ownership Calculator](#total-cost-of-ownership-calculator)
   - [Tags](#tags)
+  - [Azure Resource Manager](#azure-resource-manager)
+    - [Azure Resource Manager Templates](#azure-resource-manager-templates)
+    - [ARMVIZ](#armviz)
 
 
 # Jump to practical guides
