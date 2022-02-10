@@ -1076,3 +1076,8 @@ Then click on the Upload button to upload a file.
 
 Download the Storage Explorer application from [here](https://azure.microsoft.com/en-us/features/storage-explorer/). Install it and run it. Connect it to your subscription.
 Navigate to the storage account and explore its contents.
+
+
+# Security
+
+
