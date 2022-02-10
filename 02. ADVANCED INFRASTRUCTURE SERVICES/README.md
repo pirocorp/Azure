@@ -227,6 +227,25 @@ Total Cost of Ownership Calculator is a free online tool provided by Microsoft. 
 Can logically organize Azure resources by using tags. Each tag consists of a name and a value pair. Each resource can have a maximum of 50 tag name/value pairs. Not all resource types support tags. The length of the tag name is limited to 512 (128 for storage accounts) characters. A tag value is limited to 256 characters. Tags applied to the resource group are not inherited by the resources.
 
 
+
+### [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
+
+The deployment and management service for Azure. 
+
+![image](https://user-images.githubusercontent.com/34960418/153414316-92cf63ec-292d-4aaf-92b9-d0aa41ae63f1.png)
+
+
+#### [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/template-deployment-overview)
+
+Azure Resource Manager Templates is a **JSON file** that defines resources to deploy to a resource group or subscription. Can use it to deploy the resources consistently and repeatedly. The template is deployed only after passing validation. It can be broken into smaller, reusable components and linked together at deployment time. Nesting is also supported. Sections of a template are **parameters**, **variables**, **user-defined functions**, **resources**, and **outputs**.
+
+
+### [ARMVIZ](http://armviz.io/)
+
+ARMVIZ is a free tool for visualizing, editing and saving Azure Resource Manager Templates. Hosted online and developed and supported by 3rd party.
+
+
+
 ---
 
 # Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)
