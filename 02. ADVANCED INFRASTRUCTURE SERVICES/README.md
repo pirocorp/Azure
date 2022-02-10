@@ -18,6 +18,16 @@
   - [Resource Locks](#resource-locks)
   - [Azure Key Vault](#azure-key-vault)
 - [Monitoring and Control](#monitoring-and-control)
+  - [Subscription Limits](#subscription-limits)
+  - [Azure Monitor](#azure-monitor)
+  - [Boot Diagnostics](#boot-diagnostics)
+  - [Serial Console](#serial-console)
+  - [Cost Management and Billing](#cost-management-and-billing)
+  - [Budgets](#budgets)
+  - [Azure Advisor](#azure-advisor)
+  - [Pricing Calculator](#pricing-calculator)
+  - [Total Cost of Ownership Calculator](#total-cost-of-ownership-calculator)
+  - [Tags](#tags)
 
 
 # Jump to practical guides
