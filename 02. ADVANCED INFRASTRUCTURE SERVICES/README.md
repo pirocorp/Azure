@@ -17,14 +17,17 @@
   - [Role-based Access Control (RBAC)](#role-based-access-control-rbac)
   - [Resource Locks](#resource-locks)
   - [Azure Key Vault](#azure-key-vault)
-- [Demos](#demos)
-  - [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
-  - [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-cli)
-  - [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-ps)
-  - [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
-  - [Virtual Machine Scale Set (Azure CLI)](#virtual-machine-scale-set-azure-cli)
-  - [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
-  - [Blob + Files (Azure Portal)](#blob--files-azure-portal)
+
+
+# Jump to practical guides
+
+- [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-portal)
+- [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-cli)
+- [Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)](#two-vms-in-an-availability-set--cloud-init--load-balancer--security-group-azure-ps)
+- [Virtual Machine Scale Set (Azure Portal)](#virtual-machine-scale-set-azure-portal)
+- [Virtual Machine Scale Set (Azure CLI)](#virtual-machine-scale-set-azure-cli)
+- [Virtual Machine Scale Set (Azure PS)](#virtual-machine-scale-set-azure-ps)
+- [Blob + Files (Azure Portal)](#blob--files-azure-portal)
 
 # Virtual Machines
 
