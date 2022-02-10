@@ -17,6 +17,7 @@
   - [Role-based Access Control (RBAC)](#role-based-access-control-rbac)
   - [Resource Locks](#resource-locks)
   - [Azure Key Vault](#azure-key-vault)
+- [Monitoring and Control](#monitoring-and-control)
 
 
 # Jump to practical guides
@@ -149,6 +150,74 @@ They are used to prevent accidental deletion or modification of a resource. Can 
 ## [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/)
 
 Centralize application secrets. Securely store secrets and keys. Monitor access and use. Simplified administration of application secrets. Integratable with other Azure services. Two pricing tiers – **Standard** and **Premium**.
+
+
+# Monitoring and Control
+
+## [Subscription Limits](https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits)
+
+Microsoft Azure **limits** are also called **quotas**. **The raise of a limitation** or quota above the defaults is via **support request**. **Free Trial** subscriptions **aren't eligible** for limit or quota increases. You **can't raise limits** above the **maximum limit** value. Limits can be on subscription or region level.
+
+
+
+## [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/)
+
+**Metrics** are numerical values that describe some aspect of a system at a particular time. **Logs** contain different kinds of data organized into records. Log queries use **Kusto** language.
+
+![image](https://user-images.githubusercontent.com/34960418/153408216-afd20b69-01f4-4421-9c4f-4cdd2ce4edc6.png)
+
+
+
+## [Boot Diagnostics](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/boot-diagnostics)
+
+For both Windows and Linux virtual machines, **screenshots** are available. For Linux virtual machines, the output of the **console log** is available. A storage account in which to place the diagnostic files is needed. The Boot diagnostics feature does not support a premium storage account.
+
+
+
+## [Serial Console](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/serial-console-overview)
+
+Serial Console provides a **text-based console** for virtual machines (VMs) and virtual machine scale set instances. Available both for Linux and Windows instances. Serial Console connects to the **ttyS0** or **COM1** serial port. Serial Console can only be accessed using the Azure portal, allowed only for users with an access role of **Contributor or higher**. **Must enable boot diagnostics** for the VM.
+
+
+
+## [Cost Management and Billing](https://docs.microsoft.com/en-us/azure/billing/)
+
+Shows organizational cost and usage patterns with advanced analytics. Cost management reports show the usage-based costs consumed by Azure services and third-party Marketplace offerings. Uses management groups, budgets, and recommendations to show how expenses are organized and reduce costs. Offers **cost analysis**, **budgets**, **recommendations**, and **exporting cost management data**.
+
+
+
+## [Budgets](https://docs.microsoft.com/en-us/azure/cost-management/tutorial-acm-create-budgets)
+
+Plan for and drive organizational accountability. Account for services consumption during a specific period. Monitor how spending progresses over time. When the budget thresholds are exceeded, only notifications are triggered. Budgets reset automatically at the end of a period. Resources are not affected, and consumption isn't stopped.
+
+
+
+## [Azure Advisor](https://docs.microsoft.com/en-us/azure/advisor/)
+
+**Azure Advisor** is a **best practices analyzer** for Azure resources. Azure Advisor analyzes your **resource configuration** and **usage telemetry**. **Recommends solutions** to **improve the cost-effectiveness, performance, reliability**, and **security of resources**.
+
+Categories of recommendations: **Cost**, **Security**, **Reliability** (formerly called **High Availability**), **Operational Excellence**, **Performance**.
+
+
+
+## [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+
+**Pricing Calculator** is a free online tool provided by Microsoft. Configure and estimate the costs for Azure products. It supports complex environment scenarios. And it provides example scenarios. Offers to save and export the estimations.
+
+
+
+## [Total Cost of Ownership Calculator](https://azure.microsoft.com/en-us/pricing/tco/calculator/)
+
+Total Cost of Ownership Calculator is a free online tool provided by Microsoft. Estimate the cost savings if migrating our workloads to Azure. The emphasis is on the four core services. Expenses are accounted for software licenses, electricity, and labor.
+
+
+
+## [Tags](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags)
+
+Can logically organize Azure resources by using tags. Each tag consists of a name and a value pair. Each resource can have a maximum of 50 tag name/value pairs. Not all resource types support tags. The length of the tag name is limited to 512 (128 for storage accounts) characters. A tag value is limited to 256 characters. Tags applied to the resource group are not inherited by the resources.
+
+
+
 
 
 
