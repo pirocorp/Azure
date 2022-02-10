@@ -145,21 +145,19 @@ Centralize application secrets. Securely store secrets and keys. Monitor access 
 
 
 
-# Demos
-
-## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)
+# Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure Portal)
 
 Go to [Azure Portal](https://portal.azure.com)
 
 
-### Resource group
+## Resource group
 
 Go to Resource groups. And create a new resource group ```RG-Demo-P1-1``` in the ```West Europe``` region.
 
 ![image](https://user-images.githubusercontent.com/34960418/153183982-59348949-01b7-4c09-bab1-1507c426c8b9.png)
 
 
-### Virtual network
+## Virtual network
 
 Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Virtual Network** and hit **Enter**. Then click on the **Create** button. 
 
@@ -181,7 +179,7 @@ Finally, click on the **Create** button
 ![image](https://user-images.githubusercontent.com/34960418/153186036-ae9bc590-2e3c-4512-ad0b-58843c11f34b.png)
 
 
-### Network security group
+## Network security group
 
 Return to the resource group and click on the **+ Create** button to add new resources. In the search field enter **Network security group** and hit **Enter**. Then click on the **Create** button.
 
@@ -199,7 +197,7 @@ Once the deployment is done click on the **Go to resource** button. In the **Set
 
 
 
-### Security rules
+## Security rules
 
 In the **Settings** section click on the **Inbound security rules** to add two rules. Click on the **+ Add** button. Change **Destination port ranges** to **22**. Change **Protocol** to **TCP**. In the **Name** field enter **Port_22**. Click on the **Add** button. Repeat the procedure once again but change **22** to **80**.
 
@@ -207,7 +205,7 @@ In the **Settings** section click on the **Inbound security rules** to add two r
 
 
 
-### Virtual machines
+## Virtual machines
 
 Return to the resource group and click on the **+ Add** button to add new resources. Select **Ubuntu Server 18.04 LTS** from the list of popular resources. Leave **Subscription** and **Resource group** as they are. In the **Virtual machine name** enter **p11vm1**. Set the **Region** to **West Europe**. For **Availability options** set **Availability set**. Click on the **Create new** under the **Availability set**. Change the **Size** to **Standard B1S**. Select **Password** as **Authentication type**. Enter ```demouser``` as **Username**. For **Password** set for example ```DemoPassword-2022```. In the **Public inbound ports** section select **None**. Click on the **Next: Disks button**. 
 
@@ -253,7 +251,7 @@ Both VMs must be accessible from their public IPs.
 
 
 
-### Load balancer
+## Load balancer
 
 Add a load balancer in front of the VMs. Return to the resource group and click on the **+ Create** button to add new resources. In the search field, enter Load Balancer and hit Enter. Then click on the Create button.
 
@@ -312,7 +310,7 @@ In the **Name** field enter **p11lb-rule**. For **Frontend IP address** select f
 Return to the **Overview** of the load balancer. Copy the **Public IP address** and paste in a browser tab.
 
 
-## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)
+# Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure CLI)
 
 If using the tool on-premise, if using the **Azure Cloud Shell**, this is not necessary.
 
@@ -320,7 +318,7 @@ If using the tool on-premise, if using the **Azure Cloud Shell**, this is not ne
 az login
 ```
 
-### Resource group
+## Resource group
 
 Creating a resource group is done with
 
@@ -331,7 +329,7 @@ az group create --name RG-Demo-P1-1 --location westeurope --output table
 ![image](https://user-images.githubusercontent.com/34960418/153212484-e4aadbba-789f-4850-9358-76ec470af6d2.png)
 
 
-### Network security group
+## Network security group
 
 Create the network security group
 
@@ -340,7 +338,7 @@ az network nsg create --name p11sg --resource-group RG-Demo-P1-1 --output table
 ```
 
 
-### Security rules
+## Security rules
 
 Then, add both inbound rules
 
@@ -353,7 +351,7 @@ az network nsg rule create --name Port_80 --nsg-name p11sg --resource-group RG-D
 
 
 
-### Virtual network
+## Virtual network
 
 Create the virtual network
 
@@ -377,7 +375,7 @@ az network nic create --name p11nic2 --resource-group RG-Demo-P1-1 --vnet-name p
 ```
 
 
-### Virtual machines
+## Virtual machines
 
 Create the availability set
 
@@ -408,7 +406,7 @@ az vm create --name p11vm2 --resource-group RG-Demo-P1-1 --image UbuntuLTS --siz
 ![image](https://user-images.githubusercontent.com/34960418/153216692-573cdff7-bfca-4bbb-96a5-a11b3b2b9c10.png)
 
 
-### Load balancer
+## Load balancer
 
 Create a public IP address for our load balancer
 
@@ -462,7 +460,7 @@ az network public-ip show --name p11lb-ip --resource-group RG-Demo-P1-1 --query 
 ![image](https://user-images.githubusercontent.com/34960418/153218756-b217f58b-551c-467a-8ca1-9c4242751566.png)
 
 
-### Clean Up
+## Clean Up
 
 ```bash
 az group delete --name RG-Demo-P1-1 --yes --no-wait
@@ -470,7 +468,7 @@ az group delete --name RG-Demo-P1-1 --yes --no-wait
 
 
 
-## Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)
+# Two VMs in an Availability Set + Cloud Init + Load Balancer + Security Group (Azure PS)
 
 
 If using the tool on-premise. If using the **Azure Cloud Shell**, this is not necessary.
@@ -482,7 +480,7 @@ Connect-AzAccount
 ![image](https://user-images.githubusercontent.com/34960418/153220487-cc7e3478-60f4-4281-a43c-9674e47a78c9.png)
 
 
-### Resource group
+## Resource group
 
 Creating a resource group is done with
 
@@ -495,7 +493,7 @@ New-AzResourceGroup -Name $RG -Location $LO
 ![image](https://user-images.githubusercontent.com/34960418/153220961-88414397-c52f-4955-97ff-931bb7e2afa2.png)
 
 
-### Network security group
+## Network security group
 
 First, create the network security group rules
 
@@ -519,7 +517,7 @@ $nsg = New-AzNetworkSecurityGroup -Name "p11sg" -ResourceGroupName $RG -Location
 ![image](https://user-images.githubusercontent.com/34960418/153221706-e9980039-d0b1-4797-8f59-b9e81fbee6ee.png)
 
 
-### Virtual network
+## Virtual network
 
 First, define the subnet
 
@@ -548,7 +546,7 @@ $N2 = New-AzNetworkInterface -Name 'p11nic2' -ResourceGroupName $RG -Location $L
 ![image](https://user-images.githubusercontent.com/34960418/153222475-fcbf09d4-7c58-46c9-af8e-53036a927b23.png)
 
 
-### Virtual machines
+## Virtual machines
 
 Create the availability set
 
@@ -608,7 +606,7 @@ New-AzVM -ResourceGroupName $RG -Location $LO -VM $VC
 ![image](https://user-images.githubusercontent.com/34960418/153224582-916d88a5-80e4-4c62-baa0-db8d804f3f17.png)
 
 
-### Load balancer
+## Load balancer
 
 Define the public IP address
 
@@ -677,26 +675,26 @@ Get-AzPublicIPAddress -Name 'p11lb-ip' -ResourceGroupName $RG | Select IpAddress
 ![image](https://user-images.githubusercontent.com/34960418/153226365-e4e5493d-da28-49b5-99b5-c2d80276ea30.png)
 
 
-### Clean UP
+## Clean UP
 
 ```powershell
 Get-AzResourceGroup RG-Demo-P1-1 | Remove-AzResourceGroup -Force
 ```
 
 
-## Virtual Machine Scale Set (Azure Portal)
+# Virtual Machine Scale Set (Azure Portal)
 
 Navigate to [Azure Portal](https://portal.azure.com).
 
 
-### Resource group
+## Resource group
 
 Go to **Resource groups**. Create new resource group **RG-Demo-P1-2** in the **West Europe** region.
 
 ![image](https://user-images.githubusercontent.com/34960418/153229201-3f01ed5e-dd20-4790-8874-cd695a162549.png)
 
 
-### Virtual machines scale set
+## Virtual machines scale set
 
 Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Virtual machine scale set** and press **Enter**. Then click on the **Create** button.
 
@@ -756,7 +754,7 @@ Once the deployment is done, click on the **Go to resource** button. Get the pub
 
 
 
-## Virtual Machine Scale Set (Azure CLI)
+# Virtual Machine Scale Set (Azure CLI)
 
 If using the tool on-premise. Not necessary with Azure Cloud Shell.
 
@@ -764,7 +762,7 @@ If using the tool on-premise. Not necessary with Azure Cloud Shell.
 az login
 ```
 
-### Resource group
+## Resource group
 
 First create a resource group
 
@@ -772,7 +770,7 @@ First create a resource group
 az group create --name RG-Demo-P1-2 --location westeurope
 ```
 
-### Virtual machine scale set
+## Virtual machine scale set
 
 Create a virtual machine scale set
 
@@ -803,7 +801,7 @@ And paste it into a browser window
 ![image](https://user-images.githubusercontent.com/34960418/153239890-f885da3a-935a-42fc-af6c-0c98031e5004.png)
 
 
-### Clean Up
+## Clean Up
 
 ```bash
 az group delete --name RG-Demo-P1-2 --yes --no-wait
@@ -811,7 +809,7 @@ az group delete --name RG-Demo-P1-2 --yes --no-wait
 
 
 
-## Virtual Machine Scale Set (Azure PS)
+# Virtual Machine Scale Set (Azure PS)
 
 
 If using the tool on-premise. Not necessary with Azure Cloud Shell.
@@ -821,7 +819,7 @@ Connect-AzAccount
 ```
 
 
-### Resource group
+## Resource group
 
 Create variables for the resource group and location
 
@@ -834,7 +832,7 @@ New-AzResourceGroup -ResourceGroupName $RG -Location $LO
 ![image](https://user-images.githubusercontent.com/34960418/153244735-4626a250-4fd7-4883-a595-c20531540406.png)
 
 
-### Network security group
+## Network security group
 
 Prepare the rules and the network security group
 
@@ -849,7 +847,7 @@ $NSG = New-AzNetworkSecurityGroup -Name "NSG" -ResourceGroupName $RG `
 -Location $LO -SecurityRules $rule1,$rule2
 ```
 
-### Virtual network
+## Virtual network
 
 Create the subnet
 
@@ -866,7 +864,7 @@ $NET = New-AzVirtualNetwork -ResourceGroupName $RG -Location $LO -Name VNET1 `
 ```
 
 
-### Load balancer
+## Load balancer
 
 First, the IP address
 
@@ -908,7 +906,7 @@ $LB = New-AzLoadBalancer -Name 'LB' -ResourceGroupName $RG -Location $LO `
 -FrontendIpConfiguration $LBFE -BackendAddressPool $LBBE -Probe $LBHP -LoadBalancingRule $LBRL
 ```
 
-### Virtual machine scale set
+## Virtual machine scale set
 
 IP configuration
 
@@ -998,22 +996,23 @@ And navigate in a browser tab to this URL ```http://<public ip>/index.php```
 ![image](https://user-images.githubusercontent.com/34960418/153249409-43aaa4c5-ca3b-42ca-989d-40a97ca5f4ef.png)
 
 
-### Clean up
+## Clean up
 
 ```powershell
 Get-AzResourceGroup RG-Demo-P1-2 | Remove-AzResourceGroup -Force
 ```
 
-## BLOB + Files (Azure Portal)
 
-### Resource group
+# BLOB + Files (Azure Portal)
+
+## Resource group
 
 Go to **Resource groups**. Create new resource group **RG-Demo-P1-3** in the **West Europe** region. 
 
 ![image](https://user-images.githubusercontent.com/34960418/153252343-ab62df59-a0a4-47ea-a0c0-70092721735f.png)
 
 
-### Storage account 
+## Storage account 
 
 
 Enter the resource group and click on the **+ Create** button to add new resources. In the search field enter **Storage account** and hit **Enter**. Then click on the **Create** button.
@@ -1026,7 +1025,7 @@ For name enter something unique, for example **sadvzaze**. Set the Location to *
 ![image](https://user-images.githubusercontent.com/34960418/153253086-e0fc06f6-8e33-411f-8e6f-77d74c9cce90.png)
 
 
-### BLOB
+## BLOB
 
 Enter (navigate to) the account you just created. Click on the **Containers** section. Click on the **+ Container** button to create new one. 
 
@@ -1048,7 +1047,7 @@ Now, we can upload one or more files to it. Click on the **Upload** button. Clic
 ![image](https://user-images.githubusercontent.com/34960418/153254830-6fccecc8-cec0-42a9-8f6b-ac960ed304bf.png)
 
 
-### Files
+## Files
 
 Return to the storage account. Click on the **File shares** option. Click on the **+ File share** button to create one.
 
@@ -1071,7 +1070,7 @@ Then click on the Upload button to upload a file.
 ![image](https://user-images.githubusercontent.com/34960418/153256181-6a483d0e-9b13-4564-8dd6-0c4d095ef1d4.png)
 
 
-### Storage Explorer
+## Storage Explorer
 
 Download the Storage Explorer application from [here](https://azure.microsoft.com/en-us/features/storage-explorer/). Install it and run it. Connect it to your subscription.
 Navigate to the storage account and explore its contents.
