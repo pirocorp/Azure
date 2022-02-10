@@ -240,7 +240,7 @@ The deployment and management service for Azure.
 Azure Resource Manager Templates is a **JSON file** that defines resources to deploy to a resource group or subscription. Can use it to deploy the resources consistently and repeatedly. The template is deployed only after passing validation. It can be broken into smaller, reusable components and linked together at deployment time. Nesting is also supported. Sections of a template are **parameters**, **variables**, **user-defined functions**, **resources**, and **outputs**.
 
 
-### [ARMVIZ](http://armviz.io/)
+#### [ARMVIZ](http://armviz.io/)
 
 ARMVIZ is a free tool for visualizing, editing and saving Azure Resource Manager Templates. Hosted online and developed and supported by 3rd party.
 
