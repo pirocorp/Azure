@@ -70,11 +70,9 @@ Key features offered:
  - **Location independence** – serve data quickly to multiple locations.
 
 
-
 ## NoSQL Key-Value Type
 
 **NoSQL Key-Value** databases are a **collection of keys associated with values**. **Keys** are **strings**, and **values** are **BLOBs**. There is no query language, just simple commands (put, get, delete, update). Use Cases: Session tracking, shopping carts, etc. Examples: Redis, Cassandra, Memcached, Couchbase, etc.
-
 
 
 ## NoSQL Document Type
@@ -82,11 +80,9 @@ Key features offered:
 Similar to key-value DBs, **values** store **XML**, **JSON**, or **BSON**. They offer the storage of complex data like trees, collections, dictionaries. It doesn’t support relations and joins. No query language. Examples: MongoDB, CouchDB, OrientDB.
 
 
-
 ## NoSQL Column Store Type
 
 **Store data in column families as rows**. Rows have many columns associated with them. Each row can have a different set of columns. Offer compression, aggregation queries, and scalability. They are fast to load and query. Examples: Cassandra, DynamoDB, Hbase.
-
 
 
 ## NoSQL Graph Type
@@ -94,12 +90,12 @@ Similar to key-value DBs, **values** store **XML**, **JSON**, or **BSON**. They 
 Data is stored in the form of nodes and edges. Nodes are the data entries. Edges are the relationships between the data entries. Edges can have their properties and direction examples: Neo4J, FlockDB, OrientDB.
 
 
-
 ## [Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 
 It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL models** offers multiple APIs. Some of the features include. **Global distribution** for highly responsive and highly available apps. **Elastic scalability** of throughput and storage. **Five consistency levels** ranging from **strong** to **eventual**.
 
 ![image](https://user-images.githubusercontent.com/34960418/153903202-a893ac8e-df2b-422c-bc20-0ec6f428f403.png)
+
 
 ### Azure Cosmos DB Supported APIs
 
@@ -130,6 +126,7 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 ![image](https://user-images.githubusercontent.com/34960418/153905090-cb7dc452-0a81-437b-bdd2-a180fa44858c.png)
 
 
+
 # Azure Analytics Services
 
 They are a broad and essential set of services. Typically, those are complex services that depend on others. 
@@ -140,3 +137,16 @@ Types of Azure Analytics Services
 - HDInsight clusters
 - PowerBI Embedded
 - Stream Analytics jobs
+
+
+## [Azure Stream Analytics (ASA)](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction)
+
+Azure Stream Analytics (ASA) is **real-time analytics** and complex **event-processing** engine. ASAs are designed to simultaneously **analyze** and **process** high volumes of fast streaming data from **multiple sources**. Sources include devices, sensors, clickstreams, social media feeds, and applications. Can identify **patterns** and **relationships**. Uses findings to **trigger actions** and **initiate workflows**. Supports **alerts**, feeding information to a **reporting tool** or **storing** transformed data for later use.
+
+![image](https://user-images.githubusercontent.com/34960418/153907705-dc52812c-98ce-4390-b8b0-e17e414ac4ef.png)
+
+
+## [Streaming Units (SUs)](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-streaming-unit-consumption)
+
+![image](https://user-images.githubusercontent.com/34960418/153907817-8089637f-ec8d-4b29-9d4d-9f52e2616a06.png)
+
