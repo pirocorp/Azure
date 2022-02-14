@@ -100,7 +100,7 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 ![image](https://user-images.githubusercontent.com/34960418/153903508-e8e86e63-e03c-45a1-bb1a-611cf051e587.png)
 
 
-### Azure Cosmos DB SQL
+### [Azure Cosmos DB SQL](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-query-getting-started)
 
 - Standard clauses
   - SELECT, FROM, WHERE, ORDER BY, GROUP BY
