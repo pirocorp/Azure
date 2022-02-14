@@ -9,6 +9,11 @@
   - [Azure Cosmos DB](#azure-cosmos-db)
 - [Azure Analytics Services](#azure-analytics-services)
 - [Azure Stream Analytics (ASA)](#azure-stream-analytics-asa)
+  - [Tumbling Window](#tumbling-window)
+  - [Hopping Window](#hopping-window)
+  - [Sliding Window](#sliding-window)
+  - [Session Window](#session-window)
+  - [Snapshot Window](#snapshot-window)
 
 
 
