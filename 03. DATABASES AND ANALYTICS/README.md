@@ -100,4 +100,15 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 ![image](https://user-images.githubusercontent.com/34960418/153903508-e8e86e63-e03c-45a1-bb1a-611cf051e587.png)
 
 
+### Azure Cosmos DB SQL
+
+- Standard clauses
+  - SELECT, FROM, WHERE, ORDER BY, GROUP BY
+- Subqueries
+- Joins
+- Aggregate functions
+  - COUNT, SUM, MIN, MAX, and AVG
+- Many system functions
+  - ABS, ROUND, TRUNC, CONCAT, LEFT, TRIM, UPPER, …
+
 
