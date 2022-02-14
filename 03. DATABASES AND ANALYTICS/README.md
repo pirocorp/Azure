@@ -16,10 +16,14 @@
   - [Snapshot Window](#snapshot-window)
 
 # Jump to practical guides
-
-- [Azure SQL (Azure Portal)](#azure-sql-azure-portal)
-- [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
-- [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
+- Azure SQL
+  - [Azure SQL (Azure Portal)](#azure-sql-azure-portal)
+  - [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
+  - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
+- Cosmos DB
+  - [Cosmos DB (Azure Portal)](#comsmos-db-azure-portal)
+  - [Cosmos DB (Azure CLI)](#comsmos-db-azure-cli)
+  - [Cosmos DB (Azure PowerShell)](#comsmos-db-azure-powershell)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
@@ -215,3 +219,8 @@ In real-time events processing, it is common to perform some **set-based computa
 
 # Azure SQL (Azure PowerShell)
 
+# Cosmos DB (Azure Portal)
+
+# Cosmos DB (Azure CLI)
+
+# Cosmos DB (Azure PowerShell)
