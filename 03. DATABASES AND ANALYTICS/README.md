@@ -17,6 +17,7 @@
 
 # Jump to practical guides
 
+- [Azure SQL (Azure Portal)](#azure-sql-azure-portal)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
@@ -203,3 +204,8 @@ In real-time events processing, it is common to perform some **set-based computa
 ## [Snapshot Window](https://docs.microsoft.com/en-us/stream-analytics-query/snapshot-window-azure-stream-analytics)
 
 ![image](https://user-images.githubusercontent.com/34960418/153910198-54494bca-254a-456c-852c-c03c683f886e.png)
+
+
+
+# Azure SQL (Azure Portal)
+
