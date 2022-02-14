@@ -21,9 +21,9 @@
   - [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
   - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
 - Cosmos DB
-  - [Cosmos DB (Azure Portal)](#comsmos-db-azure-portal)
-  - [Cosmos DB (Azure CLI)](#comsmos-db-azure-cli)
-  - [Cosmos DB (Azure PowerShell)](#comsmos-db-azure-powershell)
+  - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
+  - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
+  - [Cosmos DB (Azure PowerShell)](#cosmos-db-azure-powershell)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
