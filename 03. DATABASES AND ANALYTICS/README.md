@@ -8,6 +8,7 @@
   - [NoSQL Graph Type](#nosql-graph-type) 
   - [Azure Cosmos DB](#azure-cosmos-db)
 - [Azure Analytics Services](#azure-analytics-services)
+- [Azure Stream Analytics (ASA)](#azure-stream-analytics-asa)
 
 
 
@@ -139,7 +140,7 @@ Types of Azure Analytics Services
 - Stream Analytics jobs
 
 
-## [Azure Stream Analytics (ASA)](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction)
+# [Azure Stream Analytics (ASA)](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction)
 
 Azure Stream Analytics (ASA) is **real-time analytics** and complex **event-processing** engine. ASAs are designed to simultaneously **analyze** and **process** high volumes of fast streaming data from **multiple sources**. Sources include devices, sensors, clickstreams, social media feeds, and applications. Can identify **patterns** and **relationships**. Uses findings to **trigger actions** and **initiate workflows**. Supports **alerts**, feeding information to a **reporting tool** or **storing** transformed data for later use.
 
@@ -159,3 +160,39 @@ Azure Stream Analytics (ASA) is **real-time analytics** and complex **event-proc
   - COUNT, SUM, MIN, MAX, AVG, etc.
 - Time management
 - Windowing
+
+
+## [Windowing](https://docs.microsoft.com/en-us/stream-analytics-query/windowing-azure-stream-analytics)
+
+In real-time events processing, it is common to perform some **set-based computation** (aggregation) or other operations **over subsets of events** that fall **within some period of time**. In Azure Stream Analytics, these subsets of events are defined through **windows** to represent groupings by time. There are five types of windows:
+
+- Tumbling
+- Hopping
+- Sliding
+- Session
+- Snapshot
+
+
+## [Tumbling Window](https://docs.microsoft.com/en-us/stream-analytics-query/tumbling-window-azure-stream-analytics)
+
+![image](https://user-images.githubusercontent.com/34960418/153909625-65091be4-9789-46e9-88fd-497f34797886.png)
+
+
+## [Hopping Window](https://docs.microsoft.com/en-us/stream-analytics-query/hopping-window-azure-stream-analytics)
+
+![image](https://user-images.githubusercontent.com/34960418/153909773-ed7f9e2b-2b41-4468-9ad1-bf7bd7d1586b.png)
+
+
+## [Sliding Window](https://docs.microsoft.com/en-us/stream-analytics-query/sliding-window-azure-stream-analytics)
+
+![image](https://user-images.githubusercontent.com/34960418/153909945-e0fcf83c-2065-4975-8407-f00d17f267d9.png)
+
+
+## [Session Window](https://docs.microsoft.com/en-us/stream-analytics-query/session-window-azure-stream-analytics)
+
+![image](https://user-images.githubusercontent.com/34960418/153910069-93010b01-e7e3-46b7-b25b-80c28ba87c25.png)
+
+
+## [Snapshot Window](https://docs.microsoft.com/en-us/stream-analytics-query/snapshot-window-azure-stream-analytics)
+
+![image](https://user-images.githubusercontent.com/34960418/153910198-54494bca-254a-456c-852c-c03c683f886e.png)
