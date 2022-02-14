@@ -7,7 +7,7 @@
   - [NoSQL Column Store Type](#nosql-column-store-type)
   - [NoSQL Graph Type](#nosql-graph-type) 
   - [Azure Cosmos DB](#azure-cosmos-db)
-  - [Azure Analytics Services](#azure-analytics-services)
+- [Azure Analytics Services](#azure-analytics-services)
 
 
 
