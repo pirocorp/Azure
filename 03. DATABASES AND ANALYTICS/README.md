@@ -1,11 +1,18 @@
 # TOC
 
 - [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL)
-- [NoSQL Databases](#nosql-databases)
+- [NoSQL Databases (Csomos DB)](#nosql-databases-cosmos-db)
 
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
+
+RDBMS follow ACID rules:
+
+- **Atomicity** – transactions are threated as single units.
+- **Consistency** – transactions bring DB from one valid state to another. Written data must be valid according to all rules.
+- **Isolation** – concurrent execution of transactions leaves the DB in the same state as if they were executed sequentially.
+- **Durability** – committed transaction remains committed even in case of system failure.
 
 Types of Offerings
 
@@ -47,5 +54,17 @@ Designed for very large OLTP database. Offers the ability to auto-scale storage 
 
 
 
-# [NoSQL Databases]()
+# [NoSQL Databases (Csomos DB)]
+
+NoSQL = Not-only-SQL
+
+RDBMS are hard to scale and there is need for unstructured data. NoSQL databases store unstructured data. Data is stored in a denormalized form.
+
+Key features offered:
+ - **Speed** – very fast response, usually the data is stored in memory.
+ - **Scale** – easily scalable, following the ever-growing demand.
+ - **Continuous availability** – redundant copies across multiple locations with no downtime.
+ - **Location independence** – serve data quickly to multiple locations.
+
+
 
