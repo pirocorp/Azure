@@ -1,7 +1,7 @@
 # TOC
 
 - [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL)
-- [NoSQL Databases (Csomos DB)](#nosql-databases-cosmos-db)
+- [NoSQL Databases (Csomos DB)](#nosql-databases-csomos-db)
 
 
 
