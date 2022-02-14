@@ -7,6 +7,7 @@
   - [NoSQL Column Store Type](#nosql-column-store-type)
   - [NoSQL Graph Type](#nosql-graph-type) 
   - [Azure Cosmos DB](#azure-cosmos-db)
+  - [Azure Analytics Services](#azure-analytics-services)
 
 
 
@@ -128,3 +129,14 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 
 ![image](https://user-images.githubusercontent.com/34960418/153905090-cb7dc452-0a81-437b-bdd2-a180fa44858c.png)
 
+
+# Azure Analytics Services
+
+They are a broad and essential set of services. Typically, those are complex services that depend on others. 
+
+Types of Azure Analytics Services
+- Azure Synapse Analytics (formerly SQL Data Warehouse)
+- Azure Databricks
+- HDInsight clusters
+- PowerBI Embedded
+- Stream Analytics jobs
