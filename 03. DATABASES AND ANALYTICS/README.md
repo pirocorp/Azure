@@ -211,3 +211,7 @@ In real-time events processing, it is common to perform some **set-based computa
 
 # Azure SQL (Azure Portal)
 
+# Azure SQL (Azure CLI)
+
+# Azure SQL (Azure PowerShell)
+
