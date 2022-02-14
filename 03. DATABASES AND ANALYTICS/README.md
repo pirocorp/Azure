@@ -121,4 +121,5 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 
 ### [Azure Cosmos DB Hierarchy](https://docs.microsoft.com/en-us/azure/cosmos-db/databases-containers-items)
 
-![image](https://user-images.githubusercontent.com/34960418/153905007-2379e6dd-bffd-4be7-9fe8-91067f1b44bb.png)
+![image](https://user-images.githubusercontent.com/34960418/153905090-cb7dc452-0a81-437b-bdd2-a180fa44858c.png)
+
