@@ -151,7 +151,7 @@ Azure Stream Analytics (ASA) is **real-time analytics** and complex **event-proc
 ![image](https://user-images.githubusercontent.com/34960418/153907817-8089637f-ec8d-4b29-9d4d-9f52e2616a06.png)
 
 
-[Azure Stream Analytics Query Language](https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference)
+## [Azure Stream Analytics Query Language](https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference)
 
 - Standard clauses
   - SELECT, FROM, WHERE, GROUP BY, etc.
