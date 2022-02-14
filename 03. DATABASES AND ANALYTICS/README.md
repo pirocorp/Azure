@@ -54,7 +54,7 @@ Designed for very large OLTP database. Offers the ability to auto-scale storage 
 
 
 
-# [NoSQL Databases (Csomos DB)]
+# NoSQL Databases (Csomos DB)
 
 NoSQL = Not-only-SQL
 
