@@ -2,6 +2,7 @@
 
 - [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL)
 - [NoSQL Databases (Csomos DB)](#nosql-databases-cosmos-db)
+  - [Azure Cosmos DB](#azure-cosmos-db) 
 
 
 
