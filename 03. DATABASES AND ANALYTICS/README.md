@@ -15,6 +15,8 @@
   - [Session Window](#session-window)
   - [Snapshot Window](#snapshot-window)
 
+# Jump to practical guides
+
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
