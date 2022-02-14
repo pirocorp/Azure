@@ -1,7 +1,7 @@
 # TOC
 
 - [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL)
-- [NoSQL Databases (Csomos DB)](#nosql-databases-csomos-db)
+- [NoSQL Databases (Csomos DB)](#nosql-databases-cosmos-db)
 
 
 
@@ -54,7 +54,7 @@ Designed for very large OLTP database. Offers the ability to auto-scale storage 
 
 
 
-# NoSQL Databases (Csomos DB)
+# NoSQL Databases (Cosmos DB)
 
 NoSQL = Not-only-SQL
 
