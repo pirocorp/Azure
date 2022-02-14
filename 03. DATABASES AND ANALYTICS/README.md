@@ -9,9 +9,9 @@
 
 RDBMS follow ACID rules:
 
-- **Atomicity** – transactions are threated as single units.
+- **Atomicity** – treats transactions as single units.
 - **Consistency** – transactions bring DB from one valid state to another. Written data must be valid according to all rules.
-- **Isolation** – concurrent execution of transactions leaves the DB in the same state as if they were executed sequentially.
+- **Isolation** – concurrent execution of transactions leaves the DB in the same state as executed sequentially.
 - **Durability** – committed transaction remains committed even in case of system failure.
 
 Types of Offerings
