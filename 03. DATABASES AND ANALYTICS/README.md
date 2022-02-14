@@ -18,6 +18,8 @@
 # Jump to practical guides
 
 - [Azure SQL (Azure Portal)](#azure-sql-azure-portal)
+- [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
+- [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
