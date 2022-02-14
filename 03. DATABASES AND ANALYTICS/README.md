@@ -2,7 +2,11 @@
 
 - [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL)
 - [NoSQL Databases (Csomos DB)](#nosql-databases-cosmos-db)
-  - [Azure Cosmos DB](#azure-cosmos-db) 
+  - [NoSQL Key-Value Type](#nosql-key-value-type)
+  - [NoSQL Document Type](#nosql-document-type)
+  - [NoSQL Column Store Type](#nosql-column-store-type)
+  - [NoSQL Graph Type](#nosql-graph-type) 
+  - [Azure Cosmos DB](#azure-cosmos-db)
 
 
 
