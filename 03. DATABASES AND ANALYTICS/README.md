@@ -1,3 +1,10 @@
+# TOC
+
+- [Relational Databases (Azure SQL)](#relational-Databases-azure-SQL))
+
+
+
+
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
 
 Types of Offerings
@@ -40,3 +47,4 @@ Designed for very large OLTP database. Offers the ability to auto-scale storage 
 
 
 
+## 
