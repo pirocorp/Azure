@@ -112,3 +112,6 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
   - ABS, ROUND, TRUNC, CONCAT, LEFT, TRIM, UPPER, …
 
 
+### [Azure Cosmos DB Request Units (RUs)](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units)
+
+**Serverless** or **Provisioned Throughput** Modes. **Throughput** is provisioned in increments of **100 RUs / sec**. Throughput can be set on **Container** and **Database** level. 1 RU = **single 1 KB item read**. 
