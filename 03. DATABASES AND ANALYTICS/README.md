@@ -24,6 +24,7 @@
   - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
   - [Cosmos DB (Azure PowerShell)](#cosmos-db-azure-powershell)
+- [Azure Stream Analytics](#azure-stream-analytics)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
@@ -224,3 +225,5 @@ In real-time events processing, it is common to perform some **set-based computa
 # Cosmos DB (Azure CLI)
 
 # Cosmos DB (Azure PowerShell)
+
+# Azure Stream Analytics
