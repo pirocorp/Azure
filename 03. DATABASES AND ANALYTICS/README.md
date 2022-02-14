@@ -115,3 +115,10 @@ It is Microsoft’s NoSQL database solution. Cosmos DB supports **all four NoSQL
 ### [Azure Cosmos DB Request Units (RUs)](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units)
 
 **Serverless** or **Provisioned Throughput** Modes. **Throughput** is provisioned in increments of **100 RUs / sec**. Throughput can be set on **Container** and **Database** level. 1 RU = **single 1 KB item read**. 
+
+![image](https://user-images.githubusercontent.com/34960418/153904865-41f50279-af2b-45b6-bc91-449408655dd7.png)
+
+
+### [Azure Cosmos DB Hierarchy](https://docs.microsoft.com/en-us/azure/cosmos-db/databases-containers-items)
+
+![image](https://user-images.githubusercontent.com/34960418/153905007-2379e6dd-bffd-4be7-9fe8-91067f1b44bb.png)
