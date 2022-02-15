@@ -36,7 +36,7 @@
     - [Work with data](#work-with-data)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
   - [Cosmos DB (Azure PowerShell)](#cosmos-db-azure-powershell)
-  - [Import data from (from Azure SQL)]()
+  - [Import data from (from Azure SQL)](#import-data-from-from-azure-sql)
 - [Azure Stream Analytics](#azure-stream-analytics)
 
 
@@ -805,7 +805,7 @@ Get-AzCosmosDBSqlContainer -ResourceGroupName RG-CosmosDB -AccountName azecos -D
 ![image](https://user-images.githubusercontent.com/34960418/154088714-a0063e05-0b8d-4add-885a-484c6a3bb97c.png)
 
 
-# Import data from (from Azure SQL)
+## Import data from (from Azure SQL)
 
 
 # Azure Stream Analytics
