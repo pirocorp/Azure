@@ -594,6 +594,36 @@ Repeat the procedure with another two records.
 }
 ```
 
+Note that there is a query. Let’s edit it. Click on the **Edit Filter**. Enter ```WHERE c.category = "business"``` and click on the **Apply Filter** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154079551-374b5fff-2c88-4540-b123-c692091d9787.png)
+
+
+Click on the **New SQL Query** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154079784-0969f062-03f7-4842-9438-9b8eb661d172.png)
+
+
+
+New window will open with a prepopulated query. Click on the **Execute Query** button. On the tab Results you can see the output and on the tab Query Stats you can explore what it took to execute it
+
+![image](https://user-images.githubusercontent.com/34960418/154080001-00f69403-f0fe-475c-af03-7cd8e648deae.png)
+
+
+On the tab **Results** you can see the output and on the tab **Query Stats** you can explore what it took to execute it.
+
+![image](https://user-images.githubusercontent.com/34960418/154080373-e49c6af0-7c8b-4166-8485-7a309bbe8db3.png)
+
+Test with another query
+
+```sql
+SELECT c.category, COUNT(1) AS slotsCount FROM TimeSlots c GROUP BY c.category
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154080694-7a413aee-459b-4237-8578-eca23e23aed4.png)
+
+
+
 
 
 # Cosmos DB (Azure CLI)
