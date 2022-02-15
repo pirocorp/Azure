@@ -27,6 +27,7 @@
   - [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
     - [Create a database](#create-a-database-1)
   - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
+    - [Create a database](#create-a-database-2)
 - Cosmos DB
   - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
