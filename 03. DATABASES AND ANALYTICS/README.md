@@ -28,6 +28,7 @@
     - [Create a database](#create-a-database-1)
   - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
     - [Create a database](#create-a-database-2)
+  - Connect to database from the command line (sqlcmd)
 - Cosmos DB
   - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
@@ -450,6 +451,62 @@ New-AzSqlDatabase -DatabaseName DBPS -ResourceGroupName RG-SQL -ServerName piroc
 
 ![image](https://user-images.githubusercontent.com/34960418/154064002-845e4c0a-20a9-4a0d-8da8-132f543b8fd3.png)
 
+
+# Connect to database from the command line (sqlcmd)
+
+With the help of Azure CLI we can get a connection string for a particular database:
+
+```bash
+az sql db show-connection-string --client sqlcmd --name BGCities
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154064732-d192dba9-7cb5-48ac-be35-5fc63f8053b4.png)
+
+
+Connect with the help of the sqlcmd tool using the provided connection string:
+
+```bash
+sqlcmd -S tcp:pirocorp.database.windows.net,1433 -d BGCities -U demosa -P DemoPassword-2022 -N -l 30
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154065023-d8299551-fff5-491e-ac64-efd74dc8dbe0.png)
+
+
+ask for the version of the database:
+
+```sqlcmd
+SELECT @@version;
+GO
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154065167-c40c20f6-9617-4c03-9eb7-44d7958077a9.png)
+
+
+Change the database to BGCities:
+
+```sqlcmd
+USE BGCities;
+GO
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154065280-40ed3301-0504-4a9a-9271-d53441227654.png)
+
+
+Ask for the list of top cities:
+
+```sqlcmd
+SELECT * FROM TopCities;
+GO
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154065424-9b73f42e-dfdf-4ca9-8465-7159e8c42947.png)
+
+
+Close the session with:
+
+```sqlcmd
+QUIT
+```
 
 
 # Cosmos DB (Azure Portal)
