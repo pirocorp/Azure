@@ -18,6 +18,12 @@
 # Jump to practical guides
 - Azure SQL
   - [Azure SQL (Azure Portal)](#azure-sql-azure-portal)
+    - [SQL Server](#sql-server)
+    - [Create a database](#create-a-database)
+    - [Database connectivity](#database-connectivity)
+    - [Connect to a database with Query editor](#connect-to-a-database-with-query-editor)
+    - [Connect to a database with SQL Server Management Studio (SSMS)](#connect-to-a-database-with-sql-server-management-studio-ssms)
+    - [Restore a database](#restore-a-database)
   - [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
   - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
 - Cosmos DB
