@@ -372,6 +372,9 @@ Once the process finishes, you can go to the database and query its data.
 
 ![image](https://user-images.githubusercontent.com/34960418/154060259-2a2ba0a5-34b2-41cd-86b2-a56331add8d4.png)
 
+![image](https://user-images.githubusercontent.com/34960418/154061382-0343bb21-5f36-414c-ac00-38ab0c391a48.png)
+
+
 
 
 
