@@ -410,17 +410,46 @@ az sql db create --name DBCLI --edition Basic --capacity 5 --output table
 ![image](https://user-images.githubusercontent.com/34960418/154062269-0b76cc43-8fd3-4f62-97fe-46f4aa8aabe0.png)
 
 
-
-
-
-
-
-
-
-
-
-
 # Azure SQL (Azure PowerShell)
+
+## Create a database
+
+If not working in **Azure Cloud Shell**, then first login
+
+```powershell
+Connect-AzAccount
+```
+
+For the SQL server
+
+```powershell
+Get-Command *pirocorp*
+```
+
+For the SQL databases:
+
+```powershell
+Get-Command *pirocorpdatabase*
+```
+
+List all existing databases:
+
+```powershell
+Get-AzSqlDatabase -ServerName pirocorp -ResourceGroupName RG-SQL | Format-Table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154063435-52677056-5251-4f34-a051-1df3ba25a441.png)
+
+
+Create new database with:
+
+```powershell
+New-AzSqlDatabase -DatabaseName DBPS -ResourceGroupName RG-SQL -ServerName pirocorp -Edition Basic
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154064002-845e4c0a-20a9-4a0d-8da8-132f543b8fd3.png)
+
+
 
 # Cosmos DB (Azure Portal)
 
