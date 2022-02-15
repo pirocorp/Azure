@@ -627,10 +627,102 @@ SELECT c.category, COUNT(c.id) AS slotsCount FROM TimeSlots c GROUP BY c.categor
 
 
 
-
-
 # Cosmos DB (Azure CLI)
 
+If using local shell, login first by issuing:
+
+```bash
+az login
+```
+
+## Create database
+
+List all databases:
+
+```bash
+az cosmosdb sql database list --account-name azecos --resource-group RG-CosmosDB --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154082539-a1fe8bdf-6ff8-4691-bb0d-3eb0686d1cb1.png)
+
+
+Create new database:
+
+```bash
+az cosmosdb sql database create --account-name azecos --resource-group RG-CosmosDB --name AZDB
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154082886-37860686-0977-45ef-b35e-7aee7d1c02fb.png)
+
+
+And a container for storing people partitioned by city:
+
+```bash
+az cosmosdb sql container create --account-name azecos --resource-group RG-CosmosDB --database-name AZDB --name People --partition-key-path /city --throughput 400
+```
+
+
 # Cosmos DB (Azure PowerShell)
+
+If not working in **Azure Cloud Shell**, then first login:
+
+```bash
+Connect-AzAccount
+```
+
+## Inspect Cosmos DB (without Az.CosmosDB module)
+
+Here the situation is a little bit more complex. Because of the lack of specialized commands, must pass everything through the Resource object. For example, to list all databases must execute:
+
+```powershell
+Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/databases `
+-ApiVersion "2015-04-08" -ResourceGroupName "RG-CosmosDB" -Name "azecos/sql/" | Format-Table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154084717-d4851fc0-db4e-4e14-b909-9a8365bae505.png)
+
+
+To show information for a particular database, execute:
+
+```powershell
+Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/databases `
+-ApiVersion "2015-04-08" -ResourceGroupName "RG-CosmosDB" -Name "azecos/sql/TimeTracker"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154084895-ae422105-dcbc-4619-9a44-62b981ebb34e.png)
+
+
+For all information, execute:
+
+```powershell
+Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/databases `
+-ApiVersion "2015-04-08" -ResourceGroupName "RG-CosmosDB" -Name "azecos/sql/TimeTracker" `
+| Select *
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154085222-8a4d1459-2b5b-4f5c-8870-1b4d3311ce8c.png)
+
+
+For all containers in a database, execute:
+
+```powershell
+Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/databases/containers `
+-ApiVersion "2015-04-08" -ResourceGroupName "RG-CosmosDB" -Name "azecos/sql/TimeTracker"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154085663-262d6c79-7569-4480-b415-4bfb5905eaaf.png)
+
+
+Retrieve information for a container in a database via:
+
+```powershell
+Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/databases/containers `
+-ApiVersion "2015-04-08" -ResourceGroupName "RG-CosmosDB" `
+-Name "azecos/sql/TimeTracker/TimeSlots" | Select *
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154085956-022e93f4-9618-43ed-b5a9-79faf4ff1e75.png)
+
+
 
 # Azure Stream Analytics
