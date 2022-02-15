@@ -310,6 +310,20 @@ Execute some SQL queries
 ![image](https://user-images.githubusercontent.com/34960418/154057054-b8012377-faf3-46d6-8716-8143fb2af5be.png)
 
 
+## Restore a database
+
+Return to the **Azure Portal**. Navigate to the **Overview** of the **SQL servers**. Click on the **Import database** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154057536-b18fd5ce-c10c-437b-b71b-3745f835391e.png)
+
+
+Click on **Select backup** in the **Storage** section. Select an existing storage account. If you do not see one, go and create, then return back here. Click on **+ Container**.
+
+
+![image](https://user-images.githubusercontent.com/34960418/154057841-a68b9d82-d133-4954-8304-a7729cfa63ff.png)
+
+
+
 
 
 # Azure SQL (Azure CLI)
