@@ -31,6 +31,9 @@
   - Connect to database from the command line (sqlcmd)
 - Cosmos DB
   - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
+    - [Azure Cosmos DB account](#azure-cosmos-db-account)
+    - [Database](#database)
+    - [Work with data](#work-with-data)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
   - [Cosmos DB (Azure PowerShell)](#cosmos-db-azure-powershell)
 - [Azure Stream Analytics](#azure-stream-analytics)
