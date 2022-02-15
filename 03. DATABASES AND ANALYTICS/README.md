@@ -305,6 +305,9 @@ Open the **SSMS** tool. Paste the copied string in the **Server name** section. 
 ![image](https://user-images.githubusercontent.com/34960418/154056860-ab462684-fdec-4879-aadb-07f6be8a6508.png)
 
 
+Execute some SQL queries
+
+![image](https://user-images.githubusercontent.com/34960418/154057054-b8012377-faf3-46d6-8716-8143fb2af5be.png)
 
 
 
