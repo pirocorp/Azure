@@ -35,7 +35,10 @@
     - [Database](#database)
     - [Work with data](#work-with-data)
   - [Cosmos DB (Azure CLI)](#cosmos-db-azure-cli)
+    - [Create database](#create-database)
   - [Cosmos DB (Azure PowerShell)](#cosmos-db-azure-powershell)
+    - [Inspect Cosmos DB (without Az.CosmosDB module)](#inspect-cosmos-db-without-azcosmosdb-module)
+    - [Use the Az.CosmosDB module](#use-the-azcosmosdb-module)
   - [Import data from (from Azure SQL)](#import-data-from-from-azure-sql)
 - [Azure Stream Analytics](#azure-stream-analytics)
 
