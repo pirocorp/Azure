@@ -317,10 +317,47 @@ Return to the **Azure Portal**. Navigate to the **Overview** of the **SQL server
 ![image](https://user-images.githubusercontent.com/34960418/154057536-b18fd5ce-c10c-437b-b71b-3745f835391e.png)
 
 
-Click on **Select backup** in the **Storage** section. Select an existing storage account. If you do not see one, go and create, then return back here. Click on **+ Container**.
-
+Click on **Select backup** in the **Storage** section. 
 
 ![image](https://user-images.githubusercontent.com/34960418/154057841-a68b9d82-d133-4954-8304-a7729cfa63ff.png)
+
+
+Select an existing storage account. If you do not see one, go and create, then return back here. 
+
+![image](https://user-images.githubusercontent.com/34960418/154058599-843de533-3219-4dad-8d93-a8a2c7a87563.png)
+
+
+Click on **+ Container**.
+
+![image](https://user-images.githubusercontent.com/34960418/154058696-cbded88a-62f2-47c6-bff5-8980ba8cf5e5.png)
+
+
+For Name enter **db1** and click **Create**
+
+![image](https://user-images.githubusercontent.com/34960418/154058843-6e682bfc-7439-491d-8739-3962662afe4d.png)
+
+
+Click on the new container.
+
+![image](https://user-images.githubusercontent.com/34960418/154058919-55f2de22-266f-4e1c-adfa-ac0ca6e87c03.png)
+
+
+Click on the **Upload** button. Select the database **bacpac** file and click **Upload**.
+
+![image](https://user-images.githubusercontent.com/34960418/154058990-7c78eb60-479d-4e4f-bf8b-d5c8ed177799.png)
+
+
+Select the uploaded export and click on the **Select** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154059242-8ccb8019-329e-4213-b1c7-3930239f3b93.png)
+
+
+Click on the **Pricing tier** to select a different one. Let’s select **Basic** and confirm with **Apply**. Adjust the **collation** if needed. Enter the credentials and click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/154059459-b0264f1b-df19-4235-87f5-05374ba87fc6.png)
+
+
+
 
 
 
