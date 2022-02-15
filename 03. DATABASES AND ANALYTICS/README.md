@@ -614,10 +614,10 @@ On the tab **Results** you can see the output and on the tab **Query Stats** you
 
 ![image](https://user-images.githubusercontent.com/34960418/154080373-e49c6af0-7c8b-4166-8485-7a309bbe8db3.png)
 
-Test with another query
+Test with another query. Click on the **Execute Query** button to see the results.
 
 ```sql
-SELECT c.category, COUNT(1) AS slotsCount FROM TimeSlots c GROUP BY c.category
+SELECT c.category, COUNT(c.id) AS slotsCount FROM TimeSlots c GROUP BY c.category
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/154080694-7a413aee-459b-4237-8578-eca23e23aed4.png)
