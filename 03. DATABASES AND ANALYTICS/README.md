@@ -511,6 +511,34 @@ QUIT
 
 # Cosmos DB (Azure Portal)
 
+Navigate to [Azure Portal](https://portal.azure.com)
+
+
+## Resource group
+
+Search for resource groups. Click on **+ Create** to create a new resource group. For **Resource group**, set **RG-CosmosDB**. Select the region to be **West Europe**. Click on **Review + create**. Then on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/154066344-4b396ea2-a1b4-4199-a933-737f40337fec.png)
+
+
+## Azure Cosmos DB account
+
+Go to the resource group. Click on the **+ Create** button to create new resource. Search for **Azure Cosmos DB** and hit **Enter**. Click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154066668-557277cc-0fc3-4fd4-b956-4faff34147c2.png)
+
+
+Select the Core (SQL) and click on the **Create** button for the API.
+
+![image](https://user-images.githubusercontent.com/34960418/154066974-8d868257-1c96-4e98-85a6-1ddd6c8eb01d.png)
+
+
+
+
+
+
+
+
 # Cosmos DB (Azure CLI)
 
 # Cosmos DB (Azure PowerShell)
