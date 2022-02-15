@@ -264,6 +264,50 @@ Change the **Use existing data** to **Sample**. It will load the **AdventureWork
 
 ![image](https://user-images.githubusercontent.com/34960418/154051380-648dbba3-10bc-4124-9c7d-4bd356202c53.png)
 
+After a while, the new database will appear in the bottom table of the **Overview** screen.
+
+![image](https://user-images.githubusercontent.com/34960418/154052128-e2e1f6f8-3c4a-4d6e-b48d-5e7aa442ece4.png)
+
+
+## Database connectivity
+
+Make sure that you are in the **Overview** screen of the **database server**. Click on the **Firewall and virtual networks** option in the **Security** section. You can turn on the **Allow Azure services and resource to access this server** option. Click on the **+ Add client IP** button to allow tools on your station to access the databases on the server. Don’t forget to click on the **Save** button. Then click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/154053151-19f3b513-902d-42af-9acb-8701fcad0d06.png)
+
+
+## Connect to a database with Query editor
+
+Click on the **SQL databases** option under the **Settings** section. Select the **DB1** database.
+
+![image](https://user-images.githubusercontent.com/34960418/154054426-be3e9ff7-95e4-4d61-a6b2-f0f7eb4975fa.png)
+
+
+Click on the **Query editor (preview)** option. Ensure that you enter the correct values in the **Login** and **Password** fields. Click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/154054906-b7fe5916-c8cf-410f-b4d1-3ec7522e764a.png)
+
+
+Test some queries.
+
+![image](https://user-images.githubusercontent.com/34960418/154055718-02edc71c-64eb-4b9b-97ff-892112f04f70.png)
+
+
+## Connect to a database with SQL Server Management Studio (SSMS)
+
+Click on the **Connection strings** option under the **Settings** section. There are several prepared connection strings. Click on the **ADO.NET** and then explore the others as well. And copy the **server name** and the **port** (from the **ADO.NET** section). It should be something like ```pirocorp.database.windows.net,1433```
+
+![image](https://user-images.githubusercontent.com/34960418/154056185-f0630457-2cc2-4d64-a994-3dbe7970fd3f.png)
+
+
+Open the **SSMS** tool. Paste the copied string in the **Server name** section. In the **Login** field enter a valid user and the corresponding password. Click on the **Connect** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154056860-ab462684-fdec-4879-aadb-07f6be8a6508.png)
+
+
+
+
+
 
 # Azure SQL (Azure CLI)
 
