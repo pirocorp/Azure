@@ -352,13 +352,19 @@ Select the uploaded export and click on the **Select** button.
 ![image](https://user-images.githubusercontent.com/34960418/154059242-8ccb8019-329e-4213-b1c7-3930239f3b93.png)
 
 
-Click on the **Pricing tier** to select a different one. Let’s select **Basic** and confirm with **Apply**. Adjust the **collation** if needed. Enter the credentials and click **OK**.
+Click on the **Pricing tier** to select a different one.
 
 ![image](https://user-images.githubusercontent.com/34960418/154059459-b0264f1b-df19-4235-87f5-05374ba87fc6.png)
 
 
+Select **Basic** and confirm with **Apply**. Adjust the **collation** if needed. Enter the credentials and click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/154059769-f81bc0b3-d641-4866-80d2-8517cb288c10.png)
 
 
+Once the process finishes, you can go to the database and query its data.
+
+![image](https://user-images.githubusercontent.com/34960418/154060259-2a2ba0a5-34b2-41cd-86b2-a56331add8d4.png)
 
 
 
