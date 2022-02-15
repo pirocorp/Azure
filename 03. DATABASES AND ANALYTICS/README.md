@@ -724,5 +724,84 @@ Get-AzResource -ResourceType Microsoft.DocumentDB/databaseAccounts/apis/database
 ![image](https://user-images.githubusercontent.com/34960418/154085956-022e93f4-9618-43ed-b5a9-79faf4ff1e75.png)
 
 
+## Use the Az.CosmosDB module
+
+If you do not have it installed, you can do it with:
+
+```powershell
+Install-Module -Name Az.CosmosDB
+```
+
+List all Azure CosmosDB accounts in a resource group we can execute
+
+```powershell
+Get-AzCosmosDBAccount -ResourceGroupName RG-CosmosDB
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154086640-733254a5-b98d-4b2a-8c51-6b1b1cecdc3f.png)
+
+
+The properties of a CosmosDB account can be seen with:
+
+```powershell
+Get-AzCosmosDBAccount -ResourceGroupName RG-CosmosDB -Name azecos
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154086895-a9e68ba2-0957-473f-863e-b94a61083ca0.png)
+
+
+List account keys with:
+
+```powershell
+Get-AzCosmosDBAccountKey -ResourceGroupName RG-CosmosDB -Name azecos -Type "Keys"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154087068-85094ec2-5ec3-4a0b-8048-b863ae173aeb.png)
+
+
+And all connection strings with:
+
+```powershell
+Get-AzCosmosDBAccountKey -ResourceGroupName RG-CosmosDB -Name azecos -Type "ConnectionStrings"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154087430-76e16e3f-7ffc-4c64-bcce-a7c821e80638.png)
+
+
+A list of all databases in an account can be retrieved with:
+
+```powershell
+Get-AzCosmosDBSqlDatabase -ResourceGroupName RG-CosmosDB -AccountName azecos
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154087615-b7cf126e-bb57-408c-8068-46c8fed238f6.png)
+
+
+Create a new database with:
+
+```powershell
+New-AzCosmosDBSqlDatabase -ResourceGroupName RG-CosmosDB -AccountName azecos -Name PSDB -Throughput 400
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154087900-c1d9a762-9137-4296-9231-ed89f4b1a438.png)
+
+
+And finally, a container (collection):
+
+```powershell
+New-AzCosmosDBSqlContainer -ResourceGroupName RG-CosmosDB -AccountName azecos -DatabaseName PSDB -Name Cities -PartitionKeyKind Hash -PartitionKeyPath "/cityname" -Throughput 400
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154088314-a0767b1a-edf4-44bb-a809-03e026d2960e.png)
+
+
+List all containers in a database with:
+
+```powershell
+Get-AzCosmosDBSqlContainer -ResourceGroupName RG-CosmosDB -AccountName azecos -DatabaseName PSDB
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154088714-a0063e05-0b8d-4add-885a-484c6a3bb97c.png)
+
 
 # Azure Stream Analytics
