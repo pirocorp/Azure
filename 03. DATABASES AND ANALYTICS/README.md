@@ -375,10 +375,49 @@ Once the process finishes, you can go to the database and query its data.
 ![image](https://user-images.githubusercontent.com/34960418/154061382-0343bb21-5f36-414c-ac00-38ab0c391a48.png)
 
 
-
-
-
 # Azure SQL (Azure CLI)
+
+## Create a database
+
+If using local shell, login first by issuing:
+
+```bash
+az login
+```
+
+First, let’s set a few default values in order to shorten our commands. We will set the region and the SQL server:
+
+```bash
+az configure --defaults group=RG-SQL sql-server=pirocorp
+```
+
+
+Now, list the existing databases:
+
+```bash
+az sql db list --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154061993-a1e8e776-2a14-4b8c-a8fd-2eab06969230.png)
+
+Create database with:
+
+```bash
+az sql db create --name DBCLI --edition Basic --capacity 5 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154062269-0b76cc43-8fd3-4f62-97fe-46f4aa8aabe0.png)
+
+
+
+
+
+
+
+
+
+
+
 
 # Azure SQL (Azure PowerShell)
 
