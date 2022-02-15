@@ -240,8 +240,29 @@ Ensure both fields **Subscription** and **Resource group** are filled appropriat
 ![image](https://user-images.githubusercontent.com/34960418/154048527-2af88512-02ba-4537-954d-ee66e2c76205.png)
 
 
+## Create a database
+
+Click on the **+ Create database** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154049797-c34f7910-d916-4e22-ad89-08085f70fcfe.png)
 
 
+In the **Database name** field enter for example **db1**. Click on **Configure database**.
+
+![image](https://user-images.githubusercontent.com/34960418/154050407-f5fbb3db-b6ac-4962-bd5f-21fb374e31f8.png)
+
+Select the **Basic** plan and click on **Apply**.
+
+![image](https://user-images.githubusercontent.com/34960418/154050237-9daf0590-c9f3-46e3-ade6-a111c666e25d.png)
+
+
+Select **Locally-redundant backup storage**, and click on the **Next: Networking** button. Then click on the **Next: Security** button. Click on the **Next: Additional settings** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154050657-ee47db2b-83fa-419c-8ebe-d78b92c65022.png)
+
+Change the **Use existing data** to **Sample**. It will load the **AdventureWorksLT** sample database. Click on the **Review + create** button. Click on **Create** to create the database.
+
+![image](https://user-images.githubusercontent.com/34960418/154051380-648dbba3-10bc-4124-9c7d-4bd356202c53.png)
 
 
 # Azure SQL (Azure CLI)
