@@ -533,8 +533,46 @@ Select the Core (SQL) and click on the **Create** button for the API.
 ![image](https://user-images.githubusercontent.com/34960418/154066974-8d868257-1c96-4e98-85a6-1ddd6c8eb01d.png)
 
 
+Change the **Location** to **West Europe**. In the **Account Name** field, enter a globally unique name, for example, **azecos**. Accept the default values for all other parameters. Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/154067818-2caed596-51ba-4228-8f8c-e5898cbb3eac.png)
 
 
+Once the deployment is done, click on the **Go to resource** button.
+
+
+## Database
+
+While in the Overview section, click on the **+ Add Container** button
+
+![image](https://user-images.githubusercontent.com/34960418/154068574-c72345f7-98a2-444c-b8ab-7ef5c48d4d0c.png)
+
+
+Click on the **New Container** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154068700-67a4ddd8-8ab8-4205-a31d-cca8d231779b.png)
+
+
+For **Database id** enter **TimeTracker**. Explore the provisioning options. Either accept the provisioning options with their default values or adjust them. For **Container id** enter **TimeSlots**. In the **Partition key** enter **/category**. Click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/154069169-1eb12cf0-141b-4b2b-b493-7011c6a2b79f.png)
+
+
+## Work with data
+
+Expand the **TimeSlots** container and click on **Items** option. Then click on the **New Item** button. Add the following text and click on the **Save** button.
+
+```json
+{
+	"id": "1",
+	"category": "personal", 
+	"description": "Bathroom activities",
+	"startedOn": "2019-12-09 07:30:00", 
+	"slotLength": "900"
+}
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154069790-a47d2335-2011-4876-ba1e-8a81e23c48f9.png)
 
 
 
