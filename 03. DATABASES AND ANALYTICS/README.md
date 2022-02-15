@@ -575,6 +575,25 @@ Expand the **TimeSlots** container and click on **Items** option. Then click on 
 ![image](https://user-images.githubusercontent.com/34960418/154069790-a47d2335-2011-4876-ba1e-8a81e23c48f9.png)
 
 
+Repeat the procedure with another two records.
+
+```json
+{
+	"id": "2",
+	"category": "personal", 
+	"description": "Breakfast",
+	"startedOn": "2019-12-09 07:45:00", 
+	"slotLength": "900"
+},
+{
+	"id": "3",
+	"category": "business", 
+	"description": "Check and answer all pending messages",
+	"startedOn": "2019-12-09 08:00:00", 
+	"slotLength": "600"
+}
+```
+
 
 
 # Cosmos DB (Azure CLI)
