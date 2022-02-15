@@ -807,5 +807,71 @@ Get-AzCosmosDBSqlContainer -ResourceGroupName RG-CosmosDB -AccountName azecos -D
 
 ## Import data from (from Azure SQL)
 
+Use [Azure Cosmos DB Data Migration tool](https://docs.microsoft.com/en-us/azure/cosmos-db/import-data#Install). 
+
+
+Extract it to a folder of your choice. The tool supports command line mode and graphics mode. Let’s go with the second option. Navigate to the folder and double-click over **dtui.exe**. On the **Welcome** screen, click the **Next** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154090274-377c03b8-b9a1-4ec6-b402-f1aabdaecf9c.png)
+
+
+Change the **Import from** selected value to **SQL**. Return to the **Azure Portal**, go to the **Azure SQL server**, and then to **SQL databases**. Click on the one that we will export. Let’s select the **BGCities** one.
+
+![image](https://user-images.githubusercontent.com/34960418/154090831-28dd328e-a65f-4bea-8843-c8b05700850b.png)
+
+
+Go to the **Connection strings** option under the **Settings** section. Copy the connection string for the **ADO.NET**.
+
+![image](https://user-images.githubusercontent.com/34960418/154091308-8c79acaa-212f-4235-b3c9-f3cf4c67fb77.png)
+
+
+Paste it in the **Connection String** field of the **Data Migration Tool**. Don’t forget to substitute the {your_password} with the appropriate password, for example **DemoPassword-2022**. Click on the **Verify** button to test the connectivity.
+
+
+![image](https://user-images.githubusercontent.com/34960418/154091661-b2e0690c-91fb-4793-b158-3a48950979ad.png)
+
+
+Select the **Enter Query** option and paste the following SQL statement and click on **Next** button.
+
+```sql
+SELECT CityName, Population FROM TopCities
+```
+
+![image](https://user-images.githubusercontent.com/34960418/154091875-a970cf98-cffc-4dd9-8017-5486c20d9432.png)
+
+
+Make sure that **Azure Cosmos DB – Sequential record import (partitioned collection)** is selected under **Export to**. 
+
+![image](https://user-images.githubusercontent.com/34960418/154092210-a21e86a6-fc0b-45f5-b7f6-4c9bc2f43c05.png)
+
+
+Return to the **Azure Portal**, go to the **Azure Cosmos DB**, select the **azecos** database account. Click on the **Keys** option under the **Settings** section. Copy the **PRIMARY CONNECTION STRING** value.
+
+![image](https://user-images.githubusercontent.com/34960418/154092711-2ad6ac88-23c3-4967-aba3-f4bc09fde885.png)
+
+
+Return to the **Data Migration Tool** and paste the value to the **Connection** field. At the end add **Database=AZDB** or **PSDB** or another one. Click on the **Verify** button to check the connectivity.
+
+![image](https://user-images.githubusercontent.com/34960418/154093226-78687b38-adc5-49b7-b79e-9913ce1cb694.png)
+
+
+Type **TopCities** in the **Collection** field. Enter **/CityName** as a **Partition Key**. Set **Collection Throughput** to **400**. Click on **Next**. Click again **Next**.
+
+![image](https://user-images.githubusercontent.com/34960418/154093544-8a2474e3-4666-4d1b-aa5d-c65789e7043c.png)
+
+
+Click **Import** to start the process.
+
+![image](https://user-images.githubusercontent.com/34960418/154093793-4e2f057a-cb9c-49f7-b665-8ba1bf9199e8.png)
+
+
+Once the import is complete, close the application and return to the **Azure Portal**. Go to the **Azure Cosmos DB**and select the **azecos** database. Navigate to the **Data Explorer** option. You should click on the database used during the import process and the **TopCities** container under it. Expand **TopCities** and click on **Items**. You should see the list of Bulgaria's top 10 cities by population.
+
+![image](https://user-images.githubusercontent.com/34960418/154094521-7f2d673f-118e-4032-85d8-e7cae97483bf.png)
+
+
+
+
+
 
 # Azure Stream Analytics
