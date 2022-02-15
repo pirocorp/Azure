@@ -216,6 +216,34 @@ In real-time events processing, it is common to perform some **set-based computa
 
 # Azure SQL (Azure Portal)
 
+## Resource group
+
+Navigate to the **resource groups** section. Create a new resource group, for example, **RG-SQL** in the **West Europe** region. Enter the resource group.
+
+![image](https://user-images.githubusercontent.com/34960418/154043635-68959318-cc20-4d7f-9ba9-b085fe33df00.png)
+
+
+## SQL Server
+
+In the resource group, click on the **+ Create** button to add a new resource. Enter **Azure SQL** and hit the **Enter** key in the search field. Click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154044146-04ea6cb7-1b73-48c3-9a24-f02bea66bcda.png)
+
+
+In the drop-down menu **Resource type** of the **SQL databases** section select **Database server**. Click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154047834-170197d6-875a-4fc7-b804-ac20aa28f3cc.png)
+
+
+Ensure both fields **Subscription** and **Resource group** are filled appropriately. Enter a globally unique name in the **Server name** field to become part of an URL. Adjust the Location to your liking, for example, **West Europe**. In the Server admin login enter something different from **sa**, **root**, **admin**, etc. for example **demosa**. For a password, choose between **8** and **128** characters, for example, **DemoPassword-2022**. Click on **Review + create** button. Finally, click on the **Create** button. After a while, we will have our new SQL Server ready. Once the deployment is done, click on the **Go to resource** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154048527-2af88512-02ba-4537-954d-ee66e2c76205.png)
+
+
+
+
+
+
 # Azure SQL (Azure CLI)
 
 # Azure SQL (Azure PowerShell)
