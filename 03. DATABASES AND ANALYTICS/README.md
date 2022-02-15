@@ -25,6 +25,7 @@
     - [Connect to a database with SQL Server Management Studio (SSMS)](#connect-to-a-database-with-sql-server-management-studio-ssms)
     - [Restore a database](#restore-a-database)
   - [Azure SQL (Azure CLI)](#azure-sql-azure-cli)
+    - [Create a database](#create-a-database-1)
   - [Azure SQL (Azure PowerShell)](#azure-sql-azure-powershell)
 - Cosmos DB
   - [Cosmos DB (Azure Portal)](#cosmos-db-azure-portal)
