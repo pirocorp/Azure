@@ -945,3 +945,82 @@ sensor-sample.json:
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/154251868-fad13d89-152b-4d7d-a15b-d4f84a150439.png)
+
+![image](https://user-images.githubusercontent.com/34960418/154252624-ac817de7-2903-4c35-be59-c081d9d3ecb5.png)
+
+
+## Create a query
+
+Return to the stream analytics job. Click on the **Query** option in the **Job topology** section. Change the query to:
+
+```sql
+SELECT CONCAT(Measurement.[Index], '-', Sensor) AS ID,
+       Sensor,
+       Measurement.[Index] AS MeasureId,
+       Measurement.Taken AS MeasuredAt,
+       Measurement.Value AS Temperature
+INTO StreamOut
+FROM StreamIn
+```
+
+Can note a few things:
+- It is indeed an SQL-like syntax. In fact, it is a subset of SQL.
+- Reserved words, when used for names, must be surrounded with square brackets.
+- We can use aliases for the columns.
+- We can create custom columns as well.
+
+Now, click on the **Save query** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154253760-aaa09a61-1ab8-411f-ac35-5c80fd29a30e.png)
+
+
+## Adjust the data generation process
+
+Go to the storage account. Then, navigate to the **Access Keys** option under the **Security + networking** section. Copy the **Connection string** value either for **key1** or **key2**.
+
+![image](https://user-images.githubusercontent.com/34960418/154255137-d4c15831-eafa-4a77-8558-c5d95e2a2eb7.png)
+
+
+Extract the provided archive – **AzureBlobJsonGenerator-bin** in a local folder of your choice. Open the **AzureBlobJsonGenerator.exe.config** file in a text editor. Check the **BlobContainer** setting. Please set it to match the container you created earlier. By default, it is **demo**. Paste the value copied from **key1** or **key2** in the **StorageConnectionString** setting. Check and also adjust the **LocalTempPath** parameter. It must point to a folder on your PC to store the files generated while the application is working. Save and close the file.
+
+![image](https://user-images.githubusercontent.com/34960418/154255724-51021b60-5fbd-4c61-a780-0e70fbf3b039.png)
+
+
+## Start the job
+
+Return to the **Overview** mode of the stream analytics job. Click on the **Start** button. Leave the **Job output start time** to **Now** and click on Start.
+
+![image](https://user-images.githubusercontent.com/34960418/154256310-122a4e05-e830-478d-b0e2-d15b2540f221.png)
+
+
+Wait for the job to start. Once it is started, go to the folder where you did extract the data generation application. Doble click on the **AzureBlobJsonGenerator.exe**. Press the Enter key to initiate the data generation process. Check the **input/YYYY-MM-DD** folder to see if there are files being generated.
+
+![image](https://user-images.githubusercontent.com/34960418/154256889-ed3ad6ba-30e2-4c06-83e1-5566a37ba52a.png)
+
+![image](https://user-images.githubusercontent.com/34960418/154256916-9d37b145-8135-4eb6-a902-1e8185f5d07d.png)
+
+
+## BLOB output
+
+After a minute or so, there should be some data on the output stream. Go to the storage account. Enter the container. Go to the **output/** folder. 
+
+![image](https://user-images.githubusercontent.com/34960418/154257266-f8b78438-267e-4c05-b72b-06ab7de3f439.png)
+
+
+Click on the file to download it. Open it with a text editor. The result should match what we defined for the output stream. 
+
+![image](https://user-images.githubusercontent.com/34960418/154257375-bdd0c97d-7ada-4420-8308-30aa131cb81a.png)
+
+
+## Job monitoring
+
+Return to the **Azure Portal** and go to the **Overview** view of the stream analytics job. There, can see the performance. 
+
+![image](https://user-images.githubusercontent.com/34960418/154257788-a3551c15-7fd7-41f8-b46b-8da79e599dfc.png)
+
+
+## Cleaning
+
+Return to the Overview. Click on Stop button and confirm that you want to stop the job. Stop the data generation application and delete the files under the target folder you specified in the configuration. Delete either the whole storage account, or just the blob container. Delete the resource group. 
+
+![image](https://user-images.githubusercontent.com/34960418/154257943-0a3082e7-4217-4b8b-a427-d24c4a2bdbb4.png)
