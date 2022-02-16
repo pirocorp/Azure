@@ -910,15 +910,28 @@ For **Job name** use **SimpleStreamAnalyticsJob**. Make sure that the resource g
 ![image](https://user-images.githubusercontent.com/34960418/154248644-5ae98522-3c49-46d8-a153-41dfdef570a1.png)
 
 
+## Configure input and output for a stream analytics job
+
+Navigate back to the resource group. In the **Overview** section click on the **SimpleStreamAnalyticsJob** item. Click on the **Inputs** option in the **Job topology** section. Select **+ Add stream input** to create new input stream. In the drop-down list choose **Blob storage/ADLS Gen2\***
+
+* ADLS stands for Azure Data Lake Storage
+
+![image](https://user-images.githubusercontent.com/34960418/154249261-2d0fbb9e-643a-46cd-9ce5-0f11f7af3ad6.png)
 
 
+For **Input alias** enter **StreamIn**. Ensure that the **Subscription** and the **Storage account** are correctly set. Under the **Container** select **Use existing**. Select the **blob container** that you created earlier. For example, **demo**. Switch the **Authentication mode** to **Connection string**. In the **Path pattern** field enter **input/**. Click on the **Save** button.
+
+![image](https://user-images.githubusercontent.com/34960418/154249883-5f410fb7-d97e-4e2b-b6b7-8141dbf86c00.png)
 
 
+Configure the output stream. Click on the **Outputs** command in the **Job topology** section. Click on the **+ Add** button. In the drop-down menu select **Blob storage/ADLS Gen2**
+
+![image](https://user-images.githubusercontent.com/34960418/154250382-7754c100-1975-4138-84fc-fa3453d89607.png)
 
 
+For **Output alias** enter **StreamOut**. Pay attention to the **Subscription** and **Storage account** settings. In the **Container** section select **Use existing**. Select the **demo** container from the drop-down list. Switch the **Authentication mode** to **Connection string**. Enter **output/** in the **Path pattern** field. Click on **Save**
 
-
-
+![image](https://user-images.githubusercontent.com/34960418/154250941-4b0d150f-11e1-4350-acf3-8c887e324bca.png)
 
 
 
