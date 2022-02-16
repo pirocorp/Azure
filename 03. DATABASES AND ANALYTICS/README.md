@@ -41,6 +41,15 @@
     - [Use the Az.CosmosDB module](#use-the-azcosmosdb-module)
   - [Import data from (from Azure SQL)](#import-data-from-from-azure-sql)
 - [Azure Stream Analytics](#azure-stream-analytics)
+  - [Resource group and storage account](#resource-group-and-storage-account)
+  - [Storage preparation](#storage-preparation)
+  - [Configure input and output for a stream analytics job](#configure-input-and-output-for-a-stream-analytics-job)
+  - [Sample data](#sample-data)
+  - [Adjust the data generation process](#adjust-the-data-generation-process)
+  - [Start the job](#start-the-job)
+  - [BLOB output](#blob-output)
+  - [Job monitoring- #job-monitoring)
+  - [Cleaning](#cleaning)
 
 
 # [Relational Databases (Azure SQL)](https://azure.microsoft.com/en-us/product-categories/databases/)
