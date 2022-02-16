@@ -943,3 +943,5 @@ sensor-sample.json:
 ```json
 { "Sensor" : "S001", "Measurement" : { "Index" : 1, "Taken" : "2019-01-01T10:52:09.2Z", "Value" : 75.299 } }
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/154251868-fad13d89-152b-4d7d-a15b-d4f84a150439.png)
