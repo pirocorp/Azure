@@ -934,6 +934,12 @@ For **Output alias** enter **StreamOut**. Pay attention to the **Subscription** 
 ![image](https://user-images.githubusercontent.com/34960418/154250941-4b0d150f-11e1-4350-acf3-8c887e324bca.png)
 
 
+## Sample data
 
+Using the **Azure Portal** or the **Microsoft Azure Storage Explorer** application upload the** sensor-sample.json** file in a folder **input/** in the **demo** container.
 
+sensor-sample.json:
 
+```json
+{ "Sensor" : "S001", "Measurement" : { "Index" : 1, "Taken" : "2019-01-01T10:52:09.2Z", "Value" : 75.299 } }
+```
