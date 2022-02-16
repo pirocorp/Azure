@@ -48,7 +48,7 @@
   - [Adjust the data generation process](#adjust-the-data-generation-process)
   - [Start the job](#start-the-job)
   - [BLOB output](#blob-output)
-  - [Job monitoring- #job-monitoring)
+  - [Job monitoring](#job-monitoring)
   - [Cleaning](#cleaning)
 
 
