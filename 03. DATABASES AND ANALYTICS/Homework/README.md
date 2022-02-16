@@ -71,4 +71,26 @@ _Note: You may use the sensor data generation application provided with the prac
 ![image](https://user-images.githubusercontent.com/34960418/154291966-bc4f5332-8193-4095-ba11-b58d880182d3.png)
 
 
+## Prepare one output to send data to an Azure SQL database
 
+![image](https://user-images.githubusercontent.com/34960418/154292978-96d3673b-96dc-4b41-bf09-5bfda2e1fde3.png)
+
+
+## Sample data
+
+![image](https://user-images.githubusercontent.com/34960418/154293473-63485643-7331-4026-8168-72fc2d1fe26d.png)
+
+
+## Create a query
+
+![image](https://user-images.githubusercontent.com/34960418/154293886-4bdb6e54-4482-4c84-8d00-f80e05e4adb0.png)
+
+
+## Adjust the data generation process
+
+![image](https://user-images.githubusercontent.com/34960418/154294237-98321770-4072-49a6-a4dc-ed2864604b43.png)
+
+
+## Start the job
+
+![image](https://user-images.githubusercontent.com/34960418/154295608-ea7727fb-6801-4b12-834c-b8296be3deee.png)
