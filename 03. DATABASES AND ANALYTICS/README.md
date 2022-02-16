@@ -874,7 +874,53 @@ Once the import is complete, close the application and return to the **Azure Por
 
 
 
-
-
-
 # Azure Stream Analytics
+
+Navigate to [Azure Portal](https://portal.azure.com). 
+
+
+## Resource group and storage account
+
+Create a new resource group, for example **RG-Stream-Analytics** in the **West Europe** region. Enter the resource group. 
+
+![image](https://user-images.githubusercontent.com/34960418/154246723-18dfb99f-904b-4c12-87c6-082a750b45c0.png)
+
+
+Create a new storage account in the same resource group. During creation process you can leave most of or all the parameters with their default values. For example, you may want to change the Replication to **Locally redundant storage (LRS)** to achieve lower price
+
+![image](https://user-images.githubusercontent.com/34960418/154247109-935ad57f-b485-433b-8f8b-8a4836f46a88.png)
+
+
+## Storage preparation
+
+Go to the storage account, you created. Click on **Containers** option in the **Data storage** section. Click on the **+ Container** button to create a new one. In the **Name** field enter **demo** and click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/154247880-667a79b6-d4c5-472b-8941-f721043f9fb5.png)
+
+
+## Create a stream analytics job
+
+Enter in the search bar **stream analytics** text and press **Enter**. Then, click on the **+ Create** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154248285-41693a45-1685-4738-a45f-721c451955a1.png)
+
+
+For **Job name** use **SimpleStreamAnalyticsJob**. Make sure that the resource group is set to the one created earlier. Change the **Streaming units** to **1**. Click on the **Create** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/154248644-5ae98522-3c49-46d8-a153-41dfdef570a1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
