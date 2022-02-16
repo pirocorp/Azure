@@ -65,6 +65,9 @@ _Note: You may use the sensor data generation application provided with the prac
 
 ![image](https://user-images.githubusercontent.com/34960418/154288191-9cd8410a-b446-4681-a759-ce82a56d8909.png)
 
+![image](https://user-images.githubusercontent.com/34960418/154292298-eee35b01-f779-4fa0-ad7c-7375964ee465.png)
+
+
 ![image](https://user-images.githubusercontent.com/34960418/154291966-bc4f5332-8193-4095-ba11-b58d880182d3.png)
 
 
