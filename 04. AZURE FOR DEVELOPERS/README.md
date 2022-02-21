@@ -152,3 +152,6 @@ Azure Logic Apps is a cloud-based platform for creating and running automated wo
 - **Azure Functions** vs **WebJobs** (with **WebJobs SDK**)
   - Code-first integration services that are designed for developers
   - Both are built on Azure App Service and support features such as source control integration, authentication, and monitoring with Application Insights integration
+
+
+# Working with Containers (Azure Portal)
