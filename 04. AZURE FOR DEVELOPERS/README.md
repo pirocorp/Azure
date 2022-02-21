@@ -98,6 +98,41 @@ Second, as requests increase, Azure Functions meets the demand with as many reso
   - Run your functions just like your web apps
   - Use the same plan at no additional costs
 
+## [Durable Functions](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+
+Durable Functions is an extension of Azure Functions that lets you write stateful functions in a serverless compute environment. The extension lets you define stateful workflows by writing orchestrator functions and stateful entities by writing entity functions using the Azure Functions programming model. Behind the scenes, the extension manages state, checkpoints, and restarts for you, allowing you to focus on your business logic.
+
+## Durable Functions Application Patterns
+
+**Function chaining** - A sequence of function executes in a specific order
+**Fan-out/-in** - Multiple functions are executed in parallel
+**Async HTTP APIs** - Addresses the problem of coordinating the state of long-running operations with external clients
+**Monitoring** - Flexible, recurring process in a workflow. An example is polling until specific conditions are met
+**Human interaction** - An automated process might allow for this interaction by using timeouts and compensation logic
+**Aggregator** - Aggregating event data over a period of time into a single, addressable entity
 
 
+# [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview)
 
+Azure Logic Apps is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems. With this platform, you can quickly develop highly scalable integration solutions for your enterprise and business-to-business (B2B) scenarios. As a member of Azure Integration Services, Azure Logic Apps simplifies the way that you connect legacy, modern, and cutting-edge systems across cloud, on premises, and hybrid environments.
+
+
+**Workflow** - Visualize, design, build, automate, and deploy business processes as series of steps
+**Managed connectors** - Connectors are designed to connect, access, and work with your data
+**Triggers** - Fire when events or new data meet specified conditions. Each time new logic app instance is created that runs the workflow
+**Actions** - All steps that happen after the trigger
+**Enterprise Integration Pack**
+
+
+[Right Integration and Automation Services](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
+
+- **Microsoft Flow** vs **Azure Logic Apps**
+  - Designer-first integration services that can create workflows
+  - Both services integrate with various SaaS and enterprise applications
+- **Azure Functions** vs **Azure Logic Apps**
+  - Azure services that enable serverless workloads
+  - Azure Functions is a serverless compute service, whereas Azure Logic Apps provides serverless workflows
+  - Both can create complex orchestrations. An orchestration is a collection of functions or steps
+- **Azure Functions** vs **WebJobs** (with **WebJobs SDK**)
+  - Code-first integration services that are designed for developers
+  - Both are built on Azure App Service and support features such as source control integration, authentication, and monitoring with Application Insights integration
