@@ -98,18 +98,18 @@ Second, as requests increase, Azure Functions meets the demand with as many reso
   - Run your functions just like your web apps
   - Use the same plan at no additional costs
 
-## [Durable Functions](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+# [Durable Functions](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
 
 Durable Functions is an extension of Azure Functions that lets you write stateful functions in a serverless compute environment. The extension lets you define stateful workflows by writing orchestrator functions and stateful entities by writing entity functions using the Azure Functions programming model. Behind the scenes, the extension manages state, checkpoints, and restarts for you, allowing you to focus on your business logic.
 
 ## Durable Functions Application Patterns
 
-**Function chaining** - A sequence of function executes in a specific order
-**Fan-out/-in** - Multiple functions are executed in parallel
-**Async HTTP APIs** - Addresses the problem of coordinating the state of long-running operations with external clients
-**Monitoring** - Flexible, recurring process in a workflow. An example is polling until specific conditions are met
-**Human interaction** - An automated process might allow for this interaction by using timeouts and compensation logic
-**Aggregator** - Aggregating event data over a period of time into a single, addressable entity
+- **Function chaining** - A sequence of function executes in a specific order
+- **Fan-out/-in** - Multiple functions are executed in parallel
+- **Async HTTP APIs** - Addresses the problem of coordinating the state of long-running operations with external clients
+- **Monitoring** - Flexible, recurring process in a workflow. An example is polling until specific conditions are met
+- **Human interaction** - An automated process might allow for this interaction by using timeouts and compensation logic
+- **Aggregator** - Aggregating event data over a period of time into a single, addressable entity
 
 
 # [Azure Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview)
