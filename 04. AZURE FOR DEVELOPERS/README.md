@@ -77,7 +77,26 @@ The pricing tier of an App Service plan determines what App Service features you
 
 Azure Functions is a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs. Instead of worrying about deploying and maintaining servers, the cloud infrastructure provides all the up-to-date resources needed to keep your applications running.
 
+We often build systems to react to a series of critical events. Whether you're building a web API, responding to database changes, processing IoT data streams, or even managing message queues - every application needs a way to run some code as these events occur.
 
+To meet this need, Azure Functions provides "compute on-demand" in two significant ways.
+
+First, Azure Functions allows you to implement your system's logic into readily available blocks of code. These code blocks are called "functions". Different functions can run anytime you need to respond to critical events.
+
+Second, as requests increase, Azure Functions meets the demand with as many resources and function instances as necessary - but only while needed. As requests fall, any extra resources and application instances drop off automatically.
+
+[Payment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale)
+
+- Consumption plan
+  - Azure provides all the necessary computational resources as needed
+  - Pay only for the time your code runs
+- Premium plan
+  - A number of pre-warmed instances that are always online and ready
+  - On-demand additional computational resources may be provided
+  - Pay for both set of resources
+- App Service plan
+  - Run your functions just like your web apps
+  - Use the same plan at no additional costs
 
 
 
