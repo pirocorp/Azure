@@ -60,11 +60,11 @@ In App Service (Web Apps, API Apps, or Mobile Apps), an app always runs in an Ap
 
 When you create an App Service plan in a certain region (for example, West Europe), a set of compute resources is created for that plan in that region. Whatever apps you put into this App Service plan run on these compute resources as defined by your App Service plan. Each App Service plan defines:
 
-- Operating System (Windows, Linux)
-- Region (West US, East US, etc.)
-- Number of VM instances
-- Size of VM instances (Small, Medium, Large)
-- Pricing tier (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)
+- **Operating System** (Windows, Linux)
+- **Region** (West US, East US, etc.)
+- **Number of VM instances**
+- **Size of VM instances** (Small, Medium, Large)
+- **Pricing tier** (Free, Shared, Basic, Standard, Premium, PremiumV2, PremiumV3, Isolated, IsolatedV2)
 
 The pricing tier of an App Service plan determines what App Service features you get and how much you pay for the plan. The pricing tiers available to your App Service plan depend on the operating system selected at creation time. There are a few categories of pricing tiers:
 
