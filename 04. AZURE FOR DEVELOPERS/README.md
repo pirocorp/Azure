@@ -124,7 +124,7 @@ Azure Logic Apps is a cloud-based platform for creating and running automated wo
 **Enterprise Integration Pack**
 
 
-[Right Integration and Automation Services](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
+# [Right Integration and Automation Services](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 
 - **Microsoft Flow** vs **Azure Logic Apps**
   - Designer-first integration services that can create workflows
