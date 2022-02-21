@@ -1,5 +1,15 @@
 # TOC
 
+- [Azure Container Instances (ACI)](#azure-container-instances-aci)
+- [Azure Container Registry (ACR)](#azure-container-registry-acr)
+- [Azure Kubernetes Service (AKS)](#azure-kubernetes-service-aks)
+- [App Service](#app-service)
+- [App Service Plans](#app-service-plans)
+- [Azure Functions](#azure-functions)
+- [Durable Functions](#durable-functions)
+- [Azure Logic Apps](#azure-logic-apps)
+- [Right Integration and Automation Services](#right-integration-and-automation-services)
+
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
 
 Containers are becoming the preferred way to package, deploy, and manage cloud applications. Azure Container Instances offers the fastest and simplest way to run a container in Azure, without having to manage any virtual machines and without having to adopt a higher-level service.
