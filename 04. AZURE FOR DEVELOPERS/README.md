@@ -31,6 +31,13 @@
     - [Inspect a container](#inspect-a-container-2)
     - [Remove a container](#remove-a-container-2)
   - [Container Images](#container-images)
+    - [Create a container image](#create-a-container-image)
+    - [Azure Portal: Create Azure Container Registry (Azure Portal)](#azure-portal-create-azure-container-registry-azure-portal)
+    - [Azure CLI: Create Azure Container Registry (CLI)](#azure-cli-create-azure-container-registry-cli)
+    - [Publish the image](#publish-the-image)
+    - [List repositories in a registry](#list-repositories-in-a-registry)
+    - [Azure Portal](#azure-portal)
+    - [Azure CLI](#azure-cli)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
