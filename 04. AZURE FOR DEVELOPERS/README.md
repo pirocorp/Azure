@@ -216,3 +216,10 @@ Issue some commands. For example, let’s try ```ls```, ```hostname```, ```uname
 
 
 ## Remove a container
+
+Return to the **Overview** section. Click on the **Delete** button. Confirm with **Yes**.
+
+![image](https://user-images.githubusercontent.com/34960418/156147739-c4fe7e79-8ffd-47bb-80cc-cf5bc46c4b0e.png)
+
+
+
