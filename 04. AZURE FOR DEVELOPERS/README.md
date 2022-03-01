@@ -641,3 +641,29 @@ Navigate back to the folder where the files for the page are stored. Open the in
 
 ![image](https://user-images.githubusercontent.com/34960418/156196237-838b06a7-2795-4d21-906b-16eb4af4c53f.png)
 
+
+
+## HTML web app (Azure CLI)
+
+If using a local shell, login first by issuing:
+
+```bash
+az login
+```
+
+### Deploy a HTML web app
+
+As static HTML web apps are hosted only on Windows app service plan, we must create a new plan. Unfortunately, we must create it in a separate resource group as the two (Linux and Windows) app service plans cannot co-exist in one group.
+
+```bash
+az group create --name RG-WebApps-Win --location westeurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156196887-bbbb0e4d-1205-4382-840d-d4167163454d.png)
+
+
+Now, navigate to the folder where you extracted the accompanying archive file **web-app-html.zip**. Execute the following command to deploy the web application:
+
+```bash
+az webapp up --resource-group RG-WebApps-Win --location westeurope --name azewebapp1 --html --plan Windows-WebApp-Plan --sku F1
+```
