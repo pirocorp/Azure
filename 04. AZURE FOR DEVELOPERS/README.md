@@ -344,3 +344,5 @@ $port1 = New-AzContainerInstancePortObject -Port 80 -Protocol TCP
 $container = New-AzContainerInstanceObject -Name aze-hello -Image shekeriev/aze-image-1 -RequestCpu 1 -RequestMemoryInGb 1.5 -Port $port1
 $containerGroup = New-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello -Location westeurope -Container $container -OsType Linux -RestartPolicy "Never" -IpAddressType Public
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/156156558-4e8084ae-5caf-4bbb-99f1-c72ed8e34355.png)
