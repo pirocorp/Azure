@@ -326,5 +326,9 @@ az container delete --resource-group RG-Containers --name aze-hello
 
 # Container Instances (Azure PowerShell)
 
+If using a local shell, login first by issuing
 
+```powershell
+Connect-AzAccount
+```
 
