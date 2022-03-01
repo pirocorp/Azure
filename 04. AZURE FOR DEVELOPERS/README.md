@@ -638,3 +638,6 @@ Navigate back to the folder where the files for the page are stored. Open the in
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/156196095-aea4a5a2-4a93-4c94-862d-1a1b6a76d9f5.png)
+
+![image](https://user-images.githubusercontent.com/34960418/156196237-838b06a7-2795-4d21-906b-16eb4af4c53f.png)
+
