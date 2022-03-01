@@ -270,3 +270,40 @@ Copy either the IP address or the FQDN and paste it into a browser window. And v
 ![image](https://user-images.githubusercontent.com/34960418/156150483-e37df83b-3862-4c3b-803d-230eb314a8e4.png)
 
 
+## Inspect a container
+
+Get container logs
+
+```bash
+az container logs --resource-group RG-Containers --name aze-hello
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156150909-3b4b52c3-f36e-46c0-a503-80105f7d9771.png)
+
+
+Attach to the container’s output streams and monitor what is happening in real-time. Return to the browser window, refresh a few times, and notice that events appear immediately on the stream. Detach with **Ctrl+C**. When asked, confirm with y. 
+
+```bash
+az container attach --resource-group RG-Containers --name aze-hello
+```
+
+Execute command to see the hostname of the container
+
+```bash
+az container exec --resource-group RG-Containers --name aze-hello --exec-command hostname
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156151735-5202c737-53f5-4d65-aa5e-38db93f8a2ce.png)
+
+
+Start a shell and connect to it
+
+```bash
+az container exec --resource-group RG-Containers --name aze-hello --exec-command /bin/sh
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156152009-7a2aa1cb-386c-4c12-9b71-33a0d9219c2c.png)
+
+In the container issue some commands. For example, let’s try ```ls```, ```hostname```, ```uname```, etc. Execute the exit command to close the connection.
+
+
