@@ -616,5 +616,15 @@ Click on the Quickconnect button. Accept the certificate.
 ![image](https://user-images.githubusercontent.com/34960418/156194141-f23661a4-cb73-447a-9511-704c3b300b3f.png)
 
 
+Navigate to the extracted files and copy them to the destination folder in the right part of the screen. Close the FTP session and application.
+
+![image](https://user-images.githubusercontent.com/34960418/156194672-705cedb0-6951-4690-b697-4855da2bdce4.png)
+
+
+Return to the **Azure Portal**. Go to the **Overview** section. Copy the value for **URL** and paste in a new browser window or click over it to open a new window. You should see a familiar web page.
+
+![image](https://user-images.githubusercontent.com/34960418/156195037-e2ed539e-46d6-4a02-b2db-a3cf5e763f74.png)
+![image](https://user-images.githubusercontent.com/34960418/156195120-cbd31e39-7513-479d-9543-a15e2557a1ef.png)
+
 
 
