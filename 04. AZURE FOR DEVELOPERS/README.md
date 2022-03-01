@@ -229,3 +229,17 @@ Return to the **Overview** section. Click on the **Delete** button. Confirm with
 
 
 # Container Instances (Azure CLI)
+
+If using a local shell, login first by issuing:
+
+```bash
+az login
+```
+
+
+
+
+
+
+
+
