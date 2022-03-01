@@ -38,7 +38,7 @@
     - [List repositories in a registry](#list-repositories-in-a-registry)
     - [Azure Portal](#azure-portal)
     - [Azure CLI](#azure-cli)
-- Azure App Services
+- [Azure App Services](#azure-app-services)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
