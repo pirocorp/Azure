@@ -738,3 +738,13 @@ Under **Connectivity method** select **Public endpoint**. For the Allow **Azure 
 
 ![image](https://user-images.githubusercontent.com/34960418/156205134-6b027a51-7a71-4607-976a-4fefb1074a93.png)
 
+
+## Load the data
+
+Once the deployment is done, click on **Go to resource**. Click on the **Query editor (preview)**. Enter the login information and click on the **OK** button. Paste the contents of the file **cities-database.sql** in the query panel. Click on the **Run** button.
+
+![image](https://user-images.githubusercontent.com/34960418/156206898-7e134c10-3f18-464f-82e9-d41afbc524b5.png)
+![image](https://user-images.githubusercontent.com/34960418/156206954-98f0a811-9b6d-4d06-a188-0b52131a4bfe.png)
+
+
+
