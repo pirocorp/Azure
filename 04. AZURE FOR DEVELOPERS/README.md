@@ -494,7 +494,7 @@ az acr login --name azecr2022
 Then push the image to the registry
 
 ```bash
-docker push azecr2021.azurecr.io/aze-image-2:v1
+docker push azecr2022.azurecr.io/aze-image-2:v1
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/156175968-e61fbe0e-4e9a-4188-8961-14ab150df16a.png)
