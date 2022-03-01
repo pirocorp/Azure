@@ -577,3 +577,44 @@ Navigate to resource groups section. Create a new resource group, for example **
 
 ![image](https://user-images.githubusercontent.com/34960418/156188843-cfaa2e86-92b0-41ed-9ddf-75768ed33909.png)
 
+
+## HTML web app (Azure Portal)
+
+### Create a Web App
+
+Click on the **+ Create** button to add new resource. In the search bar enter **App Services** and hit Enter. Click either on the **+ Creat**e to create a new app service.
+
+![image](https://user-images.githubusercontent.com/34960418/156191598-9c3e20a1-1f81-4b2b-8448-7c6208857eb1.png)
+
+
+Make sure that the **Subscription** and the **Resource Group** are correctly set. For **Name** of the instance enter **azewebapp**. Be sure to select **Code** in the **Publish** section. For the current task, the **Runtime stack** is of no importance. Let’s choose **PHP**. Set the **Operating System** to **Linux**. Select **West Europe** for the **Region**. Click Create new link under the drop-down list in the App Service Plan section. In the text field enter a name you like, for example Linux-WebApp-Plan. Change the Sku and size to Free F1. Click on Review + create. Click on Create.
+
+![image](https://user-images.githubusercontent.com/34960418/156192606-5e6076e5-bda5-4fea-ac63-6c169ca060d6.png)
+
+
+### Deploy the project
+
+Extract the accompanying archive file **web-app-html.zip** to a folder of your choice. Once the web app is ready, click on the **Go to resource**. Click on the **Deployment Center** option under **Deployment**. Select **FTPS Credentials** tab. 
+
+![image](https://user-images.githubusercontent.com/34960418/156193364-b9752a27-7734-49df-a283-5262c5b5fd2b.png)
+
+
+**FileZilla** as well as any other FTP application will do the job. Copy the **FTPS Endpoint** string and paste it in the **Host** field of the FTP application.
+
+![image](https://user-images.githubusercontent.com/34960418/156193658-8be97c68-ddce-4c1e-8f61-6a99530674a9.png)
+
+
+Use the provided Username and Password
+
+![image](https://user-images.githubusercontent.com/34960418/156193857-6d55f2ce-8382-4e76-bb02-de87074b7588.png)
+
+
+Click on the Quickconnect button. Accept the certificate.
+
+![image](https://user-images.githubusercontent.com/34960418/156193996-981d172b-9463-4dec-aee0-12e2ede9bd4b.png)
+
+![image](https://user-images.githubusercontent.com/34960418/156194141-f23661a4-cb73-447a-9511-704c3b300b3f.png)
+
+
+
+
