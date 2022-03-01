@@ -25,6 +25,7 @@
     - [Interact with a container](#interact-with-a-container-1)
     - [Inspect a container](#inspect-a-container-1)
     - [Remove a container](#remove-a-container-1)
+  - [Container Instances (Azure PowerShell)](#container-instances-azure-powershell)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
@@ -323,7 +324,7 @@ az container delete --resource-group RG-Containers --name aze-hello
 ```
 
 
-
+# Container Instances (Azure PowerShell)
 
 
 
