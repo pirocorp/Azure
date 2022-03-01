@@ -236,10 +236,37 @@ If using a local shell, login first by issuing:
 az login
 ```
 
+## Container instance
+
+To start a container like the one created in the previous part, execute the following:
+
+```bash
+az container create --resource-group RG-Containers --name aze-hello --image shekeriev/aze-image-1 --dns-name-label aze-hello --ports 80
+```
 
 
+## Interact with a container
+
+Ask for details like the public IP address, the FQDN, etc.
+
+```bash
+az container show --resource-group RG-Containers --name aze-hello
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156150025-a1619d07-f707-4ae3-93ef-524fcd358f4f.png)
 
 
+Narrow down the received information and change the output style with:
 
+```bash
+az container show --resource-group RG-Containers --name aze-hello --query "{FQDN:ipAddress.fqdn,IP:ipAddress.ip}" --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156150220-b922150c-e8ec-4fa7-84c3-801525a1e1cf.png)
+
+
+Copy either the IP address or the FQDN and paste it into a browser window. And voila, container is working and reachable as expected.
+
+![image](https://user-images.githubusercontent.com/34960418/156150483-e37df83b-3862-4c3b-803d-230eb314a8e4.png)
 
 
