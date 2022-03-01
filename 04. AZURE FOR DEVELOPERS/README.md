@@ -362,10 +362,10 @@ Get-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello | fl
 Narrow-down the received information with
 
 ```powershell
-Get-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello | Select IpAddressIp, Fqdn
+Get-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello | Select IpAddressIp, IpAddressFqdn
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/156161091-0b84d140-ac75-43f3-82cc-bd9d79d58a57.png)
+![image](https://user-images.githubusercontent.com/34960418/156161400-27dbca3e-ae56-46c5-81c9-e43fd0b2db12.png)
 
 
 Copy the IP address and paste it into a browser window.
