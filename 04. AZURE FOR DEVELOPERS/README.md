@@ -704,3 +704,33 @@ az webapp up --resource-group RG-WebApps-Win --location westeurope --name azeweb
 
 ![image](https://user-images.githubusercontent.com/34960418/156198416-c747e2af-e1de-479e-a20b-adf60b68413e.png)
 ![image](https://user-images.githubusercontent.com/34960418/156198471-217e5a5e-fa21-44bb-a040-f87d42f167ff.png)
+
+
+
+# PHP + SQL web app (Azure Portal)
+
+## Preparation
+
+Create a new resource group. For example, the **RG-WebApps-DB** group. Enter the resource group.
+
+![image](https://user-images.githubusercontent.com/34960418/156202985-7acdbcbc-bff8-4741-b7fe-7ecc803b5302.png)
+
+
+Click on the **+ Create** button and search for **Azure SQL**. Click on **Create**
+
+![image](https://user-images.githubusercontent.com/34960418/156203341-2dac09b8-52b4-44cc-aed3-779a632aab73.png)
+
+
+Then click on Create in the SQL databases tile
+
+![image](https://user-images.githubusercontent.com/34960418/156203519-4dc1c003-485b-4bd1-839c-b2fa67ac7ce4.png)
+
+
+Ensure that the **Subscription** and the **Resource group** are filled correctly. For **Database name** enter **azedb**. Click on **Create new** in the **Server** section. In the **Server name** filed enter **azedbsrv**. Enter **demosa** for the **Server admin login**. Use a password that conforms to the rules, for example **DemoPassword-2022**. Set the location to **West Europe**. Click on **OK**. Click on **Configure database**. Select **Basic** plan and click **Apply**. Click on **Next: Networking** to configure the connectivity to the database.
+
+![image](https://user-images.githubusercontent.com/34960418/156203866-445bd5d1-48c2-4495-88d9-c10932735b68.png)
+![image](https://user-images.githubusercontent.com/34960418/156204161-405d787a-ba56-4e0b-8b2d-8ca2f774d4bf.png)
+![image](https://user-images.githubusercontent.com/34960418/156204704-91297f60-b0e4-4627-a9e9-90f74b8a915b.png)
+
+
+
