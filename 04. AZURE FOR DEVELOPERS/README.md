@@ -440,3 +440,61 @@ docker images
 ![image](https://user-images.githubusercontent.com/34960418/156172347-4fca119a-4dd2-4457-b07e-9869244c8e31.png)
 
 
+Run the app locally. Open a browser window and navigate to http://localhost:8080 to test the app
+
+```bash
+docker run -d -p 8080:80 aze-image-2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156172647-1bcd546e-4ccb-4e4f-a902-9bc5a003ec53.png)
+
+
+## Azure Portal: Create Azure Container Registry (Azure Portal)
+
+Go to the resource group created earlier (**RG-Containers**). Click on the **+ Create** button. Search for **Container Registry** in the **Marketplace** search box. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156173532-fb8bd988-befa-40b0-8a50-a317142698b8.png)
+
+
+For **Registry name** enter **azecr2022**. Set the **Location** to **West Europe**. Change the **SKU** to **Basic**. Click on **Review + create** and then on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156174029-f13a8ced-4ccd-4c9c-90fc-0c91d1416dc8.png)
+
+
+After the registry is created, navigate to its **Overview** mode. There, click on **Access keys** in the **Settings** section. Switch the **Admin user** option to **Enable**. 
+
+![image](https://user-images.githubusercontent.com/34960418/156174469-ecff83b8-9e29-4a0f-b887-6a024ea93e5e.png)
+
+
+## Azure CLI: Create Azure Container Registry (CLI)
+
+```bash
+az acr create --resource-group RG-Containers --name azecr2022 --sku Basic --admin-enabled true
+```
+
+
+## Publish the image
+
+Return on the console session used earlier to build the container image. Tag the image against the new registry:
+
+```bash
+docker tag aze-image-2 azecr2022.azurecr.io/aze-image-2:v1
+```
+
+
+Next, log in to the registry
+
+```bash
+az acr login --name azecr2022
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156175667-afe38d6b-fa89-431a-b0f7-bf3a35dec91a.png)
+
+
+Then push the image to the registry
+
+```bash
+docker push azecr2021.azurecr.io/aze-image-2:v1
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156175968-e61fbe0e-4e9a-4188-8961-14ab150df16a.png)
