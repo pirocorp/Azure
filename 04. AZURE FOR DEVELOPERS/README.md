@@ -667,3 +667,5 @@ Now, navigate to the folder where you extracted the accompanying archive file **
 ```bash
 az webapp up --resource-group RG-WebApps-Win --location westeurope --name azewebapp1 --html --plan Windows-WebApp-Plan --sku F1
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/156197422-72f7de53-fcf9-411b-8a6e-fbd41af61329.png)
