@@ -393,4 +393,14 @@ Get-AzContainerInstanceLog -ResourceGroupName RG-Containers -ContainerName aze-h
 ![image](https://user-images.githubusercontent.com/34960418/156162003-6fcc21c5-c41d-418c-a7f3-4d2b7c12cd7f.png)
 
 
+## Remove a container
+
+```powershell
+Remove-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156162259-bfd6159d-1aad-43ac-8aa7-2929564bdd34.png)
+
+
+
 
