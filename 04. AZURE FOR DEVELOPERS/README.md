@@ -188,4 +188,31 @@ Once the deployment is done, click on the** Go to resource** button. Being in th
 ![image](https://user-images.githubusercontent.com/34960418/156145163-92066f3b-66a4-4aa8-a928-a3585056ff1c.png)
 
 
+## Inspect a container
 
+Return to the **Overview** of the container instance in the portal. Click on the **Containers** option under **Settings**. Here, we can see that there is one container in running state. Bellow the container list, we can see four different sections. First one, the **Events** section, is selected by default. It shows us, what stages the container went through. 
+
+![image](https://user-images.githubusercontent.com/34960418/156146212-5a7c21c1-fa16-41b2-a2f8-044333135e88.png)
+
+
+In **Properties** we can see some more details about our container
+
+![image](https://user-images.githubusercontent.com/34960418/156146337-c6fbb38d-bed0-4eb5-bcfb-edd5ed8515fe.png)
+
+
+**Logs** are showing us the HTTP GET requests generated when we accessed the application via the browser
+
+![image](https://user-images.githubusercontent.com/34960418/156146680-c3f26e5a-a678-4827-8d49-b62a383f6624.png)
+
+
+Click on **Connect** to establish an interactive session to the container. Select **/bin/sh** and click **Connect**.
+
+![image](https://user-images.githubusercontent.com/34960418/156146854-c29ae7d1-a86f-4808-887d-dd16bd541695.png)
+
+
+Issue some commands. For example, let’s try ```ls```, ```hostname```, ```uname```, etc. Once done exploring, execute the ```exit``` command to close the connection.
+
+![image](https://user-images.githubusercontent.com/34960418/156147465-c805ebcb-250b-4485-98c0-988fe1537700.png)
+
+
+## Remove a container
