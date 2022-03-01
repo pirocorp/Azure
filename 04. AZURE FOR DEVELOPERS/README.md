@@ -498,3 +498,59 @@ docker push azecr2022.azurecr.io/aze-image-2:v1
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/156175968-e61fbe0e-4e9a-4188-8961-14ab150df16a.png)
+
+
+## List repositories in a registry
+
+Now, we can list all repositories available in our registry. If you prefer the portal way of doing things, you can navigate to the **azecr2022** registry. Then click on **Repositories** under **Services**. There you will see our repository **aze-image-2**. If you click on it, you will see how many different tags (or versions) are available. 
+
+![image](https://user-images.githubusercontent.com/34960418/156176617-ecf502d8-bdec-4127-93e8-82776b6a29ea.png)
+
+
+If you prefer the command line way, you can execute:
+
+```bash
+az acr repository list --resource-group RG-Containers --name azecr2022 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156176784-72762e3c-7e97-4908-8e07-bbebe876f705.png)
+
+
+Besides the wanted output you will notice a deprecation warning about the resource-group. The command can be:
+
+```bash
+az acr repository list --name azecr2022 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156176999-7b6372b5-bffe-4508-a671-37a4ce0606c7.png)
+
+
+This should return the list of repositories. In order to see how many tags are available in a repository, execute:
+
+```bash
+az acr repository show-tags --resource-group RG-Containers --name azecr2022 --repository aze-image-2 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156177230-1e2001bd-396d-4f3f-821e-bb86416807de.png)
+
+
+The same applies here and the new version of the command should look like:
+
+```bash
+az acr repository show-tags --name azecr2022 --repository aze-image-2 --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156177358-0f08b5b4-272a-49dc-8679-e838325f67c1.png)
+
+
+## Deploy the new application
+
+Our image is in a private registry, so we must provide credentials
+
+### Azure Portal
+
+Here, the main difference is that during the creation process, you must select **Azure Container Registry** for **Image Source**. The rest of the steps are the same as before
+
+![image](https://user-images.githubusercontent.com/34960418/156178012-17e00120-7c2f-449f-abd8-1902a815c5e2.png)
+
+
