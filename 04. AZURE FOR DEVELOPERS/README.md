@@ -733,4 +733,7 @@ Ensure that the **Subscription** and the **Resource group** are filled correctly
 ![image](https://user-images.githubusercontent.com/34960418/156204704-91297f60-b0e4-4627-a9e9-90f74b8a915b.png)
 
 
+Under **Connectivity method** select **Public endpoint**. For the Allow **Azure services and resources to access this server** select **Yes**. Do the same for **Add current client IP address**. Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156205134-6b027a51-7a71-4607-976a-4fefb1074a93.png)
 
