@@ -21,6 +21,10 @@
     - [Inspect a container](#inspect-a-container)
     - [Remove a container](#remove-a-container)
   - [Container Instances (Azure CLI)](#container-instances-azure-cli)
+    - [Container instance](#container-instance-1)
+    - [Interact with a container](#interact-with-a-container-1)
+    - [Inspect a container](#inspect-a-container-1)
+    - [Remove a container](#remove-a-container-1)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
