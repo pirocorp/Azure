@@ -578,16 +578,13 @@ az container create --resource-group RG-Containers --name aze-hello --image azec
 ```
 
 
-# Azure App Services
+# HTML web app (Azure Portal)
 
 Navigate to resource groups section. Create a new resource group, for example **RG-WebApps** in the West Europe region. Enter the resource group.
 
 ![image](https://user-images.githubusercontent.com/34960418/156188843-cfaa2e86-92b0-41ed-9ddf-75768ed33909.png)
 
-
-## HTML web app (Azure Portal)
-
-### Create a Web App
+## Create a Web App
 
 Click on the **+ Create** button to add new resource. In the search bar enter **App Services** and hit Enter. Click either on the **+ Creat**e to create a new app service.
 
@@ -599,7 +596,7 @@ Make sure that the **Subscription** and the **Resource Group** are correctly set
 ![image](https://user-images.githubusercontent.com/34960418/156192606-5e6076e5-bda5-4fea-ac63-6c169ca060d6.png)
 
 
-### Deploy the project
+## Deploy the project
 
 Extract the accompanying archive file **web-app-html.zip** to a folder of your choice. Once the web app is ready, click on the **Go to resource**. Click on the **Deployment Center** option under **Deployment**. Select **FTPS Credentials** tab. 
 
@@ -634,7 +631,7 @@ Return to the **Azure Portal**. Go to the **Overview** section. Copy the value f
 ![image](https://user-images.githubusercontent.com/34960418/156195120-cbd31e39-7513-479d-9543-a15e2557a1ef.png)
 
 
-### Change and re-deploy a project
+## Change and re-deploy a project
 
 Navigate back to the folder where the files for the page are stored. Open the index.html file with a text editor and modify it. For example, add or remove text. Once you are done with the manipulation save and close the file.
 
@@ -650,7 +647,7 @@ Navigate back to the folder where the files for the page are stored. Open the in
 
 
 
-## HTML web app (Azure CLI)
+# HTML web app (Azure CLI)
 
 If using a local shell, login first by issuing:
 
@@ -658,7 +655,7 @@ If using a local shell, login first by issuing:
 az login
 ```
 
-### Deploy a HTML web app
+## Deploy a HTML web app
 
 As static HTML web apps are hosted only on Windows app service plan, we must create a new plan. Unfortunately, we must create it in a separate resource group as the two (Linux and Windows) app service plans cannot co-exist in one group.
 
@@ -697,7 +694,7 @@ az webapp list --resource-group RG-WebApps-Win --query "[].{Name:name,URL:defaul
 ![image](https://user-images.githubusercontent.com/34960418/156198064-ef28474d-0214-441a-8c37-39ab989387e0.png)
 
 
-### Change and re-deploy a project
+## Change and re-deploy a project
 
 Change the **index.html** file. Execute the same command that you used for the initial deployment to redeploy the app:
 
