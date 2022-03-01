@@ -20,6 +20,7 @@
     - [Interact with a container](#interact-with-a-container)
     - [Inspect a container](#inspect-a-container)
     - [Remove a container](#remove-a-container)
+  - [Container Instances (Azure CLI)](#container-instances-azure-cli)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
@@ -227,4 +228,4 @@ Return to the **Overview** section. Click on the **Delete** button. Confirm with
 ![image](https://user-images.githubusercontent.com/34960418/156147739-c4fe7e79-8ffd-47bb-80cc-cf5bc46c4b0e.png)
 
 
-
+# Container Instances (Azure CLI)
