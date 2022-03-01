@@ -156,3 +156,36 @@ Azure Logic Apps is a cloud-based platform for creating and running automated wo
 
 
 # Container Instances (Azure Portal)
+
+## Resource group
+
+Search for resource groups. Click on **+ Create** to create a new resource group for **Resource group** set **RG-Containers**. Select the **region** to be **West Europe**. Click on **Review + create**. Then on **Create**. Once the deployment is done, click on the **Go to resource group** button.
+
+![image](https://user-images.githubusercontent.com/34960418/156141727-4e4217ca-f856-47b1-8e48-70df3c870ef2.png)
+
+
+## Container instance
+
+Click on the **+ Create** button to create new resource. Type **Container instances** in the top search field and hit Enter. Click on **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/156142019-e4c23f6d-30e2-4123-b79c-3088a09fa3d6.png)
+
+
+Ensure that the correct **Subscription** and **Resource group** are selected. Enter a unique (in the resource group) name for the** Container Name**—for example, **aze-hello**. Change the **Image source** selection to **Docker Hub or other registry**. For **Image type**, leave the default selection – **Public**. Paste the path to the image in the **image** text field. The path could be a repository in any registry to which we have access. It can be either Docker Hub or Microsoft’s container registry. For this exercise, use just **shekeriev/aze-image-1** because the container image is in Docker Hub and is publicly available. Leave the **OS type** to **Linux**. You can click on Change size if you want to lower the memory. For now, leave it as it is. Click on the **Next: Networking** button.
+
+![image](https://user-images.githubusercontent.com/34960418/156143814-be6a82ef-3cdb-4b39-953d-59a70e9f7751.png)
+
+
+In the DNS name label field enter a string that must be unique for the region. It will become part of the FQDN of the container. Enter for example **aze-hello**. Click on **Next: Advanced**. Accept all default values. Click on **Review + create** button. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156144233-f30a6c8f-f43b-4026-817e-9a4f33e1d5e6.png)
+
+
+## Interact with a container
+
+Once the deployment is done, click on the** Go to resource** button. Being in the Overview section, we can copy either the **IP address** or the **FQDN** and paste it into a browser window. And voila, we can see that our container is working and reachable as expected. 
+
+![image](https://user-images.githubusercontent.com/34960418/156145163-92066f3b-66a4-4aa8-a928-a3585056ff1c.png)
+
+
+
