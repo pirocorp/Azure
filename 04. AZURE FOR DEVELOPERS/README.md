@@ -710,7 +710,7 @@ az webapp up --resource-group RG-WebApps-Win --location westeurope --name azeweb
 
 # PHP + SQL web app (Azure Portal)
 
-## Preparation
+## Create DB
 
 Create a new resource group. For example, the **RG-WebApps-DB** group. Enter the resource group.
 
@@ -760,3 +760,36 @@ Open the index.php file. Paste the copied information after the // CONNECTION IN
 
 
 ## Create the web application
+
+Go to the resource group (**RG-WebApps-DB**). Click on the **+ Create** button to add new resource. In the search bar enter **App Services** and hit Enter. Click either on the **+ Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156208889-1c155d2f-69d3-4ffe-8f75-5b53101c8ef5.png)
+
+
+Make sure that the **Subscription** and the **Resource Group** are correctly set. For **Name** of the instance enter **azewebapp2**. Be sure to select **Code** in the **Publish** section. For the current task set the **Runtime stack** to **PHP 7.4**. Set the **Operating System** to **Linux**. Select **West Europe** for the **Region**. Select 
+the existing Linux plan (we can have only one free plan per region). Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/156209703-3000b037-bc6e-4a21-94c8-edd409c390e7.png)
+
+
+## Deploy the project
+
+Once the web app is ready, click on the Go to resource. Click on the Deployment Center option under Deployment. Switch to FTPS Credentials. 
+
+![image](https://user-images.githubusercontent.com/34960418/156210162-c25d3456-65d5-4b09-9170-47ea2c7bc018.png)
+
+
+**FileZilla** as well as any other FTP application will do the job. Copy the **FTPS Endpoint** string and paste it in the **Host** field of the FTP application. Use the provided **Username** and **Password**. Click on the **Quickconnect** button. Accept the certificate if prompted to do so. Navigate to the extracted files and copy them to the destination folder in the right part of the screen. Close the FTP session and application.
+
+![image](https://user-images.githubusercontent.com/34960418/156210777-6339ff9f-4f9b-42e4-945e-3f2271022740.png)
+
+
+Return to the **Azure Portal**. Go to the **Overview** section. Copy the value for **URL** and paste in a new browser window or click over it to open a new window.
+
+![image](https://user-images.githubusercontent.com/34960418/156211005-93f79d69-cf7c-46b9-b852-2f43db623353.png)
+
+
+You should see a web page showing information about the top 10 cities by population in Bulgaria.
+
+![image](https://user-images.githubusercontent.com/34960418/156211490-6e79e4d3-6f7c-4264-bfdb-3218762154a8.png)
+
