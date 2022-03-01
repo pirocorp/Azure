@@ -47,6 +47,11 @@
     - [Deploy a HTML web app](#deploy-a-html-web-app)
     - [Change and re-deploy a project](#change-and-re-deploy-a-project-1)
   - [PHP + SQL web app (Azure Portal)](#php--sql-web-app-azure-portal)
+    - [Create DB](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-db)
+    - [Load the data](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#load-the-data)
+    - [Configure the application](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#configure-the-application)
+    - [Create the web application](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-the-web-application)
+    - [Deploy the project](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#deploy-the-project-1)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
