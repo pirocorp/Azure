@@ -627,4 +627,14 @@ Return to the **Azure Portal**. Go to the **Overview** section. Copy the value f
 ![image](https://user-images.githubusercontent.com/34960418/156195120-cbd31e39-7513-479d-9543-a15e2557a1ef.png)
 
 
+### Change and re-deploy a project
 
+Navigate back to the folder where the files for the page are stored. Open the index.html file with a text editor and modify it. For example, add or remove text. Once you are done with the manipulation save and close the file.
+
+```html
+  <br />
+  <h1>And this is a cat ;)</h1>
+  <img src="file.png" />
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156196095-aea4a5a2-4a93-4c94-862d-1a1b6a76d9f5.png)
