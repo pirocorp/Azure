@@ -39,6 +39,13 @@
     - [Azure Portal](#azure-portal)
     - [Azure CLI](#azure-cli)
 - [Azure App Services](#azure-app-services)
+  - [HTML web app (Azure Portal)](#html-web-app-azure-portal)
+    - [Create a Web App](#create-a-web-app)
+    - [Deploy the project](#deploy-the-project)
+    - [Change and re-deploy a project](#change-and-re-deploy-a-project)
+  - [HTML web app (Azure CLI)](#html-web-app-azure-cli)
+    - [Deploy a HTML web app](#deploy-a-html-web-app)
+    - [Change and re-deploy a project](#change-and-re-deploy-a-project-1)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
