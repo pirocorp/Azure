@@ -46,6 +46,7 @@
   - [HTML web app (Azure CLI)](#html-web-app-azure-cli)
     - [Deploy a HTML web app](#deploy-a-html-web-app)
     - [Change and re-deploy a project](#change-and-re-deploy-a-project-1)
+- [PHP + SQL web app (Azure Portal)](#php--sql-web-app-azure-portal)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
