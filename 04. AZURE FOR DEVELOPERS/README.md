@@ -332,3 +332,15 @@ If using a local shell, login first by issuing
 Connect-AzAccount
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/156154142-3dc150a9-d600-4f27-b1e7-f9a9be489501.png)
+
+
+## Container instance
+
+Start a container from the same image as we did in the previous part:
+
+```powershell
+$port1 = New-AzContainerInstancePortObject -Port 80 -Protocol TCP
+$container = New-AzContainerInstanceObject -Name aze-hello -Image shekeriev/aze-image-1 -RequestCpu 1 -RequestMemoryInGb 1.5 -Port $port1
+$containerGroup = New-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello -Location westeurope -Container $container -OsType Linux -RestartPolicy "Never" -IpAddressType Public
+```
