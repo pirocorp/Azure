@@ -26,6 +26,10 @@
     - [Inspect a container](#inspect-a-container-1)
     - [Remove a container](#remove-a-container-1)
   - [Container Instances (Azure PowerShell)](#container-instances-azure-powershell)
+    - [Container instance](#container-instance-2)
+    - [Interact with a container](#interact-with-a-container-2)
+    - [Inspect a container](#inspect-a-container-2)
+    - [Remove a container](#remove-a-container-2)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
