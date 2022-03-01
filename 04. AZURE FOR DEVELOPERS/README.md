@@ -346,3 +346,33 @@ $containerGroup = New-AzContainerGroup -ResourceGroupName RG-Containers -Name az
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/156156558-4e8084ae-5caf-4bbb-99f1-c72ed8e34355.png)
+
+
+## Interact with a container
+
+Ask for information with
+
+```powershell
+Get-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello | fl
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156160787-08e21364-8db3-4c68-8e6b-3647b917d948.png)
+
+
+Narrow-down the received information with
+
+```powershell
+Get-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello | Select IpAddressIp, Fqdn
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156161091-0b84d140-ac75-43f3-82cc-bd9d79d58a57.png)
+
+
+Copy the IP address and paste it into a browser window.
+
+![image](https://user-images.githubusercontent.com/34960418/156161257-c638316f-3cb2-4171-976f-49d734db6b85.png)
+
+
+
+
+
