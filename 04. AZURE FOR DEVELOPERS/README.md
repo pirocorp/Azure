@@ -406,5 +406,36 @@ Remove-AzContainerGroup -ResourceGroupName RG-Containers -Name aze-hello
 ![image](https://user-images.githubusercontent.com/34960418/156162259-bfd6159d-1aad-43ac-8aa7-2929564bdd34.png)
 
 
+# Container Images
+
+## Prepare the project
+
+Download and extract the accompanying file **docker-image-2.zip**. If you examine the contents, you will see that there is one file named **Dockerfile**, a file named **file.png** and a folder **web** with one HTML file and one PNG file. Examine the **Dockerfile**. Copy or move **file.png** to the folder **web**. Go to the **web** folder and open the **index.html** file in a text editor. Create an empty row on **line 10** and paste this block of code. Save and close the file. There is no need to modify the **Dockerfile** as it will copy the whole web folder including the new file to the image.
+
+```html
+	  <br />
+	  <h1>And this is a cat ;)</h1>
+	  <img src="file.png" />
+```
+
+
+## Create a container image
+
+Open a terminal session and make sure that you are in the folder that contains the **Dockerfile** from the previous task. Now, build the new image with:
+
+```bash
+docker build . -t aze-image-2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156172186-096ef2ce-70b1-43e0-bace-5406d112df1f.png)
+
+
+List the available images
+
+```bash
+docker images
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156172347-4fca119a-4dd2-4457-b07e-9869244c8e31.png)
 
 
