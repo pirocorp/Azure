@@ -554,3 +554,10 @@ Here, the main difference is that during the creation process, you must select *
 ![image](https://user-images.githubusercontent.com/34960418/156178012-17e00120-7c2f-449f-abd8-1902a815c5e2.png)
 
 
+### Azure CLI
+
+Extended version of the container creation command would look like:
+
+```bash
+az container create --resource-group RG-Containers --name aze-hello --image azecr2021.azurecr.io/aze-image-2:v1 --cpu 1 --memory 1 --registry-login-server azecr2021.azurecr.io --registry-username azecr2022 --registry-password "Tgjhc6KaLaTuQRErh9U/uqSq8RXMwFP0" --dns-name-label aze-hello --ports 80
+```
