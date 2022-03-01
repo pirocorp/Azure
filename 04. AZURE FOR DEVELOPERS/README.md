@@ -15,6 +15,11 @@
 
 - Container Instances
   - [Container Instances (Azure Portal)](#container-instances-azure-portal)
+    - [Resource group](#resource-group)
+	  - [Container instance](#container-instance)
+    - [Interact with a container](#interact-with-a-container)
+    - [Inspect a container](#inspect-a-container)
+	  - [Remove a container](#remove-a-container)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
