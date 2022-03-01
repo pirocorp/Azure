@@ -38,6 +38,7 @@
     - [List repositories in a registry](#list-repositories-in-a-registry)
     - [Azure Portal](#azure-portal)
     - [Azure CLI](#azure-cli)
+- Azure App Services
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
@@ -568,3 +569,11 @@ Extended version of the container creation command would look like:
 ```bash
 az container create --resource-group RG-Containers --name aze-hello --image azecr2021.azurecr.io/aze-image-2:v1 --cpu 1 --memory 1 --registry-login-server azecr2021.azurecr.io --registry-username azecr2022 --registry-password "Tgjhc6KaLaTuQRErh9U/uqSq8RXMwFP0" --dns-name-label aze-hello --ports 80
 ```
+
+
+# Azure App Services
+
+Navigate to resource groups section. Create a new resource group, for example **RG-WebApps** in the West Europe region. Enter the resource group.
+
+![image](https://user-images.githubusercontent.com/34960418/156188843-cfaa2e86-92b0-41ed-9ddf-75768ed33909.png)
+
