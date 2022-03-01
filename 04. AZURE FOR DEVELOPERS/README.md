@@ -38,7 +38,7 @@
     - [List repositories in a registry](#list-repositories-in-a-registry)
     - [Azure Portal](#azure-portal)
     - [Azure CLI](#azure-cli)
-- [Azure App Services](#azure-app-services)
+- Azure App Services
   - [HTML web app (Azure Portal)](#html-web-app-azure-portal)
     - [Create a Web App](#create-a-web-app)
     - [Deploy the project](#deploy-the-project)
