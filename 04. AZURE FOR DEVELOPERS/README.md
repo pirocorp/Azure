@@ -30,6 +30,7 @@
     - [Interact with a container](#interact-with-a-container-2)
     - [Inspect a container](#inspect-a-container-2)
     - [Remove a container](#remove-a-container-2)
+  - [Container Images](#container-images)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
