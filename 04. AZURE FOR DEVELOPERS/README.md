@@ -669,3 +669,34 @@ az webapp up --resource-group RG-WebApps-Win --location westeurope --name azeweb
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/156197422-72f7de53-fcf9-411b-8a6e-fbd41af61329.png)
+
+
+Use the following command to list all web applications with their parameters:
+
+```bash
+az webapp list --resource-group RG-WebApps-Win
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156197806-121398c7-762d-40e0-adaa-d39e8ce90ecb.png)
+
+
+Or to narrow down the results:
+
+```bash
+az webapp list --resource-group RG-WebApps-Win --query "[].{Name:name,URL:defaultHostName}" --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156197968-19fe8e1c-19bb-4e86-9952-454407ee8fe7.png)
+![image](https://user-images.githubusercontent.com/34960418/156198064-ef28474d-0214-441a-8c37-39ab989387e0.png)
+
+
+### Change and re-deploy a project
+
+Change the **index.html** file. Execute the same command that you used for the initial deployment to redeploy the app:
+
+```bash
+az webapp up --resource-group RG-WebApps-Win --location westeurope --name azewebapp1 --html
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156198416-c747e2af-e1de-479e-a20b-adf60b68413e.png)
+![image](https://user-images.githubusercontent.com/34960418/156198471-217e5a5e-fa21-44bb-a040-f87d42f167ff.png)
