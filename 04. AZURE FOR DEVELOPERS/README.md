@@ -304,6 +304,22 @@ az container exec --resource-group RG-Containers --name aze-hello --exec-command
 
 ![image](https://user-images.githubusercontent.com/34960418/156152009-7a2aa1cb-386c-4c12-9b71-33a0d9219c2c.png)
 
+
 In the container issue some commands. For example, let’s try ```ls```, ```hostname```, ```uname```, etc. Execute the exit command to close the connection.
+
+![image](https://user-images.githubusercontent.com/34960418/156152682-dfab78f6-b076-4ae9-baab-e5ec1c82e563.png)
+
+
+## Remove a container
+
+Delete the container with. Confirm with **y**.
+
+```bash
+az container delete --resource-group RG-Containers --name aze-hello
+```
+
+
+
+
 
 
