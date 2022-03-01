@@ -747,4 +747,16 @@ Once the deployment is done, click on **Go to resource**. Click on the **Query e
 ![image](https://user-images.githubusercontent.com/34960418/156206954-98f0a811-9b6d-4d06-a188-0b52131a4bfe.png)
 
 
+## Configure the application
 
+Navigate to the **Connection strings** under the **Settings** section. Switch to the **PHP** tab. Copy the information related to the **SQL Server Extension**.
+
+![image](https://user-images.githubusercontent.com/34960418/156207731-80246a5d-6527-4eaa-80d6-59e856773243.png)
+
+
+Open the index.php file. Paste the copied information after the // CONNECTION INFORMATION BELLOW. Adjust the password. Save and close the file. 
+
+![image](https://user-images.githubusercontent.com/34960418/156208067-9ecea0ee-3db1-4116-ace4-ad27530b4705.png)
+
+
+## Create the web application
