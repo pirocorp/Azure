@@ -373,6 +373,24 @@ Copy the IP address and paste it into a browser window.
 ![image](https://user-images.githubusercontent.com/34960418/156161257-c638316f-3cb2-4171-976f-49d734db6b85.png)
 
 
+## Inspect a container
+
+To get the logs, execute.
+
+```powershell
+Get-AzContainerInstanceLog -ResourceGroupName RG-Containers -ContainerName aze-hello -ContainerGroupName aze-hello
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156161905-17bb3306-affd-48d0-b46b-ed58b182ebb6.png)
+
+
+Add the **-Tail** option to get only the last **X** lines. For example **-Tail 5** to get the **last 5 lines**
+
+```powershell
+Get-AzContainerInstanceLog -ResourceGroupName RG-Containers -ContainerName aze-hello -ContainerGroupName aze-hello -Tail 5
+```
+
+![image](https://user-images.githubusercontent.com/34960418/156162003-6fcc21c5-c41d-418c-a7f3-4d2b7c12cd7f.png)
 
 
 
