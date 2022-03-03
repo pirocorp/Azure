@@ -47,11 +47,12 @@
     - [Deploy a HTML web app](#deploy-a-html-web-app)
     - [Change and re-deploy a project](#change-and-re-deploy-a-project-1)
   - [PHP + SQL web app (Azure Portal)](#php--sql-web-app-azure-portal)
-    - [Create DB](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-db)
-    - [Load the data](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#load-the-data)
-    - [Configure the application](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#configure-the-application)
-    - [Create the web application](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-the-web-application)
-    - [Deploy the project](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#deploy-the-project-1)
+    - [Create DB](#create-db)
+    - [Load the data](#load-the-data)
+    - [Configure the application](#configure-the-application)
+    - [Create the web application](#create-the-web-application)
+    - [Deploy the project](#deploy-the-project-1)
+- [Azure Functions](#azure-functions)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
@@ -798,3 +799,6 @@ You should see a web page showing information about the top 10 cities by populat
 
 ![image](https://user-images.githubusercontent.com/34960418/156211490-6e79e4d3-6f7c-4264-bfdb-3218762154a8.png)
 
+
+
+# Azure Functions
