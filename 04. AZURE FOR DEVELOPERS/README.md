@@ -52,7 +52,7 @@
     - [Configure the application](#configure-the-application)
     - [Create the web application](#create-the-web-application)
     - [Deploy the project](#deploy-the-project-1)
-- [Azure Functions](#azure-functions)
+- [Azure Functions](#azure-functions-1)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
