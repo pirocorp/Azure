@@ -941,15 +941,73 @@ Check the **Subscription** and **Resource group** values. For Database name ente
 
 ### Load sample data
 
+Navigate to the database. Go to **Query editor (preview)** option. Enter the appropriate credentials and click **OK**. Paste the contents of the **cities-database-ext.sql** file to the **Query 1** window. Click on the **Run** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157052399-e9cde1fb-382d-4657-9cfb-7df1bd6745d5.png)
 
 
+### Create a HTTP triggered function
+
+Return to the Function App created earlier. Select **Functions** and click on the **+ Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157052763-604d37db-51fa-4914-a72c-1baacdaae64b.png)
 
 
+Then, select the **HTTP trigger** option and click on the **Create Function** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157053027-e35c548b-f7c4-455a-9141-949cd1fd5575.png)
 
 
+Once the function is created, examine the code. Open the file **function-with-db.txt** and copy the text. Return to the function body and substitute the code with what you copied from the file. Click on **Save**.
 
+```csharp
+#r "Newtonsoft.Json"
 
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using System.Data.SqlClient;
 
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
 
+    string citycode = req.Query["citycode"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    citycode = citycode ?? data?.citycode;
+
+    if (citycode != null) 
+    {
+        // SQL Server DB connection string
+        var str = "";
+
+        using (SqlConnection conn = new SqlConnection(str))
+        {
+            conn.Open();
+
+            // SQL SELECT statement
+            var text = "SELECT CityCode, CityName, Population FROM Cities WHERE CityCode='" + citycode + "'";
+            log.LogInformation("SQL query is " + text);
+
+            using (SqlCommand cmd = new SqlCommand(text, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    return (ActionResult)new OkObjectResult(String.Format("City code {0} refers to {1} with population of {2} people", reader[0], reader[1], reader[2]));
+                }                    
+                else
+                    return (ActionResult)new OkObjectResult("Nothing found for city code " + citycode);
+            }
+        }
+    }
+    else 
+        return new BadRequestObjectResult("Please pass a city code on the query string or in the request body");
+}
+```
 
 
