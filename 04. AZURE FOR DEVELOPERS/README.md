@@ -836,7 +836,9 @@ Select **Timer trigger** template. Let’s change the schedule to ```0 */1 * * *
 ![image](https://user-images.githubusercontent.com/34960418/157044005-add6fa6d-80fe-49b2-a796-c89dd3032ae6.png)
 
 
+After the function is created, you will be brought to its Overview section. Explore the options under the Developer section. Return to the function by clicking on its name. When in the Monitoring section, switch to the Logs view. After a while, you will see some log messages proving that the function is working as expected. 
 
+![image](https://user-images.githubusercontent.com/34960418/157044956-2e043093-dd00-40a1-9de7-9cd9b5fd4790.png)
 
 
 
