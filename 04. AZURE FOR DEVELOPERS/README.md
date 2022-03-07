@@ -831,7 +831,13 @@ Once in the **Overview** mode of the function application, click on **Functions*
 ![image](https://user-images.githubusercontent.com/34960418/157043302-a5b687af-d567-4dce-995e-e6b3f0849104.png)
 
 
-Select **Timer trigger** template. Let’s change the schedule to **0 */1 * * * \***
+Select **Timer trigger** template. Let’s change the schedule to ```0 */1 * * * *```. This will cause the function to be executed every minute instead of every five minutes. Click on **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157044005-add6fa6d-80fe-49b2-a796-c89dd3032ae6.png)
+
+
+
+
 
 
 
