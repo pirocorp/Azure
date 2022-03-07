@@ -1012,3 +1012,31 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 
 ![image](https://user-images.githubusercontent.com/34960418/157053490-b6dfe5fd-b9e6-407a-a4dc-110280715308.png)
 
+
+Navigate to the **SQL Database**. Click on **Connection strings** under **Settings**. Copy the code for **ADO.NET**. Return to the function.
+
+![image](https://user-images.githubusercontent.com/34960418/157053777-82d7bfb7-178c-40d1-948b-a4314cca943d.png)
+
+
+Navigate to **line 22** and paste what you have copied as a value for the str variable. Substitute the string **{your_password}** with the actual password for the **SQL Server** you set earlier, for example **DemoPassword-2022**. Click on the **Save** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157054312-70cc252b-516e-4d17-83fb-e5103f34e936.png)
+
+
+Then, click on the Get function URL button. Click on Copy to copy it to the clipboard. Open a web browser, paste the URL and hit Enter. 
+
+![image](https://user-images.githubusercontent.com/34960418/157065496-6e5c8d39-ef1e-42e9-b3df-e23562bda07b.png)
+
+
+You will see a message that we must pass a city code either via a query string value or in the request body. Let’s pass it as a query string. Add **&citycode=BG03** at the end of the URL
+
+![image](https://user-images.githubusercontent.com/34960418/157067517-2afd575c-fa87-4a05-a98d-1d03f36a5bdf.png)
+
+
+Let’s try it with city code **BG99**. Now, we should see a message that nothing has been found for this code. 
+
+![image](https://user-images.githubusercontent.com/34960418/157068271-3a202f09-58c9-4b5e-b0d5-e289a3f717bd.png)
+
+![image](https://user-images.githubusercontent.com/34960418/157068331-5b7eee6d-efae-433a-b5cb-9a568cdf5cfa.png)
+
+
