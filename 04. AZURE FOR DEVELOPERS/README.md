@@ -877,3 +877,20 @@ Let’s pass it as a query string. Add **&name=Demo** at the end of the URL. Now
 ## Modify the app to use a Queue
 
 
+Return to the function window and switch to the **Integration** mode
+
+![image](https://user-images.githubusercontent.com/34960418/157046811-3b34b261-2f4f-4a20-aaa2-ce01dd615337.png)
+
+
+Then click on **+ Add output**.
+
+![image](https://user-images.githubusercontent.com/34960418/157046935-769dc5cd-9589-4f1a-aa23-27390757e3bb.png)
+
+
+Explore the options. Select the **Azure Queue Storage** in the **Binding Type** drop-down list. Copy the **Message parameter name**, which in our case should be **outputQueueItem**. We can select a new storage account or accept the default proposal. Confirm by clicking on the **OK** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157047517-d14c4959-26bc-4647-963f-66c71933ef4e.png)
+
+
+
+
