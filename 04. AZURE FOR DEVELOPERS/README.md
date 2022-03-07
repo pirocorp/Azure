@@ -924,5 +924,32 @@ There you should see the message. You can execute the function a few more times 
 ![image](https://user-images.githubusercontent.com/34960418/157049189-6eba66f8-55d2-4ab1-9589-f01fd678ab6b.png)
 
 
+## Functions with SQL backend
+
+
+### Create SQL server and database
+
+Return to the resource group **RG-Functions**. Click on the **+ Create** button. In the search field enter **SQL Database** and hit **Enter**. Click on **Create**. 
+
+![image](https://user-images.githubusercontent.com/34960418/157050103-5800897a-9249-47dd-81a4-18a8a5f83a43.png)
+
+
+Check the **Subscription** and **Resource group** values. For Database name enter **dbfunc**. Click on **Configure database** link under **Compute + storage** to change the default value. Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/157050887-69a221da-2678-4b02-8147-b0167df51227.png)
+
+
+### Load sample data
+
+
+
+
+
+
+
+
+
+
+
 
 
