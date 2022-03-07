@@ -841,6 +841,39 @@ After the function is created, you will be brought to its Overview section. Expl
 ![image](https://user-images.githubusercontent.com/34960418/157044956-2e043093-dd00-40a1-9de7-9cd9b5fd4790.png)
 
 
+## Create a HTTP triggered function
 
+
+Return in the **Overview** mode of the function app. Select Functions and click on the **+ Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157045332-5bcb340e-d518-42a7-9466-de27edae613e.png)
+
+
+Select **HTTP trigger** and click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157045559-b4356e96-1eda-4362-9767-96a6474f8814.png)
+
+
+Once the function is created, click on **Code + Test** to examine the code.
+
+![image](https://user-images.githubusercontent.com/34960418/157045743-37bba8fc-67a7-44a4-a789-7d1befda0cf7.png)
+
+
+Then, click on the **Get function URL** button. Click on **Copy** to copy it to the clipboard.
+
+![image](https://user-images.githubusercontent.com/34960418/157046163-7b32e8c9-985a-4da3-8dd4-d4423be7dc6d.png)
+
+
+Open a web browser, paste the URL and hit **Enter**. You will see a message that we must pass a name either via a query string value or in the request body.
+
+![image](https://user-images.githubusercontent.com/34960418/157046337-c1f9e2ee-f50c-437b-9c3b-f10eeb52e336.png)
+
+
+Let’s pass it as a query string. Add **&name=Demo** at the end of the URL. Now the result should become **Hello, Demo. This HTTP triggered function executed successfully.**
+
+![image](https://user-images.githubusercontent.com/34960418/157046528-f7af1cd6-6435-4aea-820d-9d515aeed491.png)
+
+
+## Modify the app to use a Queue
 
 
