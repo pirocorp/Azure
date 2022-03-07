@@ -892,5 +892,28 @@ Explore the options. Select the **Azure Queue Storage** in the **Binding Type** 
 ![image](https://user-images.githubusercontent.com/34960418/157047517-d14c4959-26bc-4647-963f-66c71933ef4e.png)
 
 
+Return to the function’s code. Modify the signature to 
+
+```csharp
+Run(HttpRequest req, ICollector<string> outputQueueItem, ILogger log)
+```
+
+Just before the return statement add this one:
+
+```csharp
+outputQueueItem.Add("Name passed to the function: " + name);
+```
+
+Click on **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/157048196-0af98baf-8b10-4cd8-a792-1df362596aa8.png)
+
+
+
+
+
+
+
+
 
 
