@@ -914,8 +914,14 @@ Let’s test the function again, click on the **Get function URL** button. Click
 ![image](https://user-images.githubusercontent.com/34960418/157048496-26760eda-3daa-4755-99dd-34e3b15c25b2.png)
 
 
-Let’s go and check the queue. Navigate to the storage account you specified earlier (or if used the proposed, navigate to the one in the resource group). Then, go to the queues and enter the queue specified during the modification, it should be outqueue. There you should see the message. You can execute the function a few more times and see what happens. 
+Let’s go and check the queue. Navigate to the storage account you specified earlier (or if used the proposed, navigate to the one in the resource group). Then, go to the queues and enter the queue specified during the modification, it should be outqueue. 
 
+![image](https://user-images.githubusercontent.com/34960418/157049111-f0c5fe61-6f0f-49ea-8e40-306ec3882628.png)
+
+
+There you should see the message. You can execute the function a few more times and see what happens. 
+
+![image](https://user-images.githubusercontent.com/34960418/157049189-6eba66f8-55d2-4ab1-9589-f01fd678ab6b.png)
 
 
 
