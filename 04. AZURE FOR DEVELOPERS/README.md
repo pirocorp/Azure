@@ -53,6 +53,14 @@
     - [Create the web application](#create-the-web-application)
     - [Deploy the project](#deploy-the-project-1)
 - [Azure Functions](#azure-functions-1)
+  - [Create a Function App](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-a-function-app)
+  - [Create a time triggered function](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-a-time-triggered-function)
+  - [Create a HTTP triggered function](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-a-http-triggered-function)
+  - [Modify the app to use a Queue](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#modify-the-app-to-use-a-queue)
+  - [Functions with SQL backend](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#functions-with-sql-backend)
+    - [Create SQL server and database](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-sql-server-and-database)
+    - [Load sample data](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#load-sample-data)
+    - [Create a HTTP triggered function](https://github.com/pirocorp/Azure/blob/main/04.%20AZURE%20FOR%20DEVELOPERS/README.md#create-a-http-triggered-function-1)
 
 
 # [Azure Container Instances (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
