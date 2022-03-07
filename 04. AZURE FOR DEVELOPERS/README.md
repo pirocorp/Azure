@@ -802,3 +802,37 @@ You should see a web page showing information about the top 10 cities by populat
 
 
 # Azure Functions
+
+
+Navigate to the resource groups section. Create a new resource group, for example, RG-Functions in the West Europe region. Enter the resource group.
+
+![image](https://user-images.githubusercontent.com/34960418/157040272-196b0f65-b8da-44b1-8e67-3a35650b596b.png)
+
+
+## Create a Function App
+
+
+Click on the **+ Create** button. Search for **Function App** in the main search bar and hit Enter. Click on the **Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157040623-c412bf0c-bd32-44bb-a7e9-2746d04e2b50.png)
+
+
+Ensure that the **Subscription** and **Resource Group** are correctly filled in. Enter **azefuncapp** for **Function App name**. Make sure that **Code** is selected in the **Publish** option. Select **.NET** for **Runtime stack**. Change the **Region** to **West Europe**. Click on **Next: Hosting**. Move forward by clicking on **Next: Monitoring**. Click on **Review + create**. Click on **Create**. Once the deployment is done, click on the **Go to resource** button.
+
+
+![image](https://user-images.githubusercontent.com/34960418/157041181-822ab1d9-1837-4c7a-b2e0-81ec8a8a4ce9.png)
+
+
+## Create a time triggered function
+
+
+Once in the **Overview** mode of the function application, click on **Functions** option in the **Functions** sectionл Click on the **+ Create** button.
+
+![image](https://user-images.githubusercontent.com/34960418/157043302-a5b687af-d567-4dce-995e-e6b3f0849104.png)
+
+
+Select **Timer trigger** template. Let’s change the schedule to **0 */1 * * * \***
+
+
+
+
