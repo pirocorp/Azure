@@ -909,9 +909,12 @@ Click on **Save**.
 ![image](https://user-images.githubusercontent.com/34960418/157048196-0af98baf-8b10-4cd8-a792-1df362596aa8.png)
 
 
+Let’s test the function again, click on the **Get function URL** button. Click on **Copy** to copy it to the clipboard. Open a web browser, paste the URL, add **&name=Demo** at the end of the URL, and hit the Enter key. The result should not differ from the earlier executions.
+
+![image](https://user-images.githubusercontent.com/34960418/157048496-26760eda-3daa-4755-99dd-34e3b15c25b2.png)
 
 
-
+Let’s go and check the queue. Navigate to the storage account you specified earlier (or if used the proposed, navigate to the one in the resource group). Then, go to the queues and enter the queue specified during the modification, it should be outqueue. There you should see the message. You can execute the function a few more times and see what happens. 
 
 
 
