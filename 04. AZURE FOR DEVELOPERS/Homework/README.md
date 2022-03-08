@@ -34,3 +34,88 @@ Create a function application with one HTTP triggered function that conforms to 
 
 ![image](https://user-images.githubusercontent.com/34960418/157239374-3cbf348a-1ff5-407f-b53b-96c686a51aa6.png)
 
+
+# Http Function Code
+
+```csharp
+#r "Newtonsoft.Json"
+
+using System.Net;
+using System.Data.SqlClient;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    string name = req.Query["name"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    name = name ?? data?.name;
+
+    string responseMessage = string.Empty;
+
+    if(string.IsNullOrEmpty(name))
+    {
+        responseMessage = "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+
+        return new OkObjectResult(responseMessage);
+    }
+
+    var str = "Server=tcp:funcsqlsrv.database.windows.net,1433;Initial Catalog=funcappdb;Persist Security Info=False;User ID=demosa;Password=DemoPassword-2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    
+    using (SqlConnection conn = new SqlConnection(str))
+    {
+        conn.Open();
+
+        var timestamp = DateTime.Now.Ticks;        
+
+        var insertQuery = $"INSERT INTO Names VALUES ({timestamp}, '{name}')";
+
+        using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader());
+        }
+
+        var countQuery = $"SELECT COUNT(*) FROM Names WHERE Name='{name}'";
+
+        int count = 0;
+
+        using (SqlCommand cmd = new SqlCommand(countQuery, conn))
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader()) 
+            {
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    count = int.Parse(reader[0].ToString());
+                };
+            }
+        }
+
+        var firstTimestampQuery = $"SELECT TOP(1) Timestamp FROM Names WHERE Name='{name}'";
+
+        long firstTimestamp = 0;
+
+        using(SqlCommand cmd = new SqlCommand(firstTimestampQuery, conn))
+        {
+            using (var reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    reader.Read();
+
+                    firstTimestamp = long.Parse(reader[0].ToString());
+                } 
+            }           
+        }
+
+        responseMessage = $"{firstTimestamp}: {name} - {count}";
+    }
+
+    return new OkObjectResult(responseMessage);
+}
+```
