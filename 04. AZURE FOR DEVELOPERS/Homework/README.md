@@ -119,3 +119,6 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
     return new OkObjectResult(responseMessage);
 }
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/157244601-a1947c4a-abee-4acc-840c-27cb5ec2a202.png)
+
