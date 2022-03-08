@@ -32,4 +32,5 @@ Create a function application with one HTTP triggered function that conforms to 
 
 ![image](https://user-images.githubusercontent.com/34960418/157234381-7c535420-6ddc-42b3-b8e0-4fbd012e5c73.png)
 
-![image](https://user-images.githubusercontent.com/34960418/157236843-0d8b4abf-5b1b-4805-ae46-c596eff59f82.png)
+![image](https://user-images.githubusercontent.com/34960418/157239374-3cbf348a-1ff5-407f-b53b-96c686a51aa6.png)
+
