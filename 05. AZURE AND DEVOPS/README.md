@@ -25,6 +25,7 @@
   - [Azure Pipelines](#azure-pipelines)
   - [Azure Repos](#azure-repos)
 - [Azure DevOps Projects](#azure-devops-projects)
+  - [Integration with Azure DevOps](#integration-with-azure-devops)
 
 
 
