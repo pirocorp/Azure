@@ -201,5 +201,51 @@
   - Azure DevOps (all five products)
 - Included with Visual Studio Subscriptions
 
+## [Azure Boards](https://docs.microsoft.com/en-us/azure/devops/boards/get-started/what-is-azure-boards)
+
+- Provides a rich set of capabilities for managing software projects.
+- The process defines the building blocks of a work-tracking system.
+- Supports **Basic**, **Agile**, **Scrum**, and **CMMI** processes.
+- Work item types for Basic process are:
+  - **Epics** are used to track significant features or requirements.
+  - **Issues** are used to track user stories, bugs, or other smaller items of work.
+  - **Tasks** are for even smaller amounts of work, measured in hours or days.
+- Basic process uses the **To Do**, **Doing**, and **Done** states to track workflow status.
+- Track work on interactive **backlogs** and **boards**.
+- Collaborate with others through the **Discussion** section.
+- Work in sprints, plan and forecast.
+- Work effectively by using hierarchies, queries, templates, etc.
+- Link issues and tasks to GitHub commits and pull requests.
+- Support independent and autonomous teams.
+- Can track work across several projects.
 
 
+## Azure Boards Tools
+
+- **Work items** - Quickly find work items that are assigned to you.
+- **Boards** - Present work items as cards and support drag-and-drop status updates.
+- **Backlogs** - Present work items as lists. Represents your project plan. It is a sort of repository.
+- **Sprints** - Sprint backlogs and taskboards provide a view of work items by iteration or sprint.
+- **Queries** - Filtered lists of work items based on criteria defined by us. 
+
+
+## [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
+
+- Automatically build and test your code project.
+- Combines **continuous integration** (CI) & **continuous delivery** (CD).
+- Supports **Python**, **Java**, **JavaScript**, **PHP**, **Ruby**, **C#**, **C++**, and **Go**.
+- Integrates with **GitHub**, **GitHub Enterprise**, **Azure Repos Git** & **TFVC**, **Bitbucket Cloud**, and **Subversion**.
+- Supports application types, such as **Java**, **JavaScript**, **Node.js**, **Python**, **.NET**, **C++**, **Go**, **PHP**, and **Xcode**.
+- Multiple targets and package formats.
+
+
+## [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos)
+
+- A set of version control tools that you can use to manage your code
+- Supports **distributed** (Git) and **centralized** (TFVC) version control
+- Git in Azure Repos is standard Git
+  - Connect your favorite development environment
+  - Review code with pull requests
+  - Protect branches with policies
+  - Extend pull request workflows with pull request status
+  - Isolate code with forks
