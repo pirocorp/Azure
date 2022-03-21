@@ -28,6 +28,10 @@
   - [Integration with Azure DevOps](#integration-with-azure-devops)
 
 
+# Jump to practical guides
+
+- [Azure Kubernetes Service (Portal)](#azure-kubernetes-service-portal)
+
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
@@ -281,4 +285,10 @@
 - Establishes a CI trigger for the build so that every new code commit initiates a build.
 - Creates a CD trigger and deploys every new successful build to the Azure service of your choice.
 - The build and release pipelines can be customized further.
+
+
+
+
+# Azure Kubernetes Service (Portal)
+
 
