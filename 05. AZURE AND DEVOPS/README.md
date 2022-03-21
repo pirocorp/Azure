@@ -134,4 +134,22 @@
 ![image](https://user-images.githubusercontent.com/34960418/159255099-a9301524-8d39-42f9-ae88-be1c2a7dbe4f.png)
 
 
+# DevOps
 
+## [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops)
+
+![image](https://user-images.githubusercontent.com/34960418/159258140-761462a3-918d-43c3-a277-47b69b5a2810.png)
+
+
+## The Road to DevOps
+
+- **Understand your Cycle Time** - Observe, Orient, Decide, Act.
+- **Become Data-Informed** - Use data to inform what to do in your next cycle.
+- **Strive for Validated Learning** - Feedback gathered with each cycle should be real, actionable data.
+- **Shorten your Cycle Time** - Smaller batches, more automation, improved telemetry, frequent deployments.
+- **Optimize Validated Learning** - The sum of improvements that you achieve and the failures that you avoid.
+
+
+## How to Achieve DevOps?
+
+![image](https://user-images.githubusercontent.com/34960418/159258994-9f6e0189-f7fb-46d1-80ec-4d4a92d8e0a2.png)
