@@ -24,6 +24,7 @@
   - [Azure Boards Tools](#azure-boards-tools)
   - [Azure Pipelines](#azure-pipelines)
   - [Azure Repos](#azure-repos)
+- [Azure DevOps Projects](#azure-devops-projects)
 
 
 
@@ -256,3 +257,6 @@
   - Protect branches with policies
   - Extend pull request workflows with pull request status
   - Isolate code with forks
+
+
+# Azure DevOps Projects
