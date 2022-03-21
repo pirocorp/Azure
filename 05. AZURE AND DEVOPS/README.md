@@ -88,7 +88,29 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159254292-b00f0bc2-9140-454f-9a33-2687e82dc995.png)
 
 
+### Services
 
+- Provide reliable network endpoint
+  - **IP address**
+  - **DNS name**
+  - **Port**
+- Expose Pods to the outside world
+  - **NodePort** (cluster-wide port)
+  - **LoadBalancer** (cloud-based)
+- Use End Point object to track Pods
+
+![image](https://user-images.githubusercontent.com/34960418/159254588-3bd11196-13cf-4a29-888a-125c59dbc627.png)
+
+
+### Services in Action
+
+![image](https://user-images.githubusercontent.com/34960418/159254828-615adde8-cdeb-4ca1-9232-7e5ccd7e3374.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159254922-49f6eb91-2084-4189-8896-69ee5a835517.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159254997-5c8ba0ad-b781-46ce-97a9-a9754997818e.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159255099-a9301524-8d39-42f9-ae88-be1c2a7dbe4f.png)
 
 
 
