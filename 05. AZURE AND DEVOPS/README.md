@@ -46,7 +46,8 @@ What Kubernetes Does?
 - **kube-proxy** 
     - Network proxy
 
-![image](https://user-images.githubusercontent.com/34960418/159253026-9ac732bf-0c4c-4c18-ae1b-b7d4c80c249d.png)
+![image](https://user-images.githubusercontent.com/34960418/159253096-2d448ccf-dc57-4501-b88f-80341c0b5fc1.png)
+
 
 
 
