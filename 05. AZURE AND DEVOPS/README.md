@@ -172,3 +172,34 @@
 
 ![image](https://user-images.githubusercontent.com/34960418/159259699-063b38c4-25b8-46f6-bd7e-cb3fbe014f64.png)
 
+
+# [Azure DevOps](https://azure.microsoft.com/en-us/pricing/details/devops/server/)
+
+![image](https://user-images.githubusercontent.com/34960418/159260563-ced4fcff-79c0-4a07-b5b4-4b25fb81b439.png)
+
+
+# [Azure DevOps Services](https://azure.microsoft.com/en-us/services/devops/)
+
+- **Azure Boards** (Agile planning tools)
+- **Azure Pipelines** (CI/CD for any platform and language)
+- **Azure Repos** (Unlimited free private repos)
+- **Azure Test Plans** (Manual and exploratory testing)
+- **Azure Artifacts** (Universal package repository)
+- **Extensions Marketplace** (Over 1000 extensions)
+
+
+## [Azure DevOps Pricing](https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/)
+
+- Individual Services
+  - Azure Pipelines
+  - Azure Artifacts
+- User Licenses
+  - Basic Plan (w/o Test Plans)
+  - Basic + Test Plans
+- Azure DevOps for Open Source
+  - Azure Pipelines
+  - Azure DevOps (all five products)
+- Included with Visual Studio Subscriptions
+
+
+
