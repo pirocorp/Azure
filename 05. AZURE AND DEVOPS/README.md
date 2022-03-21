@@ -1,6 +1,16 @@
 # TOC
 
-
+- [Azure Kubernetes Service](#azure-kubernetes-service)
+  - [Container Orchestration](#:~:text=Container%20Orchestration)
+  - [What Kubernetes Does?](#what-kubernetes-does)
+  - [Architecture Overview](#architecture-overview)
+  - [Masters](#masters)
+  - [(Worker) Nodes](#worker-nodes)
+  - [Pods](#pods)
+  - [Replication Controllers](#replication-controllers)
+  - [Deployments](#deployments)
+  - [Services](#services)
+  - [Services in Action](#services-in-action)
 
 
 
