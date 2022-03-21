@@ -11,6 +11,12 @@
   - [Deployments](#deployments)
   - [Services](#services)
   - [Services in Action](#services-in-action)
+- [DevOps](#devops)
+  - [What is DevOps?](#what-is-devops)
+  - [The Road to DevOps](#the-road-to-devops)
+  - [How to Achieve DevOps?](#how-to-achieve-devops)
+  - [Continuous (Something)](#continuous-something)
+  - [CD vs CD](#cd-vs-cd)
 
 
 
