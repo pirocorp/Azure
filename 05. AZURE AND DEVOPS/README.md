@@ -153,3 +153,16 @@
 ## How to Achieve DevOps?
 
 ![image](https://user-images.githubusercontent.com/34960418/159258994-9f6e0189-f7fb-46d1-80ec-4d4a92d8e0a2.png)
+
+
+## Continuous (Something)
+
+**Continuous Integration** - Series of steps that are automatically performed to integrate code from multiple sources, create a build and test.
+**Continuous Delivery** - Helps you build a refined version of the software by continuously implementing fixes and feedback until finally, you decide to push it out to production.
+**Continuous Deployment** - Every change goes through an automated pipeline and a working version of the application is automatically pushed to production.
+
+
+## CD vs CD
+
+![image](https://user-images.githubusercontent.com/34960418/159259699-063b38c4-25b8-46f6-bd7e-cb3fbe014f64.png)
+
