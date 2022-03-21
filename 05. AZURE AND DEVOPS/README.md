@@ -1,4 +1,9 @@
-# Azure Kubernetes Service
+# [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+
+- Accelerate containerized application development
+- Manage Kubernetes with ease
+- Build on an enterprise-grade, more secure foundation
+- Run any workload in the cloud, at the edge, or as a hybrid
 
 Container Orchestration
 
@@ -23,7 +28,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159252034-da006e4a-9599-4749-a898-59d5dfbcd660.png)
 
 
-### Masters
+## Masters
 
 - Responsible for **managing** the cluster.
 - Typically, **more than one** is installed.
@@ -35,7 +40,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159252789-fc7cdbc8-480c-4c13-bddd-3dc20b1efd5d.png)
 
 
-### (Worker) Nodes
+## (Worker) Nodes
 
 - Initially called **Minions**
 - **Container runtime**
@@ -49,7 +54,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159253096-2d448ccf-dc57-4501-b88f-80341c0b5fc1.png)
 
 
-### Pods
+## Pods
 
 - Smallest **unit of scheduling**.
 - **One** or **more** containers.
@@ -67,7 +72,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159253613-29f22d1f-b64d-432c-bec0-5079c029e139.png)
 
 
-### Replication Controllers
+## Replication Controllers
 
 - **Higher** level workload.
 - Looks after **pod** or **set of pods**.
@@ -77,7 +82,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159253974-1340c5cf-e9b2-49fe-8c8e-8063a5b4ff18.png)
 
 
-### Deployments
+## Deployments
 
 - **Even higher** level workload.
 - Simplifies **updates** and **rollbacks**.
@@ -88,7 +93,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159254292-b00f0bc2-9140-454f-9a33-2687e82dc995.png)
 
 
-### Services
+## Services
 
 - Provide reliable network endpoint
   - **IP address**
@@ -102,7 +107,7 @@ What Kubernetes Does?
 ![image](https://user-images.githubusercontent.com/34960418/159254588-3bd11196-13cf-4a29-888a-125c59dbc627.png)
 
 
-### Services in Action
+## Services in Action
 
 ![image](https://user-images.githubusercontent.com/34960418/159254828-615adde8-cdeb-4ca1-9232-7e5ccd7e3374.png)
 
