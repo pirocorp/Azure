@@ -259,4 +259,25 @@
   - Isolate code with forks
 
 
-# Azure DevOps Projects
+# [Azure DevOps Projects](https://azure.microsoft.com/en-us/features/devops-projects/)
+
+- Built-in support for popular application frameworks - **.NET**, **Java**, **PHP**, **Node**, **Python**, **Go** and other languages and frameworks.
+- Deploy to the platform of your choice - **Azure Web App**, **Virtual Machine**, **Service Fabric** or choose **AKS**.
+- Cloud-powered CI/CD - Auto-generated and fully integrated Azure Pipelines.
+- Application Insights integration - Rich performance monitoring, powerful alerting, and dashboards.
+- Quickly deploy your application to Azure
+- Automate the setup of a CI/CD pipeline
+- View and understand how to properly set up a CI/CD pipeline
+- Further customize the release pipelines based on your specific scenarios
+
+
+## [Integration with Azure DevOps](https://docs.microsoft.com/en-us/azure/devops-project/overview)
+
+- DevOps Projects is powered by Azure DevOps.
+- DevOps Projects automates all the work that's needed in Azure Pipelines to set up a CI/CD pipeline.
+- Creates a Git repository in a new or existing Azure DevOps organization.
+- Commits a sample application or your existing code to a new Git repository.
+- Establishes a CI trigger for the build so that every new code commit initiates a build.
+- Creates a CD trigger and deploys every new successful build to the Azure service of your choice.
+- The build and release pipelines can be customized further.
+
