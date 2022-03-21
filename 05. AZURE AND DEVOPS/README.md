@@ -45,3 +45,9 @@ What Kubernetes Does?
     - Uses CRI shims
 - **kube-proxy** 
     - Network proxy
+
+![image](https://user-images.githubusercontent.com/34960418/159253026-9ac732bf-0c4c-4c18-ae1b-b7d4c80c249d.png)
+
+
+
+
