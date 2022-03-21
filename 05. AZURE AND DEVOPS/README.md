@@ -17,6 +17,13 @@
   - [How to Achieve DevOps?](#how-to-achieve-devops)
   - [Continuous (Something)](#continuous-something)
   - [CD vs CD](#cd-vs-cd)
+- [Azure DevOps](#azure-devops)
+- [Azure DevOps Services](#azure-devops-services)
+  - [Azure DevOps Pricing](#azure-devops-pricing)
+  - [Azure Boards](#azure-boards)
+  - [Azure Boards Tools](#azure-boards-tools)
+  - [Azure Pipelines](#azure-pipelines)
+  - [Azure Repos](#azure-repos)
 
 
 
