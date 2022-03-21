@@ -66,3 +66,29 @@ What Kubernetes Does?
 
 ![image](https://user-images.githubusercontent.com/34960418/159253613-29f22d1f-b64d-432c-bec0-5079c029e139.png)
 
+
+### Replication Controllers
+
+- **Higher** level workload.
+- Looks after **pod** or **set of pods**.
+- **Scale** up/down **pods**.
+- Sets **Desired State**.
+
+![image](https://user-images.githubusercontent.com/34960418/159253974-1340c5cf-e9b2-49fe-8c8e-8063a5b4ff18.png)
+
+
+### Deployments
+
+- **Even higher** level workload.
+- Simplifies **updates** and **rollbacks**.
+- **Declarative** and **imperative** approach.
+- Self **documenting**.
+- Suitable for **versioning**.
+
+![image](https://user-images.githubusercontent.com/34960418/159254292-b00f0bc2-9140-454f-9a33-2687e82dc995.png)
+
+
+
+
+
+
