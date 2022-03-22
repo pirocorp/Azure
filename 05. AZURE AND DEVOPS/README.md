@@ -842,5 +842,23 @@ Click on the project’s name Demo 1 in the navigation bar
 ![image](https://user-images.githubusercontent.com/34960418/159506121-fb96eb33-4b32-4317-98a1-de172d5e80a4.png)
 
 
+## Manage work items
+
+We will add a few work items on different levels – epics, issues, and tasks. Navigate to **Boards / Work items**.
+
+![image](https://user-images.githubusercontent.com/34960418/159506574-5287122f-3433-4f59-adfa-501f4471deec.png)
+
+
+Let’s start with the epics. Click on **New Work Item** and select **Epic**.
+
+![image](https://user-images.githubusercontent.com/34960418/159506953-a1138400-b714-427b-aa30-d621a3a6f79a.png)
+
+
+For title enter **User interface**. For the **Iteration** select **Demo 1\Sprint 1**. Enter a **Description**. For example, **Align the interface with the specification**. Set the **Priority** to **3**. Click on **Save** and then **Back to Work Items**. 
+
+![image](https://user-images.githubusercontent.com/34960418/159507861-db75da75-90c7-431b-bef8-8dcb5c01e744.png)
+
+
+
 
 
