@@ -594,3 +594,17 @@ Now, we can go to the app opened in the browser and refresh a few times to see t
 ![image](https://user-images.githubusercontent.com/34960418/159489428-4eb573df-8089-4373-8598-5b0eeb1b0f7d.png)
 
 
+Let’s scale down a bit:
+
+```bash
+kubectl scale --replicas=2 deployment.apps/phpapp-deployment
+```
+
+
+And check what is going on with the pods:
+
+```bash
+kubectl get pods
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159489755-4d53a625-e18e-4fb2-84b2-6a69bcb1ad6d.png)
