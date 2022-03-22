@@ -859,6 +859,30 @@ For title enter **User interface**. For the **Iteration** select **Demo 1\Sprint
 ![image](https://user-images.githubusercontent.com/34960418/159507861-db75da75-90c7-431b-bef8-8dcb5c01e744.png)
 
 
+Click on **New Work Item** and select **Epic**. For title enter **Data presentation**. For the **Iteration** select **Demo 1\Sprint 1**. Enter a **Description**. For example, **Nice formatted table**. Set the **Priority** to **1**. Click on **Save** and then **Back to Work Items**.
+
+![image](https://user-images.githubusercontent.com/34960418/159508557-f66e68bb-dd19-4b6a-966d-dd295ce251b4.png)
+
+
+Now, let’s add a few Issues to both Epics but we will use another place to do this. Navigate to **Boards / Backlogs**. Change the view from **Issues** to **Epics**. Click on the **+** sign in front of the first epic.
+
+![image](https://user-images.githubusercontent.com/34960418/159509212-cd429ae0-3024-4e70-b4af-4b63f00eef54.png)
+
+
+Enter **Title style** and click on **Save & Close**
+
+![image](https://user-images.githubusercontent.com/34960418/159509445-8282fde1-09fd-4b31-8664-af46312fb0cf.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
