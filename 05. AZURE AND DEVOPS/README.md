@@ -920,3 +920,42 @@ Click on the **Initialize** button at the end of the page to initialize the repo
 
 ![image](https://user-images.githubusercontent.com/34960418/159513727-9f5f3705-2186-4501-8bcc-ee5152096bd3.png)
 
+
+### Upload files
+
+Extract the web-app-html.zip archive to a folder. Return to the browser. Click on the three dots next to the repository’s name and select **Clone**.
+
+![image](https://user-images.githubusercontent.com/34960418/159514381-5c8af1b2-b517-463c-9dfd-00b00d0e05c2.png)
+
+
+Select Clone in VS Code. Confirm in the pop-up window that you want to open the link with VS Code. When asked, click on Open. Navigate to a folder and click on Select Repository Location. If prompted for credentials, enter them. Once all is set up, you will be asked if you want to open the folder in VS Code, confirm with Open.
+
+![image](https://user-images.githubusercontent.com/34960418/159514637-52d03432-a7de-414a-a6f0-f470c20774ef.png)
+
+
+Now, copy all extracted files into this new folder. Next steps can be done either visually or on the command line. Let’s go with the command-line approach. Open either a separate terminal and login to Azure or use the integrated one – View / Terminal. First, we must stage the changes (plus the new files):
+
+```bash
+git add .\Dockerfile .\web\index.html
+git status
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159515733-a23757ab-a301-4135-926d-4ed0af9084f6.png)
+
+
+Next, we can commit the changes:
+
+```bash
+git commit -m "Initial upload"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159515915-2084cfbd-8aaf-405c-9bc3-87395c4d0d91.png)
+
+
+And finally, push them:
+
+```bash
+git push
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159516196-a378a102-87f3-4ae4-8896-22fdc03b34d1.png)
