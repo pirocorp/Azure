@@ -289,9 +289,22 @@
 
 
 
-
 # Azure Kubernetes Service (Portal)
 
+## Resource group
+
+Search for **Resource groups** in the main search bar and hit **Enter**. Click on **+ Add**. Check the **Subscription**. For Resource group enter **RG-Kubernetes**. Select **West Europe** for **Region**. Click on **Review + create** and then on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159470302-9c8cd9c4-1849-4c65-aa74-21240337bbec.png)
+
+
+
 # Azure Kubernetes Service (CLI)
+
+
+
+
+
+
 
 
