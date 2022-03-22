@@ -959,3 +959,16 @@ git push
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/159516196-a378a102-87f3-4ae4-8896-22fdc03b34d1.png)
+
+
+## Azure DevOps Pipelines
+
+Click on the **Demo 1** repository. Then click on **Set up build**.
+
+![image](https://user-images.githubusercontent.com/34960418/159517168-d04176df-611d-4c47-81f1-6d67d9dc21a2.png)
+
+
+Click on Show more to explore the available options. Click on Deploy to **Azure Kubernetes Service**. Select your subscription and click on **Continue**.
+
+![image](https://user-images.githubusercontent.com/34960418/159517655-379cf062-1e12-47c4-b47d-bcbc7abcc22b.png)
+
