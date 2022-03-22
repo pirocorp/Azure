@@ -310,6 +310,33 @@ For **Registry name** enter **azesu**. Check the **Subscription**. For **Resourc
 ![image](https://user-images.githubusercontent.com/34960418/159471047-8f9e45b8-aa63-4d12-96d9-256c3b02c6c3.png)
 
 
+## Kubernetes cluster
+
+Search for **Kubernetes services** in the main search bar and hit **Enter**. Click on **+ Create** and select **Create a Kubernetes cluster**.
+
+![image](https://user-images.githubusercontent.com/34960418/159471668-d21245fc-bd5f-48fe-8f50-40916613368a.png)
+
+
+Check that the correct **Subscription** is selected. For the **Resource group** select the **RG-Kubernetes** created earlier. In the **Kubernetes cluster name** field enter **aze-kubernetes**. Change **Region** to **West Europe**. Change **Node size** to **Standard B2s**. Set **Node count** to **1**. Click on **Next: Node pools**. Click on **Next: Access**. Click on **Next: Networking**. Click on **Next: Integrations**.
+
+![image](https://user-images.githubusercontent.com/34960418/159472777-7685daa1-289b-4c1a-9fc5-bd433273e05b.png)
+
+
+Select the registry created earlier in the **Container registry** drop-down list. Click on **Create new** under the **Log Analytics workspace**. 
+
+![image](https://user-images.githubusercontent.com/34960418/159473459-d7c13651-ecbf-4f3c-a482-f26b07cd8c93.png)
+
+
+Leave the **Region** to **West Europe**. For **Log Analytics workspace** enter **LA-Kubernetes**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159473590-d7b94ad4-9a9e-4199-a457-c384477acb2c.png)
+
+
+Click **Review + create** and then **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159473826-88bc531b-ab64-4d0b-8e05-df6456fe047c.png)
+
+
 
 # Azure Kubernetes Service (CLI)
 
