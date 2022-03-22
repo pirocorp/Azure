@@ -832,7 +832,14 @@ We can manage **Teams** from here as well. Go to **General / Teams**. Click on t
 ![image](https://user-images.githubusercontent.com/34960418/159505083-6314f8a4-f874-471d-a70f-be2d19cccb47.png)
 
 
+Now, you can see the members. Click on the Add button to add some more. Once you are done, click Save. 
 
+![image](https://user-images.githubusercontent.com/34960418/159505858-3169ccf9-3e84-4043-b339-acd637d90ef3.png)
+
+
+Click on the project’s name Demo 1 in the navigation bar
+
+![image](https://user-images.githubusercontent.com/34960418/159506121-fb96eb33-4b32-4317-98a1-de172d5e80a4.png)
 
 
 
