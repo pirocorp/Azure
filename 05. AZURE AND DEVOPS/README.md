@@ -372,3 +372,22 @@ az aks create -g RG-K8S -n k8s-demo --node-count 1 --node-vm-size Standard_B2s -
 
 ![image](https://user-images.githubusercontent.com/34960418/159479531-fb5527c5-ab9d-4778-afde-99a971f0be84.png)
 
+
+## Explore the cluster
+
+In order to get and store the credentials needed for communication with the cluster, you must execute:
+
+```bash
+az aks get-credentials --resource-group RG-Kubernetes --name aze-kubernetes
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159479888-e2356089-933a-4a05-b4f1-1152afd9bf96.png)
+
+
+Check versions. Plus minus one minor version is ok.
+
+```bash
+kubectl version
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159480159-5c4b0608-d84a-4497-b847-4062de7f46c9.png)
