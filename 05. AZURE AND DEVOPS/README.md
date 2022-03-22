@@ -799,4 +799,41 @@ Our brand-new empty project with Basic process is set up
 ![image](https://user-images.githubusercontent.com/34960418/159502382-09ce65db-5eb0-40cd-a598-6112e8151180.png)
 
 
+## Project settings
+
+Click on Project settings (bottom-left)
+
+![image](https://user-images.githubusercontent.com/34960418/159502652-7a25c595-41a0-41f0-81cf-e7683557c0ce.png)
+
+
+Go to **General / Overview** and add **Description**. For example, **This is our first Azure DevOps project**. Click on **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/159503081-6f1f400e-ed33-4837-96f8-def8277f7064.png)
+
+
+Then, go to **Boards / Project configuration**. Select **Demo 1** and click on Set dates. Select today as Start date and 31.05.2022 as End date. Click on **Save and close**.
+
+![image](https://user-images.githubusercontent.com/34960418/159503676-4a53ad37-14f3-48d8-afda-4f030d0a4dd5.png)
+![image](https://user-images.githubusercontent.com/34960418/159503996-12601658-4603-4fe6-a5b2-a24e77bea366.png)
+
+
+Select Sprint 1 and click on Set dates. Select today as Start date and **30.04.2022** as **End date**. Click on **Save and close**.
+
+![image](https://user-images.githubusercontent.com/34960418/159504266-e063293a-b713-4bb4-a7c7-5b524c2410e9.png)
+
+
+Click on **New**. For **Iteration name** enter **Sprint 2**. Select **01.05.2022** as **Start date** and **31.05.2022** as **End date**. Click on **Save and close**.
+
+![image](https://user-images.githubusercontent.com/34960418/159504702-cc32ee96-6bbb-4f4a-b935-de4a1e8c16dd.png)
+
+
+We can manage **Teams** from here as well. Go to **General / Teams**. Click on the Demo 1 Team
+
+![image](https://user-images.githubusercontent.com/34960418/159505083-6314f8a4-f874-471d-a70f-be2d19cccb47.png)
+
+
+
+
+
+
 
