@@ -874,10 +874,12 @@ Enter **Title style** and click on **Save & Close**
 ![image](https://user-images.githubusercontent.com/34960418/159509445-8282fde1-09fd-4b31-8664-af46312fb0cf.png)
 
 
+Repeat for **Data table** and **Row numbering**
+ 
+![image](https://user-images.githubusercontent.com/34960418/159509938-fa3df68a-fc1e-42d6-9714-a0a1c73a353e.png)
 
 
-
-
+Finally, let’s add a few **Tasks** to each **Issue**. Click on the **+** sign in front of the **Title style** issue. Enter **Element type H1**, for **Remaining work** enter **1**, and click on **Save & Close**. Click on the **+** sign in front of the **Title style** issue. Enter **Underline**, for **Remaining work** enter **1**, and click on **Save & Close**. Click on the **+** sign in front of the **Data table** issue. Enter **Show border**, for Remaining work enter **1**, and click on **Save & Close**. Click on the **+** sign in front of the **Row numbering** issue. Enter **Each row numbered from 1 to 10**, for Remaining work enter **2**, and click on **Save & Close**. Click on the **+** sign in front of the **Row numbering** issue. Enter **Order from biggest to smallest**, for Remaining work enter **2**, and click on **Save & Close**.
 
 
 
