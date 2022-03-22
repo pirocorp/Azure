@@ -298,6 +298,18 @@ Search for **Resource groups** in the main search bar and hit **Enter**. Click o
 ![image](https://user-images.githubusercontent.com/34960418/159470302-9c8cd9c4-1849-4c65-aa74-21240337bbec.png)
 
 
+## Container registry
+
+Search for **Container registries** in the main search bar and hit **Enter**. Click on **+ Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159470666-7f2c0b5a-96aa-4670-82ca-2e456fc293ce.png)
+
+
+For **Registry name** enter **azesu**. Check the **Subscription**. For **Resource group** select **RG-Kubernetes** created earlier. Adjust the **Location**. Change **SKU** to **Basic**. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159471047-8f9e45b8-aa63-4d12-96d9-256c3b02c6c3.png)
+
+
 
 # Azure Kubernetes Service (CLI)
 
