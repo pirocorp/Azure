@@ -983,6 +983,9 @@ Accept the proposed defaults for the commit operation and click **Save and run**
 ![image](https://user-images.githubusercontent.com/34960418/159519848-8f440b0f-1267-4199-9eca-4c93a14770c2.png)
 
 
+Click on Build stage and watch the progress. Then select Deploy to monitor the deployment progress. Once the pipeline finishes successfully, click on the Deploy to Kubernetes cluster step and scroll to the bottom. Close to the end you will notice a string like service webapp external IP is xxx.xxx.xxx.xxx. Copy the IP address, open a new browser tab and paste it there. You must see the web application.
+
+
 
 
 
