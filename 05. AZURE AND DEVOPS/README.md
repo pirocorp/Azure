@@ -376,6 +376,22 @@ After a while you will notice that the number of nodes has changed to two.
 ![image](https://user-images.githubusercontent.com/34960418/159492598-660f559e-db30-424a-9e48-d208f0deb913.png)
 
 
+If we scale now to 5 replicas:
+
+```bash
+kubectl scale --replicas=5 deployment.apps/phpapp-deployment
+```
+
+We will notice that some of the pods are on the first node, and others on the second:
+
+```bash
+kubectl get pods -o wide
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159493097-7da77faf-1e34-4c9c-82fd-b5b8b5edc021.png)
+
+
+
 
 # Azure Kubernetes Service (CLI)
 
