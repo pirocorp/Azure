@@ -31,6 +31,11 @@
 # Jump to practical guides
 
 - [Azure Kubernetes Service (Portal)](#azure-kubernetes-service-portal)
+  - [Resource group](#resource-group)
+  - [Container registry](#container-registry)
+  - [Kubernetes cluster](#kubernetes-cluster)
+  - [Explore the cluster](#explore-the-cluster)
+  - [Scale the cluster](#scale-the-cluster)
 - [Azure Kubernetes Service (CLI)](#azure-kubernetes-service-cli)
 
 
