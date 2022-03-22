@@ -340,10 +340,34 @@ Click **Review + create** and then **Create**.
 
 # Azure Kubernetes Service (CLI)
 
+## Login
+
+```bash
+az login
+```
+
+## Create a resource group
+
+```bash
+az group create -n RG-K8S -l westeurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159477855-c024c33e-e044-47c7-aee4-ba7385a547ed.png)
 
 
+## Create a container registry
+
+```bash
+az acr create -g RG-K8S -n azesucli --sku Basic
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159478160-e4e9ab5b-288c-4ed4-a574-b0376d4e763f.png)
 
 
+## Create the cluster
 
+```bash
+az aks create -g RG-K8S -n k8s-demo --node-count 1 --node-vm-size Standard_B2s --enable-addons monitoring --generate-ssh-keys --attach-acr azesucli
+```
 
 
