@@ -973,7 +973,14 @@ Click on Show more to explore the available options. Click on Deploy to **Azure 
 ![image](https://user-images.githubusercontent.com/34960418/159517655-379cf062-1e12-47c4-b47d-bcbc7abcc22b.png)
 
 
-Enter your Microsoft account credentials. In the **Cluster** drop-down select the cluster created earlier.
+Enter your Microsoft account credentials. In the **Cluster** drop-down select the cluster created earlier. For **Namespace** select **New** and enter **devops-pipeline**. In the **Container registry** drop-down select the registry created earlier. For **Image Name** enter **webapp**. For **Service Port** enter **80**. You may select the Enable **Review App flow for Pull Requests** option if you like so. For this exercise we do not want to review pull requests, so let’s leave it unselected. Click **Validate and configure**. Click **Save and run**.
+
+![image](https://user-images.githubusercontent.com/34960418/159519626-08b08275-4db6-4c25-bf2b-f1cb9368b86e.png)
+
+
+Accept the proposed defaults for the commit operation and click **Save and run**.
+
+![image](https://user-images.githubusercontent.com/34960418/159519848-8f440b0f-1267-4199-9eca-4c93a14770c2.png)
 
 
 
