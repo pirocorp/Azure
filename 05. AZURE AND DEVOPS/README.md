@@ -884,8 +884,15 @@ Finally, let’s add a few **Tasks** to each **Issue**. Click on the **+** sign 
 ![image](https://user-images.githubusercontent.com/34960418/159511571-b037480c-7f31-4794-a932-b5233e319581.png)
 
 
+## Working with the items
 
+Switch to **Boards / Sprints**. Check the four different views – **Taskboard**, **Backlog**, **Capacity**, and **Analytics**.
 
+![image](https://user-images.githubusercontent.com/34960418/159511973-a766bd00-72dd-4b3f-820e-b31dedde5211.png)
 
+![image](https://user-images.githubusercontent.com/34960418/159512029-64d4b4d8-8e3b-43b1-a9c6-cb8ec588d6bd.png)
 
+![image](https://user-images.githubusercontent.com/34960418/159512069-d519351d-f6be-47be-bf9c-72e5f21b5635.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159512110-c7266622-4902-40fd-9f05-878e993fc57d.png)
 
