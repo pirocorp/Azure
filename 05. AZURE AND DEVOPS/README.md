@@ -509,3 +509,28 @@ Integrate our existing ACR with our existing AKS cluster (if not done):
 ```bash
 az aks update -n aze-kubernetes -g RG-Kubernetes --attach-acr azesu
 ```
+
+
+Enter the **manifests** folder. Deploy both the service and application simultaneously:
+
+```bash
+kubectl apply -f service.yaml -f deployment.yaml
+```
+
+```bash
+kubectl get svc,pod
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159487778-8d7dcff0-b8fa-430f-a51f-96e9e74e6cae.png)
+
+
+Get the load balancer IP address and paste it into a new browser window to check if the application is working
+
+![image](https://user-images.githubusercontent.com/34960418/159487913-b2367055-a889-45c1-9ffc-b19aafd6c402.png)
+
+
+## Delete the application
+
+```bash
+kubectl delete -f service.yaml -f deployment.yaml
+```
