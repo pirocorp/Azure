@@ -31,6 +31,7 @@
 # Jump to practical guides
 
 - [Azure Kubernetes Service (Portal)](#azure-kubernetes-service-portal)
+- [Azure Kubernetes Service (CLI)](#azure-kubernetes-service-cli)
 
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
@@ -290,5 +291,7 @@
 
 
 # Azure Kubernetes Service (Portal)
+
+# Azure Kubernetes Service (CLI)
 
 
