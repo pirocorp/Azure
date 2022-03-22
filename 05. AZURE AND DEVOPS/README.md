@@ -896,3 +896,27 @@ Switch to **Boards / Sprints**. Check the four different views – **Taskboard**
 
 ![image](https://user-images.githubusercontent.com/34960418/159512110-c7266622-4902-40fd-9f05-878e993fc57d.png)
 
+
+Explore Boards and Backlogs modes as well
+
+![image](https://user-images.githubusercontent.com/34960418/159512279-2e98746f-396a-4f1d-83e6-938e2b01555c.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159512340-d3945533-e390-472e-ab32-965d2f5e258e.png)
+
+
+Go to **Boards** and switch the view between **Epics** and **Issues**. Make sure that your are in **Boards** and the view is set to **Issues**. Drag the **Title style** issue from **To Do** to **Doing**. Check how the statuses are reflected in different views.
+
+
+## Azure DevOps Repos
+
+Let’s go to **Repos**. There we have an empty repository. 
+
+![image](https://user-images.githubusercontent.com/34960418/159513085-a1591916-5bb8-452e-809b-73865d08c594.png)
+
+
+### Prepare a repository
+
+Click on the **Initialize** button at the end of the page to initialize the repository with a read me file. Select the **README.md** file if not selected and click on **Contents**. Click on **Edit** and delete everything. Enter some descriptive text. For example, on the first line enter **# Top cities in Bulgaria**. And on the second – **Simple web application that shows top 10 cities by population in Bulgaria**. Hit **Commit** and then again **Commit**.
+
+![image](https://user-images.githubusercontent.com/34960418/159513727-9f5f3705-2186-4501-8bcc-ee5152096bd3.png)
+
