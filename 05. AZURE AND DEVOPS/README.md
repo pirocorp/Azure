@@ -45,7 +45,7 @@
   - [Delete the application](#delete-the-application)
   - [Scale an application](#scale-an-application)
   - [Scale the cluster](#scale-the-cluster-1)
-  - [Update and redeploy the application](#update-and-redeploy-the-application
+  - [Update and redeploy the application](#update-and-redeploy-the-application)
 
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
