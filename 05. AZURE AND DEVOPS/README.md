@@ -384,10 +384,31 @@ az aks get-credentials --resource-group RG-Kubernetes --name aze-kubernetes
 ![image](https://user-images.githubusercontent.com/34960418/159479888-e2356089-933a-4a05-b4f1-1152afd9bf96.png)
 
 
-Check versions. Plus minus one minor version is ok.
+Check versions. Plus minus one minor version is ok. Download **kubectl** from [here](https://kubernetes.io/docs/tasks/tools/).
 
 ```bash
 kubectl version
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/159480159-5c4b0608-d84a-4497-b847-4062de7f46c9.png)
+
+
+Get information about the cluster and nodes:
+
+```bash
+kubectl cluster-info
+kubectl get nodes
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159480590-273f7ca9-9f71-4a99-9685-5818f84b3984.png)
+![image](https://user-images.githubusercontent.com/34960418/159480697-b0e32b0e-38cf-493a-9da3-beae87912745.png)
+
+
+List all namespaces and all pods in every namespace:
+
+```bash
+kubectl get namespaces
+kubectl get pods --all-namespaces
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159480938-99fb24a3-11fa-470c-bd62-1440eb381be8.png)
