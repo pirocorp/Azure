@@ -529,8 +529,68 @@ Get the load balancer IP address and paste it into a new browser window to check
 ![image](https://user-images.githubusercontent.com/34960418/159487913-b2367055-a889-45c1-9ffc-b19aafd6c402.png)
 
 
+
 ## Delete the application
 
 ```bash
 kubectl delete -f service.yaml -f deployment.yaml
 ```
+
+
+## Scale an application
+
+Let’s first check what do we have:
+
+```bash
+kubectl get pods
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159488453-f1385202-2066-420f-b8fc-14df0e67646f.png)
+
+
+Get detailed information about the deployment:
+
+```bash
+kubectl describe deployment phpapp-deployment
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159488638-fedac254-9519-4b70-af6c-135bb1b9c23b.png)
+
+
+Scale up to 5 replicas:
+
+```bash
+kubectl scale --replicas=5 deployment.apps/phpapp-deployment
+```
+
+
+Check what is going on with the pods:
+
+```bash
+kubectl get pods
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159488903-4b7c3abd-b8e4-412b-b841-eb0017e2692f.png)
+
+
+Scale once again, this time to 10 replicas:
+
+```bash
+kubectl scale --replicas=10 deployment.apps/phpapp-deployment
+```
+
+Check that the new pods are created:
+
+```bash
+kubectl get pods
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159489181-6e8e5492-07a8-4b6f-88b8-c28b7681c711.png)
+
+
+Now, we can go to the app opened in the browser and refresh a few times to see that it is served by different pods.
+
+![image](https://user-images.githubusercontent.com/34960418/159489389-83a34eaf-6726-4d03-abe3-e8541dd1084a.png)
+![image](https://user-images.githubusercontent.com/34960418/159489428-4eb573df-8089-4373-8598-5b0eeb1b0f7d.png)
+
+
