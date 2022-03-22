@@ -972,3 +972,10 @@ Click on Show more to explore the available options. Click on Deploy to **Azure 
 
 ![image](https://user-images.githubusercontent.com/34960418/159517655-379cf062-1e12-47c4-b47d-bcbc7abcc22b.png)
 
+
+Enter your Microsoft account credentials. In the **Cluster** drop-down select the cluster created earlier.
+
+
+
+
+
