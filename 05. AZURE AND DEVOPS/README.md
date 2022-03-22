@@ -432,3 +432,80 @@ kubectl get pods --all-namespaces
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/159480938-99fb24a3-11fa-470c-bd62-1440eb381be8.png)
+
+
+## Run an application
+
+Extract the file **web-app-php.zip**. Build the image:
+
+```bash
+docker build . -t aze-web-app-php
+```
+
+
+Test the app locally:
+
+```bash
+docker run -d --name webapp -p 8000:80 aze-web-app-php
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159483604-9d32c010-bbb3-42b6-b3c0-fe3e14ef68e1.png)
+
+
+After we are sure that everything is working as expected, we can continue further. Login to the ACR (Azure Container Registry).
+
+```bash
+az acr login --name azesu
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159484125-58691092-636e-4997-ad5f-7ba3a7705d65.png)
+
+
+Check the login server:
+
+```bash
+az acr list --resource-group RG-Kubernetes --query "[].{acrLoginServer:loginServer}" --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159484297-e32fed0d-58a2-4f38-b6bd-22f081cb6acb.png)
+
+
+Tag the image:
+
+```bash
+docker tag aze-web-app-php azesu.azurecr.io/aze-web-app-php:v1
+```
+
+
+Push the image to our ACR:
+
+```bash
+docker push azesu.azurecr.io/aze-web-app-php:v1
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159484850-f04094df-6571-4f4b-b3bd-9089c0c4aad9.png)
+
+
+Check the list of images available on our ACR:
+
+```bash
+az acr repository list --name azesu --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159485038-beba7e5b-090b-4dce-b10e-29ff66394882.png)
+
+
+And all tags for an image:
+
+```bash
+az acr repository show-tags --name azesu --repository aze-web-app-php --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159485218-f62e34fb-7538-47ac-bad4-9be82fcded3d.png)
+
+
+Integrate our existing ACR with our existing AKS cluster (if not done):
+
+```bash
+az aks update -n aze-kubernetes -g RG-Kubernetes --attach-acr azesu
+```
