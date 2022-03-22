@@ -37,6 +37,15 @@
   - [Explore the cluster](#explore-the-cluster)
   - [Scale the cluster](#scale-the-cluster)
 - [Azure Kubernetes Service (CLI)](#azure-kubernetes-service-cli)
+  - [Create a resource group](#create-a-resource-group)
+  - [Create a container registry](#create-a-container-registry)
+  - [Create the cluster](#create-the-cluster)
+  - [Explore the cluster](#explore-the-cluster-1)
+  - [Run an application](#run-an-application)
+  - [Delete the application](#delete-the-application)
+  - [Scale an application](#scale-an-application)
+  - [Scale the cluster](#scale-the-cluster-1)
+  - [Update and redeploy the application](#update-and-redeploy-the-application
 
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
