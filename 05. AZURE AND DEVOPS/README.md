@@ -349,12 +349,31 @@ Then, you can visit the **Node pools**.
 ![image](https://user-images.githubusercontent.com/34960418/159481405-7ee39527-b769-459e-902b-42ae43f5cb2c.png)
 
 
-
 Next stop is the **Insights**, **Metrics**, and **Logs** sections.
 
 ![image](https://user-images.githubusercontent.com/34960418/159481538-7e4726c2-b125-4e24-b5e8-dee1b8c92c8c.png)
 
 
+## Scale the cluster
+
+Go to **Node pools** under **Settings**. Select the pool.
+
+![image](https://user-images.githubusercontent.com/34960418/159490541-0ebec128-2858-43f0-8a09-0c62d2722d02.png)
+
+
+Click on **Scale node pool**.
+
+![image](https://user-images.githubusercontent.com/34960418/159490706-34a6a5c1-9beb-4b85-ac47-1c9f20af72fd.png)
+
+
+Change **Node count** to **2**. Click **Apply**.
+
+![image](https://user-images.githubusercontent.com/34960418/159491011-86579b02-f1f9-411a-b786-00d163683e23.png)
+
+
+After a while you will notice that the number of nodes has changed to two.
+
+![image](https://user-images.githubusercontent.com/34960418/159492598-660f559e-db30-424a-9e48-d208f0deb913.png)
 
 
 
