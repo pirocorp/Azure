@@ -659,3 +659,92 @@ kubectl get nodes -o wide
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/159494785-a59e5e3c-f72e-4052-a472-957cfdd323ce.png)
+
+
+## Update and redeploy the application
+
+Let’s modify our application. Remember to stop it first if it is still running. This can be done with.
+
+```bash
+docker container rm webapp --force
+```
+
+Change the title to **Top 10 cities in Bulgaria**, change the **H3** tag to **H2**, and add a border to the table. Save the file. Build the new image:
+
+```bash
+docker build . -t aze-web-app-php
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159495680-808645ff-9706-481f-b588-e9aa2decee78.png)
+
+
+Test the app locally:
+
+```bash
+docker run -d --name webapp -p 8000:80 aze-web-app-php
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159496130-6719d089-9256-4d26-ad12-03629601b59a.png)
+
+
+After we are sure that everything is working as expected, we can continue further. Tag the image:
+
+```bash
+docker tag aze-web-app-php azesu.azurecr.io/aze-web-app-php:v2
+```
+
+
+Push the image to our ACR:
+
+```bash
+docker push azesu.azurecr.io/aze-web-app-php:v2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159496519-1fad6513-bc78-48cf-9871-b237c0445d72.png)
+
+
+Check the list of images available on our ACR:
+
+```bash
+az acr repository list --name azesu --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159496722-4b08b5b3-ec98-4be0-ab4e-b73be0023638.png)
+
+
+And all tags for an image:
+
+```bash
+az acr repository show-tags --name azesu --repository aze-web-app-php --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159496916-55d1f647-5f8c-4521-93fc-6270eee726d8.png)
+
+
+Change the image version in the **deployment.yaml** file as well
+
+![image](https://user-images.githubusercontent.com/34960418/159497283-237f3bb8-f01d-4c00-9047-f0623caf2981.png)
+
+
+Deploy both the service and application simultaneously:
+
+```bash
+kubectl apply -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159497519-fe510445-3841-463f-b096-a6039b394dc8.png)
+
+
+We can check periodically how it is going:
+
+```bash
+kubectl get svc,pod
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159497738-a9f96e73-b702-4672-9646-969a182032dc.png)
+
+
+We can go to the browser and check the result
+
+![image](https://user-images.githubusercontent.com/34960418/159497922-e33b241f-ce9d-4f0f-bc45-8381f808bce5.png)
+
