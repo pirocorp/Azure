@@ -370,4 +370,5 @@ az acr create -g RG-K8S -n azesucli --sku Basic
 az aks create -g RG-K8S -n k8s-demo --node-count 1 --node-vm-size Standard_B2s --enable-addons monitoring --generate-ssh-keys --attach-acr azesucli
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/159479531-fb5527c5-ab9d-4778-afde-99a971f0be84.png)
 
