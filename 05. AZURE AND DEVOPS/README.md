@@ -766,4 +766,37 @@ We can go to the browser and check the result
 
 # Azure DevOps Boards
 
+You can reach the Azure DevOps services in two ways
+
+- Navigate to [Azure Portal](https://portal.azure.com). Enter your credentials. Search for **Azure DevOps** in the main search bar and hit **Enter**. Then click on **My Azure DevOps Organizations**
+
+![image](https://user-images.githubusercontent.com/34960418/159500492-6bb625fa-682b-440b-a36a-a55a397f29b2.png)
+
+- Navigate to [Azure DevOps portal](https://dev.azure.com). Enter your credentials.
+
+
+## Create new organization
+
+Once you’re in, click on the **Create new organization** button. Click on **Continue**.
+
+![image](https://user-images.githubusercontent.com/34960418/159501128-b4ab9f54-9919-4ab0-873e-b9397a6ad73a.png)
+
+
+Enter name for the organization, for example **azedo202202**. Then select a **region**, for example **West Europe**. Enter the code. Click on the **Continue** button.
+
+![image](https://user-images.githubusercontent.com/34960418/159501740-7d99fb0a-fe98-41b0-8942-6e725188b26a.png)
+
+
+## Set up a project
+
+In the **Project name** field enter **Demo1** for example. You can leave the Visibility setting to **Private**. Click on **Create project**.
+
+![image](https://user-images.githubusercontent.com/34960418/159502249-017da187-2dc3-4671-b7dc-133b39251533.png)
+
+
+Our brand-new empty project with Basic process is set up
+
+![image](https://user-images.githubusercontent.com/34960418/159502382-09ce65db-5eb0-40cd-a598-6112e8151180.png)
+
+
 
