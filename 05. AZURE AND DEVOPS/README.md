@@ -643,3 +643,19 @@ kubectl get pods
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/159489755-4d53a625-e18e-4fb2-84b2-6a69bcb1ad6d.png)
+
+
+## Scale the cluster
+
+```bash
+az aks scale --resource-group RG-Kubernetes --name aze-kubernetes --node-count 3 --nodepool-name agentpool
+```
+
+
+After a while, a new nodes will appear:
+
+```bash
+kubectl get nodes -o wide
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159494785-a59e5e3c-f72e-4052-a472-957cfdd323ce.png)
