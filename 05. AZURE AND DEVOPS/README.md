@@ -337,6 +337,26 @@ Click **Review + create** and then **Create**.
 ![image](https://user-images.githubusercontent.com/34960418/159473826-88bc531b-ab64-4d0b-8e05-df6456fe047c.png)
 
 
+## Explore the cluster
+
+Your first stop is the **Overview**.
+
+![image](https://user-images.githubusercontent.com/34960418/159481299-a34211df-6d21-4919-bb9c-30d311dedeb7.png)
+
+
+Then, you can visit the **Node pools**.
+
+![image](https://user-images.githubusercontent.com/34960418/159481405-7ee39527-b769-459e-902b-42ae43f5cb2c.png)
+
+
+
+Next stop is the **Insights**, **Metrics**, and **Logs** sections.
+
+![image](https://user-images.githubusercontent.com/34960418/159481538-7e4726c2-b125-4e24-b5e8-dee1b8c92c8c.png)
+
+
+
+
 
 # Azure Kubernetes Service (CLI)
 
