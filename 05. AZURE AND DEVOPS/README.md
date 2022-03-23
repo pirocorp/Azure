@@ -1199,9 +1199,36 @@ Click on **Save** and then again on **Save**
 ![image](https://user-images.githubusercontent.com/34960418/159674924-e1596282-21b7-40a0-97b5-d5c146bb3d89.png)
 
 
-Let’s add two badges to our **README.md** file. The first badge will reflect our pipeline statu. Navigate to the pipeline. Click on the button with three vertical dots.
+Let’s add two badges to our **README.md** file. The first badge will reflect our pipeline status. Navigate to the pipeline. Click on the button with three vertical dots. Click on **Status badge**.
 
 ![image](https://user-images.githubusercontent.com/34960418/159675542-97469d95-60ce-4a0f-a4bd-409eac07d55d.png)
+
+
+Click on the **Copy** button next to the **Sample markdown field**. Close the dialog box.
+
+![image](https://user-images.githubusercontent.com/34960418/159675898-2d9e53ba-d7a1-440c-ab7e-5940d1f93817.png)
+
+
+Go to **Repos / Files**. Click on the **README.md** file. Click **Edit** and paste the copied string at the end of the file. Click **Commit** and for **Comment** add **Added pipeline badge**. Click **Commit**.
+
+![image](https://user-images.githubusercontent.com/34960418/159676415-42ddb33a-789d-4242-9362-f6eb59ba793f.png)
+
+
+Now, we must see the badge.
+
+![image](https://user-images.githubusercontent.com/34960418/159676576-5ca1fc63-dbc8-4d8b-9032-5aa19e60a007.png)
+
+
+Let’s add one more badge but this time it will reflect the status of the work items. Go to **Boards / Boards**. Click on **Settings**. 
+
+![image](https://user-images.githubusercontent.com/34960418/159676883-194a09d5-ed80-4155-a953-450e4ef60e15.png)
+
+
+Click on **Status badge** under **Board**. Click on the **Copy** button next to the **Sample Markdown** field (Please note, that this will reflect the current board mode – what is selected **Epics** or **Issues**). Close the dialog box.
+
+![image](https://user-images.githubusercontent.com/34960418/159677960-f6cdc3fe-dbc1-43c1-8fac-4574866f225b.png)
+
+
 
 
 
