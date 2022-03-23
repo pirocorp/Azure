@@ -1253,3 +1253,60 @@ Now, we must see the second badge as well.
 
 
 # DevOps Projects (DevOps Starter)
+
+In the main search bar enter **DevOps Starter** (used to be **DevOps Projects**) and hit the Enter key. Click on **+ Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159681506-2a4f587b-ce6f-494a-b0ed-7a20ec79cc3e.png)
+
+
+Select **PHP**. Click Next: **Framework >**
+
+![image](https://user-images.githubusercontent.com/34960418/159681586-d369b90e-f606-47d3-8335-7dc4a36cc308.png)
+
+
+Select **Simple PHP**. Click **Next: Service >**
+
+![image](https://user-images.githubusercontent.com/34960418/159681705-2d19a757-9846-4138-9fda-664d8684628f.png)
+
+
+Select **Web App for Containers**. Click **Next: Create >**
+
+![image](https://user-images.githubusercontent.com/34960418/159681969-9b8a1e0b-6c38-4c7e-bc31-e84b32b7758d.png)
+
+
+Click the **Authorize** button. Click **Authorize AzureGithubActions**.
+
+
+Enter a **Repository** name, for example **aze-demo**. Select the right Subscription. Select the right Location. Click **Additional settings** link. Change **Container Registry SKU** to **Basic**. Change **Container Registry Location** to **West Europe**. Click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/159682651-d5787143-8b5a-4cb8-94e5-d409d00dc920.png)
+
+
+Click **Review + create**. Click **Create**. Once the resource is ready, click on **Go to resource**.
+
+![image](https://user-images.githubusercontent.com/34960418/159682956-67ecb346-defc-4dcc-99c6-0af1eadc919f.png)
+
+
+Click the **Authorize** button.
+
+![image](https://user-images.githubusercontent.com/34960418/159696677-d1db4eb4-37a1-4af9-ab67-e98a6fd4552e.png)
+
+
+Click the **Authorize** button again.
+
+![image](https://user-images.githubusercontent.com/34960418/159696754-ba41b2f5-a76c-49b4-84a5-5d74b845bb31.png)
+
+
+Click the link to the GitHub repository to explore the files
+
+![image](https://user-images.githubusercontent.com/34960418/159697349-fff39827-58be-4870-93a5-78a6ce43be30.png)
+
+
+Return to the portal and watch the progress. Click on the stages to see their progress. Periodically, click on the **Refresh** button if you think that the status if not updated. You can click on different stages and jobs to explore and watch the progress. Once the whole processes is done, explore the **Azure Resources** area. Click on the **Browse** button next to the **Application endpoint**.
+
+![image](https://user-images.githubusercontent.com/34960418/159697994-c220fec3-6654-4f9d-8044-02c9fe5e54ee.png)
+
+![image](https://user-images.githubusercontent.com/34960418/159698040-33b334ea-a7a0-4771-9785-85e653712d60.png)
+
+
+
