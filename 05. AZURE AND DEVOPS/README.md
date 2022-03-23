@@ -1067,3 +1067,26 @@ Now, switch to **Boards / Sprints**. Open the **Title style** and check if the t
 ![image](https://user-images.githubusercontent.com/34960418/159665756-760ce0d7-e40d-4ffb-aa96-76611ab75569.png)
 
 
+## Query the Boards
+
+Go to **Boards / Query**. Click on **New query**.
+
+![image](https://user-images.githubusercontent.com/34960418/159666275-d6dc4264-4e00-4f92-adc5-4fa04cdc9a44.png)
+
+
+Change **Value** of **Work Item Type** to **Issue**. Change **Value** of **State** to **Done**. Click on **Run query**.
+
+![image](https://user-images.githubusercontent.com/34960418/159667056-6e7da4dc-bfa0-4a19-b875-675d932df892.png)
+
+
+Then, click on **Save query**. For **Name** enter **Done Items** and click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/159667324-de5d8609-382b-465d-b657-da7b829ab310.png)
+
+
+
+
+
+
+
+
