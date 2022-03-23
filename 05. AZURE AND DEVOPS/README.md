@@ -1084,7 +1084,26 @@ Then, click on **Save query**. For **Name** enter **Done Items** and click **OK*
 ![image](https://user-images.githubusercontent.com/34960418/159667324-de5d8609-382b-465d-b657-da7b829ab310.png)
 
 
+## Modify the application 2
 
+Being in **Boards / Boards**, move both the **Data table** and **Row numbering** issues from **To Do** to **Doing**.
+
+![image](https://user-images.githubusercontent.com/34960418/159668067-9fa9798c-f872-4679-8b37-58583c93a94f.png)
+
+
+Open the **Data table** issue in editing mode. Click on **create a branch** under the **Add link** in the **Development** section.
+
+![image](https://user-images.githubusercontent.com/34960418/159668413-5c5f1db5-bc6c-4732-94a3-f370180ff813.png)
+
+
+In **Name** enter **branch-data**, select **Demo 1** in **Based on** if not selected, and click on **Create branch**.
+
+![image](https://user-images.githubusercontent.com/34960418/159668668-010bcc64-048d-4d5b-b19c-ca81fef1f58f.png)
+
+
+Return to **Boards** and click on the **Row numbering** issue. Click on **Add link**. 
+
+![image](https://user-images.githubusercontent.com/34960418/159669911-06d5204d-ed52-42e3-a919-6d4f0f0e9b50.png)
 
 
 
