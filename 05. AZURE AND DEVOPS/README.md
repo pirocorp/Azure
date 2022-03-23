@@ -1061,3 +1061,9 @@ Open the tasks and mark them as done as well.
 
 ![image](https://user-images.githubusercontent.com/34960418/159665141-69597863-5750-42d0-b112-d0f422e72aca.png)
 
+
+Now, switch to **Boards / Sprints**. Open the **Title style** and check if the tasks are marked as done.
+
+![image](https://user-images.githubusercontent.com/34960418/159665756-760ce0d7-e40d-4ffb-aa96-76611ab75569.png)
+
+
