@@ -1052,4 +1052,12 @@ Now, if you visit the app, you should see the changes.
 ![image](https://user-images.githubusercontent.com/34960418/159664703-f99d3b1e-2b32-4a8f-a22c-fa0204dbec52.png)
 
 
+Switch to **Boards / Boards**. The item that was under **Doing** now should in **Done** state.
+
+![image](https://user-images.githubusercontent.com/34960418/159665003-c8337bb7-e118-4975-b5cf-6f5d647be0a5.png)
+
+
+Open the tasks and mark them as done as well.
+
+![image](https://user-images.githubusercontent.com/34960418/159665141-69597863-5750-42d0-b112-d0f422e72aca.png)
 
