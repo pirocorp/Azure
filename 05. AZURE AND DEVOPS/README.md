@@ -60,6 +60,7 @@
   - [Query the Boards](#query-the-boards)
   - [Modify the application 2](#modify-the-application-2)
   - [Final touches](#final-touches)
+- [DevOps Projects (DevOps Starter)](#devops-projects-devops-starter)
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
