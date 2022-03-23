@@ -1106,6 +1106,13 @@ Return to **Boards** and click on the **Row numbering** issue. Click on **Add li
 ![image](https://user-images.githubusercontent.com/34960418/159669911-06d5204d-ed52-42e3-a919-6d4f0f0e9b50.png)
 
 
+Select **Branch** in **Link type**. Select **branch-data** in **Branch**. Click **OK**.
 
+![image](https://user-images.githubusercontent.com/34960418/159670291-c7ccd9df-04e2-48b0-833b-aedb31fafd1f.png)
+
+
+Click **Save & Close**.
+
+![image](https://user-images.githubusercontent.com/34960418/159670382-da1fc78b-fbb8-4d4e-afcc-f85e97b6d75e.png)
 
 
