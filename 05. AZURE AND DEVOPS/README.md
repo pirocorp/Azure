@@ -1175,3 +1175,34 @@ Switch to **Boards / Boards**. Both issues now should in **Done** state. Open th
 Now, switch to **Boards / Sprints**. Open each of the issues and check if the tasks are marked as done.
 
 ![image](https://user-images.githubusercontent.com/34960418/159674014-9c9838ad-4195-4982-9ca5-7e8abe1f3b8e.png)
+
+
+
+## Final touches
+
+Let’s modify the trigger section of our pipeline. We want it not to be triggered by changes committed to the **README.md** file for example. 
+
+Go to **Pipelines / Pipelines**. Click on **Demo1**. Click **Edit**. Change the trigger section to be like this:
+
+```yaml
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    exclude:
+    - README.md
+```
+
+Click on **Save** and then again on **Save**
+
+![image](https://user-images.githubusercontent.com/34960418/159674924-e1596282-21b7-40a0-97b5-d5c146bb3d89.png)
+
+
+Let’s add two badges to our **README.md** file. The first badge will reflect our pipeline statu. Navigate to the pipeline. Click on the button with three vertical dots.
+
+![image](https://user-images.githubusercontent.com/34960418/159675542-97469d95-60ce-4a0f-a4bd-409eac07d55d.png)
+
+
+
+
