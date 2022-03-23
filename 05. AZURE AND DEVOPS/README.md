@@ -1167,5 +1167,11 @@ Now, if you visit the app, you should see the changes.
 ![image](https://user-images.githubusercontent.com/34960418/159673439-8a622209-34fa-487d-9731-a1a76974a189.png)
 
 
+Switch to **Boards / Boards**. Both issues now should in **Done** state. Open the tasks and mark them as done as well.
+
+![image](https://user-images.githubusercontent.com/34960418/159673782-e1d27576-e42e-452a-a699-c0516ac22017.png)
 
 
+Now, switch to **Boards / Sprints**. Open each of the issues and check if the tasks are marked as done.
+
+![image](https://user-images.githubusercontent.com/34960418/159674014-9c9838ad-4195-4982-9ca5-7e8abe1f3b8e.png)
