@@ -1042,8 +1042,14 @@ And finally, on **Complete**. Click on **Complete merge**.
 ![image](https://user-images.githubusercontent.com/34960418/159664213-f944293f-a33a-445c-9ff5-c248a69d81d0.png)
 
 
+Switch to **Pipelines**. Click on **Demo 1**. Click on the running pipeline. Click on the stages to monitor the progress. 
+
+![image](https://user-images.githubusercontent.com/34960418/159664498-d596dbf5-3434-4f31-ae86-e8b414f163e4.png)
 
 
+Now, if you visit the app, you should see the changes.
+
+![image](https://user-images.githubusercontent.com/34960418/159664703-f99d3b1e-2b32-4a8f-a22c-fa0204dbec52.png)
 
 
 
