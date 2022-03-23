@@ -47,7 +47,19 @@
   - [Scale the cluster](#scale-the-cluster-1)
   - [Update and redeploy the application](#update-and-redeploy-the-application)
 - [Azure DevOps Boards](#azure-devops-boards)
-
+  - [Create new organization](#create-new-organization)
+  - [Set up a project](#set-up-a-project)
+  - [Project settings](#project-settings)
+  - [Manage work items](#manage-work-items)
+  - [Working with the items](#working-with-the-items)
+  - [Azure DevOps Repos](#azure-devops-repos)
+    - [Prepare a repository](#prepare-a-repository)
+    - [Upload files](#upload-files)
+  - [Azure DevOps Pipelines](#azure-devops-pipelines)
+  - [Modify the application 1](#modify-the-application-1)
+  - [Query the Boards](#query-the-boards)
+  - [Modify the application 2](#modify-the-application-2)
+  - [Final touches](#final-touches)
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
