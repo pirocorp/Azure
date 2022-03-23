@@ -1116,3 +1116,23 @@ Click **Save & Close**.
 ![image](https://user-images.githubusercontent.com/34960418/159670382-da1fc78b-fbb8-4d4e-afcc-f85e97b6d75e.png)
 
 
+Switch to VS Code to take care for the tasks. Be sure that the local copy of the repo is aligned with the remote one:.
+
+```bash
+git pull
+git switch branch-data
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159670780-b02c9b2b-4863-40c7-9e16-5165e3fc74cc.png)
+
+
+Open the **index.html** file for editing. Add **border="1"** in the **table** tag. Rearrange the rows based on their population column. Add additional column with numbers from 1 to 10. Save the file. Test locally that the result is as expected. Publish the changes:
+
+```bash
+git add .\web\index.html
+git commit -m "Table and data corrected"
+git push
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159672015-65fa8a0e-7b9f-4304-bd62-4efcff8ab87d.png)
+
