@@ -1136,3 +1136,33 @@ git push
 
 ![image](https://user-images.githubusercontent.com/34960418/159672015-65fa8a0e-7b9f-4304-bd62-4efcff8ab87d.png)
 
+
+Return to **Repos**. You will see a message that the **branch-data** has been updated. Next to it there will be a **Create a pull request** button. Click on it.
+
+![image](https://user-images.githubusercontent.com/34960418/159672437-1a237dc5-0d12-400f-ab6a-c876f15864dd.png)
+
+
+Examine the information on the next screen. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/159672612-4b0689ba-764b-40b4-919c-3deea5965654.png)
+
+
+Examine the information, skip the **Approve**, and click on **Complete** directly.
+
+![image](https://user-images.githubusercontent.com/34960418/159672843-fcc3fe25-2bc8-4603-a17f-22d8e278c3ee.png)
+
+
+Click on **Complete merge**.
+
+![image](https://user-images.githubusercontent.com/34960418/159672890-7f7377de-126f-41c1-88fa-d2234afc0292.png)
+
+
+Switch to **Pipelines**. Click on **Demo 1**. Click on the running pipeline. Click on the stages to monitor the progress. Now, if you visit the app, you should see the changes.
+
+![image](https://user-images.githubusercontent.com/34960418/159673177-0ebdd64b-f25e-4cfb-9945-6c5e2d299f6a.png)
+
+
+
+
+
+
