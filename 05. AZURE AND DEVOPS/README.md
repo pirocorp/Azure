@@ -1229,7 +1229,14 @@ Click on **Status badge** under **Board**. Click on the **Copy** button next to 
 ![image](https://user-images.githubusercontent.com/34960418/159677960-f6cdc3fe-dbc1-43c1-8fac-4574866f225b.png)
 
 
+Go to **Repos / Files**. Click on the **README.md** file. Click **Edit** and paste the copied string at the end of the file. Click **Commit** and for **Comment** add **Added boards badge**. Click **Commit**.
 
+![image](https://user-images.githubusercontent.com/34960418/159678398-b2c484d1-6cad-4fed-a4b5-ed427780c216.png)
+
+
+Now, we must see the second badge as well.
+
+![image](https://user-images.githubusercontent.com/34960418/159678494-6410aaba-9d7b-4dca-8dc4-75ca6c697707.png)
 
 
 
