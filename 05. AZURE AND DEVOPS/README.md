@@ -990,5 +990,60 @@ Click on Build stage and watch the progress. Then select Deploy to monitor the d
 ![image](https://user-images.githubusercontent.com/34960418/159522446-ab6d6e00-b4a6-46d2-b691-7cac3584ef12.png)
 
 
+## Modify the application 1
+
+Return to Boards and move the Title style issue from To Do to Doing if not there already. Open the item in editing mode. Click on **create a branch** under the **Add link** in the **Development** section.
+
+![image](https://user-images.githubusercontent.com/34960418/159661566-0ca46c3f-1bdc-467c-bdde-a62fb072c267.png)
+
+
+In **Name** enter **branch-title** and click on **Create branch**.
+
+![image](https://user-images.githubusercontent.com/34960418/159662043-ad578883-50d3-4be7-956f-461514068d1e.png)
+
+
+Switch to the VS Code to take care for the task. Be sure that the local copy of the repo is aligned with the remote one:.
+
+```bash
+git pull
+git switch branch-title
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159662512-87a6e4e8-b75b-4c89-8421-5ad7bae0a1f3.png)
+
+
+Open the **index.html** file for editing. Change the ```<h3>``` tags to ```<h1>```. Add a pair of ```<u>``` and ```</u>``` tags around the title. Save the file. Test locally that the result is as expected. Publish the changes:
+
+```bash
+git add .\web\index.html
+git commit -m "Title corrected"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/159663223-47a18d15-a9ed-4c26-b169-993e5c0770a8.png)
+
+
+Return to Repos. You will see a message that the branch-title has been updated. Next to it there will be a Create a pull request button. Click on it.
+
+![image](https://user-images.githubusercontent.com/34960418/159663573-d590e897-7ede-44ac-8326-e3fc3a66c8e4.png)
+
+
+Examine the information on the next screen. Click on Create.
+
+![image](https://user-images.githubusercontent.com/34960418/159663702-bfee4fe7-8985-4d88-aba0-cda48e68eb5a.png)
+
+
+Explore the overview of the pull request and click on **Approve**. 
+
+![image](https://user-images.githubusercontent.com/34960418/159664072-10e0d0f9-50d6-4fd5-88fa-cb8c21bf6548.png)
+
+
+And finally, on **Complete**. Click on **Complete merge**.
+
+![image](https://user-images.githubusercontent.com/34960418/159664213-f944293f-a33a-445c-9ff5-c248a69d81d0.png)
+
+
+
+
+
 
 
