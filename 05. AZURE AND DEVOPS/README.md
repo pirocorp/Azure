@@ -61,6 +61,7 @@
   - [Modify the application 2](#modify-the-application-2)
   - [Final touches](#final-touches)
 - [DevOps Projects (DevOps Starter)](#devops-projects-devops-starter)
+  - [Make A Change](#make-a-change)
 
 # [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
