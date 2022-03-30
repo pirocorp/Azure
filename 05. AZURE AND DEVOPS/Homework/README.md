@@ -79,3 +79,10 @@ kubectl get nodes
 
 Build docker image
 
+```bash
+docker build . -t aze-simple-app
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160821862-ac25ae24-5f62-4d19-8a84-5ef179a4c851.png)
+![image](https://user-images.githubusercontent.com/34960418/160822018-88e19b44-3ef1-4210-8a7a-93b531e2d034.png)
+
