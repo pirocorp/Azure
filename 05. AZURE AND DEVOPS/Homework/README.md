@@ -96,3 +96,57 @@ docker run -d --name webapp -p 8000:80 aze-simple-app
 ![image](https://user-images.githubusercontent.com/34960418/160822290-89ced656-bc52-47f6-b98b-34edc3fd31a0.png)
 
 ![image](https://user-images.githubusercontent.com/34960418/160822357-13e63899-3c2e-4fb7-a687-984b2e6fa308.png)
+
+
+Login to the ACR (Azure Container Registry)
+
+```bash
+az acr login --name azesucli
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160822763-ce175ffa-07a6-4ae3-8eaf-f402c8722832.png)
+
+
+Check the login server
+
+```bash
+az acr list --resource-group RG-Homework --query "[].{acrLoginServer:loginServer}" --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160823028-e7086d2b-563f-4a0a-ae8e-da042d89df75.png)
+
+
+Tag the image:
+
+```bash
+docker tag aze-simple-app azesucli.azurecr.io/aze-simple-app:v1
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160823283-6a3e2d22-f92c-4cf9-a817-5e7fd60df766.png)
+
+
+Push the image to our ACR
+
+```bash
+docker push azesucli.azurecr.io/aze-simple-app:v1
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160823466-171a7730-51c3-47e3-b91f-4fa536b8d0e5.png)
+
+
+Check the list of images available on our ACR
+
+```bash
+az acr repository list --name azesucli --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160823689-d0cf3850-bb23-49a1-abd8-dbabdf57bede.png)
+
+
+And all tags for an image
+
+```bash
+az acr repository show-tags --name azesucli --repository aze-simple-app --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160823861-0dc336ac-16d6-4790-bd10-a0796b6ed744.png)
