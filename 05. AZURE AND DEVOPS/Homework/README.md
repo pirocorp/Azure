@@ -86,3 +86,13 @@ docker build . -t aze-simple-app
 ![image](https://user-images.githubusercontent.com/34960418/160821862-ac25ae24-5f62-4d19-8a84-5ef179a4c851.png)
 ![image](https://user-images.githubusercontent.com/34960418/160822018-88e19b44-3ef1-4210-8a7a-93b531e2d034.png)
 
+
+Test the app locally:
+
+```bash
+docker run -d --name webapp -p 8000:80 aze-simple-app
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160822290-89ced656-bc52-47f6-b98b-34edc3fd31a0.png)
+
+![image](https://user-images.githubusercontent.com/34960418/160822357-13e63899-3c2e-4fb7-a687-984b2e6fa308.png)
