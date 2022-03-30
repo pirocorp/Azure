@@ -198,3 +198,8 @@ kubectl delete -f service.yaml -f deployment.yaml
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/160827262-1b2f7c6c-6f16-4165-a0ac-e77f2ae4df3d.png)
+
+
+# DevOps Solution
+
+
