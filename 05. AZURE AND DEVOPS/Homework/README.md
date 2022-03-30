@@ -67,3 +67,10 @@ kubectl version
 
 ![image](https://user-images.githubusercontent.com/34960418/160816589-950e2181-ce74-448f-91a6-789002aa2a39.png)
 
+
+```bash
+kubectl get nodes
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160817023-200cf70d-cbad-482e-8e89-47bc54881c01.png)
+
