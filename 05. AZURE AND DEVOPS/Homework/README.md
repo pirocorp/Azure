@@ -167,3 +167,65 @@ Integrate existing ACR with existing AKS cluster (if not done):
 az aks update -n k8s-homework -g RG-Homework --attach-acr azesucli
 ```
 
+
+Enter the manifests folder. Deploy both the service and application simultaneously:
+
+```bash
+kubectl apply -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160826319-473b3510-c8b3-4fbd-bc3f-8c42d4122f79.png)
+
+
+Check pods and services
+
+```bash
+kubectl get svc,pod
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160826467-f987e367-cfbb-4894-89e5-517f64c6216a.png)
+
+
+Get the load balancer IP address and paste it into a new browser window to check if the application is working
+
+![image](https://user-images.githubusercontent.com/34960418/160826542-f8cbbec2-a227-4454-902f-e8e1973a5169.png)
+
+
+Delete the application
+
+```bash
+kubectl delete -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160827262-1b2f7c6c-6f16-4165-a0ac-e77f2ae4df3d.png)
+
+
+# DevOps Solution
+
+Select Node.js
+
+![image](https://user-images.githubusercontent.com/34960418/160829179-88f9884d-c012-4eac-815b-7cb2b0a58607.png)
+
+
+Simple Node.js app
+
+![image](https://user-images.githubusercontent.com/34960418/160829226-98f280e8-c3d8-44da-917f-42c14250602d.png)
+
+
+Select Deploy to AKS
+
+![image](https://user-images.githubusercontent.com/34960418/160829485-84f8037f-f59c-47b0-a6e5-5cf72d432a09.png)
+
+
+Specify AKS parameters
+
+![image](https://user-images.githubusercontent.com/34960418/160830035-b3130a79-f4f5-47ac-8c19-5e48d92d4913.png)
+
+
+Initial app.
+
+![image](https://user-images.githubusercontent.com/34960418/160832473-41e835be-4c1d-49ec-b051-091f7d0ef129.png)
+
+
+
+
