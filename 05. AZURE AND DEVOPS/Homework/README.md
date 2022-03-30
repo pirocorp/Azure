@@ -227,5 +227,8 @@ Initial app.
 ![image](https://user-images.githubusercontent.com/34960418/160832473-41e835be-4c1d-49ec-b051-091f7d0ef129.png)
 
 
+Update the application with simple-app-2
+
+![image](https://user-images.githubusercontent.com/34960418/160895682-a40c2313-992b-4036-bf55-40f2bd28c8ea.png)
 
 
