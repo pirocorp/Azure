@@ -217,9 +217,7 @@ Select Deploy to AKS
 ![image](https://user-images.githubusercontent.com/34960418/160829485-84f8037f-f59c-47b0-a6e5-5cf72d432a09.png)
 
 
-Specify AKS parameters
-
-![image](https://user-images.githubusercontent.com/34960418/160830035-b3130a79-f4f5-47ac-8c19-5e48d92d4913.png)
+Specify Existing Kubernetes Cluster
 
 
 Initial app.
