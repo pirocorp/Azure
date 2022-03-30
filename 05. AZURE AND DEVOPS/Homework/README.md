@@ -229,6 +229,6 @@ Initial app.
 
 Update the application with simple-app-2
 
-![image](https://user-images.githubusercontent.com/34960418/160895682-a40c2313-992b-4036-bf55-40f2bd28c8ea.png)
+![image](https://user-images.githubusercontent.com/34960418/160896815-a3723673-e456-40ba-aabb-a54c3c44274f.png)
 
 
