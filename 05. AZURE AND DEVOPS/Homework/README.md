@@ -189,3 +189,12 @@ kubectl get svc,pod
 Get the load balancer IP address and paste it into a new browser window to check if the application is working
 
 ![image](https://user-images.githubusercontent.com/34960418/160826542-f8cbbec2-a227-4454-902f-e8e1973a5169.png)
+
+
+Delete the application
+
+```bash
+kubectl delete -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160827262-1b2f7c6c-6f16-4165-a0ac-e77f2ae4df3d.png)
