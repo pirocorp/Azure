@@ -13,3 +13,47 @@ You may use the files and the steps from the practice to help yourself.
 - Create an AKS cluster with one node or reuse the one created earlier
 - Publish the app created earlier in a code repository (for example in GitHub)
 - Create a DevOps Starter project in Azure and deploy the app from the code repository to the AKS cluster
+
+
+# AKS Solution
+
+login into azure
+
+```bash
+az login
+```
+
+Create a resource group
+
+```bash
+az group create -n RG-Homework -l westeurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160814494-e405c662-1218-4066-bfa4-639101ee1f45.png)
+
+
+Create a container registry
+
+```bash
+az acr create -g RG-Homework -n azesucli --sku Basic
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160814718-da705478-5e4c-4d4f-a525-5a696f998035.png)
+
+
+Create the cluster
+
+```bash
+az aks create -g RG-Homework -n k8s-homework --node-count 1 --node-vm-size Standard_B2s --enable-addons monitoring --generate-ssh-keys --attach-acr azesucli
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160816045-1b998831-99d9-45d6-9a6f-ae7446b978d4.png)
+
+
+Get and store the credentials needed for communication with the cluster
+
+```bash
+az aks get-credentials --resource-group RG-Homework --name k8s-homework
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160816392-0f181e02-8fdb-441e-8d3f-161a3a747460.png)
