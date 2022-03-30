@@ -227,36 +227,5 @@ Initial app.
 ![image](https://user-images.githubusercontent.com/34960418/160832473-41e835be-4c1d-49ec-b051-091f7d0ef129.png)
 
 
-Docker image should be taged and pushed to the container registry of the DevOps Starter.
 
-![image](https://user-images.githubusercontent.com/34960418/160834472-509e4cae-daf6-486a-a204-0a6241da8ee2.png)
-
-
-Check the login server
-
-![image](https://user-images.githubusercontent.com/34960418/160834957-ed3381e4-3823-4cb0-9db5-9f22f0d58b9c.png)
-
-
-Login to the ACR (Azure Container Registry)
-
-```bash
-az acr login --name azehomeworkacr
-```
-
-![image](https://user-images.githubusercontent.com/34960418/160835568-d019f713-4fee-4af1-8009-92c06f80fcfc.png)
-
-
-Tag the image:
-
-```bash
-docker tag aze-simple-app azehomeworkacr.azurecr.io/aze-simple-app:v1
-```
-
-Push the image to our ACR
-
-```bash
-docker push azehomeworkacr.azurecr.io/aze-simple-app:v1
-```
-
-![image](https://user-images.githubusercontent.com/34960418/160835685-875ddf33-168a-428d-a625-5745381f6017.png)
 
