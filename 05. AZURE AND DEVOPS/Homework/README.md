@@ -150,3 +150,20 @@ az acr repository show-tags --name azesucli --repository aze-simple-app --output
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/160823861-0dc336ac-16d6-4790-bd10-a0796b6ed744.png)
+
+
+Validate the ACR is accessible from the AKS cluster.
+
+```bash
+az aks check-acr --name k8s-homework --resource-group RG-Homework --acr azesucli.azurecr.io
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160824990-c2a5365e-8555-4b0a-97d4-6c0ca4d7dc56.png)
+
+
+Integrate existing ACR with existing AKS cluster (if not done):
+
+```bash
+az aks update -n k8s-homework -g RG-Homework --attach-acr azesucli
+```
+
