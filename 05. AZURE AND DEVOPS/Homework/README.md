@@ -167,3 +167,25 @@ Integrate existing ACR with existing AKS cluster (if not done):
 az aks update -n k8s-homework -g RG-Homework --attach-acr azesucli
 ```
 
+
+Enter the manifests folder. Deploy both the service and application simultaneously:
+
+```bash
+kubectl apply -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160826319-473b3510-c8b3-4fbd-bc3f-8c42d4122f79.png)
+
+
+Check pods and services
+
+```bash
+kubectl get svc,pod
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160826467-f987e367-cfbb-4894-89e5-517f64c6216a.png)
+
+
+Get the load balancer IP address and paste it into a new browser window to check if the application is working
+
+![image](https://user-images.githubusercontent.com/34960418/160826542-f8cbbec2-a227-4454-902f-e8e1973a5169.png)
