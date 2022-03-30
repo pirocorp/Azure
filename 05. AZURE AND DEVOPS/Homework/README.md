@@ -76,3 +76,6 @@ kubectl get nodes
 
 ![image](https://user-images.githubusercontent.com/34960418/160817023-200cf70d-cbad-482e-8e89-47bc54881c01.png)
 
+
+Build docker image
+
