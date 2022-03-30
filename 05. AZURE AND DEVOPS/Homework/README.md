@@ -68,6 +68,8 @@ kubectl version
 ![image](https://user-images.githubusercontent.com/34960418/160816589-950e2181-ce74-448f-91a6-789002aa2a39.png)
 
 
+Get information about the nodes
+
 ```bash
 kubectl get nodes
 ```
