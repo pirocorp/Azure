@@ -222,3 +222,6 @@ Specify AKS parameters
 ![image](https://user-images.githubusercontent.com/34960418/160830035-b3130a79-f4f5-47ac-8c19-5e48d92d4913.png)
 
 
+Initial app.
+
+![image](https://user-images.githubusercontent.com/34960418/160832473-41e835be-4c1d-49ec-b051-091f7d0ef129.png)
