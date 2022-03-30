@@ -57,3 +57,13 @@ az aks get-credentials --resource-group RG-Homework --name k8s-homework
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/160816392-0f181e02-8fdb-441e-8d3f-161a3a747460.png)
+
+
+Check versions. Plus minus one minor version is ok.
+
+```bash
+kubectl version
+```
+
+![image](https://user-images.githubusercontent.com/34960418/160816589-950e2181-ce74-448f-91a6-789002aa2a39.png)
+
