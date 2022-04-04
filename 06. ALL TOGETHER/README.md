@@ -100,6 +100,16 @@
 6. Connect all together
 
 
+## Resource group
+
+Search for **Resource groups** in the main search bar and hit Enter
+Click on + Create
+Check the Subscription
+For the Resource group enter RG-Solution
+Select West Europe for Region
+Click on Review + create and then on Create
+
+
 
 # Three-tier architecture (CLI)
 
