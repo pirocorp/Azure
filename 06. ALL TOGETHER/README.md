@@ -353,6 +353,59 @@ Click the **Add a frontnd IP configuration** button. Enter **LBI-FE** in the **N
 ![image](https://user-images.githubusercontent.com/34960418/161562641-26f8a526-817a-480e-9d03-307bd89838c9.png)
 
 
+## Setup external load balancer rules
+
+Navigate to the front-end (public) load balancer (LBP)
+
+![image](https://user-images.githubusercontent.com/34960418/161563773-51d856a7-3a71-44bb-9333-dc1ebc1f6d8d.png)
+
+
+### Backend pools
+
+Go to **Backend pools** under **Settings**. Click on **+ Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161563996-bd19b68b-dbaf-4aad-9f8f-b3e12634508f.png)
+
+
+For **Name** enter **LBP-BP**. Under **Virtual network** select **NET**. Select **Virtual machines** under the **Associated to**. Click the **+ Add** button. Then select both **VM-FE-1** and **VM-FE-2** and click **Add**. Click once more on **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161564541-60239bb0-b2e9-42ba-80df-7516502f70af.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161564582-8926863f-798f-4df4-b446-646336d31bf1.png)
+
+
+### Health probes
+
+Go to **Health probes**. Click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/161565206-b1912911-c077-49d9-bf51-23c2a702f1b7.png)
+
+
+For Name enter LBP-HP. Accept the default values. Click on **Add**. Wait a while for the health probe to be created. 
+
+
+### Load balancing rules
+
+Go to Load balancing rules. Click on the **+ Add** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/161565850-8bb78c8b-3451-438d-aca1-c625314823ad.png)
+
+
+For Name enter **LBP-RULE**. Select the **LBP-FE** item in the Frontend IP address list. Select **LBP-BP** in the **Backend pool** list. Both for Port and Backend port enter **80**. Select **LBP-HP** in the **Health probe** list. Click **Add**. Wait a while for the load balancing rule to be created.
+
+![image](https://user-images.githubusercontent.com/34960418/161566380-456e8279-47df-4524-8721-045b8488242b.png)
+
+
+### Inbound NAT rules
+
+If order to be able to connect to a particular VM behind the load balancer, we can create one or more NAT rules. Go to **Inbound NAT rules**. Click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/161567364-cb4eaab8-e647-4b1f-8a60-eaf68914d8da.png)
+
+
+For **Name** enter **LBP-NAT-SSH-1**. Select **VM-FE-1** as **Target virtual machine**. Select **ipconfig1** for **Network IP configuration**. Select the **LBP-FE** item in the **Frontend IP address** list. Enter **11001** in the **Frontend Port** field. Leave **Service Tag** to **Custom**. Enter **22** in the **Backend Port** field. Set **Protocol** to **TCP**. Click **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161568249-5c4fb739-07da-465f-8205-eb04f1faa669.png)
 
 
 
