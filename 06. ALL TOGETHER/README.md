@@ -126,6 +126,19 @@ Return to the resource group. Click on **+ Create**. Search for Availability Set
 ![image](https://user-images.githubusercontent.com/34960418/161525790-0b4a68d8-3c45-4485-af62-ad39a01cb41c.png)
 
 
+## Virtual machine 1 (front-end #1)
+
+Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.04 LTS in the Popular resources list.
+
+![image](https://user-images.githubusercontent.com/34960418/161526397-e9544b05-33c3-4313-a20e-60f1a3370a00.png)
+
+
+Check the values for **Subscription** and **Resource group**. For Virtual machine name enter VM-FE-1. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >**
+
+![image](https://user-images.githubusercontent.com/34960418/161527543-9354a2a2-accf-41d4-b96c-e0cb943c1543.png)
+
+
+
 
 
 
