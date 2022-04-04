@@ -204,13 +204,6 @@ Return to the resource group. Click on **+ Create**. Search for Availability Set
 ![image](https://user-images.githubusercontent.com/34960418/161525790-0b4a68d8-3c45-4485-af62-ad39a01cb41c.png)
 
 
-
-
-
-
-
-
-
 ## Virtual machine 1 (front-end #1)
 
 Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.04 LTS in the Popular resources list.
@@ -237,6 +230,33 @@ Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text ar
 
 ![image](https://user-images.githubusercontent.com/34960418/161536141-33fdfbc7-522b-476d-9aff-356dbb14f509.png)
 
+
+## Virtual machine 2 (front-end #2)
+
+Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.04 LTS in the Popular resources list.
+
+![image](https://user-images.githubusercontent.com/34960418/161526397-e9544b05-33c3-4313-a20e-60f1a3370a00.png)
+
+
+Check the values for **Subscription** and **Resource group**. For Virtual machine name enter **VM-FE-2**. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >** Leave everything as it is. Click on **Next: Networking >**.
+
+![image](https://user-images.githubusercontent.com/34960418/161543246-0e707e95-32f3-470f-bb50-51004f427c44.png)
+
+
+In the **Subnet** drop-down select **NET-SUB-Front**. For **Public IP** select **None** or for debugging purposes allow it to create one (you can use the serial console instead). Click on **Next: Management >**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161543454-fad28b93-dc5b-4846-b65d-d97c0573c69a.png)
+
+
+Ensure that the **Boot diagnostics** is set to **On** especially if you chose to NOT have a public IP address and you plan to use the serial console. Accept the 
+default values. Click on **Next: Advanced >**.  
+
+![image](https://user-images.githubusercontent.com/34960418/161543587-d6ee9b6a-8cc9-4123-aa93-04c5d6441695.png)
+
+
+Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text area. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161543702-b41c24d6-eccc-4c55-9f44-36b167a1d18e.png)
 
 
 
