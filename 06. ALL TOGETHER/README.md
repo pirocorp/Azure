@@ -107,6 +107,27 @@ Search for **Resource groups** in the main search bar and hit Enter. Click on **
 ![image](https://user-images.githubusercontent.com/34960418/161523236-1c526c07-1543-43fc-ac11-c9a98afe4549.png)
 
 
+## Availability set (front-end).
+
+Return to the resource group. Click on **+ Create**. Search for **Availability Set**. Click on **Create**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161525056-77d8c443-59b0-43a2-ab45-de5b95355d55.png)
+
+
+Set the **Name** to **AS-FE**. Change the **Region** to **West Europe** (or the one you are using). Set **Update domains** to **2**. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161525272-72ea5e7c-a6ff-40b5-9b3d-61451c5647a3.png)
+
+
+## Availability set (back-end)
+
+Return to the resource group. Click on **+ Create**. Search for Availability Set. Click on **Create**. Set the **Name** to **AS-BE**. Change the **Region** to **West Europe** (or the one you are using). Set **Update domains** to **2**. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161525790-0b4a68d8-3c45-4485-af62-ad39a01cb41c.png)
+
+
+
+
 
 # Three-tier architecture (CLI)
 
