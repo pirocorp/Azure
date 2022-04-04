@@ -102,12 +102,9 @@
 
 ## Resource group
 
-Search for **Resource groups** in the main search bar and hit Enter
-Click on + Create
-Check the Subscription
-For the Resource group enter RG-Solution
-Select West Europe for Region
-Click on Review + create and then on Create
+Search for **Resource groups** in the main search bar and hit Enter. Click on **+ Create**. Check the **Subscription**. For the **Resource group** enter **RG-Solution**. Select **West Europe** for **Region**. Click on **Review + create** and then on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161523236-1c526c07-1543-43fc-ac11-c9a98afe4549.png)
 
 
 
