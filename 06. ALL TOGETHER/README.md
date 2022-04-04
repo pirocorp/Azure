@@ -408,6 +408,46 @@ For **Name** enter **LBP-NAT-SSH-1**. Select **VM-FE-1** as **Target virtual mac
 ![image](https://user-images.githubusercontent.com/34960418/161568249-5c4fb739-07da-465f-8205-eb04f1faa669.png)
 
 
+Repeat the procedure for the second VM as well, but change the name (**LBP-NAT-SSH-2**) and port (**11002**)
+
+![image](https://user-images.githubusercontent.com/34960418/161569076-b92dc7e8-c4fd-4ac4-a8ca-37a36de8a01b.png)
+
+
+## Setup internal load balancer rules
+
+### Backend pools
+
+Go to **Backend pools** under **Settings**. Click on **+ Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161571296-2a1c7b03-9fc0-4c7f-886b-5b20ac4b3e05.png)
+
+For **Name** enter **LBI-BP**. Under Virtual network, you should see that the **NET** is already selected (and you can not change it). Select **Virtual machines** under the **Associated to**. Click the **+ Add** button. Select both **VM-BE-1** and **VM-BE-2** machines. Click on **Add**. Once again, click on **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161571778-3055703e-51d2-4954-880a-a843c4113d11.png)
+
+
+### Health probes
+
+Go to **Health probes**. Click on the **+ Add** button. 
+
+![image](https://user-images.githubusercontent.com/34960418/161572453-cbdc8e1a-067d-43b2-98fb-794faeadc4d2.png)
+
+
+For **Name** enter **LBI-HP**. Change the **Port** to **9000**. Accept the default values for the rest of the parameters. Click on **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161572587-73b8721b-b5cf-4420-ae6b-1d9018889a4e.png)
+
+
+### Load balancing rules
+
+Go to **Load balancing rules**. Click on the **+ Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/161572921-2ebc0eac-966b-466c-a8e6-7e6469d0eb59.png)
+
+
+For **Name** enter **LBI-RULE**. Select **LBI-FE (10.0.1.254)** item in the Frontend IP address list. Select **LBI-BP** in the **Backend pool** list. Change both **Port** and **Backend port** to **9000**. Select **LBI-HP** in the **Health probe** list. Click **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161573745-bc5c456b-c7fa-4556-8a48-9fdb48c8cd52.png)
 
 
 
