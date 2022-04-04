@@ -287,6 +287,33 @@ Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text ar
 ![image](https://user-images.githubusercontent.com/34960418/161545142-863550e5-308c-4f7a-b6e7-d4cb85d9259e.png)
 
 
+## Virtual machine 4 (back-end #2)
+
+Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.04 LTS in the Popular resources list.
+
+![image](https://user-images.githubusercontent.com/34960418/161526397-e9544b05-33c3-4313-a20e-60f1a3370a00.png)
+
+
+Check the values for **Subscription** and **Resource group**. For Virtual machine name enter **VM-BE-2**. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-BE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >** Leave everything as it is. Click on **Next: Networking >**.
+
+![image](https://user-images.githubusercontent.com/34960418/161545883-9d5d1ca5-2baa-42e6-9037-0b30aceb0986.png)
+
+
+In the **Subnet** drop-down select **NET-SUB-Back**. For **Public IP** select **None** or for debugging purposes allow it to create one (you can use the serial console instead). Click on **Next: Management >**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161546694-373048d3-da69-4170-babe-971eafd3af24.png)
+
+
+Ensure that the **Boot diagnostics** is set to **On** especially if you chose to NOT have a public IP address and you plan to use the serial console. Accept the 
+default values. Click on **Next: Advanced >**.  
+
+![image](https://user-images.githubusercontent.com/34960418/161546901-71b40a93-29f6-47d6-b090-3b26b21ebbd4.png)
+
+
+Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text area. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161547034-8a233ff6-58d2-4b44-bba9-e8833176b859.png)
+
 
 
 # Three-tier architecture (CLI)
