@@ -185,7 +185,6 @@ Go to the **Subnets** rules option under **Settings**. Click on **NET-SUB-Back**
 ![image](https://user-images.githubusercontent.com/34960418/161534367-f8f14fcb-6591-4bfd-9331-a19a1f09cfde.png)
 
 
-
 ## Availability set (front-end).
 
 Return to the resource group. Click on **+ Create**. Search for **Availability Set**. Click on **Create**. 
@@ -219,12 +218,24 @@ Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.0
 ![image](https://user-images.githubusercontent.com/34960418/161526397-e9544b05-33c3-4313-a20e-60f1a3370a00.png)
 
 
-Check the values for **Subscription** and **Resource group**. For Virtual machine name enter VM-FE-1. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >** Leave everything as it is. Click on **Next: Networking >**.
+Check the values for **Subscription** and **Resource group**. For Virtual machine name enter **VM-FE-1**. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >** Leave everything as it is. Click on **Next: Networking >**.
 
 
 ![image](https://user-images.githubusercontent.com/34960418/161527543-9354a2a2-accf-41d4-b96c-e0cb943c1543.png)
 
 
+In the **Subnet** drop-down select **NET-SUB-Front**. For **Public IP** select **None** or for debugging purposes allow it to create one (you can use the serial console instead). Click on **Next: Management >**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161535682-1a68cd06-e5c2-440b-b779-55b88d37360c.png)
+
+
+Ensure that the **Boot diagnostics** is set to **On** especially if you chose to NOT have a public IP address and you plan to use the serial console. Accept the default values. Click on **Next: Advanced >**.  
+
+![image](https://user-images.githubusercontent.com/34960418/161535867-c7b20588-c754-4409-8a18-54670eabfc1b.png)
+
+Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text area. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161536141-33fdfbc7-522b-476d-9aff-356dbb14f509.png)
 
 
 
