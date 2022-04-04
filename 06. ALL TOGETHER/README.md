@@ -679,6 +679,51 @@ Restart the service:
 sudo systemctl restart php7.2-fpm.service
 ```
 
+Open the **/site/index.php** file and paste the contents of the **web/index.php** file from the accompanying files. Return to the **Azure Portal** and go to the SQL database. In the **Settings** section click on **Connection strings**. Switch to **PHP** and copy the connection string for SQL Server Extension (the second one). Paste it at the beginning of the file and enter the password for the database set during the creation process. Save and close the file.
+
+```php
+<h1>Top 10 cities in Bulgaria</h1>
+<?php
+
+	// SQL Server Extension Sample Code:
+	$connectionInfo = array("UID" => "examsa", "pwd" => "ExamPassword2022", "Database" => "azesqldb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+	$serverName = "tcp:azesql.database.windows.net,1433";
+	$conn = sqlsrv_connect($serverName, $connectionInfo);
+
+	if( $conn === false ) {
+	     die( print_r( sqlsrv_errors(), true));
+	}
+
+	$stmt = sqlsrv_query( $conn, "SELECT * FROM Cities");
+
+	if( $stmt === false ) {
+	     die( print_r( sqlsrv_errors(), true));
+	}
+
+	print "<ol>\n";
+	
+	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+	     echo "<li>".$row['CityName']." -> ".$row['Population']."</li>\n";
+	}
+	
+	print "</ol>\n";
+	
+	print "<hr />\n";
+	
+	print "<small>Serverd by: ".gethostname()."</small>\n";
+?>
+```
+
+## Deploy the application and all supplementary software (VM-BE-2)
+
+Repeat all steps that you did on [VM-BE-1]() on VM-BE-2 as well.
+
+
+## Test Deployed Application
+
+Copy the **Public IP address** of the public load balancer. Open a browser tab and navigate to it but do not forget to add **/index.php** at the end. 
+
+![image](https://user-images.githubusercontent.com/34960418/161595712-4a703bba-2247-46bd-b27f-21a172047b0d.png)
 
 
 
