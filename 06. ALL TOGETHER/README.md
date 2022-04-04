@@ -315,6 +315,15 @@ Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text ar
 ![image](https://user-images.githubusercontent.com/34960418/161547034-8a233ff6-58d2-4b44-bba9-e8833176b859.png)
 
 
+## Public Load Balancer
+
+Return to the resource group. Click on **+ Create**. Search for **Load Balancer** in the main search bar and hit **Enter**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161549053-030881b9-7992-40a8-9a82-a6b69ea855d6.png)
+
+
+
+
 
 # Three-tier architecture (CLI)
 
