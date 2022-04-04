@@ -107,6 +107,85 @@ Search for **Resource groups** in the main search bar and hit Enter. Click on **
 ![image](https://user-images.githubusercontent.com/34960418/161523236-1c526c07-1543-43fc-ac11-c9a98afe4549.png)
 
 
+## Network security group (front-end)
+
+Click on **+ Create**. Search for **Network security group**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161531373-a67d2949-9c73-46d8-9493-dd7314b7e8eb.png)
+
+
+Check the values for the **Subscription** and **Resource group**. Enter **SG-Front**. Change the **Region** to **West Europe**. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161531585-1fffe4e1-6f5b-4897-9f19-96e662fdb0ed.png)
+
+
+Navigate to the security group **SG-Front**. Go to the **Inbound security** rules option under **Settings**. Click on **+ Add**
+
+![image](https://user-images.githubusercontent.com/34960418/161531945-b023978d-909f-4265-81d8-c16c7e7432f9.png)
+
+
+Click on **+ Add**. Change Destination port ranges to **22**. Select the **TCP** option under **Protocol**. Enter **Port_22** for **Name**. Click on **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161532234-84b73d45-753d-49f3-9212-fa3b3fe54da3.png)
+
+
+Being in the **Inbound security rules** option under **Settings**. Click on **+ Add**. Change Destination port ranges to **80**. Select the **TCP** option under **Protocol**. Enter **Port_80** for **Name**. Click on **Add**.
+
+![image](https://user-images.githubusercontent.com/34960418/161532470-812f7a09-76b3-4470-9002-f6864d951173.png)
+
+
+## Network security group (back-end)
+
+Return to the resource group. Click on **+ Create**. Search for **Network security group**. Click on **Create**. Check the values for the **Subscription** and **Resource group**. Enter **SG-Back**. Change the **Region** to **West Europe**. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161533067-f05928f7-b3a3-4f17-8638-449a01263f5d.png)
+
+
+Navigate to the security group **SG-Back**. Go to the **Inbound security rules** option under **Settings**. And add **allow** inbound **TCP** trafic for ports **22** and **9000**.
+
+![image](https://user-images.githubusercontent.com/34960418/161533406-5c5608a3-ee30-461e-b744-de61428b11f7.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161533508-8a3e837d-bb05-4ce1-90f8-888e22082cbb.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161533580-14064802-2df6-4da6-a872-f196d5f4bdc4.png)
+
+
+## Virtual Network and Subnets
+
+Return to the resource group. Click on **+ Create**. Search for **Virtual networks**. Click on **Create**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161528473-32790a99-d7d6-46c0-a138-3d5eaad82e09.png)
+
+
+Set the **Name** to **NET**. Change the **Region** to **West Europe**. Click on **Next: IP Addresses >**.
+
+![image](https://user-images.githubusercontent.com/34960418/161528804-1e59b3ea-4ed8-4f94-b875-e5790acb48d6.png)
+
+
+Check that the **Address space** field contains **10.0.0.0/16**. In the **Subnet** section click on the label **default**. 
+
+Change Subnet name to **NET-SUB-Front**. Adjust the Address range to be **10.0.1.0/24** Click on **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/161529476-1a47cab7-fb09-41fa-b92c-b354838659e8.png)
+
+
+In the **Subnet** section click on **+ Add subnet**. For **Subnet name** enter **NET-SUB-Back**. In the **Subnet address range** enter **10.0.2.0/24** Click on **Save**. Click on **Save**. Click on the **Review + create** button and then on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161530337-0727a3f1-60ca-454f-b74d-cd1009b5158b.png)
+
+
+## Link the subnets and security groups.
+
+Navigate to the Virtual network **NET**. 
+
+Go to the **Subnets** rules option under **Settings**. Click on **NET-SUB-Front** and select **SG-Front** from **Network security group** drop-down.
+
+Go to the **Subnets** rules option under **Settings**. Click on **NET-SUB-Back** and select **SG-Back** from **Network security group** drop-down.
+
+![image](https://user-images.githubusercontent.com/34960418/161534367-f8f14fcb-6591-4bfd-9331-a19a1f09cfde.png)
+
+
+
 ## Availability set (front-end).
 
 Return to the resource group. Click on **+ Create**. Search for **Availability Set**. Click on **Create**. 
@@ -126,6 +205,13 @@ Return to the resource group. Click on **+ Create**. Search for Availability Set
 ![image](https://user-images.githubusercontent.com/34960418/161525790-0b4a68d8-3c45-4485-af62-ad39a01cb41c.png)
 
 
+
+
+
+
+
+
+
 ## Virtual machine 1 (front-end #1)
 
 Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.04 LTS in the Popular resources list.
@@ -133,7 +219,8 @@ Return to the resource group. Click on **+ Create**. Click on Ubuntu Server 18.0
 ![image](https://user-images.githubusercontent.com/34960418/161526397-e9544b05-33c3-4313-a20e-60f1a3370a00.png)
 
 
-Check the values for **Subscription** and **Resource group**. For Virtual machine name enter VM-FE-1. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >**
+Check the values for **Subscription** and **Resource group**. For Virtual machine name enter VM-FE-1. Select **West Europe** for **Region**. Select **Availability set** in the **Availability options** drop-down list. Select the **AS-FE** option under the **Availability set** drop-down. Click on **Change size** if necessary. Select **B1s** and click **Select**. Change **Authentication type** to **Password**. Enter ```examuser``` for **Username**. Enter ```ExamPassword2022``` for **Password**. Switch the **Public inbound ports option** to **None**. Click on **Next : Disks >** Leave everything as it is. Click on **Next: Networking >**.
+
 
 ![image](https://user-images.githubusercontent.com/34960418/161527543-9354a2a2-accf-41d4-b96c-e0cb943c1543.png)
 
