@@ -315,11 +315,44 @@ Paste the contents of the **fe-cloud-init.yaml** file in the Custom data text ar
 ![image](https://user-images.githubusercontent.com/34960418/161547034-8a233ff6-58d2-4b44-bba9-e8833176b859.png)
 
 
-## Public Load Balancer
+## Create Public Load Balancer
 
 Return to the resource group. Click on **+ Create**. Search for **Load Balancer** in the main search bar and hit **Enter**. Click **Create**.
 
 ![image](https://user-images.githubusercontent.com/34960418/161549053-030881b9-7992-40a8-9a82-a6b69ea855d6.png)
+
+
+Check the **Subscription**. For Resource group select **RG-Solution** created earlier. For **Name** enter **LBP**. Change **Region** to **West Europe** (or the one you are using so far). Change **SKU** to **Basic**. Click **Next: Frontend IP configuration >** button.
+
+![image](https://user-images.githubusercontent.com/34960418/161560640-1499684d-d809-4745-8879-fdd0c3a91296.png)
+
+
+Click the **Add a frontnd IP configuration** button. Enter **LBP-FE** in the **Name** field. Then click **Create new** under **Public IP address**. In the **Name** field enter **LBP-IP**. Click **OK** to confirm the IP address creation. Then click **Add** to confirm the frontend configuration creation. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161561269-00243f4f-6de3-40bb-a4bb-d416210f03f3.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161561428-88553cbb-8a30-4811-ac72-684518dddb49.png)
+
+
+## Create Internal Load Balancer
+
+Return to the resource group. Click on **+ Create**. Search for **Load Balancer** in the main search bar and hit **Enter**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161549053-030881b9-7992-40a8-9a82-a6b69ea855d6.png)
+
+
+Check the **Subscription**. For Resource group select **RG-Solution** created earlier. For **Name** enter **LBI**. Change **Region** to **West Europe** (or the one you are using). Change **SKU** to **Basic**. Change the **Type** to **Internal**. Click **Next: Frontend IP configuration**.
+
+![image](https://user-images.githubusercontent.com/34960418/161562056-fb7ec386-5910-4c18-b7ce-fbfa8d4f6feb.png)
+
+
+Click the **Add a frontnd IP configuration** button. Enter **LBI-FE** in the **Name** field. In the **Subnet** drop-down list select **NET-SUB-Front** item. Change the **Assignment** to **Static**. Enter **10.0.1.254** in the **IP address** field. Then click **Add** to confirm the frontend configuration creation. Click **Review + create**. Click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161562592-0f539ccd-0308-40be-8a73-287f8042db7c.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161562641-26f8a526-817a-480e-9d03-307bd89838c9.png)
+
+
 
 
 
