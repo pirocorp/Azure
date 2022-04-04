@@ -587,7 +587,6 @@ systemctl status nginx
 ![image](https://user-images.githubusercontent.com/34960418/161587118-454e5913-59c0-4700-b3fb-f1fa8f30ca80.png)
 
 
-
 Test the page can be open locally
 
 ```bash
@@ -595,6 +594,12 @@ curl http://localhost/index.php
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/161587056-2beceeb6-ec75-4ca7-ab0d-b8ed0968daba.png)
+
+
+## Configure the front-end servers (VM-FE-2)
+
+Repeat the steps for the [VM-FE-2]()
+
 
 
 
