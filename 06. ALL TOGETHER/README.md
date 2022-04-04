@@ -725,6 +725,9 @@ Copy the **Public IP address** of the public load balancer. Open a browser tab a
 
 ![image](https://user-images.githubusercontent.com/34960418/161595712-4a703bba-2247-46bd-b27f-21a172047b0d.png)
 
+![image](https://user-images.githubusercontent.com/34960418/161595775-c1d6a5c7-45e4-4085-bf4d-37f88d9e9eb5.png)
+
+
 
 
 
