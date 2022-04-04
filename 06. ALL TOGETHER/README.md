@@ -450,6 +450,114 @@ For **Name** enter **LBI-RULE**. Select **LBI-FE (10.0.1.254)** item in the Fron
 ![image](https://user-images.githubusercontent.com/34960418/161573745-bc5c456b-c7fa-4556-8a48-9fdb48c8cd52.png)
 
 
+## Database
+
+### Database and database server
+
+Return to the resource group. Click on **+ Create**. Click on **SQL Database** in the **Popular** resources list. Click **Create**.
+
+Check the values for **Subscription** and **Resource group**. Enter **azesqldb** in the Database name field. Click on **Create new** link under the **Server** field. In the New server windows enter the following values:
+-	For Server name enter **azesql**
+-	In Server admin login enter **demosa**
+-	Use **ExamPassword2022** for Password
+-	Select **West Europe** for Location (or another one you prefer)
+
+Click on **OK**
+
+![image](https://user-images.githubusercontent.com/34960418/161579269-2e8b73d0-37f4-4eb8-9f3d-3765440022a5.png)
+
+
+Click on **Configure database** link under **Compute + storage**. Select **Basic** plan (**5 DTU**) and click **Apply**. Change the **Backup storage redundancy** setting to **Locally-redundant backup storage**. Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161579688-42354e48-5698-4a60-8d66-d6ee0a375de7.png)
+
+
+### Setup database connectivity
+
+Navigate to the SQL server. Click on the **Firewalls and virtual networks** option under **Settings**. Select **Yes** in **Allow Azure services and resources to access this server**. Click on **+ Add client IP**. Click **Save**. Click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/161580565-73ee4227-3f36-4024-b590-4c97ddc0088b.png)
+
+
+### Load data
+
+Navigate to the SQL database. Click on **Query editor (preview)**. Enter the credentials specified during the creation process (should be **examsa** / **ExamPassword2022**). Click **OK**. Paste the code from **sql/load-data.sql** file. Click on **Run**. Check that the data is indeed loaded into the database.
+
+
+## Configure the backend servers (VM-BE-1)
+
+Connect to backend VMs. Check if **php-fpm** is installed and running.
+
+```bash
+systemctl status php7.2-fpm
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161582968-fe26eb45-fef3-48a0-b216-bbdcb2f7f2c0.png)
+
+
+If is not installed execute
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install php-fpm
+```
+
+
+Modify the **PHP FPM** configuration to make it listen on port **9000**.
+
+```bash
+sudo nano /etc/php/7.2/fpm/pool.d/www.conf
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161583578-abe104d0-2385-4f5b-9449-38c47cd90488.png)
+
+
+Restart the service and check its state:
+
+```bash
+sudo systemctl restart php7.2-fpm.service
+systemctl status php7.2-fpm.service
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161583788-42c017cd-e2b4-45dd-8aee-409167f4f135.png)
+
+
+Create a folder **/site** and change the ownership to **www-data** user and group:
+
+```bash
+sudo mkdir /site
+sudo chown -R www-data:www-data /site
+```
+
+### Test it
+
+Create a simple **/site/index.php** file that contains **<?php phpinfo(); ?>** construction in it.
+
+```bash
+echo '<?php phpinfo(); ?>' | sudo tee /site/index.php
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161584395-0c2d984f-0677-471c-aace-e6245a6055e0.png)
+
+
+Test it on the command line by executing:
+
+```bash
+php /site/index.php
+```
+
+You should see a dump of the PHP configuration
+
+![image](https://user-images.githubusercontent.com/34960418/161584569-b1d15bf3-6690-434f-8b5b-394c075c15d7.png)
+
+
+## Configure the backend servers (VM-BE-2)
+
+Repeat the steps for the [VM-BE-1]()
+
+
+
 
 # Three-tier architecture (CLI)
 
