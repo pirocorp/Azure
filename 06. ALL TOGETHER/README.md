@@ -86,6 +86,8 @@
 
 # Implement AKS and deploy Azure Web App and 2 Azure Functions
 
+![image](https://user-images.githubusercontent.com/34960418/161599129-f155add4-f0b5-4882-9c22-ce39dc517693.png)
+
 ## Infrastructure - 5 tasks, 13 pts
 
 -	(T101, 1 pts) Create a resource group named RG-SolutionB
