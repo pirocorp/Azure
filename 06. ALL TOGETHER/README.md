@@ -5,6 +5,12 @@
 - [Implement three-tier architecture to host a PHP web application with SQL server database](#implement-three-tier-architecture-to-host-a-php-web-application-with-sql-server-database)
 - [Implement AKS and deploy Azure Web App and 2 Azure Functions](#implement-aks-and-deploy-azure-web-app-and-2-azure-functions)
 
+## Solutions
+
+- [Three-tier architecture (Portal)](#three-tier-architecture-portal)
+- [Three-tier architecture (CLI)](#three-tier-architecture-cli)
+- [AKS (Portal)](#aks-portal)
+
 
 # Implement three-tier architecture to host a PHP web application with SQL server database.
 
@@ -79,3 +85,11 @@
 -	(T506, 3 pts) Create a Timer triggered function. It must execute every two minutes and insert a row with SubmittedName=TIMER in the database (table SubmittedItems)
 -	(T507, 5 pts) Create a HTTP triggered function. When executed it must accept a single parameter (name), store the value in the database (table SubmittedItems), and return how many times the value has been inserted and when was the first time. The format should be VALUE has N copies and the first one was inserted on TIME. For example, if the function was called 5 times with the text Exam, and the first execution was on 17.10.2020 09:30, then it should return Exam has 5 copies and the first one was inserted on 17.10.2020 09:30. Please note that the format of the time is not important and may not match the example
 -	(T508, 2 pts) Make sure that you have executed the HTTP triggered function successfully several times
+
+
+
+# Three-tier architecture (Portal)
+
+# Three-tier architecture (CLI)
+
+# AKS (Portal)
