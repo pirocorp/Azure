@@ -92,12 +92,12 @@
 
 ## Exemplary execution plan
 
-1 Create a resource group
-2	Take care of the network infrastructure (network + 2 subnets + 2 security groups with rules)
-3	Create one public (external) and one internal load balancers
-4	Create both front-end and back-end VMs, each in a separate availability set
-5	Create and set up the database
-6	Connect all together
+1. Create a resource group
+2. Take care of the network infrastructure (network + 2 subnets + 2 security groups with rules)
+3. Create one public (external) and one internal load balancers
+4. Create both front-end and back-end VMs, each in a separate availability set
+5. Create and set up the database
+6. Connect all together
 
 
 
