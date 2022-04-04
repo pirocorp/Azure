@@ -8,6 +8,41 @@
 ## Solutions
 
 - [Three-tier architecture (Portal)](#three-tier-architecture-portal)
+  - [Exemplary execution plan](#exemplary-execution-plan)
+  - [Resource group](#resource-group)
+  - [Network security group (front-end)](#network-security-group-front-end)
+  - [Network security group (back-end)](#network-security-group-back-end)
+  - [Virtual Network and Subnets](#virtual-network-and-subnets)
+  - [Link the subnets and security groups.](#link-the-subnets-and-security-groups)
+  - [Availability set (front-end).](#availability-set-front-end)
+  - [Availability set (back-end)](#availability-set-back-end)
+  - [Virtual machine 1 (front-end #1)](#virtual-machine-1-front-end-1)
+  - [Virtual machine 2 (front-end #2)](#virtual-machine-2-front-end-2)
+  - [Virtual machine 3 (back-end #1)](#virtual-machine-3-back-end-1)
+  - [Virtual machine 4 (back-end #2)](#virtual-machine-4-back-end-2)
+  - [Create Public Load Balancer](#create-public-load-balancer)
+  - [Create Internal Load Balancer](#create-internal-load-balancer)
+  - [Setup external load balancer rules](#setup-external-load-balancer-rules)
+    - [Backend pools](#backend-pools)
+    - [Health probes](#health-probes)
+    - [Load balancing rules](#load-balancing-rules)
+    - [Inbound NAT rules](#inbound-nat-rules)
+  - [Setup internal load balancer rules](#setup-internal-load-balancer-rules)
+    - [Backend pools](#backend-pools-1)
+    - [Health probes](#health-probes-1)
+    - [Load balancing rules](#load-balancing-rules-1)
+  - [Database](#database)
+    - [Database and database server](#database-and-database-server)
+    - [Setup database connectivity](#setup-database-connectivity)
+    - [Load data](#load-data)
+  - [Configure the backend servers (VM-BE-1)](#configure-the-backend-servers-vm-be-1)
+  - [Configure the backend servers (VM-BE-2)](#configure-the-backend-servers-vm-be-2)
+  - [Configure the front-end servers (VM-FE-1)](#configure-the-front-end-servers-vm-fe-1)
+  - [Configure the front-end servers (VM-FE-2)](#configure-the-front-end-servers-vm-fe-2)
+  - [Test the infrastructure](#test-the-infrastructure)
+  - [Deploy the application and all supplementary software (VM-BE-1)](#deploy-the-application-and-all-supplementary-software-vm-be-1)
+  - [Deploy the application and all supplementary software (VM-BE-2)](#deploy-the-application-and-all-supplementary-software-vm-be-2)
+  - [Test Deployed Application](#test-deployed-application)
 - [Three-tier architecture (CLI)](#three-tier-architecture-cli)
 - [AKS (Portal)](#aks-portal)
 
@@ -554,7 +589,7 @@ You should see a dump of the PHP configuration
 
 ## Configure the backend servers (VM-BE-2)
 
-Repeat the steps for the [VM-BE-1]()
+Repeat the steps from the [VM-BE-1](#configure-the-backend-servers-vm-be-1)
 
 
 ## Configure the front-end servers (VM-FE-1)
@@ -598,7 +633,7 @@ curl http://localhost/index.php
 
 ## Configure the front-end servers (VM-FE-2)
 
-Repeat the steps for the [VM-FE-2]()
+Repeat the steps from the [VM-FE-1](#configure-the-front-end-servers-vm-fe-1)
 
 
 ## Test the infrastructure
@@ -716,7 +751,7 @@ Open the **/site/index.php** file and paste the contents of the **web/index.php*
 
 ## Deploy the application and all supplementary software (VM-BE-2)
 
-Repeat all steps that you did on [VM-BE-1]() on VM-BE-2 as well.
+Repeat all steps that you did on [VM-BE-1](#deploy-the-application-and-all-supplementary-software-vm-be-1) on VM-BE-2 as well.
 
 
 ## Test Deployed Application
