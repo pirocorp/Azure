@@ -601,6 +601,86 @@ curl http://localhost/index.php
 Repeat the steps for the [VM-FE-2]()
 
 
+## Test the infrastructure
+
+Copy the **Public IP address** of the public load balancer. Open a browser tab and navigate to it (don’t forget to add **/index.php**). You should see the same configuration information.
+
+![image](https://user-images.githubusercontent.com/34960418/161587994-211bda28-2ad1-4132-93a8-9e3b388c4717.png)
+
+
+## Deploy the application and all supplementary software (VM-BE-1)
+
+Add the Microsoft’s repository:
+
+```bash
+sudo bash -c "curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -"
+sudo bash -c "curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list"
+```
+
+Update package information
+
+```bash
+sudo apt-get update
+```
+
+
+Install the Microsoft tools:
+
+```bash
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17 mssql-tools
+```
+
+
+Install the ODBC driver:
+
+```bash
+sudo apt-get install -y unixodbc-dev
+```
+
+
+Install all necessary packages:
+
+```bash
+sudo apt-get install -y gcc g++ make autoconf libc-dev pkg-config
+```
+
+
+Install PHP PEAR and PHP development packages:
+
+```bash
+sudo apt-get install -y php-pear php-dev
+```
+
+Install SQL server extensions: 
+
+```bash
+sudo pecl install sqlsrv-5.8.1
+sudo pecl install pdo_sqlsrv-5.8.1
+```
+
+
+Adjust the configuration:
+
+```bash
+sudo bash -c "echo extension=sqlsrv.so > /etc/php/7.2/mods-available/sqlsrv.ini"
+sudo bash -c "echo extension=pdo_sqlsrv.so > /etc/php/7.2/mods-available/pdo_sqlsrv.ini"
+```
+
+
+Enable both modules:
+
+```bash
+sudo phpenmod sqlsrv pdo_sqlsrv
+```
+
+Restart the service:
+
+```bash
+sudo systemctl restart php7.2-fpm.service
+```
+
+
+
 
 
 
