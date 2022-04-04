@@ -557,6 +557,46 @@ You should see a dump of the PHP configuration
 Repeat the steps for the [VM-BE-1]()
 
 
+## Configure the front-end servers (VM-FE-1)
+
+Connect to backend VMs. Check if NGINX is installed and running.
+
+```bash
+systemctl status nginx
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161586317-6be9454b-a4f5-4968-8433-3127dc0b4ee2.png)
+
+
+Modify the NGINX configuration file by pasting the contents of the **conf/nginx-sample.conf** file over the default one.
+
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161586707-5228deff-3994-4efa-b337-3b5746200037.png)
+
+
+Restart and test that the **NGINX** service is working
+
+```bash
+sudo systemctl restart nginx
+systemctl status nginx
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161587118-454e5913-59c0-4700-b3fb-f1fa8f30ca80.png)
+
+
+
+Test the page can be open locally
+
+```bash
+curl http://localhost/index.php
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161587056-2beceeb6-ec75-4ca7-ab0d-b8ed0968daba.png)
+
+
 
 
 # Three-tier architecture (CLI)
