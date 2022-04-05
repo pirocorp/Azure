@@ -878,3 +878,84 @@ Go to the folder where the files are extracted. Open the file **docker/web/index
 ![image](https://user-images.githubusercontent.com/34960418/161743407-4b3f4a1f-3b13-40b3-a0c1-5f89bbf3cb32.png)
 
 
+## Image build and test
+
+Open a terminal session in the folder **docker/** Execute the following command to build the image.
+
+```bash
+docker build -t examapp .
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161743769-b9d2a208-6832-4734-acdc-4f308c6a39a1.png)
+
+
+List the available images
+
+```bash
+docker images
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161743970-6eaaafed-aca7-47a7-aa37-27864319f19f.png)
+
+
+Run the app locally:
+
+```bash
+docker run -d -p 8080:80 --name testexamapp examapp
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161744081-29c397d5-7a2d-4659-8514-95d53da54985.png)
+
+
+Open a browser window and navigate to http://localhost:8080 to test the app.
+
+![image](https://user-images.githubusercontent.com/34960418/161744157-d2a9128c-9d1d-47e0-957d-ff19871ff401.png)
+
+
+Once everything is considered working, delete the running container with
+
+```bash
+docker container rm testexamapp --force
+```
+
+
+## Publish the image
+
+While still in the terminal session, log in to Azure by executing
+
+```bash
+az login
+```
+
+
+Select a subscription if there is more than one
+
+```bash
+az account set --subscription "<Subsription Name>"
+```
+
+
+Tag the image against the new registry:
+
+```bash
+docker tag examapp registryzrz.azurecr.io/examapp:latest
+```
+
+
+Next, log in to the registry:
+
+```bash
+az acr login --name registryzrz
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161744913-f26e4880-862d-4ba2-9e9f-e7aab8b43115.png)
+
+
+Then push the image to the registry
+
+```bash
+docker push registryzrz.azurecr.io/examapp:latest
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161745147-79a8528b-677e-43c4-8c73-def2dac56911.png)
+
