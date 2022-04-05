@@ -826,10 +826,41 @@ Select the registry created earlier in the **Container registry** drop-down list
 ![image](https://user-images.githubusercontent.com/34960418/161736809-1bbde263-f055-4eeb-84ff-338cde3d36ec.png)
 
 
+## Database and database server
+
+Return to the resource group. Click on **+ Create**. Click on **SQL Database** in the **Popular** resources list.
+
+![image](https://user-images.githubusercontent.com/34960418/161739646-f802dbba-9180-4e73-8cf2-2f63f734d84b.png)
 
 
+Check the values for the **Subscription** and **Resource group**. Enter an arbitrary name in the **Database name** field. Click on **Create new** link under the Server field.
+
+In the New server windows enter the following values:
+- For Server name enter an arbitrary name
+- In Server admin login enter **examsa**
+- Use **ExamPassword2022** for Password
+- Select **West Europe** for **Location**
+
+Click on OK
+
+![image](https://user-images.githubusercontent.com/34960418/161740063-2ece3d2b-3da4-48df-816f-0a3070a79657.png)
+
+Click on **Configure database** link under Compute + storage. Select **Basic** plan **(5 DTU)** and click **Apply**. Click on **Review + create**. Click on **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161740470-a8e138a0-9a07-44c9-81cd-7b0cc294c644.png)
 
 
+## Setup database connectivity
 
+Navigate to the SQL server. Click on the **Firewalls and virtual networks** option under **Settings**. Select **Yes** in **Allow Azure services and resources to access this server**. Click on **+ Add client IP**. Click **Save**. Click **OK**.
+
+![image](https://user-images.githubusercontent.com/34960418/161741690-cf6739e3-c84f-43ef-b078-3eb63dc65d57.png)
+
+
+## Load data
+
+Navigate to the SQL database. Click on **Query editor (preview)**. Enter the credentials specified during the creation process (should be **examsa** / **ExamPassword2022**). Click **OK**. Paste the code from **sql/create-structures.sql** file. Click on **Run**. Check that the data is indeed loaded into the database.
+
+![image](https://user-images.githubusercontent.com/34960418/161742205-eb6e81ee-cc7e-4d15-86c2-cfa26a5d5152.png)
 
 
