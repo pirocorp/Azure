@@ -785,17 +785,45 @@ In general, we will follow this plan:
 7. Create a function app and two functions
 
 
+## Resource group
+
+Search for **Resource groups** in the main search bar and hit **Enter**. Click on **+ Create**. Check the **Subscription**. For the Resource group enter **RG-SolutionB**. Select **West Europe** for **Region** (or something else you prefer). Click on **Review + create** and then on **Create**. Once it is created, click on the **Go to the resource group**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161734194-068fa571-6948-4d48-9640-13d3a82ba754.png)
 
 
+## Container registry
+
+Go to the resource group. Click on **+ Create**. Search for Container registries. Click on **+ Create** or **Create container registry**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161734659-6a468f92-23f8-4381-a587-992aa24245c2.png)
 
 
+Make sure that the **subscription**, **resource group**, and **region** are all set. Enter an arbitrary name. Change the **SKU** to **Basic**. Click **Review + create** and then **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161735067-cd8207be-d2a9-4b72-8c52-40356ca63ee1.png)
 
 
+Navigate to the resource. Go to Access Keys under Settings and enable the Admin user.
+
+![image](https://user-images.githubusercontent.com/34960418/161735278-9f495743-f4d1-4668-b150-9980427f6255.png)
 
 
+## Azure Kubernetes Service
+
+Return to the resource group. Click on **+ Create**. Search for **Kubernetes services**. Click on **Create**
+
+![image](https://user-images.githubusercontent.com/34960418/161736255-d2345797-7002-4f3c-8e31-f926045b309e.png)
 
 
+Make sure that the subscription, resource group, and region are all set. Enter an arbitrary name. Change the size of the nodes to **Standard B2s**. Set the number of nodes to **1**. Switch to Integrations tab.
 
+![image](https://user-images.githubusercontent.com/34960418/161736712-af555f7d-a8c3-4d07-bf66-beb4b8a85269.png)
+
+
+Select the registry created earlier in the **Container registry** drop-down list. Click **Review + Create** and then **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161736809-1bbde263-f055-4eeb-84ff-338cde3d36ec.png)
 
 
 
