@@ -45,6 +45,22 @@
   - [Test Deployed Application](#test-deployed-application)
 - [Three-tier architecture (CLI)](#three-tier-architecture-cli)
 - [AKS (Portal)](#aks-portal)
+  - [General plan](#general-plan)
+  - [Resource group](#resource-group-1)
+  - [Container registry](#container-registry)
+  - [Azure Kubernetes Service](#azure-kubernetes-service)
+  - [Database and database server](#database-and-database-server-1)
+  - [Setup database connectivity](#setup-database-connectivity-1)
+  - [Load data](#load-data-1)
+  - [Database connection string](#database-connection-string)
+  - [Modify image configuration](#modify-image-configuration)
+  - [Image build and test](#image-build-and-test)
+  - [Publish the image](#publish-the-image)
+  - [Modify and deploy application manifests](#modify-and-deploy-application-manifests)
+  - [App Service + Web App](#app-service--web-app)
+  - [Create a code-based Function App with .NET Core as runtime](#create-a-code-based-function-app-with-net-core-as-runtime)
+  - [Create a Timer Trigger function](#create-a-timer-trigger-function)
+  - [Create a HTTP Trigger function](#create-a-http-trigger-function)
 
 
 # Implement three-tier architecture to host a PHP web application with SQL server database.
