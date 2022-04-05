@@ -1039,3 +1039,76 @@ Start an FTP client, for example, FileZilla. Connect to the service and upload t
 Return to the **Overview** mode. Copy the application **URL** and paste it into a browser tab. The application should be working.
 
 ![image](https://user-images.githubusercontent.com/34960418/161763169-e322c15f-fbac-4890-bbaa-a8399af678f5.png)
+
+
+## Create a code-based Function App with .NET Core as runtime 
+
+Return to the portal and navigate to the resource group. Click on **+ Create**. Search for **Function App**. Click on **+ Create** or **Create Function App**.
+
+![image](https://user-images.githubusercontent.com/34960418/161764552-6d3f158d-3f59-4e08-b6ea-dd4dfe4637f4.png)
+
+
+Make sure that the **subscription**, **resource group**, and **region** are all set. Enter an arbitrary name. Make sure that the **Code** option is selected. For **Runtime stack** select **.NET**. For **Version** select **3.1**. Click **Review + create** and then **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161764867-37e8746c-b768-4c31-a220-9a5def77902d.png)
+
+
+## Create a Timer Trigger function
+
+Navigate to the function application. Switch to **Functions** under **Functions**. Click **+ Create** to add a new functions.
+
+![image](https://user-images.githubusercontent.com/34960418/161765498-5816042d-0b07-4e05-acf4-e461e2aa5ea1.png)
+
+
+Select the correct template. Enter name and schedule and click **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161765851-9a6794de-ff46-46dd-ba6d-e7b706d4cccd.png)
+
+
+Navigate to the code of the function and paste the following:
+
+```csharp
+using System;
+using System.Data.SqlClient;
+
+public static void Run(TimerInfo myTimer, ILogger log)
+{
+    string constr = "Server=tcp:zrzsqlsrv.database.windows.net,1433;Initial Catalog=sqldb;Persist Security Info=False;User ID=examsa;Password=ExamPassword2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    string sqltext;
+
+    log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+    //
+    using (SqlConnection conn = new SqlConnection(constr))
+    {
+        conn.Open();
+
+        // Insert a row
+        sqltext = "INSERT INTO SubmittedItems (SubmittedName) VALUES ('TIMER')";
+
+        using (SqlCommand cmd = new SqlCommand(sqltext, conn))
+        {
+            cmd.ExecuteNonQuery();
+        }
+
+    }
+}
+```
+
+Don’t forget to change the values of the database name, server, and the password. Click **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/161766695-bdde538f-591d-4384-91b6-d09ccd583f77.png)
+
+
+Test the function and see if the web application reflects the changes
+
+![image](https://user-images.githubusercontent.com/34960418/161767918-75ee4ef3-2cf6-4cb7-a0a6-a12b8f0bd89e.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161767723-cde00479-9627-41dd-b4ee-de24ad2f90be.png)
+
+
+
+
+
+
+
+
