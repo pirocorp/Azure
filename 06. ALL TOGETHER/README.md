@@ -864,3 +864,17 @@ Navigate to the SQL database. Click on **Query editor (preview)**. Enter the cre
 ![image](https://user-images.githubusercontent.com/34960418/161742205-eb6e81ee-cc7e-4d15-86c2-cfa26a5d5152.png)
 
 
+## Database connection string
+
+Navigate to the database. Go to **Connection strings** under **Settings**. Switch to the **PHP** tab. Copy the lines related to the second connection type.
+
+![image](https://user-images.githubusercontent.com/34960418/161743095-1488256f-9276-4d97-911a-cbb1f0ea7edd.png)
+
+
+## Modify image configuration
+
+Go to the folder where the files are extracted. Open the file **docker/web/index.php**. Paste the copied connection string in the appropriate section. Don’t forget to enter the actual password you used during the database creation. Save and close the file.
+
+![image](https://user-images.githubusercontent.com/34960418/161743407-4b3f4a1f-3b13-40b3-a0c1-5f89bbf3cb32.png)
+
+
