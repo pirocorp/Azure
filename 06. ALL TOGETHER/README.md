@@ -766,9 +766,42 @@ Copy the **Public IP address** of the public load balancer. Open a browser tab a
 
 
 
-
-
-
 # Three-tier architecture (CLI)
 
+
+
 # AKS (Portal)
+
+## General plan
+
+In general, we will follow this plan:
+
+1. Create a resource group
+2. Create container registry
+3. Create Kubernetes service
+4. Create and set up the database
+5. Create and deploy the image
+6. Create and deploy the web app
+7. Create a function app and two functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
