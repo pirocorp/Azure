@@ -959,3 +959,51 @@ docker push registryzrz.azurecr.io/examapp:latest
 
 ![image](https://user-images.githubusercontent.com/34960418/161745147-79a8528b-677e-43c4-8c73-def2dac56911.png)
 
+
+## Modify and deploy application manifests
+
+Navigate to the **manifests/** folder. Open for editing the **deployment.yaml** file. Put the actual image name in the appropriate placeholder. Save and close the file.
+
+![image](https://user-images.githubusercontent.com/34960418/161747063-0b76eadd-9764-438d-b02f-e6495c7fd386.png)
+
+
+To get and store the credentials needed for communication with the cluster, you must execute:
+
+```bash
+az aks get-credentials --resource-group RG-SolutionB --name k8s
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161747274-c1faf512-85d3-4155-b42b-d67799bd4ef2.png)
+
+
+Now, you can use the kubectl tool to manage the cluster. Test that it is working:
+
+```bash
+kubectl cluster-info
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161747378-cae4534e-4e5a-4531-9ac6-08a97fb12280.png)
+
+
+Deploy both the service and application simultaneously:
+
+```bash
+kubectl apply -f service.yaml -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161747491-b162bff5-54c3-4554-935e-87ba9cabc4c7.png)
+
+
+We can check periodically how it is going:
+
+```bash
+kubectl get svc,pod
+```
+
+![image](https://user-images.githubusercontent.com/34960418/161747569-78623b04-6268-448f-aff5-22de6e8a344d.png)
+
+
+Get the load balancer IP address and test the application
+
+![image](https://user-images.githubusercontent.com/34960418/161747913-db735394-1298-4f5b-ac86-1b2818060f78.png)
+
