@@ -1007,3 +1007,35 @@ Get the load balancer IP address and test the application
 
 ![image](https://user-images.githubusercontent.com/34960418/161747913-db735394-1298-4f5b-ac86-1b2818060f78.png)
 
+
+
+## App Service + Web App
+
+Return to the portal and navigate to the resource group. Click on **+ Create**. Search for **App services**. Click on **+ Create** or **Create app service**.
+
+![image](https://user-images.githubusercontent.com/34960418/161761643-62170f3d-4793-4fee-8485-3a0f5845abf4.png)
+
+
+Make sure that the subscription, resource group, and region are all set. Enter an arbitrary **name**. Make sure that **Code** is selected. Select **PHP 7.4**. For **SKU and size** select **F1**. Click **Review + create** and then **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/161762164-15898c73-8ec3-4457-b2f3-b70350888052.png)
+
+
+Copy the connection string used earlier to the **webapp/index.php** file. Save and close the file. 
+
+![image](https://user-images.githubusercontent.com/34960418/161762595-b47d27b1-2439-43d4-b1bb-072ba8b13fe8.png)
+
+
+Go to the Deployment Center under Deployment in the Web App created earlier. Switch to the FTPS Credentials tab. 
+
+![image](https://user-images.githubusercontent.com/34960418/161762802-1e24c54e-4619-46bb-8656-e5fbf539efdd.png)
+
+
+Start an FTP client, for example, FileZilla. Connect to the service and upload the webapp/index.php file.
+
+![image](https://user-images.githubusercontent.com/34960418/161763031-bc238ede-3572-4272-9c0a-1f6d77467c55.png)
+
+
+Return to the **Overview** mode. Copy the application **URL** and paste it into a browser tab. The application should be working.
+
+![image](https://user-images.githubusercontent.com/34960418/161763169-e322c15f-fbac-4890-bbaa-a8399af678f5.png)
