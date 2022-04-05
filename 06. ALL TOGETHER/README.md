@@ -1106,8 +1106,89 @@ Test the function and see if the web application reflects the changes
 ![image](https://user-images.githubusercontent.com/34960418/161767723-cde00479-9627-41dd-b4ee-de24ad2f90be.png)
 
 
+## Create a HTTP Trigger function
+
+Navigate to the function application. Switch to **Functions** under **Functions**. Click **+ Create** to add a new functions.
+
+![image](https://user-images.githubusercontent.com/34960418/161768268-37e842fc-a3bd-4912-8e45-e776a935d8dc.png)
 
 
+Select the correct template. Enter name and click **Add**. 
+
+![image](https://user-images.githubusercontent.com/34960418/161768762-24fc5c7b-32ad-4f3f-986c-6e60960b5b4b.png)
+
+
+Navigate to the code of the function and paste the following:
+
+```csharp
+#r "Newtonsoft.Json"
+
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using System.Data.SqlClient;
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    string constr = "Server=tcp:zrzsqlsrv.database.windows.net,1433;Initial Catalog=sqldb;Persist Security Info=False;User ID=examsa;Password=ExamPassword2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    string sqltext;
+
+    string name = req.Query["name"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    name = name ?? data?.name;
+
+    if (name != null) 
+    {
+        using (SqlConnection conn = new SqlConnection(constr))
+        {
+            conn.Open();
+
+            // Insert a row
+            sqltext = "INSERT INTO SubmittedItems (SubmittedName) VALUES ('" + name + "')";
+
+            using (SqlCommand cmd = new SqlCommand(sqltext, conn))
+            {
+                await cmd.ExecuteNonQueryAsync();
+            }
+
+            // Query the database
+            sqltext = "SELECT SubmittedName, MIN(SubmissionTime), COUNT(SubmittedName) FROM SubmittedItems WHERE SubmittedName='" + name + "' GROUP BY SubmittedName";
+            
+            using (SqlCommand cmd = new SqlCommand(sqltext, conn))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    return (ActionResult)new OkObjectResult(String.Format("{0} has {2} copies and the first one was inserted on {1}", reader[0], reader[1], reader[2]));
+                }                    
+                else
+                    return (ActionResult)new OkObjectResult("Nothing found for " + name);
+            }
+        }
+    }
+    else 
+        return new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+}
+```
+
+Don’t forget to change the values of the database name, server, and the password. Click **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/161769085-db59fc8d-83c3-42d6-925c-319fbac1ec37.png)
+
+
+Test the function and see if the web application reflects the changes
+
+![image](https://user-images.githubusercontent.com/34960418/161769195-afb1e2f7-59e3-49cc-ae37-a811e3633054.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161769253-8b228c47-c2c3-4a11-a71a-0c600ab56dca.png)
+
+![image](https://user-images.githubusercontent.com/34960418/161769385-b6351305-fdde-4bff-858e-3a640e791a10.png)
 
 
 
