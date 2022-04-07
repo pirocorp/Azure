@@ -784,6 +784,204 @@ Copy the **Public IP address** of the public load balancer. Open a browser tab a
 
 # Three-tier architecture (CLI)
 
+All steps that follow can be executed without any changes either in a bash session on a Linux machine or in bash mode of the Azure Cloud Shell
+
+Should you want to execute them in a PowerShell session under Windows, then you must prefix the variables with a dollar sign (```$```) during their declaration
+
+Let us log in first
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162197979-e1720921-9493-4736-b77b-7d5b6c648d62.png)
+
+
+Then, we can set a few variables
+
+```bash
+$RES="RG-Solution"
+$LOC="westeurope"
+$SGF="SG-FE"
+$SGB="SG-BE"
+$NET="NET"
+$NSF="NET-SUB-Front"
+$NSB="NET-SUB-Back"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162197759-4253da9e-639b-43ea-952d-3aa6ab05540e.png)
+
+
+Select a subscription if there is more than one
+
+```bash
+az account set --subscription "<Subsription Name>"
+```
+
+Now, let’s create the resource group
+
+```bash
+az group create --name $RES --location $LOC
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162198259-08d7596b-cfae-4a85-97b5-36d21d7edded.png)
+
+
+We can create the front-end network security group
+
+```bash
+az network nsg create --name $SGF --resource-group $RES
+
+az network nsg rule create --name Port_22 --nsg-name $SGF --resource-group $RES --access Allow --protocol tcp --direction inbound --priority 100 --destination-port-range 22
+
+az network nsg rule create --name Port_80 --nsg-name $SGF --resource-group $RES --access Allow --protocol tcp --direction inbound --priority 110 --destination-port-range 80
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162200709-da9716c5-6a32-4c41-a2b1-0a945d50b35c.png)
+
+
+And then the back-end network security group
+
+```bash
+az network nsg create --name $SGB --resource-group $RES
+
+az network nsg rule create --name Port_22 --nsg-name $SGB --resource-group $RES --access Allow --protocol tcp --direction inbound --priority 100 --destination-port-range 22
+
+az network nsg rule create --name Port_9000 --nsg-name $SGB --resource-group $RES --access Allow --protocol tcp --direction inbound --priority 110 --destination-port-range 9000
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162201053-afaf532c-6eb1-4422-af0c-35eac8d15b1c.png)
+
+
+Then, we create the virtual network and the two subnets – one for the front-end and one for the back-end
+
+```bash
+az network vnet create --name $NET --resource-group $RES
+
+az network vnet subnet create --name $NSF --vnet-name $NET --resource-group $RES --address-prefix 10.0.1.0/24 --network-security-group $SGF
+
+az network vnet subnet create --name $NSB --vnet-name $NET --resource-group $RES --address-prefix 10.0.2.0/24 --network-security-group $SGB
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162201415-cb156d2f-fe08-432c-9e02-680f3a471914.png)
+
+
+The public load balancer with its rules and probes can be created with:
+
+```bash
+az network public-ip create --name LBP-IP --resource-group $RES --allocation-method dynamic
+
+az network lb create --name LBP --resource-group $RES --frontend-ip-name LBP-FE-IP --public-ip-address LBP-IP --backend-pool-name LBP-BP
+
+az network lb probe create --name LBP-HP --lb-name LBP --resource-group $RES --protocol tcp --port 80
+
+az network lb rule create --name LBP-RULE --lb-name LBP --resource-group $RES --protocol tcp --frontend-port 80 --backend-port 80 --frontend-ip-name LBP-FE-IP --backend-pool-name LBP-BP --probe-name LBP-HP
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162202040-e1e95e0b-c47e-417f-95f9-97f4b2c8052d.png)
+
+
+Then, the internal load balancer can be created with:
+
+```bash
+az network lb create --name LBI --resource-group $RES --frontend-ip-name LBI-FE-IP --private-ip-address 10.0.1.254 --backend-pool-name LBI-BP --vnet-name $NET --subnet $NSF
+
+az network lb probe create --name LBI-HP --lb-name LBI --resource-group $RES --protocol tcp --port 9000
+
+az network lb rule create --name LBI-RULE --lb-name LBI --resource-group $RES --protocol tcp --frontend-port 9000 --backend-port 9000 --frontend-ip-name LBI-FE-IP --backend-pool-name LBI-BP --probe-name LBI-HP
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162202675-e47672f9-c2d6-4389-b403-f3656218f0ef.png)
+
+
+Now, let’s create a pair of network interface cards for the front-end virtual machines:
+
+```bash
+az network nic create --name NIC-FE-1 --resource-group $RES --vnet-name $NET --subnet $NSF --lb-name LBP --lb-address-pools LBP-BP
+
+az network nic create --name NIC-FE-2 --resource-group $RES --vnet-name $NET --subnet $NSF --lb-name LBP --lb-address-pools LBP-BP
+```
+
+
+And another one for the back-end virtual machines:
+
+```bash
+az network nic create --name NIC-BE-1 --resource-group $RES --vnet-name $NET --subnet $NSB --lb-name LBI --lb-address-pools LBI-BP
+
+az network nic create --name NIC-BE-2 --resource-group $RES --vnet-name $NET --subnet $NSB --lb-name LBI --lb-address-pools LBI-BP
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162203612-81c10596-be75-45e2-8e2a-1ba88a06effa.png)
+
+
+We can create the SQL server now:
+
+```bash
+az sql server create --name AZESQLSRV --resource-group $RES --location $LOC --admin-user demosa --admin-password 'ExamPrepPa66word'
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162203986-bbc10252-4fdd-4f6d-a3b0-2811ff7548ca.png)
+
+
+Then, adjust the firewall settings to allow connections from Azure Services and our Client IP address (substitute x.x.x.x with the actual IP address):
+
+```bash
+az sql server firewall-rule create --name AllowAzureServices --server azesqlsrv --resource-group $RES --start-ip-address '0.0.0.0' --end-ip-address '0.0.0.0'
+
+az sql server firewall-rule create --name AllowClientIP --server azesqlsrv --resource-group $RES --start-ip-address 'x.x.x.x' --end-ip-address 'x.x.x.x'
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162204430-a2acec82-645d-4eb2-b75d-65b59d3e2f0a.png)
+
+
+Finally, we can create the database:
+
+```bash
+az sql db create --name AZESQLSRVDB --server AZESQLSRV --resource-group $RES --edition Basic --capacity 5
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162204873-4be45658-a999-43dc-9976-da69ca0c6830.png)
+
+
+We can now use the ```load-data.sql``` file to create the table and load it with data. For this, we can use a command similar to this one:
+
+```bash
+sqlcmd -S azesqlsrv.database.windows.net,1433 -U demosa -P ExamPrepPa66word -d AZESQLSRVDB -i load-data.sql
+```
+
+Next, we can create both availability sets for the front-end and back-end virtual machines:
+
+```bash
+az vm availability-set create --name AS-FE --resource-group $RES --platform-fault-domain-count 2 --platform-update-domain-count 2
+
+az vm availability-set create --name AS-BE --resource-group $RES --platform-fault-domain-count 2 --platform-update-domain-count 2
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162205604-8d911863-9fe5-4351-befc-5eeaa4017739.png)
+
+
+Then, we can create the two front-end virtual machines. We will use the ```azcli-fe-cloud-init.yaml``` file provided with the resource for the module (do not forget to adjust names, ports, addresses, etc.):
+
+```bash
+az vm create --name VM-FE-1 --resource-group $RES --availability-set AS-FE --nics NIC-FE-1 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password ExamPrepPa66word --custom-data azcli-fe-cloud-init.yaml
+
+az vm create --name VM-FE-2 --resource-group $RES --availability-set AS-FE --nics NIC-FE-2 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password ExamPrepPa66word --custom-data azcli-fe-cloud-init.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162206399-7dd20eaf-ebb0-488f-b80a-652fe3230c52.png)
+
+
+And finally, we create the two back-end virtual machines. We will use the ```azcli-be-cloud-init.yaml``` file provided with the resource for the module (do not forget to adjust the connection string and any other things like names, ports, addresses, etc.):
+
+```bash
+az vm create --name VM-BE-1 --resource-group $RES --availability-set AS-BE --nics NIC-BE-1 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password ExamPrepPa66word --custom-data azcli-be-cloud-init.yaml
+
+az vm create --name VM-BE-2 --resource-group $RES --availability-set AS-BE --nics NIC-BE-2 --image UbuntuLTS --size Standard_B1s --authentication-type password --admin-username demouser --admin-password ExamPrepPa66word --custom-data azcli-be-cloud-init.yaml
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162207281-11fcc29a-4210-4769-854f-f331e651e3a2.png)
+
+
 
 
 # AKS (Portal)
