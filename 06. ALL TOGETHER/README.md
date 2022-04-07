@@ -982,6 +982,10 @@ az vm create --name VM-BE-2 --resource-group $RES --availability-set AS-BE --nic
 ![image](https://user-images.githubusercontent.com/34960418/162207281-11fcc29a-4210-4769-854f-f331e651e3a2.png)
 
 
+Now, we should have a fully working setup
+
+![image](https://user-images.githubusercontent.com/34960418/162214362-04c8c029-2804-45cc-aec5-98a12157d803.png)
+
 
 
 # AKS (Portal)
