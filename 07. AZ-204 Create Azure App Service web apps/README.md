@@ -91,11 +91,11 @@ Isolate your app into a new App Service plan when:
 This way you can allocate a new set of resources for your app and gain greater control of your apps.
 
 
-## Deploy to App Service
+# Deploy to App Service
 
 Every development team has unique requirements that can make implementing an efficient deployment pipeline difficult on any cloud service. App Service supports both automated and manual deployment.
 
-### Automated deployment
+## Automated deployment
 
 Automated deployment, or continuous integration, is a process used to push out new features and bug fixes in a fast and repetitive pattern with minimal impact on end users.
 
