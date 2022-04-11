@@ -1,5 +1,10 @@
 # Jump to practical guide
 
+- [Create a static HTML web app by using Azure Cloud Shell](#create-a-static-html-web-app-by-using-azure-cloud-shell)
+  - [Login to Azure and download the sample app](#login-to-azure-and-download-the-sample-app)
+  - [Create the web app](#create-the-web-app)
+  - [Update and redeploy the app](#update-and-redeploy-the-app)
+  - [Clean up resources](#clean-up-resources)
 
 
 
