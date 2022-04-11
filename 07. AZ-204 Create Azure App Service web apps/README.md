@@ -183,3 +183,20 @@ The table below shows the steps of the authentication flow.
 | Establish authenticated session 	| App Service adds authenticated cookie to response.                                               	| App Service returns its own authentication token to client code.                                                                                	|
 | Serve authenticated content     	| Client includes authentication cookie in subsequent requests (automatically handled by browser). 	| Client code presents authentication token in X-ZUMO-AUTH header (automatically handled by Mobile Apps client SDKs).                             	|
 | Any OpenID Connect provider     	| /.auth/login/<providerName>                                                                      	| App Service OpenID Connect login                                                                                                                	|
+
+  
+For client browsers, App Service can automatically direct all unauthenticated users to /.auth/login/<provider>. You can also present users with one or more /.auth/login/<provider> links to sign in to your app using their provider of choice.
+
+  
+## Authorization behavior
+  
+In the Azure portal, you can configure App Service with a number of behaviors when an incoming request is not authenticated.
+  
+- **Allow unauthenticated requests**: This option defers authorization of unauthenticated traffic to your application code. For authenticated requests, App Service also passes along authentication information in the HTTP headers.This option provides more flexibility in handling anonymous requests. It lets you present multiple sign-in providers to your users.
+
+- **Require authentication**: This option will reject any unauthenticated traffic to your application. This rejection can be a redirect action to one of the configured identity providers. In these cases, a browser client is redirected to /.auth/login/<provider> for the provider you choose. If the anonymous request comes from a native mobile app, the returned response is an HTTP 401 Unauthorized. You can also configure the rejection to be an HTTP 401 Unauthorized or HTTP 403 Forbidden for all requests.
+  
+**Caution**
+
+Restricting access in this way applies to all calls to your app, which may not be desirable for apps wanting a publicly available home page, as in many single-page applications.
+  
