@@ -212,3 +212,20 @@ There are two main deployment types for Azure App Service. The multitenant publi
 Azure App Service is a distributed system. The roles that handle incoming HTTP or HTTPS requests are called front ends. The roles that host the customer workload are called workers. All the roles in an App Service deployment exist in a multitenant network. Because there are many different customers in the same App Service scale unit, you can't connect the App Service network directly to your network.
 
 Instead of connecting the networks, you need features to handle the various aspects of application communication. The features that handle requests to your app can't be used to solve problems when you're making calls from your app. Likewise, the features that solve problems for calls from your app can't be used to solve problems to your app.
+
+| Step                 	| Without provider SDK              	|
+|----------------------	|-----------------------------------	|
+| Inbound features     	| Outbound features                 	|
+| App-assigned address 	| Hybrid Connections                	|
+| Access restrictions  	| Gateway-required VNet Integration 	|
+| Service endpoints    	| VNet Integration                  	|
+| Private endpoints    	|      	|
+  
+  
+You can mix the features to solve your problems with a few exceptions. The following inbound use cases are examples of how to use App Service networking features to control traffic inbound to your app.
+  
+| Inbound use case                                                 	| Feature              	|
+|------------------------------------------------------------------	|----------------------	|
+| Support IP-based SSL needs for your app                          	| App-assigned address 	|
+| Support unshared dedicated inbound address for your app          	| App-assigned address 	|
+| Restrict access to your app from a set of well-defined addresses 	| Access restrictions  	|
