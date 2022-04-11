@@ -87,7 +87,8 @@ Below is a list of the currently available settings:
 
 - Stack settings: The software stack to run the app, including the language and SDK versions. For Linux apps and custom container apps, you can also set an optional start-up command or file.
 
-- Establishing the stack settings which includes the programming language.
+![image](https://user-images.githubusercontent.com/34960418/162736420-94cb3a81-8d1a-4fad-ac32-0dc20ebe3500.png)
+
 - Platform settings: Lets you configure settings for the hosting platform, including:
   - Bitness: 32-bit or 64-bit.
   - WebSocket protocol: For ASP.NET SignalR or socket.io, for example.
