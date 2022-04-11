@@ -148,9 +148,9 @@ App Service uses federated identity, in which a third-party identity provider ma
 | Google                      	| /.auth/login/google         	| App Service Google login                      	|
 | Twitter                     	| /.auth/login/twitter        	| App Service Twitter login                     	|
 | Any OpenID Connect provider 	| /.auth/login/<providerName> 	| App Service OpenID Connect login              	|
-  
-When you enable authentication and authorization with one of these providers, its sign-in endpoint is available for user authentication and for validation of authentication tokens from the provider. You can provide your users with any number of these sign-in options.
 
+
+When you enable authentication and authorization with one of these providers, its sign-in endpoint is available for user authentication and for validation of authentication tokens from the provider. You can provide your users with any number of these sign-in options.
   
 ## How it works
   
@@ -200,3 +200,15 @@ In the Azure portal, you can configure App Service with a number of behaviors wh
 
 Restricting access in this way applies to all calls to your app, which may not be desirable for apps wanting a publicly available home page, as in many single-page applications.
   
+
+# App Service networking features
+  
+By default, apps hosted in App Service are accessible directly through the internet and can reach only internet-hosted endpoints. But for many applications, you need to control the inbound and outbound network traffic.
+
+There are two main deployment types for Azure App Service. The multitenant public service hosts App Service plans in the Free, Shared, Basic, Standard, Premium, PremiumV2, and PremiumV3 pricing SKUs. There is also the single-tenant App Service Environment (ASE) hosts Isolated SKU App Service plans directly in your Azure virtual network.
+  
+## Multitenant App Service networking features
+  
+Azure App Service is a distributed system. The roles that handle incoming HTTP or HTTPS requests are called front ends. The roles that host the customer workload are called workers. All the roles in an App Service deployment exist in a multitenant network. Because there are many different customers in the same App Service scale unit, you can't connect the App Service network directly to your network.
+
+Instead of connecting the networks, you need features to handle the various aspects of application communication. The features that handle requests to your app can't be used to solve problems when you're making calls from your app. Likewise, the features that solve problems for calls from your app can't be used to solve problems to your app.
