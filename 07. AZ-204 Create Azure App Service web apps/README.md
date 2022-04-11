@@ -152,7 +152,7 @@ App Service uses federated identity, in which a third-party identity provider ma
 | Facebook                    	| /.auth/login/facebook       	| App Service Facebook login                    	|
 | Google                      	| /.auth/login/google         	| App Service Google login                      	|
 | Twitter                     	| /.auth/login/twitter        	| App Service Twitter login                     	|
-| Any OpenID Connect provider 	| /.auth/login/<providerName> 	| App Service OpenID Connect login              	|
+| Any OpenID Connect provider 	| **/.auth/login/<providerName> **	| App Service OpenID Connect login              	|
 
 
 When you enable authentication and authorization with one of these providers, its sign-in endpoint is available for user authentication and for validation of authentication tokens from the provider. You can provide your users with any number of these sign-in options.
