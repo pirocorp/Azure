@@ -15,7 +15,7 @@ To scale your app to a different tier, make sure that the target tier supports t
 When you create a new slot the new deployment slot has no content, even if you clone the settings from a different slot. You can deploy to the slot from a different repository branch or a different repository.
 
 
-## Examine slot swapping
+# Examine slot swapping
 
 When you swap slots (for example, from a staging slot to the production slot), App Service does the following to ensure that the target slot doesn't experience downtime:
 
