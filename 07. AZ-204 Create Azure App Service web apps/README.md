@@ -1,5 +1,3 @@
-
-
 # Azure App Service
 
 Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows and Linux-based environments.
@@ -268,3 +266,100 @@ az webapp show \
     --query possibleOutboundIpAddresses \
     --output tsv
 ```
+
+  
+# Create a static HTML web app by using Azure Cloud Shell
+  
+After gathering information about App Service you've decided to create and update a simple web app to try it out. In this exercise you'll deploy a basic HTML + CSS site to Azure App Service by using the Azure CLI ```az webapp up``` command. You will then update the code and redeploy it by using the same command.
+  
+The ```az webapp up``` command makes it easy to create and update web apps. When executed it performs the following actions:
+
+- Create a default resource group.
+- Create a default app service plan.
+- Create an app with the specified name.
+- Zip deploy files from the current working directory to the web app.
+  
+## Login to Azure and download the sample app
+  
+```bash
+![image](https://user-images.githubusercontent.com/34960418/162729066-48d267ff-15a5-4111-89b3-1c42ecc7bb8c.png)
+```
+
+  
+Select desired subscription if many.
+
+```bash
+az account set --subscription "<Subsription Name>"
+```
+
+
+Create a directory and then navigate to it.
+  
+```bash
+mkdir htmlapp
+cd htmlapp
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162729638-87fb934d-31cf-4ecf-b893-418e49c6700d.png)
+
+  
+Run the following ```git``` command to clone the sample app repository to your htmlapp directory.
+  
+```bash
+git clone https://github.com/Azure-Samples/html-docs-hello-world.git
+```
+  
+![image](https://user-images.githubusercontent.com/34960418/162729789-308685b5-7f82-4fc7-a6d0-4098563c5282.png)
+  
+
+## Create the web app
+  
+Change to the directory that contains the sample code and run the az webapp up command. In the following example, replace <myAppName> with a unique app name, and <myLocation> with a region near you.
+  
+```bash
+cd html-docs-hello-world
+
+az webapp up --location <myLocation> --name <myAppName> --html
+```
+  
+This command may take a few minutes to run. While running, it displays information similar to the example below. Make a note of the **resourceGroup** value. You need it for the Clean up resources section later.
+
+![image](https://user-images.githubusercontent.com/34960418/162730296-31c39943-9f17-4c25-816e-630fdbb1b93f.png)
+
+
+Open a browser and navigate to the app URL (http://<myAppName>.azurewebsites.net) and verify the app is running - take note of the title at the top of the page. Leave the browser open on the app for the next section.
+  
+![image](https://user-images.githubusercontent.com/34960418/162730454-3c87731f-6bff-4dab-a5fb-fa17478e649a.png)
+  
+
+## Update and redeploy the app
+  
+In the Shell, type code index.html to open the editor. In the <h1> heading tag, change Azure App Service - Sample Static HTML Site to Azure App Service Updated - or to anything else that you'd like. Save the changes and close the editor. 
+
+![image](https://user-images.githubusercontent.com/34960418/162730786-de88c806-53bc-4615-b91a-bccdb086e0a2.png)
+
+
+Redeploy the app with the same az webapp up command. Be sure to use the same values for <myLocation> and <myAppName> as you used earlier.
+  
+```bash
+az webapp up --location <myLocation> --name <myAppName> --html
+```
+  
+![image](https://user-images.githubusercontent.com/34960418/162731034-aa96db5b-9f3a-49c5-9bda-9dcdae144fde.png)
+
+  
+Once deployment is completed switch back to the browser from step 2 in the "Create the web app" section above and refresh the page.
+  
+![image](https://user-images.githubusercontent.com/34960418/162731127-a34d9f84-fc01-4fb6-af6d-1483981a045b.png)
+  
+
+## Clean up resources
+  
+If you no longer need the resources you created in this exercise you can delete the resource group using the az group delete command below. Replace <resource_group> with resource group name you noted in step 1 of the "Create the web app" section above.
+
+
+```bash
+az group delete --name <resource_group> --no-wait
+```
+  
+![image](https://user-images.githubusercontent.com/34960418/162731423-6d5a9929-fda8-4a55-a593-607922df7422.png)
