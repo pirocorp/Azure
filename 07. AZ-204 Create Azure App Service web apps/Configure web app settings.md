@@ -255,3 +255,85 @@ To secure a custom domain in a TLS binding, the certificate has additional requi
 
 - Contains an Extended Key Usage for server authentication (OID = 1.3.6.1.5.5.7.3.1)
 - Signed by a trusted certificate authority
+
+
+## Creating a free managed certificate
+
+To create custom TLS/SSL bindings or enable client certificates for your App Service app, your App Service plan must be in the Basic, Standard, Premium, or Isolated tier. Custom SSL is not supported in the F1 or D1 tier.
+
+The free App Service managed certificate is a turn-key solution for securing your custom DNS name in App Service. It's a TLS/SSL server certificate that's fully managed by App Service and renewed continuously and automatically in six-month increments, 45 days before expiration. You create the certificate and bind it to a custom domain, and let App Service do the rest.
+
+The free certificate comes with the following limitations:
+
+- Does not support wildcard certificates.
+- Does not support usage as a client certificate by certificate thumbprint.
+- Is not exportable.
+- Is not supported on App Service Environment (ASE).
+- Is not supported with root domains that are integrated with Traffic Manager.
+- If a certificate is for a CNAME-mapped domain, the CNAME must be mapped directly to ```<app-name>.azurewebsites.net```.
+
+
+## Import an App Service Certificate
+
+If you purchase an App Service Certificate from Azure, Azure manages the following tasks:
+
+- Takes care of the purchase process from GoDaddy.
+- Performs domain verification of the certificate.
+- Maintains the certificate in Azure Key Vault.
+- Manages certificate renewal.
+- Synchronize the certificate automatically with the imported copies in App Service apps.
+
+If you already have a working App Service certificate, you can:
+
+- Import the certificate into App Service.
+- Manage the certificate, such as renew, rekey, and export it.
+
+
+## Upload a private certificate
+  
+If your certificate authority gives you multiple certificates in the certificate chain, you need to merge the certificates in order. Then you can Export your merged TLS/SSL certificate with the private key that your certificate request was generated with.
+
+If you generated your certificate request using OpenSSL, then you have created a private key file. To export your certificate to PFX, run the following command. Replace the placeholders ```<private-key-file>``` and ```<merged-certificate-file>``` with the paths to your private key and your merged certificate file.
+
+```bash
+openssl pkcs12 -export -out myserver.pfx -inkey <private-key-file> -in <merged-certificate-file>
+```
+
+When prompted, define an export password. You'll use this password when uploading your TLS/SSL certificate to App Service.
+
+
+## Enforce HTTPS
+
+By default, anyone can still access your app using HTTP. You can redirect all HTTP requests to the HTTPS port by navigating to your app page and, in the left navigation, select **TLS/SSL** settings. Then, in **HTTPS Only**, select **On**.
+
+![image](https://user-images.githubusercontent.com/34960418/162750365-c028c45d-b10b-4fa8-ac10-6db4e13b3731.png)
+
+
+# Manage app features
+
+Feature management is a modern software-development practice that decouples feature release from code deployment and enables quick changes to feature availability on demand. It uses a technique called feature flags (also known as feature toggles, feature switches, and so on) to dynamically administer a feature's lifecycle.
+
+
+## Basic concepts
+
+Here are several new terms related to feature management:
+
+- Feature flag: A feature flag is a variable with a binary state of on or off. The feature flag also has an associated code block. The state of the feature flag triggers whether the code block runs or not.
+- Feature manager: A feature manager is an application package that handles the lifecycle of all the feature flags in an application. The feature manager typically provides additional functionality, such as caching feature flags and updating their states.
+- Filter: A filter is a rule for evaluating the state of a feature flag. A user group, a device or browser type, a geographic location, and a time window are all examples of what a filter can represent.
+
+An effective implementation of feature management consists of at least two components working in concert:
+
+- An application that makes use of feature flags.
+- A separate repository that stores the feature flags and their current states.
+
+How these components interact is illustrated in the following examples.
+
+
+
+
+
+
+
+
+
