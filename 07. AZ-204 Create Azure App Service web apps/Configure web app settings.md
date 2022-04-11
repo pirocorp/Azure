@@ -213,3 +213,18 @@ az webapp log tail --name appname --resource-group myResourceGroup
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/162746551-383b9b50-f7da-4264-8811-56dc717fdab9.png)
+
+
+## Access log files
+
+If you configure the Azure Storage blobs option for a log type, you need a client tool that works with Azure Storage.
+
+For logs stored in the App Service file system, the easiest way is to download the ZIP file in the browser at:
+
+- Linux/container apps: ```https://<app-name>.scm.azurewebsites.net/api/logs/docker/zip```
+- Windows apps: ```https://<app-name>.scm.azurewebsites.net/api/dump```
+  
+For Linux/container apps, the ZIP file contains console output logs for both the docker host and the docker container. For a scaled-out app, the ZIP file contains one set of logs for each instance. In the App Service file system, these log files are the contents of the /home/LogFiles directory.
+
+
+## Configure security certificates
