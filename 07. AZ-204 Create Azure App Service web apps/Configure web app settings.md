@@ -206,9 +206,10 @@ Azure portal - To stream logs in the Azure portal, navigate to your app and sele
 ![image](https://user-images.githubusercontent.com/34960418/162746245-b523bd29-7c43-4a3e-995c-38754be71acd.png)
 
 
-
 Azure CLI - To stream logs live in Cloud Shell, use the following command:
 
 ```bash
 az webapp log tail --name appname --resource-group myResourceGroup
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/162746551-383b9b50-f7da-4264-8811-56dc717fdab9.png)
