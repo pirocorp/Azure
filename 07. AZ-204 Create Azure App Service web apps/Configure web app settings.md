@@ -167,5 +167,48 @@ When finished, select **Save**.
 ![image](https://user-images.githubusercontent.com/34960418/162743874-5f4e54e7-5a51-48b3-aa07-dcd8835ed8c7.png)
 
 
+## Enable application logging (Linux/Container)
+
+In **App Service logs** set the **Application logging** option to **File System**. In **Quota (MB)**, specify the disk quota for the application logs. In **Retention Period (Days)**, set the number of days the logs should be retained. When finished, select **Save**.
 
 
+## Enable web server logging
+
+For **Web server logging**, select **Storage** to store logs on blob storage, or **File System** to store logs on the App Service file system. In **Retention Period (Days)**, set the number of days the logs should be retained. When finished, select **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/162744494-2294ba92-bace-4eb9-a6e1-948a7ef92fad.png)
+
+
+## Add log messages in code
+
+In your application code, you use the usual logging facilities to send log messages to the application logs. For example:
+
+ASP.NET applications can use the System.Diagnostics.Trace class to log information to the application diagnostics log. For example:
+
+```csharp
+System.Diagnostics.Trace.TraceError("If you're seeing this, something bad happened");
+```
+
+By default, ASP.NET Core uses the Microsoft.Extensions.Logging.AzureAppServices logging provider.
+
+
+## Stream logs
+
+Before you stream logs in real time, enable the log type that you want. Any information written to files ending in .txt, .log, or .htm that are stored in the /LogFiles directory (d:/home/logfiles) is streamed by App Service.
+
+**Note**
+
+Some types of logging buffer write to the log file, which can result in out of order events in the stream. For example, an application log entry that occurs when a user visits a page may be displayed in the stream before the corresponding HTTP log entry for the page request.
+
+
+Azure portal - To stream logs in the Azure portal, navigate to your app and select Log stream. 
+
+![image](https://user-images.githubusercontent.com/34960418/162746245-b523bd29-7c43-4a3e-995c-38754be71acd.png)
+
+
+
+Azure CLI - To stream logs live in Cloud Shell, use the following command:
+
+```bash
+az webapp log tail --name appname --resource-group myResourceGroup
+```
