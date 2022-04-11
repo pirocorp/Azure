@@ -1,2 +1,2 @@
 - [Azure App Service](Azure%20App%20Service.md)
-- [Configure web app settings]()
+- [Configure web app settings](Configure%20web%20app%20settings.md)
