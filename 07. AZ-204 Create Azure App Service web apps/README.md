@@ -1,3 +1,8 @@
+# Jump to practical guide
+
+
+
+
 # Azure App Service
 
 Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. Applications run and scale with ease on both Windows and Linux-based environments.
@@ -347,7 +352,7 @@ az webapp up --location <myLocation> --name <myAppName> --html
   
 ![image](https://user-images.githubusercontent.com/34960418/162731034-aa96db5b-9f3a-49c5-9bda-9dcdae144fde.png)
 
-  
+
 Once deployment is completed switch back to the browser from step 2 in the "Create the web app" section above and refresh the page.
   
 ![image](https://user-images.githubusercontent.com/34960418/162731127-a34d9f84-fc01-4fb6-af6d-1483981a045b.png)
