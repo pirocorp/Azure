@@ -81,11 +81,13 @@ Adding and editing connection strings follow the same principles as other app se
 
 In the **Configuration > General settings** section you can configure some common settings for your app. Some settings require you to scale up to higher pricing tiers.
 
+![image](https://user-images.githubusercontent.com/34960418/162741176-89a44603-030b-420b-bd22-c393d11fc60f.png)
+
 Below is a list of the currently available settings:
 
 - Stack settings: The software stack to run the app, including the language and SDK versions. For Linux apps and custom container apps, you can also set an optional start-up command or file.
 
-![image](https://user-images.githubusercontent.com/34960418/162736420-94cb3a81-8d1a-4fad-ac32-0dc20ebe3500.png)
+![image](https://user-images.githubusercontent.com/34960418/162741381-2aa2baa0-3213-43b8-adb5-350f0962fb5f.png)
 
 - Platform settings: Lets you configure settings for the hosting platform, including:
   - Bitness: 32-bit or 64-bit.
@@ -102,8 +104,9 @@ Below is a list of the currently available settings:
 
 In the **Configuration > Path mappings** section you can configure handler mappings, and virtual application and directory mappings. The Path mappings page will display different options based on the OS type.
 
-
 ## Windows apps (uncontainerized)
+
+![image](https://user-images.githubusercontent.com/34960418/162741721-ef801565-5429-4e27-b004-58a34cedf4cf.png)
 
 For Windows apps, you can customize the IIS handler mappings and virtual applications and directories.
 
