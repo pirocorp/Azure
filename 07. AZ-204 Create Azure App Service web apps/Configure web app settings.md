@@ -18,12 +18,18 @@ App settings are always encrypted when stored (encrypted-at-rest).
   
 To add a new app setting, click **New application setting**. If you are using deployment slots you can specify if your setting is swappable or not. In the dialog, you can stick the setting to the current slot.
   
-![image](https://user-images.githubusercontent.com/34960418/162734968-d95ef9c2-fc41-4c98-af5d-22874327673a.png)
+![image](https://user-images.githubusercontent.com/34960418/162739479-f9ed42b1-c7da-4a85-a76e-76a8ab4a5aa5.png)
   
   
 To edit a setting, click the **Edit** button on the right side.
 
-When finished, click **Update**. Don't forget to click **Save** back in the Configuration page.
+![image](https://user-images.githubusercontent.com/34960418/162739664-e8e97f4a-1814-4797-ba8a-66c7057274f3.png)
+
+
+When finished, click **OK**. Don't forget to click **Save** back in the Configuration page.
+
+![image](https://user-images.githubusercontent.com/34960418/162739870-38858e8f-37b9-4ace-a9a3-53afebea27f3.png)
+
 
 **Note**
 
