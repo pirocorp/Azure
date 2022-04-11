@@ -1,6 +1,3 @@
-# TOC
-
-- []()
 
 
 # Azure App Service
