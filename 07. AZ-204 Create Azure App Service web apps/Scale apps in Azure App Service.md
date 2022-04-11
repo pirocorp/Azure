@@ -109,3 +109,54 @@ A single autoscale condition can contain several autoscale rules (for example, a
 - If the CPU utilization drops below 50%, scale in by 1
 
 When determining whether to scale out, the autoscale action will be performed if any of the scale-out rules are met (HTTP queue length exceeds 10 or CPU utilization exceeds 70%). When scaling in, the autoscale action will run only if all of the scale-in rules are met (HTTP queue length drops to zero and CPU utilization falls below 50%). If you need to scale in if only one the scale-in rules are met, you must define the rules in separate autoscale conditions.
+
+
+# Enable autoscaling
+
+To get started with autoscaling navigate to your App Service plan in the Azure portal and select Scale out (App Service plan) in the Settings group in the left navigation pane.
+
+**Note**
+
+Not all pricing tiers support autoscaling. The development pricing tiers are either limited to a single instance (the F1 and D1 tiers), or they only provide manual scaling (the B1 tier). If you've selected one of these tiers, you must first scale up to the S1 or any of the P level production tiers.
+
+![image](https://user-images.githubusercontent.com/34960418/162758790-d18105c9-b6cb-4c1c-9659-abad5cefa236.png)
+
+
+By default, an App Service Plan only implements manual scaling. Selecting Custom autoscale reveals condition groups you can use to manage your scale settings.
+
+![image](https://user-images.githubusercontent.com/34960418/162759188-2646af50-af21-464e-b381-0726a131ea5f.png)
+
+
+## Add scale conditions
+
+Once you enable autoscaling, you can edit the automatically created default scale condition, and you can add your own custom scale conditions. Remember that each scale condition can either scale based on a metric, or scale to a specific instance count.
+
+The Default scale condition is executed when none of the other scale conditions are active.
+
+![image](https://user-images.githubusercontent.com/34960418/162759551-47ed0da3-d6c5-487c-a97c-51cd68fdf67f.png)
+
+A metric-based scale condition can also specify the minimum and maximum number of instances to create. The maximum number can't exceed the limits defined by the pricing tier. Additionally, all scale conditions other than the default may include a schedule indicating when the condition should be applied.
+
+
+## Create scale rules
+
+A metric-based scale condition contains one or more scale rules. You use the Add a rule link to add your own custom rules. You define the criteria that indicate when a rule should trigger an autoscale action, and the autoscale action to be performed (scale out or scale in) using the metrics, aggregations, operators, and thresholds described earlier.
+
+![image](https://user-images.githubusercontent.com/34960418/162760372-b4f877b6-cc66-4b5d-9b47-0ec019c18477.png)
+
+![image](https://user-images.githubusercontent.com/34960418/162761277-32ac282c-4035-4c6d-a3cc-4dcf833ce7c8.png)
+
+
+## Monitor autoscaling activity
+
+The Azure portal enables you to track when autoscaling has occurred through the Run history chart. This chart shows how the number of instances varies over time, and which autoscale conditions caused each change.
+
+![image](https://user-images.githubusercontent.com/34960418/162761661-a6d374d6-6cdb-4b11-807c-59a80d5df2cd.png)
+
+
+You can use the Run history chart in conjunction with the metrics shown on the Overview page to correlate the autoscaling events with resource utilization.
+
+![image](https://user-images.githubusercontent.com/34960418/162761757-cdc5b1af-8a51-4dc6-81e3-794b441ccd94.png)
+
+
+
