@@ -240,3 +240,18 @@ The table below details the options you have for adding certificates in App Serv
 | Import a certificate from Key Vault           	| Useful if you use Azure Key Vault to manage your certificates.                                                                                                   	|
 | Upload a private certificate                  	| If you already have a private certificate from a third-party provider, you can upload it.                                                                        	|
 | Upload a public certificate                   	| Public certificates are not used to secure custom domains, but you can load them into your code if you need them to access remote resources.                     	|
+
+
+## Private certificate requirements
+
+The free App Service managed certificate and the App Service certificate already satisfy the requirements of App Service. If you want to use a private certificate in App Service, your certificate must meet the following requirements:
+
+- Exported as a password-protected PFX file, encrypted using triple DES.
+- Contains private key at least 2048 bits long
+- Contains all intermediate certificates in the certificate chain
+
+
+To secure a custom domain in a TLS binding, the certificate has additional requirements:
+
+- Contains an Extended Key Usage for server authentication (OID = 1.3.6.1.5.5.7.3.1)
+- Signed by a trusted certificate authority
