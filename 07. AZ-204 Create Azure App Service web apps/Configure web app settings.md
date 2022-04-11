@@ -228,3 +228,15 @@ For Linux/container apps, the ZIP file contains console output logs for both the
 
 
 ## Configure security certificates
+
+A certificate uploaded into an app is stored in a deployment unit that is bound to the app service plan's resource group and region combination (internally called a webspace). This makes the certificate accessible to other apps in the same resource group and region combination.
+
+The table below details the options you have for adding certificates in App Service:
+
+| Option                                        	| Description                                                                                                                                                      	|
+|-----------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Create a free App Service managed certificate 	| A private certificate that's free of charge and easy to use if you just need to secure your custom domain in App Service.                                        	|
+| Purchase an App Service certificate           	| A private certificate that's managed by Azure. It combines the simplicity of automated certificate management and the flexibility of renewal and export options. 	|
+| Import a certificate from Key Vault           	| Useful if you use Azure Key Vault to manage your certificates.                                                                                                   	|
+| Upload a private certificate                  	| If you already have a private certificate from a third-party provider, you can upload it.                                                                        	|
+| Upload a public certificate                   	| Public certificates are not used to secure custom domains, but you can load them into your code if you need them to access remote resources.                     	|
