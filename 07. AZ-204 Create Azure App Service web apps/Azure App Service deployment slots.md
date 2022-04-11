@@ -121,7 +121,7 @@ Some apps might require custom warm-up actions before the swap. The applicationI
 </system.webServer>
 ```
 
-For more information on customizing the applicationInitialization element, see Most common deployment slot swap failures and how to fix them.
+For more information on customizing the applicationInitialization element, see [Most common deployment slot swap failures and how to fix them](https://ruslany.net/2017/11/most-common-deployment-slot-swap-failures-and-how-to-fix-them/).
 
 You can also customize the warm-up behavior with one or both of the following app settings:
 
