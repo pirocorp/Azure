@@ -120,3 +120,33 @@ There are a few options that you can use to manually push your code to Azure:
 
 Whenever possible, use deployment slots when deploying a new production build. When using a Standard App Service Plan tier or better, you can deploy your app to a staging environment and then swap your staging and production slots. The swap operation warms up the necessary worker instances to match your production scale, thus eliminating downtime.
 
+
+# Authentication and authorization in App Service
+
+Azure App Service provides built-in authentication and authorization support, so you can sign in users and access data by writing minimal or no code in your web app, API, and mobile back end, and also Azure Functions.
+
+
+## Why use the built-in authentication?
+
+You're not required to use App Service for authentication and authorization. Many web frameworks are bundled with security features, and you can use them if you like. If you need more flexibility than App Service provides, you can also write your own utilities.
+
+The built-in authentication feature for App Service and Azure Functions can save you time and effort by providing out-of-the-box authentication with federated identity providers, allowing you to focus on the rest of your application.
+
+- Azure App Service allows you to integrate a variety of auth capabilities into your web app or API without implementing them yourself.
+- It’s built directly into the platform and doesn’t require any particular language, SDK, security expertise, or even any code to utilize.
+- You can integrate with multiple login providers. For example, Azure AD, Facebook, Google, Twitter.
+
+
+## Identity providers
+
+App Service uses federated identity, in which a third-party identity provider manages the user identities and authentication flow for you. The following identity providers are available by default:
+
+| Provider                    	| Sign-in endpoint            	| How-To guidance                               	|
+|-----------------------------	|-----------------------------	|-----------------------------------------------	|
+| Microsoft Identity Platform 	| /.auth/login/aad            	| App Service Microsoft Identity Platform login 	|
+| Facebook                    	| /.auth/login/facebook       	| App Service Facebook login                    	|
+| Google                      	| /.auth/login/google         	| App Service Google login                      	|
+| Twitter                     	| /.auth/login/twitter        	| App Service Twitter login                     	|
+| Any OpenID Connect provider 	| /.auth/login/<providerName> 	| App Service OpenID Connect login              	|
+  
+When you enable authentication and authorization with one of these providers, its sign-in endpoint is available for user authentication and for validation of authentication tokens from the provider. You can provide your users with any number of these sign-in options.
