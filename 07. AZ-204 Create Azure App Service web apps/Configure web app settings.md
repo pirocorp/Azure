@@ -38,23 +38,14 @@ In a default, or custom, Linux container any nested JSON key structure in the ap
 
 ## Editing application settings in bulk
 
-To add or edit app settings in bulk, click the **Advanced** edit button. When finished, click **Update**. App settings have the following JSON formatting:
+To add or edit app settings in bulk, click the **Advanced** edit button.
 
-```json
-[
-  {
-    "name": "<key-1>",
-    "value": "<value-1>",
-    "slotSetting": false
-  },
-  {
-    "name": "<key-2>",
-    "value": "<value-2>",
-    "slotSetting": false
-  },
-  ...
-]
-```
+![image](https://user-images.githubusercontent.com/34960418/162740247-21fd155e-c40b-4ae5-ba26-13ec0e7dba87.png)
+
+
+When finished, click **OK**. App settings have the following JSON formatting:
+
+![image](https://user-images.githubusercontent.com/34960418/162740418-884d0b20-c9d3-426c-8089-23054f0ca1a0.png)
 
 
 ## Configure connection strings
