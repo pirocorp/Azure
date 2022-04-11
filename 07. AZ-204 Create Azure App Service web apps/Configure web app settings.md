@@ -6,7 +6,8 @@ In App Service, app settings are variables passed as environment variables to th
 
 Application settings can be accessed by navigating to your app's management page and selecting Configuration > Application Settings.
 
-![image](https://user-images.githubusercontent.com/34960418/162734540-f352fb41-4ec5-4f27-94e9-dcda098deab5.png)
+![image](https://user-images.githubusercontent.com/34960418/162739298-502d79f3-a43c-46b2-afc0-ab303db3015e.png)
+
 
 For ASP.NET and ASP.NET Core developers, setting app settings in App Service are like setting them in ```<appSettings>``` in Web.config or appsettings.json, but the values in App Service override the ones in Web.config or appsettings.json. You can keep development settings (for example, local MySQL password) in Web.config or appsettings.json, but production secrets (for example, Azure MySQL database password) safe in App Service. The same code uses your development settings when you debug locally, and it uses your production secrets when deployed to Azure.
 
