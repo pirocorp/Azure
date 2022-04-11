@@ -339,7 +339,7 @@ Open a browser and navigate to the app URL (http://<myAppName>.azurewebsites.net
 
 ## Update and redeploy the app
   
-In the Shell, type code index.html to open the editor. In the <h1> heading tag, change Azure App Service - Sample Static HTML Site to Azure App Service Updated - or to anything else that you'd like. Save the changes and close the editor. 
+In the Shell, type code index.html to open the editor. In the ```<h1>``` heading tag, change Azure App Service - Sample Static HTML Site to Azure App Service Updated - or to anything else that you'd like. Save the changes and close the editor. 
 
 ![image](https://user-images.githubusercontent.com/34960418/162730786-de88c806-53bc-4615-b91a-bccdb086e0a2.png)
 
