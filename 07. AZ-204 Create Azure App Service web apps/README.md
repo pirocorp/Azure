@@ -1,4 +1,4 @@
 - [Azure App Service](Azure%20App%20Service.md)
 - [Configure web app settings](Configure%20web%20app%20settings.md)
 - [Scale apps in Azure App Service](Scale%20apps%20in%20Azure%20App%20Service.md)
-- [](Azure%20App%20Service%20deployment%20slots.md)
+- [Azure App Service deployment slots](Azure%20App%20Service%20deployment%20slots.md)
