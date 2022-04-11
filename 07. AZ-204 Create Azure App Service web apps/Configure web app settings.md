@@ -151,3 +151,21 @@ The table below shows the types of logging, the platforms supported, and where t
 
 ## Enable application logging (Windows)
 
+To enable application logging for Windows apps in the Azure portal, navigate to your app and select **App Service logs**. Select **On** for either **Application Logging (Filesystem)** or **Application Logging (Blob)**, or both. The Filesystem option is for temporary debugging purposes, and turns itself off in 12 hours. The Blob option is for long-term logging, and needs a blob storage container to write logs to. You can also set the Level of details included in the log as shown in the table below.
+
+| Level       	| Included categories                                           	|
+|-------------	|---------------------------------------------------------------	|
+| Disabled    	| None                                                          	|
+| Error       	| Error, Critical                                               	|
+| Warning     	| Warning, Error, Critical                                      	|
+| Information 	| Info, Warning, Error, Critical                                	|
+| Verbose     	| Trace, Debug, Info, Warning, Error, Critical (all categories) 	|
+
+
+When finished, select **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/162743874-5f4e54e7-5a51-48b3-aa07-dcd8835ed8c7.png)
+
+
+
+
