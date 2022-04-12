@@ -283,3 +283,15 @@ az webapp deployment source config-zip --name zrzDempApp --resource-group RG-Dem
 ![image](https://user-images.githubusercontent.com/34960418/162939758-10da6f7d-3ec2-4fc0-bc6a-bf43a447faee.png)
 
 
+## Swap Staging and Production Slots
+
+```bash
+az webapp deployment slot swap -n zrzDempApp -g RG-Demo --slot stage --target-slot production
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162940552-587a7feb-be4d-4a58-a887-43757a451a43.png)
+
+![image](https://user-images.githubusercontent.com/34960418/162940625-183c914a-f23b-41f3-bc2b-557657e353bc.png)
+
+![image](https://user-images.githubusercontent.com/34960418/162940661-9942abb9-a08f-4e4a-b63c-854cf8d98f09.png)
+
