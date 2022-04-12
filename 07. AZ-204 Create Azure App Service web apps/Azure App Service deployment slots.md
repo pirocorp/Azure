@@ -1,5 +1,12 @@
 # Staging environments
 
+- [Create app with Azure CLI and deployment stages](#create-app-with-azure-cli-and-deployment-stages)
+  - [Login to Azure and download the sample app](#login-to-azure-and-download-the-sample-app)
+  - [Create the web app](#create-the-web-app)
+  - [Update and redeploy the app to staging slot](#update-and-redeploy-the-app-to-staging-slot)
+  - [Swap Staging and Production Slots](#swap-staging-and-production-slots)
+  - [Clean Up](#clean-up)
+
 When you deploy your web app, web app on Linux, mobile back end, or API app to Azure App Service, you can use a separate deployment slot instead of the default production slot when you're running in the Standard, Premium, or Isolated App Service plan tier. Deployment slots are live apps with their own host names. App content and configurations elements can be swapped between two deployment slots, including the production slot.
 
 Deploying your application to a non-production slot has the following benefits:
