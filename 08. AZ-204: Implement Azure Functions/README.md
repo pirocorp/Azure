@@ -1,3 +1,5 @@
+[Azure Functions](Azure%20Functions.md)
+
 # Azure Functions
 
 Azure Functions are a great solution for processing data, integrating systems, working with the internet-of-things (IoT), and building simple APIs and microservices. Consider Functions for tasks like image or order processing, file maintenance, or for any tasks that you want to run on a schedule. Functions provides templates to get you started with key scenarios.
