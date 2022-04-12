@@ -39,7 +39,7 @@ In Functions 2.x all functions in a function app must be authored in the same la
 
 # Folder structure
 
-The code for all the functions in a specific function app is located in a root project folder that contains a host configuration file. The host.json file contains runtime-specific configurations and is in the root folder of the function app. A bin folder contains packages and other library files that the function app requires. Specific folder structures required by the function app depend on language:
+The code for all the functions in a specific function app is located in a root project folder that contains a host configuration file. The [host.json](https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json) file contains runtime-specific configurations and is in the root folder of the function app. A bin folder contains packages and other library files that the function app requires. Specific folder structures required by the function app depend on language:
 
 - [C# compiled (.csproj)](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#functions-class-library-project)
 - [C# script (.csx)](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp#folder-structure)
