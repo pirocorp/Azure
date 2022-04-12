@@ -175,3 +175,108 @@ To let users opt in to your beta app, set the same query parameter to the name o
 ```
 
 By default, new slots are given a routing rule of 0%, a default value is displayed in grey. When you explicitly set this value to 0% it is displayed in black, your users can access the staging slot manually by using the x-ms-routing-name query parameter. But they won't be routed to the slot automatically because the routing percentage is set to 0. This is an advanced scenario where you can "hide" your staging slot from the public while allowing internal teams to test changes on the slot.
+
+
+# Create app with Azure CLI and deployment stages
+
+## Login to Azure and download the sample app
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162923615-1241c3a8-3a4f-4735-85e0-0d38478463e1.png)
+
+
+Select desired subscription if many.
+
+```bash
+az account set --subscription "<Subsription Name>"
+```
+
+Create a directory and then navigate to it.
+
+```bash
+mkdir htmlapp
+cd htmlapp
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162923862-1259b844-af55-4d61-a580-5cbd18127472.png)
+
+
+Run the following git command to clone the sample app repository to your htmlapp directory.
+
+```bash
+git clone https://github.com/Azure-Samples/html-docs-hello-world.git
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162923896-5b6a845b-b9b0-4f00-bf40-3705a816bd02.png)
+
+
+## Create the web app
+
+Change to the directory that contains the sample code and run the az webapp up command. In the following example, replace with a unique app name, and with a region near you.
+
+```bash
+cd html-docs-hello-world
+
+az webapp up --location <myLocation> --name <myAppName> --html --sku S1
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162929622-b52f09d2-ccc8-48b2-8133-1ed7e9e39322.png)
+
+
+Open a browser and navigate to the app URL (http://.azurewebsites.net) and verify the app is running - take note of the title at the top of the page. Leave the browser open on the app for the next section.
+
+![image](https://user-images.githubusercontent.com/34960418/162925563-fe83fae4-1698-420a-bec2-e041221093b4.png)
+
+
+## Update and redeploy the app to staging slot
+
+Open App Service, go to **Deployment > Deployment slots** and click on **Add Slot**.
+
+![image](https://user-images.githubusercontent.com/34960418/162930362-40f1462b-0fea-40a6-947f-3bbcbe3ea165.png)
+
+
+Add **stage** for **name** field and select the name of the app service from **Clone settings from** dropdown. Click on **Add** button.
+
+![image](https://user-images.githubusercontent.com/34960418/162930621-b37212db-bbaf-456b-a3c3-ba1587f7f844.png)
+
+![image](https://user-images.githubusercontent.com/34960418/162931038-0c08ab66-530d-4e57-a229-afb0ebbb9478.png)
+
+
+Create slot with CLI
+
+```bash
+az webapp deployment slot create --name zrzDempApp --resource-group RG-Demo --slot test
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162932066-c22620fd-fdaa-4ee9-98d5-683802115dda.png)
+
+
+List all slots
+
+```bash
+az webapp deployment slot list --name zrzDempApp --resource-group RG-Demo --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162932251-ea181548-d006-4fe3-b46b-9d746f2a5f29.png)
+
+
+Build (in this case just zip) the application
+
+```bash
+ 7z a build.zip .\
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162938944-5ac3dfb7-7e48-44bc-8054-245d5440a9fc.png)
+
+
+ ZipDeploy to the staging slot
+
+```bash
+az webapp deployment source config-zip --name zrzDempApp --resource-group RG-Demo --src build.zip --slot stage
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162939432-bac24eed-85bc-48f3-9817-be1be423ea35.png)
+
