@@ -295,3 +295,11 @@ az webapp deployment slot swap -n zrzDempApp -g RG-Demo --slot stage --target-sl
 
 ![image](https://user-images.githubusercontent.com/34960418/162940661-9942abb9-a08f-4e4a-b63c-854cf8d98f09.png)
 
+
+## Clean Up
+
+```bash
+az group delete --name <resource_group> --no-wait
+```
+
+![image](https://user-images.githubusercontent.com/34960418/162941040-505fd375-6998-49ff-ba8d-dba00f4d6cad.png)
