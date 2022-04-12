@@ -195,7 +195,7 @@ The table below shows the steps of the authentication flow.
 | Any OpenID Connect provider     	| /.auth/login/<providerName>                                                                      	| App Service OpenID Connect login                                                                                                                	|
 
   
-For client browsers, App Service can automatically direct all unauthenticated users to /.auth/login/<provider>. You can also present users with one or more /.auth/login/<provider> links to sign in to your app using their provider of choice.
+For client browsers, App Service can automatically direct all unauthenticated users to ```/.auth/login/<provider>```. You can also present users with one or more ```/.auth/login/<provider>``` links to sign in to your app using their provider of choice.
 
   
 ## Authorization behavior
@@ -267,7 +267,7 @@ az webapp show \
     --output tsv
 ```
   
-To find all possible outbound IP addresses for your app, regardless of pricing tiers, run the following command in the Cloud Shell.
+To find all possible outbound IP addresses for your app, regardless of pricing tiers, run the following command in the Cloud Shell
   
 ```bash
 az webapp show \
@@ -292,9 +292,11 @@ The ```az webapp up``` command makes it easy to create and update web apps. When
 ## Login to Azure and download the sample app
   
 ```bash
-![image](https://user-images.githubusercontent.com/34960418/162729066-48d267ff-15a5-4111-89b3-1c42ecc7bb8c.png)
+
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/162729066-48d267ff-15a5-4111-89b3-1c42ecc7bb8c.png)
+  
   
 Select desired subscription if many.
 
