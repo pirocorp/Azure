@@ -1,6 +1,6 @@
 # Staging environments
 
-- [Create app with Azure CLI and deployment stages](#create-app-with-azure-cli-and-deployment-stages)
+- [Create app with Azure CLI and deployment slots](#create-app-with-azure-cli-and-deployment-slots)
   - [Login to Azure and download the sample app](#login-to-azure-and-download-the-sample-app)
   - [Create the web app](#create-the-web-app)
   - [Update and redeploy the app to staging slot](#update-and-redeploy-the-app-to-staging-slot)
@@ -184,7 +184,7 @@ To let users opt in to your beta app, set the same query parameter to the name o
 By default, new slots are given a routing rule of 0%, a default value is displayed in grey. When you explicitly set this value to 0% it is displayed in black, your users can access the staging slot manually by using the x-ms-routing-name query parameter. But they won't be routed to the slot automatically because the routing percentage is set to 0. This is an advanced scenario where you can "hide" your staging slot from the public while allowing internal teams to test changes on the slot.
 
 
-# Create app with Azure CLI and deployment stages
+# Create app with Azure CLI and deployment slots
 
 ## Login to Azure and download the sample app
 
