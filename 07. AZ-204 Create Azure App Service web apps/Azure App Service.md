@@ -292,7 +292,7 @@ The ```az webapp up``` command makes it easy to create and update web apps. When
 ## Login to Azure and download the sample app
   
 ```bash
-
+az login
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/162729066-48d267ff-15a5-4111-89b3-1c42ecc7bb8c.png)
