@@ -1,5 +1,6 @@
 - [Create an Azure Function by using Visual Studio Code](#exercise-create-an-azure-function-by-using-visual-studio-code)
-
+- [Prerequisites](#prerequisites)
+- [Create your local project](#create-your-local-project)
 
 # Develop Azure Functions
 
