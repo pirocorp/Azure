@@ -1,4 +1,4 @@
-[Create an Azure Function by using Visual Studio Code](#exercise-create-an-azure-function-by-using-visual-studio-code)
+- [Create an Azure Function by using Visual Studio Code](#exercise-create-an-azure-function-by-using-visual-studio-code)
 
 
 # Develop Azure Functions
@@ -275,4 +275,17 @@ Some permissions might be exposed by the target service that are not necessary f
 
 # Exercise: Create an Azure Function by using Visual Studio Code
 
+## Prerequisites
 
+Before you begin make sure you have the following requirements in place:
+
+- An Azure account with an active subscription. If you don't already have one, you can sign up for a free trial at https://azure.com/free.
+- The [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools) version 3.x.
+- [Visual Studio Code](https://code.visualstudio.com/) on one of the [supported platforms](https://code.visualstudio.com/docs/supporting/requirements#_platforms).
+- [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1) is the target framework for the steps below.
+- The [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.
+- The [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) for Visual Studio Code.
+
+
+
+## Create your local project
