@@ -1,11 +1,11 @@
 - [Create an Azure Function by using Visual Studio Code](#exercise-create-an-azure-function-by-using-visual-studio-code)
-- [Prerequisites](#prerequisites)
-- [Create your local project](#create-your-local-project)
-- [Run the function locally]()
-- [Sign in to Azure]()
-- [Publish the project to Azure]()
-- [Run the function in Azure]()
-- [Clean up resources]
+  - [Prerequisites](#prerequisites)
+  - [Create your local project](#create-your-local-project)
+  - [Run the function locally](#run-the-function-locally)
+  - [Sign in to Azure](#sign-in-to-azure)
+  - [Publish the project to Azure](#publish-the-project-to-azure)
+  - [Run the function in Azure](#run-the-function-in-azure)
+  - [Clean up resources](#clean-up-resources)
 
 
 
