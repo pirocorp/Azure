@@ -424,3 +424,103 @@ Publishing to an existing function app overwrites the content of that app in Azu
 
 Choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose the **Deploy to Function app...** button.
 
+![image](https://user-images.githubusercontent.com/34960418/163155870-bec27c84-396c-48a8-a408-b15741d60532.png)
+
+
+Provide the following information at the prompts:
+
+- Select Function App in Azure: Choose + Create new Function App. (Don't choose the Advanced option, which isn't covered in this article.)
+- Enter a globally unique name for the function app: Type a name that is valid in a URL path. The name you type is validated to make sure that it's unique in Azure Functions.
+- Select a runtime stack: Use the same choice you made in the Create your local project section above.
+- Select a location for new resources: For better performance, choose a region near you.
+- Select subscription: Choose the subscription to use. You won't see this if you only have one subscription.
+
+
+Select Function App in Azure: **Choose + Create new Function App**. (Don't choose the Advanced option, which isn't covered in this article.)
+
+![image](https://user-images.githubusercontent.com/34960418/163156249-7cf58a0d-054a-48a5-9d50-6a2f070e2372.png)
+
+
+**Enter a globally unique name for the function app**: Type a name that is valid in a URL path. The name you type is validated to make sure that it's unique in Azure Functions.
+
+![image](https://user-images.githubusercontent.com/34960418/163156405-5f2a7af4-9bbd-482f-8dd5-730af4725785.png)
+
+
+**Select a runtime stack**: Use the same choice you made in the Create your local project section above.
+
+![image](https://user-images.githubusercontent.com/34960418/163156608-aab4f82e-d1ab-4269-96a7-45659a757e9e.png)
+
+
+**Select a location for new resources**: For better performance, choose a region near you.
+
+![image](https://user-images.githubusercontent.com/34960418/163156756-1fbcc1e7-7867-478b-a437-a7700cdc7c9f.png)
+
+
+The extension shows the status of individual resources as they are being created in Azure in the notification area.
+
+![image](https://user-images.githubusercontent.com/34960418/163156957-a768f480-87ab-4d29-88e9-029b0f2aa4cd.png)
+
+
+When completed, the following Azure resources are created in your subscription, using names based on your function app name:
+
+- A resource group, which is a logical container for related resources.
+- A standard Azure Storage account, which maintains state and other information about your projects.
+- A consumption plan, which defines the underlying host for your serverless function app.
+- A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan.
+- An Application Insights instance connected to the function app, which tracks usage of your serverless function.
+- A notification is displayed after your function app is created and the deployment package is applied.
+
+![image](https://user-images.githubusercontent.com/34960418/163157291-49d544e3-e67c-4567-bd00-a7bdf87a586d.png)
+
+![image](https://user-images.githubusercontent.com/34960418/163157264-3edc26dd-b8f2-4dbc-95e2-a5c5a501380c.png)
+
+
+## Run the function in Azure
+
+Back in the **Azure: Functions** area in the side bar, expand your subscription, your new function app, and **Functions**. **Right-click** the **HttpExample** function and choose **Execute Function Now**....
+
+![image](https://user-images.githubusercontent.com/34960418/163157849-a738711c-fa57-44fc-9ed0-84ff4522cd88.png)
+
+
+In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request message to your function.
+
+![image](https://user-images.githubusercontent.com/34960418/163158171-77aacfd6-b3e9-4303-bf16-c336ec5841e3.png)
+
+
+When the function executes in Azure and returns a response, a notification is raised in Visual Studio Code.
+
+![image](https://user-images.githubusercontent.com/34960418/163158213-0830da82-c2ee-45c6-97f5-17e7f6fc701c.png)
+
+
+## Clean up resources
+
+Use the following steps to delete the function app and its related resources to avoid incurring any further costs.
+
+In Visual Studio Code, press **F1** to open the command palette. In the command palette, search for and select Azure Functions: Open in portal.
+
+![image](https://user-images.githubusercontent.com/34960418/163158535-7ee739a9-e98c-4092-a698-0e95c1629785.png)
+
+
+Choose your function app from the list, and press Enter. The function app page opens in the Azure portal.
+
+![image](https://user-images.githubusercontent.com/34960418/163158665-3df78bf1-2e22-4f88-8dbf-d0cfb8822fd0.png)
+
+
+In the **Overview** tab, select the named link next to **Resource group**.
+
+![image](https://user-images.githubusercontent.com/34960418/163158899-6c1b1cf5-8fac-40e0-ab7b-319710ee8b79.png)
+
+
+In the **Resource group** page, review the list of included resources, and verify that they are the ones you want to delete.
+
+![image](https://user-images.githubusercontent.com/34960418/163159032-6d707021-bf97-4bd2-bfdf-c594edf51f0a.png)
+
+
+Select **Delete resource group**, and follow the instructions.
+
+![image](https://user-images.githubusercontent.com/34960418/163159177-86644cb5-b235-46fc-9f29-376a26d023b3.png)
+
+
+Deletion may take a couple of minutes. When it's done, a notification appears for a few seconds. You can also select the bell icon at the top of the page to view the notification.
+
+
