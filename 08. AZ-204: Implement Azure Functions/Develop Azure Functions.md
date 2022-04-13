@@ -290,3 +290,137 @@ Before you begin make sure you have the following requirements in place:
 
 
 ## Create your local project
+
+In this section, you use Visual Studio Code to create a local Azure Functions project in C#. Later in this exercise, you'll publish your function code to Azure.
+
+Choose the Azure icon in the Activity bar, then in the Azure: Functions area, select Create new project....
+
+![image](https://user-images.githubusercontent.com/34960418/163142363-167366b2-9b23-44b9-b8c0-a07d32c9e6eb.png)
+
+
+Choose a directory location for your project workspace and choose **Select**.
+
+![image](https://user-images.githubusercontent.com/34960418/163142568-a9c172d4-523f-49b8-a44f-d82479b227da.png)
+
+**Note**
+
+Be sure to select a project folder that is outside of a workspace.
+
+
+Provide the following information at the prompts:
+
+- Select a language: Choose C#.
+- Select a .NET runtime: Choose .NET Core 3.1
+- Select a template for your project's first function: Choose HTTP trigger.
+- Provide a function name: Type HttpExample.
+- Provide a namespace: Type My.Functions.
+- Authorization level: Choose Anonymous, which enables anyone to call your function endpoint.
+- Select how you would like to open your project: Choose Add to workspace.
+
+![image](https://user-images.githubusercontent.com/34960418/163142856-54bf3361-ecf6-4d9c-bf44-a4a84094d7cb.png)
+
+
+The current version of the Azure Functions extension (version 4) only shows .NET 6 in the runtime list. You can change the Azure Functions version by selecting **Change Azure Functions version**.
+
+![image](https://user-images.githubusercontent.com/34960418/163143160-9d694051-0741-4889-9146-2368fd010ba5.png)
+
+
+In the runtime list, and then selecting **Azure Functions v3**
+
+![image](https://user-images.githubusercontent.com/34960418/163143396-531b05d5-dd14-4ae0-ada9-2d5ef94fbfa8.png)
+
+
+Select .Net Core 3 LTS
+
+![image](https://user-images.githubusercontent.com/34960418/163143657-68629dd8-7cfc-4c59-a715-25c9fdbcfe5f.png)
+
+
+Select a template for your project's first function: Choose **HTTP trigger**.
+
+![image](https://user-images.githubusercontent.com/34960418/163143874-22aa342a-c232-4fe0-a8da-b608f6169094.png)
+
+
+Provide a function name: Type **HttpExample**.
+
+![image](https://user-images.githubusercontent.com/34960418/163143994-5603905f-59d7-4134-b89f-45a61527917e.png)
+
+
+Provide a namespace: Type **My.Functions**.
+
+![image](https://user-images.githubusercontent.com/34960418/163144120-2946b39d-5cdd-4a48-9be9-47509f2e913d.png)
+
+
+Authorization level: Choose **Anonymous**, which enables anyone to call your function endpoint.
+
+![image](https://user-images.githubusercontent.com/34960418/163144322-3292392f-7386-4d1b-b04d-b82d227e83e8.png)
+
+
+Select how you would like to open your project: Choose **Add to workspace**.
+
+Using this information, Visual Studio Code generates an Azure Functions project with an HTTP trigger.
+
+
+## Run the function locally
+
+Visual Studio Code integrates with Azure Functions Core tools to let you run this project on your local development computer before you publish to Azure.
+
+To call your function, press **F5** to start the function app project. Output from Core Tools is displayed in the **Terminal** panel. Your app starts in the **Terminal** panel. You can see the URL endpoint of your HTTP-triggered function running locally.
+
+![image](https://user-images.githubusercontent.com/34960418/163145303-cc8cd583-c539-4fce-b663-eba54c93e54c.png)
+
+
+Execute the function by browser
+
+![image](https://user-images.githubusercontent.com/34960418/163145601-71c286d8-5bbe-465d-9b5f-58d2e8e03648.png)
+
+![image](https://user-images.githubusercontent.com/34960418/163145682-b746bfda-e801-4774-9a46-c93944949a1b.png)
+
+
+With Core Tools running, go to the **Azure: Functions area**. Under **Functions**, expand **Local Project** > **Functions**. Right-click the **HttpExample** function and choose **Execute Function Now....**
+
+![image](https://user-images.githubusercontent.com/34960418/163146326-c4e6624d-63e6-44a0-9a42-6f2a009ea465.png)
+
+
+In **Enter request body** type the request message body value of { "name": "Azure" }. Press **Enter** to send this request message to your function. 
+
+![image](https://user-images.githubusercontent.com/34960418/163146636-634e24c4-0d23-40b7-b28a-c99538588142.png)
+
+
+When the function executes locally and returns a response, a notification is raised in Visual Studio Code. Information about the function execution is shown in **Terminal** panel.
+
+![image](https://user-images.githubusercontent.com/34960418/163146779-77f13b92-fa20-4aa4-952c-291456ce75f2.png)
+
+
+Press **Ctrl + C** to stop Core Tools and disconnect the debugger.
+
+![image](https://user-images.githubusercontent.com/34960418/163147116-22da755b-03b2-4e73-9ce4-9567755fa07f.png)
+
+
+After you've verified that the function runs correctly on your local computer, it's time to use Visual Studio Code to publish the project directly to Azure.
+
+
+## Sign in to Azure
+
+Before you can publish your app, you must sign in to Azure. If you're already signed in, go to the next section.
+
+If you aren't already signed in, choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose **Sign in to Azure...**
+
+![image](https://user-images.githubusercontent.com/34960418/163147434-f276c564-69fa-455f-9f59-0ff395ddf340.png)
+
+
+When prompted in the browser, choose your Azure account and sign in using your Azure account credentials. After you've successfully signed in, you can close the new browser window. The subscriptions that belong to your Azure account are displayed in the Side bar.
+
+![image](https://user-images.githubusercontent.com/34960418/163147697-9b4dd19f-94b0-4f28-aa58-43a030b48311.png)
+
+
+## Publish the project to Azure
+
+In this section, you create a function app and related resources in your Azure subscription and then deploy your code.
+
+**Important**
+
+Publishing to an existing function app overwrites the content of that app in Azure.
+
+
+Choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose the **Deploy to Function app...** button.
+
