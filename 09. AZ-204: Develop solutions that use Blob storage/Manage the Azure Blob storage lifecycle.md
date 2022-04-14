@@ -147,3 +147,50 @@ The run conditions are based on age. Base blobs use the last modified time to tr
 |----------------------------------	|------------------------------------------	|-----------------------------------------	|
 | daysAfterModificationGreaterThan 	| Integer value indicating the age in days 	| The condition for base blob actions     	|
 | daysAfterCreationGreaterThan     	| Integer value indicating the age in days 	| The condition for blob snapshot actions 	|
+
+
+# Implement Blob storage lifecycle policies
+
+You can add, edit, or remove a policy by using any of the following methods:
+
+- Azure portal
+- Azure PowerShell
+- Azure CLI
+- REST APIs
+
+Below are the steps and some examples for the Portal and Azure CLI.
+
+
+## Azure portal
+
+There are two ways to add a policy through the Azure portal: Azure portal List view, and Azure portal Code view.
+
+### Azure portal List view
+
+Sign in to the Azure portal. Select your storage account. **Under Data management**, select **Lifecycle management** to view or change your rules. Select the List view tab.
+
+![image](https://user-images.githubusercontent.com/34960418/163423452-baf23c89-eb2a-4700-8faf-9e6de3a332e8.png)
+
+
+Select **+ Add a rule**
+
+![image](https://user-images.githubusercontent.com/34960418/163423723-c385e051-ee0f-4c54-8f33-861e28bb2a17.png)
+
+
+Fill out the Action set form fields. In the following example, blobs are moved to cool storage if they haven't been modified for 30 days.
+
+![image](https://user-images.githubusercontent.com/34960418/163424356-a7a93f7b-43f2-4b06-98a0-4a13637ebbfc.png)
+
+
+Select Filter set to add an optional filter.
+
+![image](https://user-images.githubusercontent.com/34960418/163424412-6fd65251-2d46-4c6c-a8d8-bab7eefa4613.png)
+
+
+Then, select Browse to specify a container and folder by which to filter.
+
+
+
+Select Review + add to review the policy settings.
+
+Select Add to add the new policy.
