@@ -188,3 +188,39 @@ Select **Review + create** to review the storage account settings. Select **Crea
 
 ![image](https://user-images.githubusercontent.com/34960418/163412324-a39178b3-50fb-4002-a809-455e6dbe8255.png)
 
+
+## Create account by using CLI
+
+Login in Azure
+
+```bash
+az login
+```
+
+Create a new resource group. Replace ```<myLocation>``` with a region near you.
+  
+```bash
+az group create --name az204-blob-rg --location <myLocation>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163413476-e62bd4e6-927f-467c-8b2a-26966ff3d677.png)
+
+
+Create the block blob storage account. Replace ```<myLocation>``` with a region near you.
+
+```bash
+az storage account create --resource-group az204-blob-rg --name \
+<myStorageAcct> --location <myLocation> \ 
+--kind BlockBlobStorage --sku Premium_LRS
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163414224-dd383c98-9605-4cb6-a617-88fe2b39a0cd.png)
+
+
+## Clean up resources
+
+```bash
+az group delete --name az204-blob-rg --no-wait
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163414370-f774896d-8f82-447c-8c39-39b1eb6a2b17.png)
