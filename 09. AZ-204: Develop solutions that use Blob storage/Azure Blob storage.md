@@ -1,4 +1,4 @@
-[Create a block blob storage account (CLI)](#create-a-block-blob-storage-account)
+[Create a block blob storage account](#create-a-block-blob-storage-account)
 
 
 # Azure Blob storage
@@ -163,3 +163,28 @@ Azure Storage offers two options for copying your data to a secondary region:
 The block blob storage account type lets you create block blobs with premium performance characteristics. This type of storage account is optimized for workloads with high transactions rates or that require very fast access times.
 
 In this exercise you will create a block blob storage account by using the Azure portal, and in the Cloud Shell using the Azure CLI.
+
+## Create account in the Azure portal
+
+In the Azure portal, select All services > the Storage category > Storage accounts.
+
+![image](https://user-images.githubusercontent.com/34960418/163411366-ec22a604-3d8a-4e0d-8b87-20d4bc3f8857.png)
+
+
+Under Storage accounts, select **+ Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/163411480-633daa46-7615-4a24-b4c6-4e1387747780.png)
+
+
+In the Subscription field, select the subscription in which to create the storage account. In the Resource group field, select Create new and enter **az204-blob-rg** as the name for the new resource group. In the Storage account name field, enter a name for the account. In the Location field, select a location for the storage account, or use the default location. For the rest of the settings, configure the following
+
+| Field                	| Value                                                         	|
+|----------------------	|---------------------------------------------------------------	|
+| Performance          	| Select Premium.                                               	|
+| Premium account type 	| Select Block blobs.                                           	|
+| Replication          	| Leave the default setting of Locally-redundant storage (LRS). 	|
+
+Select **Review + create** to review the storage account settings. Select **Create**.
+
+![image](https://user-images.githubusercontent.com/34960418/163412324-a39178b3-50fb-4002-a809-455e6dbe8255.png)
+
