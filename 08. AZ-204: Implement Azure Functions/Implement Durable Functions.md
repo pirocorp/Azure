@@ -3,12 +3,12 @@
 Durable Functions is an extension of Azure Functions that lets you write stateful functions in a serverless compute environment.
 
 
-# Durable Functions app patterns
+## Durable Functions app patterns
 
 The durable functions extension lets you define stateful workflows by writing orchestrator functions and stateful entities by writing entity functions using the Azure Functions programming model. Behind the scenes, the extension manages state, checkpoints, and restarts for you, allowing you to focus on your business logic.
 
 
-# Supported languages
+## Supported languages
 
 Durable Functions currently supports the following languages:
 
@@ -19,7 +19,7 @@ Durable Functions currently supports the following languages:
 - **PowerShell**: Supported only for version 3.x of the Azure Functions runtime and PowerShell7. Requires version 2.x of the bundle extensions.
 
 
-# Application patterns
+## Application patterns
 
 The primary use case for Durable Functions is simplifying complex, stateful coordination requirements in serverless applications. The following sections describe typical application patterns that can benefit from Durable Functions:
 
@@ -30,7 +30,7 @@ The primary use case for Durable Functions is simplifying complex, stateful coor
 - Human interaction
 
 
-# Function chaining
+## Function chaining
 
 In the function chaining pattern, a sequence of functions executes in a specific order. In this pattern, the output of one function is applied to the input of another function.
 
@@ -94,7 +94,7 @@ public static async Task Run([OrchestrationTrigger] IDurableOrchestrationContext
 The automatic checkpointing that happens at the await or yield call on ```Task.WhenAll``` or ```context.df.Task.all``` ensures that a potential midway crash or reboot doesn't require restarting an already completed task.
 
 
-# Async HTTP APIs
+## Async HTTP APIs
 
 The async HTTP API pattern addresses the problem of coordinating the state of long-running operations with external clients. A common way to implement this pattern is by having an HTTP endpoint trigger the long-running action. Then, redirect the client to a status endpoint that the client polls to learn when the operation is finished.
 
@@ -153,4 +153,83 @@ public static class HttpStart
 ```
 
 To interact with orchestrators, the function must include a **DurableClient** input binding. You use the client to start an orchestration. It can also help you return an HTTP response containing URLs for checking the status of the new orchestration.
+
+
+## Monitor
+
+The monitor pattern refers to a flexible, recurring process in a workflow. An example is polling until specific conditions are met. You can use a regular timer trigger to address a basic scenario, such as a periodic cleanup job, but its interval is static and managing instance lifetimes becomes complex. You can use Durable Functions to create flexible recurrence intervals, manage task lifetimes, and create multiple monitor processes from a single orchestration.
+
+![image](https://user-images.githubusercontent.com/34960418/163378500-6df0fd73-1c38-49a7-8a52-c3ba80a04b64.png)
+
+In a few lines of code, you can use Durable Functions to create multiple monitors that observe arbitrary endpoints. The monitors can end execution when a condition is met, or another function can use the durable orchestration client to terminate the monitors. You can change a monitor's wait interval based on a specific condition (for example, exponential backoff).
+
+The following code implements a basic monitor:
+
+```csharp
+[FunctionName("MonitorJobStatus")]
+public static async Task Run(
+    [OrchestrationTrigger] IDurableOrchestrationContext context)
+{
+    int jobId = context.GetInput<int>();
+    int pollingInterval = GetPollingInterval();
+    DateTime expiryTime = GetExpiryTime();
+
+    while (context.CurrentUtcDateTime < expiryTime)
+    {
+        var jobStatus = await context.CallActivityAsync<string>("GetJobStatus", jobId);
+        if (jobStatus == "Completed")
+        {
+            // Perform an action when a condition is met.
+            await context.CallActivityAsync("SendAlert", machineId);
+            break;
+        }
+
+        // Orchestration sleeps until this time.
+        var nextCheck = context.CurrentUtcDateTime.AddSeconds(pollingInterval);
+        await context.CreateTimer(nextCheck, CancellationToken.None);
+    }
+
+    // Perform more work here, or let the orchestration end.
+}
+```
+
+
+## Human interaction
+
+Many automated processes involve some kind of human interaction. Involving humans in an automated process is tricky because people aren't as highly available and as responsive as cloud services. An automated process might allow for this interaction by using timeouts and compensation logic.
+
+![image](https://user-images.githubusercontent.com/34960418/163381415-1917b252-a68b-434e-bddb-7af2387f5940.png)
+
+You can implement the pattern in this example by using an orchestrator function. The orchestrator uses a durable timer to request approval. The orchestrator escalates if timeout occurs. The orchestrator waits for an external event, such as a notification that's generated by a human interaction.
+
+
+```csharp
+[FunctionName("ApprovalWorkflow")]
+public static async Task Run(
+    [OrchestrationTrigger] IDurableOrchestrationContext context)
+{
+    await context.CallActivityAsync("RequestApproval", null);
+    using (var timeoutCts = new CancellationTokenSource())
+    {
+        DateTime dueTime = context.CurrentUtcDateTime.AddHours(72);
+        Task durableTimeout = context.CreateTimer(dueTime, timeoutCts.Token);
+
+        Task<bool> approvalEvent = context.WaitForExternalEvent<bool>("ApprovalEvent");
+        if (approvalEvent == await Task.WhenAny(approvalEvent, durableTimeout))
+        {
+            timeoutCts.Cancel();
+            await context.CallActivityAsync("ProcessApproval", approvalEvent.Result);
+        }
+        else
+        {
+            await context.CallActivityAsync("Escalate", null);
+        }
+    }
+}
+```
+
+## Additional resources
+
+To learn about the differences between Durable Functions 1.x and 2.x visit: [Durable Functions versions overview](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-versions)
+
 
