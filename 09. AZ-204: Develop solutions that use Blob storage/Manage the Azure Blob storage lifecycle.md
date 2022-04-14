@@ -177,17 +177,15 @@ Select **+ Add a rule**
 ![image](https://user-images.githubusercontent.com/34960418/163423723-c385e051-ee0f-4c54-8f33-861e28bb2a17.png)
 
 
-Fill out the Action set form fields. In the following example, blobs are moved to cool storage if they haven't been modified for 30 days.
+Fill out the Action set form fields. In the following example, blobs are moved to cool storage if they haven't been modified for 30 days. Select Filter set to add an optional filter.
 
 ![image](https://user-images.githubusercontent.com/34960418/163424356-a7a93f7b-43f2-4b06-98a0-4a13637ebbfc.png)
-
-
-Select Filter set to add an optional filter.
 
 ![image](https://user-images.githubusercontent.com/34960418/163424412-6fd65251-2d46-4c6c-a8d8-bab7eefa4613.png)
 
 
 Then, select Browse to specify a container and folder by which to filter.
+
 
 
 
