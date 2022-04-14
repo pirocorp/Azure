@@ -1,1 +1,3 @@
-
+- [Azure Blob storage](Azure%20Blob%20storage.md)
+- [Manage the Azure Blob storage lifecycle](Manage%20the%20Azure%20Blob%20storage%20lifecycle.md)
+- [Work with Azure Blob storage](Work%20with%20Azure%20Blob%20storage.md)
