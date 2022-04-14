@@ -126,3 +126,31 @@ Content-Type: application/json
 
 {"runtimeStatus":"Completed","lastUpdatedTime":"2019-03-16T21:20:57Z", ...}
 ```
+
+The Durable Functions extension exposes built-in HTTP APIs that manage long-running orchestrations. You can alternatively implement this pattern yourself by using your own function triggers (such as HTTP, a queue, or Azure Event Hubs) and the orchestration client binding.
+
+You can use the **HttpStart** triggered function to start instances of an orchestrator function using a client function.
+
+```csharp
+public static class HttpStart
+{
+    [FunctionName("HttpStart")]
+    public static async Task<HttpResponseMessage> Run(
+        [HttpTrigger(AuthorizationLevel.Function, methods: "post", Route = "orchestrators/{functionName}")] HttpRequestMessage req,
+        [DurableClient] IDurableClient starter,
+        string functionName,
+        ILogger log)
+    {
+        // Function input comes from the request content.
+        object eventData = await req.Content.ReadAsAsync<object>();
+        string instanceId = await starter.StartNewAsync(functionName, eventData);
+
+        log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
+
+        return starter.CreateCheckStatusResponse(req, instanceId);
+    }
+}
+```
+
+To interact with orchestrators, the function must include a **DurableClient** input binding. You use the client to start an orchestration. It can also help you return an HTTP response containing URLs for checking the status of the new orchestration.
+
