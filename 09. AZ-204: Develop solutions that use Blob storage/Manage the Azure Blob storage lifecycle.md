@@ -179,16 +179,18 @@ Select **+ Add a rule**
 
 Fill out the Action set form fields. In the following example, blobs are moved to cool storage if they haven't been modified for 30 days. Select Filter set to add an optional filter.
 
-![image](https://user-images.githubusercontent.com/34960418/163424356-a7a93f7b-43f2-4b06-98a0-4a13637ebbfc.png)
+![image](https://user-images.githubusercontent.com/34960418/163427845-da650ed4-3b94-4553-88e1-509076f69c6f.png)
 
-![image](https://user-images.githubusercontent.com/34960418/163424412-6fd65251-2d46-4c6c-a8d8-bab7eefa4613.png)
-
-
-Then, select Browse to specify a container and folder by which to filter.
+![image](https://user-images.githubusercontent.com/34960418/163427950-0e33f171-9e2b-462e-afb5-43c73423ef29.png)
 
 
+Then, specify a container and prefix by which to filter. Select Add to add the new policy.
+
+![image](https://user-images.githubusercontent.com/34960418/163428161-f1a23f0c-ac43-43b6-986b-0de5236add49.png)
+
+![image](https://user-images.githubusercontent.com/34960418/163428270-b75355f3-fc8c-4210-84c9-e89032209dae.png)
 
 
-Select Review + add to review the policy settings.
 
-Select Add to add the new policy.
+
+
