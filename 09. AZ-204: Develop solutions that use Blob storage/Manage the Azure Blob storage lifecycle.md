@@ -1,3 +1,10 @@
+- [Implement Blob storage lifecycle policies]()
+  - [Azure portal](#azure-portal)
+    - [](Azure portal List view)
+    - [Azure portal Code view]()
+  - [Azure CLI]#azure-cli)
+
+
 # Azure Blob storage lifecycle
 
 Data sets have unique lifecycles. Early in the lifecycle, people access some data often. But the need for access drops drastically as the data ages. Some data stays idle in the cloud and is rarely accessed once stored. Some data expires days or months after creation, while other data sets are actively read and modified throughout their lifetimes.
