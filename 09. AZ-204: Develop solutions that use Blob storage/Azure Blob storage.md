@@ -1,3 +1,6 @@
+[Create a block blob storage account (CLI)](#create-a-block-blob-storage-account)
+
+
 # Azure Blob storage
 
 Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that does not adhere to a particular data model or definition, such as text or binary data.
@@ -153,3 +156,10 @@ Azure Storage offers two options for copying your data to a secondary region:
 
 - Geo-redundant storage (GRS) copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in the secondary region. Within the secondary region, your data is copied synchronously three times using LRS.
 - Geo-zone-redundant storage (GZRS) copies your data synchronously across three Azure availability zones in the primary region using ZRS. It then copies your data asynchronously to a single physical location in the secondary region. Within the secondary region, your data is copied synchronously three times using LRS.
+
+
+# Create a block blob storage account
+
+The block blob storage account type lets you create block blobs with premium performance characteristics. This type of storage account is optimized for workloads with high transactions rates or that require very fast access times.
+
+In this exercise you will create a block blob storage account by using the Azure portal, and in the Cloud Shell using the Azure CLI.
