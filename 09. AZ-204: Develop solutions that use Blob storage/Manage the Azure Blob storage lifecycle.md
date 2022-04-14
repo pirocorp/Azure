@@ -235,3 +235,17 @@ Select Save.
 
 ![image](https://user-images.githubusercontent.com/34960418/163428994-1b58c8a1-82a6-42f7-8600-e50d865798df.png)
 
+
+
+## Azure CLI
+
+To add a lifecycle management policy with Azure CLI, write the policy to a JSON file, then call the az storage account management-policy create command to create the policy.
+
+```bash
+az storage account management-policy create \
+    --account-name <storage-account> \
+    --policy @policy.json \
+    --resource-group <resource-group>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163429709-e3d2a488-7998-4fbf-bc27-69ecff4009ee.png)
