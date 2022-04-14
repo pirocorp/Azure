@@ -1,8 +1,8 @@
-- [Implement Blob storage lifecycle policies]()
+- [Implement Blob storage lifecycle policies](#implement-blob-storage-lifecycle-policies)
   - [Azure portal](#azure-portal)
-    - [](Azure portal List view)
-    - [Azure portal Code view]()
-  - [Azure CLI]#azure-cli)
+    - [Azure portal List view](#azure-portal-list-view)
+    - [Azure portal Code view](#azure-portal-code-view)
+  - [Azure CLI](#azure-cli)
 
 
 # Azure Blob storage lifecycle
