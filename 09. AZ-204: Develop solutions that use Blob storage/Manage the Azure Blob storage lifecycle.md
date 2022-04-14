@@ -30,3 +30,44 @@ Azure Blob storage lifecycle management offers a rich, rule-based policy for Gen
 - Apply rules to containers or a subset of blobs (using prefixes as filters)
 
 Consider a scenario where data gets frequent access during the early stages of the lifecycle, but only occasionally after two weeks. Beyond the first month, the data set is rarely accessed. In this scenario, hot storage is best during the early stages. Cool storage is most appropriate for occasional access. Archive storage is the best tier option after the data ages over a month. By adjusting storage tiers in respect to the age of data, you can design the least expensive storage options for your needs. To achieve this transition, lifecycle management policy rules are available to move aging data to cooler tiers.
+
+
+# Blob storage lifecycle policies
+
+A lifecycle management policy is a collection of rules in a JSON document. Each rule definition within a policy includes a filter set and an action set. The filter set limits rule actions to a certain set of objects within a container or objects names. The action set applies the tier or delete actions to the filtered set of objects.:
+
+```json
+{
+  "rules": [
+    {
+      "name": "rule1",
+      "enabled": true,
+      "type": "Lifecycle",
+      "definition": {...}
+    },
+    {
+      "name": "rule2",
+      "type": "Lifecycle",
+      "definition": {...}
+    }
+  ]
+}
+```
+
+
+A policy is a collection of rules:
+
+| Parameter name 	| Parameter type           	| Notes                                                                                  	|
+|----------------	|--------------------------	|----------------------------------------------------------------------------------------	|
+| rules          	| An array of rule objects 	| At least one rule is required in a policy. You can define up to 100 rules in a policy. 	|
+
+
+Each rule within the policy has several parameters:
+
+
+| Parameter name 	| Parameter type                            	| Notes                                                                                                                      	| Required 	|
+|----------------	|-------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------	|----------	|
+| name           	| String                                    	| A rule name can include up to 256 alphanumeric characters. Rule name is case-sensitive. It must be unique within a policy. 	| True     	|
+| enabled        	| Boolean                                   	| An optional boolean to allow a rule to be temporary disabled. Default value is true if it's not set.                       	| False    	|
+| type           	| An enum value                             	| The current valid type is Lifecycle.                                                                                       	| True     	|
+| definition     	| An object that defines the lifecycle rule 	| Each definition is made up of a filter set and an action set.                                                              	| True     	|
