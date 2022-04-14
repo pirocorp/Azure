@@ -191,6 +191,47 @@ Then, specify a container and prefix by which to filter. Select Add to add the n
 ![image](https://user-images.githubusercontent.com/34960418/163428270-b75355f3-fc8c-4210-84c9-e89032209dae.png)
 
 
+### Azure portal Code view
+
+Sign in to the Azure portal. Select your storage account. **Under Data management**, select **Lifecycle management** to view or change your rules. Select the Code view tab.
+
+![image](https://user-images.githubusercontent.com/34960418/163428664-66635cf0-7221-40de-a8ec-378aa1ebbe82.png)
 
 
+The following JSON is an example of a policy that moves a block blob whose name begins with log to the cool tier if it has been more than 30 days since the blob was modified.
+
+```json
+{
+  "rules": [
+    {
+      "enabled": true,
+      "name": "move-to-cool",
+      "type": "Lifecycle",
+      "definition": {
+        "actions": {
+          "baseBlob": {
+            "tierToCool": {
+              "daysAfterModificationGreaterThan": 30
+            }
+          }
+        },
+        "filters": {
+          "blobTypes": [
+            "blockBlob"
+          ],
+          "prefixMatch": [
+            "sample-container/log"
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+Select Save.
+
+![image](https://user-images.githubusercontent.com/34960418/163428933-b708ba43-d632-4898-a2c8-883a1bac4237.png)
+
+![image](https://user-images.githubusercontent.com/34960418/163428994-1b58c8a1-82a6-42f7-8600-e50d865798df.png)
 
