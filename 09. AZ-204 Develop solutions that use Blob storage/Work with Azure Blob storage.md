@@ -390,6 +390,8 @@ dotnet run
 
 There are many prompts in the app to allow you to take the time to see what's happening in the portal after each step.
 
+![image](https://user-images.githubusercontent.com/34960418/163592936-ef1c8e0b-043f-4402-bb61-5359b0a95f58.png)
+
 
 # Clean up other resources
 
