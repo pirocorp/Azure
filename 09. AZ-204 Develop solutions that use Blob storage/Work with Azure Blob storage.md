@@ -138,4 +138,8 @@ namespace az204_blob
 
 Set the storageConnectionString variable to the value you copied from the portal.
 
-![image](https://user-images.githubusercontent.com/34960418/163580330-f4f4240d-a103-4272-ba4d-e2beb019e69f.png)
+![image](https://user-images.githubusercontent.com/34960418/163580556-77d726ea-b403-434f-80d7-2504dbce8207.png)
+
+
+
+
