@@ -379,6 +379,18 @@ public static async Task ReadContainerMetadataAsync(BlobContainerClient containe
 ```
 
 
+## Run the code
+
+Now that the app is complete it's time to build and run it. Ensure you are in your application directory and run the following commands:
+
+```bash
+dotnet build
+dotnet run
+```
+
+There are many prompts in the app to allow you to take the time to see what's happening in the portal after each step.
+
+
 # Clean up other resources
 
 The app deleted the resources it created. You can delete all of the resources created for this exercise by using the command below. You will need to confirm that you want to delete the resources.
