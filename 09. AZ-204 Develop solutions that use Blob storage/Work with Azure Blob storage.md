@@ -272,16 +272,7 @@ There are many prompts in the app to allow you to take the time to see what's ha
 ![image](https://user-images.githubusercontent.com/34960418/163586019-21ebbe34-5877-4267-be56-20019788ca94.png)
 
 
-# Clean up other resources
-
-The app deleted the resources it created. You can delete all of the resources created for this exercise by using the command below. You will need to confirm that you want to delete the resources.
-
-```bash
-az group delete --name az204-blob-rg --no-wait
-```
-
-
-# Manage container properties and metadata by using .NET
+## Manage container properties and metadata by using .NET
 
 Blob containers support system properties and user-defined metadata, in addition to the data they contain.
 
@@ -292,7 +283,7 @@ Blob containers support system properties and user-defined metadata, in addition
 Metadata name/value pairs are valid HTTP headers, and so should adhere to all restrictions governing HTTP headers. Metadata names must be valid HTTP header names and valid C# identifiers, may contain only ASCII characters, and should be treated as case-insensitive. Metadata values containing non-ASCII characters should be Base64-encoded or URL-encoded.
 
 
-## Retrieve container properties
+### Retrieve container properties
 
 To retrieve container properties, call one of the following methods of the BlobContainerClient class:
 
@@ -322,7 +313,7 @@ private static async Task ReadContainerPropertiesAsync(BlobContainerClient conta
 }
 ```
 
-## Set and retrieve metadata
+### Set and retrieve metadata
 
 You can specify metadata as one or more name-value pairs on a blob or container resource. To set metadata, add name-value pairs to an IDictionary object, and then call one of the following methods of the BlobContainerClient class to write the values:
 
@@ -388,3 +379,10 @@ public static async Task ReadContainerMetadataAsync(BlobContainerClient containe
 ```
 
 
+# Clean up other resources
+
+The app deleted the resources it created. You can delete all of the resources created for this exercise by using the command below. You will need to confirm that you want to delete the resources.
+
+```bash
+az group delete --name az204-blob-rg --no-wait
+```
