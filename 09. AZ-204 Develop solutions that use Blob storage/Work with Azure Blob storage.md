@@ -1,3 +1,21 @@
+- [Create Blob storage resources by using the .NET client library](#create-blob-storage-resources-by-using-the-net-client-library)
+  - [Prerequisites](#prerequisites)
+  - [Setting up](#setting-up)
+  - [Prepare the .NET project](#prepare-the-net-project)
+  - [Build the full app](#build-the-full-app)
+    - [Create a container](#create-a-container)
+    - [Upload blobs to a container](#upload-blobs-to-a-container)
+    - [List the blobs in a container](#list-the-blobs-in-a-container)
+    - [Download blobs](#download-blobs)
+    - [Delete a container](#delete-a-container)
+    - [Run the code](#run-the-code)
+  - [Manage container properties and metadata by using .NET](#manage-container-properties-and-metadata-by-using-net)
+    - [Retrieve container properties](#retrieve-container-properties)
+    - [Set and retrieve metadata](#set-and-retrieve-metadata)
+    - [Run the code](#run-the-code-1)
+  - [Clean up other resources](#clean-up-other-resources)
+
+
 # Azure Blob storage client library
 
 The Azure Storage client libraries for .NET offer a convenient interface for making calls to Azure Storage. The latest version of the Azure Storage client library is version 12.x. Microsoft recommends using version 12.x for new applications.
