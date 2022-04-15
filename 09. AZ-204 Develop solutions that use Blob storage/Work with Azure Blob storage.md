@@ -267,4 +267,16 @@ dotnet build
 dotnet run
 ```
 
+There are many prompts in the app to allow you to take the time to see what's happening in the portal after each step.
+
 ![image](https://user-images.githubusercontent.com/34960418/163586019-21ebbe34-5877-4267-be56-20019788ca94.png)
+
+
+# Clean up other resources
+
+The app deleted the resources it created. You can delete all of the resources created for this exercise by using the command below. You will need to confirm that you want to delete the resources.
+
+```bash
+az group delete --name az204-blob-rg --no-wait
+```
+
