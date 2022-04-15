@@ -1,5 +1,6 @@
 ﻿namespace Az204_blob
 {
+    using Azure;
     using Azure.Storage.Blobs;
     using Azure.Storage.Blobs.Models;
 
@@ -8,37 +9,53 @@
 
     public static class Program
     {
+        // Copy the connection string from the portal in the variable below.
+        private const string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=zrzstorageaccaunt;AccountKey=ZPXYiv4EWGtWu0FyqdNPBj04d1h2nZST5L7MXS3KPTJ5xOKbU1N2MMcGLNdrSqqsvR/DYdCUFSrxm+4l2uTOhA==;EndpointSuffix=core.windows.net";
+        
+        private static readonly BlobServiceClient BlobServiceClient;
+
+        static Program()
+        {
+            BlobServiceClient = new BlobServiceClient(StorageConnectionString);
+        }
+
         public static async Task Main()
         {
             Console.WriteLine("Azure Blob Storage exercise\n");
 
             // Run the examples asynchronously, wait for the results before proceeding
-            await ProcessAsync();
+
+            // await CreateBlobStorageResources();
+            await ManageContainerPropertiesAndMetadata();
 
             Console.WriteLine("Press enter to exit the sample application.");
             Console.ReadLine();
         }
 
-        private static async Task ProcessAsync()
+        private static async Task CreateBlobStorageResources()
         {
-            // Copy the connection string from the portal in the variable below.
-            const string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=zrzstorageaccaunt;AccountKey=ZPXYiv4EWGtWu0FyqdNPBj04d1h2nZST5L7MXS3KPTJ5xOKbU1N2MMcGLNdrSqqsvR/DYdCUFSrxm+4l2uTOhA==;EndpointSuffix=core.windows.net";
-
-            // Create a client that can authenticate with a connection string
-            var blobServiceClient = new BlobServiceClient(storageConnectionString);
-
-            // EXAMPLE CODE STARTS BELOW HERE
-
             //Create a unique name for the container
             var containerName = "wtblob" + Guid.NewGuid();
 
             var localFile = CreateLocalFile();
             
-            await CreateContainer(blobServiceClient, containerName);
-            await UploadBlobToContainer(blobServiceClient, containerName, localFile);
-            await ListBlobsInContainer(blobServiceClient, containerName);
-            await DownloadBlob(blobServiceClient, containerName, localFile);
-            await DeleteContainer(blobServiceClient, containerName, localFile);
+            await CreateContainer(BlobServiceClient, containerName);
+            await UploadBlobToContainer(BlobServiceClient, containerName, localFile);
+            await ListBlobsInContainer(BlobServiceClient, containerName);
+            await DownloadBlob(BlobServiceClient, containerName, localFile);
+            await DeleteContainer(BlobServiceClient, containerName);
+            DeleteFiles(localFile);
+        }
+
+        private static async Task ManageContainerPropertiesAndMetadata()
+        {
+            var containerName = "wtblob" + Guid.NewGuid();
+
+            await CreateContainer(BlobServiceClient, containerName);
+            await ReadContainerProperties(BlobServiceClient, containerName);
+            await AddContainerMetadata(BlobServiceClient, containerName);
+            await ReadContainerMetadata(BlobServiceClient, containerName);
+            await DeleteContainer(BlobServiceClient, containerName);
         }
 
         private static (string FileName, string FilePath) CreateLocalFile()
@@ -150,8 +167,7 @@
 
         private static async Task DeleteContainer(
             BlobServiceClient blobServiceClient, 
-            string containerName, 
-            (string FileName, string FilePath) file)
+            string containerName)
         {
             // Get a reference to the container client
             var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
@@ -159,7 +175,10 @@
             // Delete the container and clean up local files created
             Console.WriteLine("\n\nDeleting blob container...");
             await containerClient.DeleteAsync();
+        }
 
+        private static void DeleteFiles((string FileName, string FilePath) file)
+        {
             var (_, filePath) = file;
             var downloadFilePath = GenerateDownloadFilePath(filePath);
 
@@ -168,6 +187,87 @@
             File.Delete(downloadFilePath);
 
             Console.WriteLine("Finished cleaning up.");
+        }
+
+        private static async Task ReadContainerProperties(BlobServiceClient blobServiceClient, string containerName)
+        {
+            // Get a reference to the container client
+            var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+            try
+            {
+                // Fetch some container properties and write out their values.
+                var properties = await containerClient.GetPropertiesAsync();
+                Console.WriteLine($"Properties for container {containerClient.Uri}");
+                Console.WriteLine($"Public access level: {properties.Value.PublicAccess}");
+                Console.WriteLine($"Last modified time in UTC: {properties.Value.LastModified}");
+            }
+            catch (RequestFailedException e)
+            {
+                Console.WriteLine($"HTTP error code {e.Status}: {e.ErrorCode}");
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+            }
+
+            Console.WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+        }
+
+        private static async Task AddContainerMetadata(BlobServiceClient blobServiceClient, string containerName)
+        {
+            // Get a reference to the container client
+            var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+            try
+            {
+                IDictionary<string, string> metadata = new Dictionary<string, string>();
+
+                // Add some metadata to the container.
+                metadata.Add("docType", "textDocuments");
+                metadata.Add("category", "guidance");
+
+                // Set the container's metadata.
+                await containerClient.SetMetadataAsync(metadata);
+            }
+            catch (RequestFailedException e)
+            {
+                Console.WriteLine($"HTTP error code {e.Status}: {e.ErrorCode}");
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+            }
+
+            Console.WriteLine("Added container metadata ...");
+            Console.WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+        }
+
+        private static async Task ReadContainerMetadata(BlobServiceClient blobServiceClient, string containerName)
+        {
+            // Get a reference to the container client
+            var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+            try
+            {
+                var properties = await containerClient.GetPropertiesAsync();
+
+                // Enumerate the container's metadata.
+                Console.WriteLine("Container metadata:");
+
+                foreach (var metadataItem in properties.Value.Metadata)
+                {
+                    Console.WriteLine($"\tKey: {metadataItem.Key}");
+                    Console.WriteLine($"\tValue: {metadataItem.Value}");
+                }
+            }
+            catch (RequestFailedException e)
+            {
+                Console.WriteLine($"HTTP error code {e.Status}: {e.ErrorCode}");
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+            }
+
+            Console.WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
         }
     }
 }
