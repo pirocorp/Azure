@@ -316,3 +316,10 @@ dotnet run
 You can verify the results by opening the Azure portal, navigating to your Azure Cosmos DB resource, and use the Data Explorer to view the database and container.
 
 ![image](https://user-images.githubusercontent.com/34960418/163841291-0595b01d-43a0-4e33-87b9-6cf5dd54f847.png)
+
+
+## Clean up Azure resources
+
+```bash
+az group delete --name az204-cosmos-rg --no-wait
+```
