@@ -2,7 +2,7 @@
 
 This unit focuses on version 3 of the .NET SDK. (Microsoft.Azure.Cosmos NuGet package.) If you're familiar with the previous version of the .NET SDK, you may be used to the terms collection and document.
 
-The azure-cosmos-dotnet-v3 GitHub repository includes the latest .NET sample solutions. You use these solutions to perform CRUD (create, read, update, and delete) and other common operations on Azure Cosmos DB resources.
+The [azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/master/Microsoft.Azure.Cosmos.Samples/Usage) GitHub repository includes the latest .NET sample solutions. You use these solutions to perform CRUD (create, read, update, and delete) and other common operations on Azure Cosmos DB resources.
 
 Because Azure Cosmos DB supports multiple API models, version 3 of the .NET SDK uses the generic terms "container" and "item". A container can be a collection, graph, or table. An item can be a document, edge/vertex, or row, and is the content inside a container.
 
@@ -119,7 +119,11 @@ FeedIterator<SalesOrder> resultSet = container.GetItemQueryIterator<SalesOrder>(
     });
 ```
 
-Additional resources
+## Additional resources
 
 - The [azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/master/Microsoft.Azure.Cosmos.Samples/Usage) GitHub repository includes the latest .NET sample solutions to perform CRUD and other common operations on Azure Cosmos DB resources.
 - Visit this article [Azure Cosmos DB.NET V3 SDK (Microsoft.Azure.Cosmos) examples for the SQL API](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-dotnet-v3sdk-samples) for direct links to specific examples in the GitHub repository.
+
+
+# Create resources by using the Microsoft .NET SDK v3
+
