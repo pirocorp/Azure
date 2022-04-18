@@ -211,3 +211,45 @@ In the Create Azure Cosmos DB Account - Core (SQL) page, enter the basic setting
 
 It takes a few minutes to create the account. Wait for the portal page to display **Your deployment is complete**. Select **Go to resource** to go to the Azure Cosmos DB account page.
 
+
+![image](https://user-images.githubusercontent.com/34960418/163821770-213dabe3-182c-4ce1-b2c0-c329ef28bf87.png)
+
+
+# Add a database and a container
+
+You can use the Data Explorer in the Azure portal to create a database and container.
+
+Select **Data Explorer** from the left navigation on your Azure Cosmos DB account page, and then select **New Container**.
+
+![image](https://user-images.githubusercontent.com/34960418/163822031-e53faf30-709e-4f99-8fa2-7ca854f08a92.png)
+
+In the Add container pane, enter the settings for the new container.
+
+- Database ID: Select Create new, and enter ToDoList.
+- Container ID: Enter Items
+- Partition key: Enter /category. The samples in this demo use /category as the partition key.
+
+Select OK. The Data Explorer displays the new database and the container that you created.
+
+![image](https://user-images.githubusercontent.com/34960418/163822306-938ef007-8395-4bb0-b80a-17711f998a28.png)
+
+
+In **Data Explorer**, expand the **ToDoList** database, and expand the **Items** container. Next, select **Items**, and then select **New Item**.
+
+![image](https://user-images.githubusercontent.com/34960418/163822653-1571cb5e-66f9-4cfe-808b-5aa28df3696e.png)
+
+
+Add the following structure to the item on the right side of the Items pane:
+
+```json
+{
+    "id": "1",
+    "category": "personal",
+    "name": "groceries",
+    "description": "Pick up apples and strawberries.",
+    "isComplete": false
+}
+```
+
+
+
