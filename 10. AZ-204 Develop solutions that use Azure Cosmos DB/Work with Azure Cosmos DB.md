@@ -165,5 +165,6 @@ Retrieve the primary key for the account by using the command below. Record the 
 az cosmosdb keys list --name <myCosmosDBacct> --resource-group az204-cosmos-rg
 ```
 
+
 ## Set up the console application
 
