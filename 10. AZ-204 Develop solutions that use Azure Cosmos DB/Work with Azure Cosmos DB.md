@@ -122,8 +122,48 @@ FeedIterator<SalesOrder> resultSet = container.GetItemQueryIterator<SalesOrder>(
 ## Additional resources
 
 - The [azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/master/Microsoft.Azure.Cosmos.Samples/Usage) GitHub repository includes the latest .NET sample solutions to perform CRUD and other common operations on Azure Cosmos DB resources.
+
+
+
 - Visit this article [Azure Cosmos DB.NET V3 SDK (Microsoft.Azure.Cosmos) examples for the SQL API](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-dotnet-v3sdk-samples) for direct links to specific examples in the GitHub repository.
 
 
 # Create resources by using the Microsoft .NET SDK v3
+
+## Connecting to Azure
+
+Log in to Azure by using the command below. A browser window should open letting you choose which account to log in with.
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163834158-be661df0-5db4-42c8-a0ff-d40e29c86cc2.png)
+
+
+## Create resources in Azure
+
+Create a resource group for the resources needed for this exercise. Replace ```<myLocation>``` with a region near you.
+    
+```bash
+az group create --location <myLocation> --name az204-cosmos-rg
+```
+
+Create the Azure Cosmos DB account. Replace ```<myCosmosDBacct>``` with a unique name to identify your Azure Cosmos account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. This command will take a few minutes to complete.
+    
+```bash
+az cosmosdb create --name <myCosmosDBacct> --resource-group az204-cosmos-rg
+```
+
+Record the documentEndpoint shown in the JSON response, it will be used below.
+
+
+Retrieve the primary key for the account by using the command below. Record the primaryMasterKey from the command results it will be used in the code below.
+
+```bash
+# Retrieve the primary key
+az cosmosdb keys list --name <myCosmosDBacct> --resource-group az204-cosmos-rg
+```
+
+## Set up the console application
 
