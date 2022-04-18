@@ -185,3 +185,29 @@ The type of Azure Cosmos account you're using determines the way consumed RUs ge
 - Serverless mode: In this mode, you don't have to provision any throughput when creating resources in your Azure Cosmos account. At the end of your billing period, you get billed for the amount of request units that has been consumed by your database operations.
 
 - Autoscale mode: In this mode, you can automatically and instantly scale the throughput (RU/s) of your database or container based on it's usage. This mode is well suited for mission-critical workloads that have variable or unpredictable traffic patterns, and require SLAs on high performance and scale.
+
+
+# Create Azure Cosmos DB resources by using the Azure portal
+
+Log in to the [Azure portal](https://portal.azure.com/). From the Azure portal navigation pane, select **+ Create a resource**.
+
+![image](https://user-images.githubusercontent.com/34960418/163817381-6bd86145-7953-4c23-8911-8cf1d0007386.png)
+
+
+Search for Azure Cosmos DB, then select **Create/Azure Cosmos DB** to get started.
+
+![image](https://user-images.githubusercontent.com/34960418/163817824-d2b60b24-84af-4ce0-9f6d-af5ae8429209.png)
+
+
+On the Select API option page, select **Create** in the **Core (SQL) - Recommended** box.
+
+![image](https://user-images.githubusercontent.com/34960418/163817978-9ca6c280-9a64-4f3b-9a14-b7b18bbdff7e.png)
+
+
+In the Create Azure Cosmos DB Account - Core (SQL) page, enter the basic settings for the new Azure Cosmos account. Subscription: Select the subscription you want to use. **Resource Group**: Select **Create new**, then enter **az204-cosmos-rg**. Account Name: Enter a unique name to identify your Azure Cosmos account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. Location: Use the location that is closest to your users to give them the fastest access to the data. Capacity mode: Select Serverless. Select **Review + create** and then select **Create**. 
+
+![image](https://user-images.githubusercontent.com/34960418/163819205-fe0b7c3d-f554-478e-bb0b-387bbb8bd07e.png)
+
+
+It takes a few minutes to create the account. Wait for the portal page to display **Your deployment is complete**. Select **Go to resource** to go to the Azure Cosmos DB account page.
+
