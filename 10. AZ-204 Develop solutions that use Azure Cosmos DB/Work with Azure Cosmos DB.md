@@ -149,6 +149,9 @@ Create a resource group for the resources needed for this exercise. Replace ```<
 az group create --location <myLocation> --name az204-cosmos-rg
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/163835848-aa30addc-0c86-4e97-8393-fb2a8ab4c92b.png)
+
+
 Create the Azure Cosmos DB account. Replace ```<myCosmosDBacct>``` with a unique name to identify your Azure Cosmos account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. This command will take a few minutes to complete.
     
 ```bash
@@ -156,6 +159,8 @@ az cosmosdb create --name <myCosmosDBacct> --resource-group az204-cosmos-rg
 ```
 
 Record the documentEndpoint shown in the JSON response, it will be used below.
+
+![image](https://user-images.githubusercontent.com/34960418/163836680-b124ff27-6bc3-4b11-bcc5-6bfb45bf9205.png)
 
 
 Retrieve the primary key for the account by using the command below. Record the primaryMasterKey from the command results it will be used in the code below.
