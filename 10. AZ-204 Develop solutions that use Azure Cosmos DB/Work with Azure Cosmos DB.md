@@ -257,3 +257,62 @@ public async Task CosmosAsync()
     this.cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
 }
 ```
+
+
+## Create a database
+
+Copy and paste the CreateDatabaseAsync method after the CosmosAsync method. CreateDatabaseAsync creates a new database with ID az204Database if it doesn't already exist.
+
+
+```csharp
+private async Task CreateDatabaseAsync()
+{
+    // Create a new database using the cosmosClient
+    this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(databaseId);
+    Console.WriteLine("Created Database: {0}\n", this.database.Id);
+}
+```
+
+Add the code below at the end of the CosmosAsync method, it calls the CreateDatabaseAsync method you just added.
+
+```csharp
+// Runs the CreateDatabaseAsync method
+    await this.CreateDatabaseAsync();
+```
+
+
+## Create a container
+
+Copy and paste the CreateContainerAsync method below the CreateDatabaseAsync method.
+
+```csharp
+private async Task CreateContainerAsync()
+{
+    // Create a new container
+    this.container = await this.database.CreateContainerIfNotExistsAsync(containerId, "/LastName");
+    Console.WriteLine("Created Container: {0}\n", this.container.Id);
+}
+```
+
+Copy and paste the code below where you instantiated the CosmosClient to call the CreateContainer method you just added.
+
+```csharp
+// Run the CreateContainerAsync method
+await this.CreateContainerAsync();
+```
+
+
+## Run the application
+
+Save your work and, in a terminal in VS Code, run the dotnet run command. The console will display the following messages.
+
+```bash
+dotnet run
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163841175-eac7985f-d764-4344-9006-999513840d0c.png)
+
+
+You can verify the results by opening the Azure portal, navigating to your Azure Cosmos DB resource, and use the Data Explorer to view the database and container.
+
+![image](https://user-images.githubusercontent.com/34960418/163841291-0595b01d-43a0-4e33-87b9-6cf5dd54f847.png)
