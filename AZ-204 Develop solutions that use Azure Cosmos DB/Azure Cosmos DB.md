@@ -206,7 +206,7 @@ On the Select API option page, select **Create** in the **Core (SQL) - Recommend
 
 In the Create Azure Cosmos DB Account - Core (SQL) page, enter the basic settings for the new Azure Cosmos account. Subscription: Select the subscription you want to use. **Resource Group**: Select **Create new**, then enter **az204-cosmos-rg**. Account Name: Enter a unique name to identify your Azure Cosmos account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. Location: Use the location that is closest to your users to give them the fastest access to the data. Capacity mode: Select Serverless. Select **Review + create** and then select **Create**. 
 
-![image](https://user-images.githubusercontent.com/34960418/163819205-fe0b7c3d-f554-478e-bb0b-387bbb8bd07e.png)
+![image](https://user-images.githubusercontent.com/34960418/163820709-a04d02c5-39e2-4310-b843-269484164ead.png)
 
 
 It takes a few minutes to create the account. Wait for the portal page to display **Your deployment is complete**. Select **Go to resource** to go to the Azure Cosmos DB account page.
