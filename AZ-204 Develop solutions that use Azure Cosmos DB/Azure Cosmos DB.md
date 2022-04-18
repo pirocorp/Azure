@@ -1,3 +1,10 @@
+- [Create Azure Cosmos DB resources by using the Azure portal](#create-azure-cosmos-db-resources-by-using-the-azure-portal)
+  - [Create an Azure Cosmos DB account](#create-an-azure-cosmos-db-account)
+  - [Add a database and a container](#add-a-database-and-a-container)
+  - [Add data to your database](#add-data-to-your-database)
+  - [Clean up resources](#clean-up-resources)
+
+
 # Identify key benefits of Azure Cosmos DB
 
 Azure Cosmos DB is a globally distributed database system that allows you to read and write data from the local replicas of your database and it transparently replicates the data to all the regions associated with your Cosmos account.
