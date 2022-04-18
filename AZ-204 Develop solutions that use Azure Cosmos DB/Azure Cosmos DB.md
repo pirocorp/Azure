@@ -269,10 +269,16 @@ Select **New Item** again, and create and save another item with a unique id, an
 ![image](https://user-images.githubusercontent.com/34960418/163823195-9b0df99a-944e-4a44-84c6-c8019aad6c04.png)
 
 
+## Clean up resources
+
+Select Overview from the left navigation on your Azure Cosmos DB account page. Select the **az204-cosmos-rg** resource group link in the Essentials group.
+
+![image](https://user-images.githubusercontent.com/34960418/163823743-a890bb7c-105f-4012-833d-3da032083e53.png)
 
 
+Select **Delete** resource group and follow the directions to delete the resource group and all of the resources it contains.
 
-
+![image](https://user-images.githubusercontent.com/34960418/163823847-49ec66ce-8376-4b05-bcb7-9754b10d1e6a.png)
 
 
 
