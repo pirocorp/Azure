@@ -189,6 +189,8 @@ The type of Azure Cosmos account you're using determines the way consumed RUs ge
 
 # Create Azure Cosmos DB resources by using the Azure portal
 
+## Create an Azure Cosmos DB account
+
 Log in to the [Azure portal](https://portal.azure.com/). From the Azure portal navigation pane, select **+ Create a resource**.
 
 ![image](https://user-images.githubusercontent.com/34960418/163817381-6bd86145-7953-4c23-8911-8cf1d0007386.png)
@@ -211,11 +213,10 @@ In the Create Azure Cosmos DB Account - Core (SQL) page, enter the basic setting
 
 It takes a few minutes to create the account. Wait for the portal page to display **Your deployment is complete**. Select **Go to resource** to go to the Azure Cosmos DB account page.
 
-
 ![image](https://user-images.githubusercontent.com/34960418/163821770-213dabe3-182c-4ce1-b2c0-c329ef28bf87.png)
 
 
-# Add a database and a container
+## Add a database and a container
 
 You can use the Data Explorer in the Azure portal to create a database and container.
 
@@ -233,6 +234,10 @@ Select OK. The Data Explorer displays the new database and the container that yo
 
 ![image](https://user-images.githubusercontent.com/34960418/163822306-938ef007-8395-4bb0-b80a-17711f998a28.png)
 
+
+## Add data to your database
+
+Add data to your new database using Data Explorer.
 
 In **Data Explorer**, expand the **ToDoList** database, and expand the **Items** container. Next, select **Items**, and then select **New Item**.
 
