@@ -122,10 +122,203 @@ FeedIterator<SalesOrder> resultSet = container.GetItemQueryIterator<SalesOrder>(
 ## Additional resources
 
 - The [azure-cosmos-dotnet-v3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/master/Microsoft.Azure.Cosmos.Samples/Usage) GitHub repository includes the latest .NET sample solutions to perform CRUD and other common operations on Azure Cosmos DB resources.
-
-
-
 - Visit this article [Azure Cosmos DB.NET V3 SDK (Microsoft.Azure.Cosmos) examples for the SQL API](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-dotnet-v3sdk-samples) for direct links to specific examples in the GitHub repository.
+
+
+# Create stored procedures
+
+Azure Cosmos DB provides language-integrated, transactional execution of JavaScript that lets you write **stored procedures**, **triggers**, and **user-defined functions (UDFs)**. To call a stored procedure, trigger, or user-defined function, you need to register it. For more information, see [How to work with stored procedures, triggers, user-defined functions in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-use-stored-procedures-triggers-udfs).
+
+**Note**
+
+This unit focuses on stored procedures, the following unit covers triggers and user-defined functions.
+
+
+## Writing stored procedures
+
+Stored procedures can create, update, read, query, and delete items inside an Azure Cosmos container. Stored procedures are registered per collection, and can operate on any document or an attachment present in that collection.
+
+Here is a simple stored procedure that returns a "Hello World" response.
+
+```javascript
+var helloWorldStoredProc = {
+    id: "helloWorld",
+    serverScript: function () {
+        var context = getContext();
+        var response = context.getResponse();
+
+        response.setBody("Hello, World");
+    }
+}
+```
+
+The context object provides access to all operations that can be performed in Azure Cosmos DB, as well as access to the request and response objects. In this case, you use the response object to set the body of the response to be sent back to the client.
+
+
+## Create an item using stored procedure
+
+When you create an item by using stored procedure it is inserted into the Azure Cosmos container and an ID for the newly created item is returned. Creating an item is an asynchronous operation and depends on the JavaScript callback functions. The callback function has two parameters:
+
+- The error object in case the operation fails
+- A return value
+
+Inside the callback, you can either handle the exception or throw an error. In case a callback is not provided and there is an error, the Azure Cosmos DB runtime will throw an error.
+
+The stored procedure also includes a parameter to set the description, it's a boolean value. When the parameter is set to true and the description is missing, the stored procedure will throw an exception. Otherwise, the rest of the stored procedure continues to run.
+
+The following example stored procedure takes an input parameter named documentToCreate and the parameter’s value is the body of a document to be created in the current collection. The callback throws an error if the operation fails. Otherwise, it sets the id of the created document as the body of the response to the client.
+
+```javascript
+function createSampleDocument(documentToCreate) {
+    var context = getContext();
+    var collection = context.getCollection();
+    var accepted = collection.createDocument(
+        collection.getSelfLink(),
+        documentToCreate,
+        function (error, documentCreated) {                 
+            context.getResponse().setBody(documentCreated.id)
+        }
+    );
+    if (!accepted) return;
+}
+```
+
+
+## Arrays as input parameters for stored procedures
+
+When defining a stored procedure in the Azure portal, input parameters are always sent as a string to the stored procedure. Even if you pass an array of strings as an input, the array is converted to string and sent to the stored procedure. To work around this, you can define a function within your stored procedure to parse the string as an array. The following code shows how to parse a string input parameter as an array:
+
+```javascript
+function sample(arr) {
+    if (typeof arr === "string") arr = JSON.parse(arr);
+
+    arr.forEach(function(a) {
+        // do something here
+        console.log(a);
+    });
+}
+```
+
+
+## Bounded execution
+
+All Azure Cosmos DB operations must complete within a limited amount of time. Stored procedures have a limited amount of time to run on the server. All collection functions return a Boolean value that represents whether that operation will complete or not
+
+
+## Transactions within stored procedures
+
+You can implement transactions on items within a container by using a stored procedure. JavaScript functions can implement a continuation-based model to batch or resume execution. The continuation value can be any value of your choice and your applications can then use this value to resume a transaction from a new starting point. The diagram below depicts how the transaction continuation model can be used to repeat a server-side function until the function finishes its entire processing workload.
+
+![image](https://user-images.githubusercontent.com/34960418/163843171-0f4bb77a-6fb7-4a30-8e56-3caf819e52c3.png)
+
+
+# Create triggers and user-defined functions
+
+Azure Cosmos DB supports pre-triggers and post-triggers. Pre-triggers are executed before modifying a database item and post-triggers are executed after modifying a database item. Triggers are not automatically executed, they must be specified for each database operation where you want them to execute. After you define a trigger, you should register it by using the Azure Cosmos DB SDKs.
+
+For examples of how to register and call a trigger, see [pre-triggers](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-use-stored-procedures-triggers-udfs#pre-triggers) and [post-triggers](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-use-stored-procedures-triggers-udfs#post-triggers).
+
+
+## Pre-triggers
+
+The following example shows how a pre-trigger is used to validate the properties of an Azure Cosmos item that is being created, it adds a timestamp property to a newly added item if it doesn't contain one.
+
+```javascript
+function validateToDoItemTimestamp() {
+    var context = getContext();
+    var request = context.getRequest();
+
+    // item to be created in the current operation
+    var itemToCreate = request.getBody();
+
+    // validate properties
+    if (!("timestamp" in itemToCreate)) {
+        var ts = new Date();
+        itemToCreate["timestamp"] = ts.getTime();
+    }
+
+    // update the item that will be created
+    request.setBody(itemToCreate);
+}
+```
+
+Pre-triggers cannot have any input parameters. The request object in the trigger is used to manipulate the request message associated with the operation. In the previous example, the pre-trigger is run when creating an Azure Cosmos item, and the request message body contains the item to be created in JSON format.
+
+When triggers are registered, you can specify the operations that it can run with. This trigger should be created with a TriggerOperation value of TriggerOperation.Create, which means using the trigger in a replace operation is not permitted.
+
+For examples of how to register and call a pre-trigger, visit the [pre-triggers](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/how-to-use-stored-procedures-triggers-udfs#pre-triggers) article.
+
+
+## Post-triggers
+
+The following example shows a post-trigger. This trigger queries for the metadata item and updates it with details about the newly created item.
+
+```javascript
+function updateMetadata() {
+var context = getContext();
+var container = context.getCollection();
+var response = context.getResponse();
+
+// item that was created
+var createdItem = response.getBody();
+
+// query for metadata document
+var filterQuery = 'SELECT * FROM root r WHERE r.id = "_metadata"';
+var accept = container.queryDocuments(container.getSelfLink(), filterQuery,
+    updateMetadataCallback);
+if(!accept) throw "Unable to update metadata, abort";
+
+function updateMetadataCallback(err, items, responseOptions) {
+    if(err) throw new Error("Error" + err.message);
+        if(items.length != 1) throw 'Unable to find metadata document';
+
+        var metadataItem = items[0];
+
+        // update metadata
+        metadataItem.createdItems += 1;
+        metadataItem.createdNames += " " + createdItem.id;
+        var accept = container.replaceDocument(metadataItem._self,
+            metadataItem, function(err, itemReplaced) {
+                    if(err) throw "Unable to update metadata, abort";
+            });
+        if(!accept) throw "Unable to update metadata, abort";
+        return;
+    }
+}
+```
+
+One thing that is important to note is the transactional execution of triggers in Azure Cosmos DB. The post-trigger runs as part of the same transaction for the underlying item itself. An exception during the post-trigger execution will fail the whole transaction. Anything committed will be rolled back and an exception returned.
+
+
+## User-defined functions
+
+The following sample creates a UDF to calculate income tax for various income brackets. This user-defined function would then be used inside a query. For the purposes of this example assume there is a container called "Incomes" with properties as follows:
+
+```javascript
+{
+   "name": "User One",
+   "country": "USA",
+   "income": 70000
+}
+```
+
+The following is a function definition to calculate income tax for various income brackets:
+
+```javascript
+function tax(income) {
+
+        if(income == undefined)
+            throw 'no input';
+
+        if (income < 1000)
+            return income * 0.1;
+        else if (income < 10000)
+            return income * 0.2;
+        else
+            return income * 0.4;
+    }
+```
+
 
 
 # Create resources by using the Microsoft .NET SDK v3
@@ -316,6 +509,11 @@ dotnet run
 You can verify the results by opening the Azure portal, navigating to your Azure Cosmos DB resource, and use the Data Explorer to view the database and container.
 
 ![image](https://user-images.githubusercontent.com/34960418/163841291-0595b01d-43a0-4e33-87b9-6cf5dd54f847.png)
+
+
+
+
+
 
 
 ## Clean up Azure resources
