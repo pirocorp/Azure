@@ -511,11 +511,6 @@ You can verify the results by opening the Azure portal, navigating to your Azure
 ![image](https://user-images.githubusercontent.com/34960418/163841291-0595b01d-43a0-4e33-87b9-6cf5dd54f847.png)
 
 
-
-
-
-
-
 ## Clean up Azure resources
 
 ```bash
