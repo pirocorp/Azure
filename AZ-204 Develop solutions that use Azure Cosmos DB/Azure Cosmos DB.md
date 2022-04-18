@@ -251,5 +251,27 @@ Add the following structure to the item on the right side of the Items pane:
 }
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/163822832-334261ec-67d7-4ccb-b98f-3ed9fd21fa72.png)
+
+
+Select **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/163822907-fe35e418-8655-4fc4-a06b-530223c6f40d.png)
+
+
+Select **New Item** again, and create and save another item with a unique id, and any other properties and values you want. Your items can have any structure, because Azure Cosmos DB doesn't impose any schema on your data.
+
+![image](https://user-images.githubusercontent.com/34960418/163823195-9b0df99a-944e-4a44-84c6-c8019aad6c04.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
