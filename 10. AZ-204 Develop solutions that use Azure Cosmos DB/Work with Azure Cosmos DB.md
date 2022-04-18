@@ -163,12 +163,14 @@ Record the documentEndpoint shown in the JSON response, it will be used below.
 ![image](https://user-images.githubusercontent.com/34960418/163836680-b124ff27-6bc3-4b11-bcc5-6bfb45bf9205.png)
 
 
-Retrieve the primary key for the account by using the command below. Record the primaryMasterKey from the command results it will be used in the code below.
+Retrieve the primary key for the account by using the command below. Record the **primaryMasterKey** from the command results it will be used in the code below.
 
 ```bash
 # Retrieve the primary key
 az cosmosdb keys list --name <myCosmosDBacct> --resource-group az204-cosmos-rg
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/163837062-5cf51bc1-b32b-4c82-8078-0fdb356e675f.png)
 
 
 ## Set up the console application
