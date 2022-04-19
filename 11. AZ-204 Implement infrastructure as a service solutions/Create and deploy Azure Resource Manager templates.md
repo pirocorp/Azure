@@ -399,3 +399,20 @@ az deployment group create --resource-group az204-arm-rg --template-file azurede
 
 ![image](https://user-images.githubusercontent.com/34960418/164010098-29428bc9-b3b8-445a-9675-fd44ac20f56a.png)
 
+
+You can verify the deployment by running the command below. Replace ```<myStorageAccount>``` with the name you used earlier.
+  
+```bash
+az storage account show --resource-group az204-arm-rg --name <myStorageAccount>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164012085-48450f50-7bb7-4a0d-81ef-1dadea7e3c8f.png)
+
+
+## Clean up resources
+
+When the Azure resources are no longer needed use the Azure CLI command below to delete the resource group.
+
+```bash
+az group delete --name az204-arm-rg --no-wait
+```
