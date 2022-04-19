@@ -140,7 +140,7 @@ az group create --name az204-vm-rg --location <myLocation>
 ![image](https://user-images.githubusercontent.com/34960418/163986656-b9598a7b-a936-48d3-bd5e-eee5ea71b995.png)
 
 
-Create a VM with the ```az vm create``` command. The command below creates a Linux VM named **az204vm** with an admin user named **azureuser**. After executing the command you will need to supply a password that meets the password requirements.
+Create a VM with the ```az vm create``` command. The command below creates a Linux VM named **az204vm** with an admin user named **azureuser**.
 
 ```bash
 az vm create \
@@ -172,3 +172,23 @@ az vm open-port --port 80 --resource-group az204-vm-rg --name az204vm
 
 
 Connect to your VM by using SSH. Replace ```<publicIPAddress>``` in the example with the public IP address of your VM as noted in the previous output:
+
+```bash
+ssh azureuser@<publicIPAddress>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163988711-bd4cbcf6-f3c6-4d61-9634-0e19256fa6f8.png)
+
+
+To see your VM in action, install the NGINX web server. Update your package sources and then install the latest NGINX package.
+
+```bash
+sudo apt-get -y update
+sudo apt-get -y install nginx
+```
+
+## View the web server in action
+
+Use a web browser of your choice to view the default NGINX welcome page. Use the public IP address of your VM as the web address. The following example shows the default NGINX web site:
+
+![image](https://user-images.githubusercontent.com/34960418/163989053-f6abd58b-c16a-41e7-87c3-1a566e6396f9.png)
