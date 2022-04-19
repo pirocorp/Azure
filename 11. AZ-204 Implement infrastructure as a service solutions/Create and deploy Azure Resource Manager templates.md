@@ -319,5 +319,27 @@ Update the name of the parameter to storageAccountName and the description to St
 },
 ```
 
+Follow the steps below to update the name property of the storage resource to use the parameter.
 
+1. In the resources block, delete the current default name which is storageaccount1 in the examples above. Leave the quotes ("") around the name in place.
+2. Enter a square bracket ```[```, which produces a list of Azure Resource Manager template functions. Select parameters from the list.
+3. Add () at the end of parameters and select storageAccountName from the pop-up. If the list of parameters does not show up automatically you can enter a single quote ' inside of the round brackets to display the list.
 
+The resources block of the template should now be similar to the example below.
+
+```json
+"resources": [{
+    "name": "[parameters('storageAccountName')]",
+    "type": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-04-01",
+    "tags": {
+        "displayName": "storageaccount1"
+    },
+    "location": "[resourceGroup().location]",
+    "kind": "StorageV2",
+    "sku": {
+        "name": "Premium_LRS",
+        "tier": "Premium"
+    }
+}],
+```
