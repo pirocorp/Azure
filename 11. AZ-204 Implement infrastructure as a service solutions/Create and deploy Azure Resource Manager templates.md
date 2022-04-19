@@ -371,3 +371,30 @@ Edit the **value** parameter and type in a name that meets the naming requiremen
     }
 }
 ```
+
+## Deploy the template
+
+It's time to deploy the template. Follow the steps below, in the VS Code terminal, to connect to Azure and deploy the new storage account resource.
+
+Connect to Azure by using the az login command.
+
+```bash
+az login
+```
+
+Create a resource group to contain the new resource. Replace ```<myLocation>``` with a region near you.
+  
+```bash
+az group create --name az204-arm-rg --location <myLocation>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164009269-ea567827-2f34-48f8-8dba-fb9c992c81f9.png)
+
+
+Use the ```az deployment group create``` command to deploy your template. The deployment will take a few minutes to complete, progress will be shown in the terminal.
+
+```bash
+az deployment group create --resource-group az204-arm-rg --template-file azuredeploy.json --parameters azuredeploy.parameters.json
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164010008-a3c1e795-2a0f-457b-aec8-d4d154cd97da.png)
