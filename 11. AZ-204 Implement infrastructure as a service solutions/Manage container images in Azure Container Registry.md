@@ -194,3 +194,27 @@ The command above creates a Basic registry, a cost-optimized option for develope
 
 
 ## Build and push image from a Dockerfile
+
+Now use Azure Container Registry to build and push an image based on a local Dockerfile.
+
+Create, or navigate, to a local directory and then use the command below to create the Dockerfile. The Dockerfile will contain a single line that references the **hello-world** image hosted at the Microsoft Container Registry.
+
+```bash
+echo FROM mcr.microsoft.com/hello-world > Dockerfile
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164027580-63565d1d-eec5-4ae4-99a9-5da61c7bd1da.png)
+![image](https://user-images.githubusercontent.com/34960418/164027959-d6f13a8b-2c43-45b3-951a-c8d6e78b9c0f.png)
+
+
+Run the az acr build command, which builds the image and, after the image is successfully built, pushes it to your registry. Replace ```<myContainerRegistry>``` with the name you used earlier.
+
+```bash
+az acr build --image sample/hello-world:v1 \
+    --registry <myContainerRegistry> \
+    --resource-group az204-acr-rg \
+    --file Dockerfile .
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164029868-066f8ab1-5ea9-4f2c-b7b4-09c7f8b82cde.png)
+
