@@ -239,3 +239,7 @@ az deployment group create \
 
 # Create and deploy Azure Resource Manager templates by using Visual Studio Code
 
+# Prerequisites
+- An Azure account with an active subscription. If you don't already have one, you can sign up for a free trial at https://azure.com/free.
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Azure Resource Manager Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools) installed.
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) installed locally
