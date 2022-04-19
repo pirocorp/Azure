@@ -397,4 +397,5 @@ Use the ```az deployment group create``` command to deploy your template. The de
 az deployment group create --resource-group az204-arm-rg --template-file azuredeploy.json --parameters azuredeploy.parameters.json
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/164010008-a3c1e795-2a0f-457b-aec8-d4d154cd97da.png)
+![image](https://user-images.githubusercontent.com/34960418/164010098-29428bc9-b3b8-445a-9675-fd44ac20f56a.png)
+
