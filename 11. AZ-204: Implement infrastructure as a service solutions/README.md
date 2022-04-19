@@ -1,1 +1,4 @@
-
+- [Provision virtual machines in Azure](Provision%20virtual%20machines%20in%20Azure.md)
+- [Create and deploy Azure Resource Manager templates](Create%20and%20deploy%20Azure%20Resource%20Manager%20templates.md)
+- [Manage container images in Azure Container Registry](Manage%20container%20images%20in%20Azure%20Container%20Registry.md)
+- [Run container images in Azure Container Instances](Run%20container%20images%20in%20Azure%20Container%20Instances.md)
