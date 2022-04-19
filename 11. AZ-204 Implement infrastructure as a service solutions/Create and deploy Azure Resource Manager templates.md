@@ -302,9 +302,22 @@ Place your cursor in the parameters block, type ", and then select the new-param
 ![image](https://user-images.githubusercontent.com/34960418/164006141-02e2c6d5-db67-4214-9dd6-2a7a6e17a59a.png)
 
 
+Make the following changes to the new parameter you just added:
 
+Update the name of the parameter to storageAccountName and the description to Storage Account Name. Azure storage account names have a minimum length of 3 characters and a maximum of 24. Add both minLength and maxLength to the parameter and provide appropriate values. The parameters block should look similar to the example below.
 
-
+```json
+"parameters": {
+    "storageAccountName": {
+        "type": "string",
+        "metadata": {
+            "description": "Storage Account Name"
+        },
+        "minLength": 3,
+        "maxLength": 24
+    }
+},
+```
 
 
 
