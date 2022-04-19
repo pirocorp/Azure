@@ -343,3 +343,31 @@ The resources block of the template should now be similar to the example below.
     }
 }],
 ```
+
+## Create a parameter file
+
+An Azure Resource Manager template parameter file allows you to store environment-specific parameter values and pass these values in as a group at deployment time. This useful if you want to have values specific to a test or production environment, for example. The extension makes it easy to create a parameter file that is mapped to your existing template. Follow the steps below to create a parameter file.
+
+With the azuredeploy.json file in focus open the **Command Palette** by selecting **View** > **Command Palette** from the menu bar. In the **Command Palette** enter "**parameter**" in the search bar and select **Azure Resource Manager Tools:Select/Create Parameter File**.
+
+![image](https://user-images.githubusercontent.com/34960418/164007965-15e37328-e9c9-4b18-9a20-35c71dfd388b.png)
+
+
+A new dialog box will open at the top of the editor. From those options select New, then select All Parameters. Accept the default name for the new file.
+
+![image](https://user-images.githubusercontent.com/34960418/164008164-8e684dfb-ce20-428a-ac85-c6f225d81cdd.png)
+
+
+Edit the **value** parameter and type in a name that meets the naming requirements. The **azuredeploy.parameters.json** file should be similar to the example below.
+
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "value": "az204storageacctarm"
+        }
+    }
+}
+```
