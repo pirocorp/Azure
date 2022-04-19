@@ -207,6 +207,32 @@ However, when redeploying an existing resource in incremental mode, the outcome 
 # Example result
 
 To illustrate the difference between incremental and complete modes, consider the following table.
+
 | Resource Group contains                	| Template contains                      	| Incremental result                                   	| Complete result                        	|
 |----------------------------------------	|----------------------------------------	|------------------------------------------------------	|----------------------------------------	|
 | Resource A<br>Resource B<br>Resource C 	| Resource A<br>Resource B<br>Resource D 	| Resource A<br>Resource B<br>Resource C<br>Resource D 	| Resource A<br>Resource B<br>Resource D 	|
+
+When deployed in incremental mode, Resource D is added to the existing resource group. When deployed in complete mode, Resource D is added and Resource C is deleted.
+
+
+# Set deployment mode
+
+To set the deployment mode when deploying with PowerShell, use the Mode parameter.
+
+```powershell
+New-AzResourceGroupDeployment `
+  -Mode Complete `
+  -Name ExampleDeployment `
+  -ResourceGroupName ExampleResourceGroup `
+  -TemplateFile c:\MyTemplates\storage.json
+```
+
+To set the deployment mode when deploying with Azure CLI, use the mode parameter.
+
+```powershell
+az deployment group create \
+  --mode Complete \
+  --name ExampleDeployment \
+  --resource-group ExampleResourceGroup \
+  --template-file storage.json
+```
