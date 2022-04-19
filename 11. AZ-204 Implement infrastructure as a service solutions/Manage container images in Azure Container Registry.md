@@ -218,3 +218,44 @@ az acr build --image sample/hello-world:v1 \
 
 ![image](https://user-images.githubusercontent.com/34960418/164029868-066f8ab1-5ea9-4f2c-b7b4-09c7f8b82cde.png)
 
+
+## Verify the results
+
+Use the az acr repository list command to list the repositories in your registry. Replace ```<myContainerRegistry>``` with the name you used earlier.
+	
+```bash
+az acr repository list --name zrzregistry --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164030277-97aa241b-a257-4e69-b6e0-48d57a2f6309.png)
+
+
+Use the az acr repository show-tags command to list the tags on the sample/hello-world repository. Replace ```<myContainerRegistry>``` with the name you used earlier.
+	
+```bash
+az acr repository show-tags --name <myContainerRegistry> --repository sample/hello-world --output table
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164030632-4a08da49-923e-45e1-bc0f-7229e8616e63.png)
+
+
+## Run the image in the ACR
+
+Run the sample/hello-world:v1 container image from your container registry by using the az acr run command. The following example uses $Registry to specify the registry where you run the command. Replace ```<myContainerRegistry>``` with the name you used earlier.
+
+```bash
+az acr run --registry zrzregistry --resource-group az204-acr-rg --cmd '$Registry/sample/hello-world:v1' /dev/null
+```
+
+The cmd parameter in this example runs the container in its default configuration, but cmd supports additional docker run parameters or even other docker commands. Below is shortened sample of the output:
+
+![image](https://user-images.githubusercontent.com/34960418/164031253-7d10ec07-dddf-47de-bd26-83333502adc7.png)
+
+
+## Clean up resources
+
+```bash
+az group delete --name az204-acr-rg --no-wait
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164031604-01df3a5f-3274-454b-b74d-6b71937ee9eb.png)
