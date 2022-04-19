@@ -158,3 +158,39 @@ Finally, notice the last step, step 8. The ENTRYPOINT in the file indicates whic
 # Additional resources
 
 - [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+
+
+# Build and run a container image by using Azure Container Registry Tasks
+
+## Login to Azure
+
+```bash
+az login
+```
+
+
+## Create an Azure Container Registry
+
+Create a resource group for the registry, replace ```<myLocation>``` in the command below with a location near you.
+
+```bash
+az group create --name az204-acr-rg --location <myLocation>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164026265-286225df-e09c-4bd9-a2f8-bd0a7b6ee066.png)
+
+
+Create a basic container registry. The registry name must be unique within Azure, and contain 5-50 alphanumeric characters. Replace ```<myContainerRegistry>``` in the command below with a unique value.
+	
+```bash
+az acr create --resource-group az204-acr-rg --name <myContainerRegistry> --sku Basic
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164026683-326be89f-5c2b-4625-92b8-153e1ac7ff76.png)
+
+**Note**
+
+The command above creates a Basic registry, a cost-optimized option for developers learning about Azure Container Registry.
+
+
+## Build and push image from a Dockerfile
