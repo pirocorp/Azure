@@ -1,3 +1,12 @@
+- [Build and run a container image by using Azure Container Registry Tasks](#build-and-run-a-container-image-by-using-azure-container-registry-tasks)
+  - [Login to Azure](#login-to-azure)
+  - [Create an Azure Container Registry](#create-an-azure-container-registry)
+  - [Build and push image from a Dockerfile](#build-and-push-image-from-a-dockerfile)
+  - [Verify the results](#verify-the-results)
+  - [Run the image in the ACR](#run-the-image-in-the-acr)
+  - [Clean up resources](#clean-up-resources)
+
+
 # Azure Container Registry
 
 Use the Azure Container Registry (ACR) service with your existing container development and deployment pipelines, or use Azure Container Registry Tasks to build container images in Azure. Build on demand, or fully automate builds with triggers such as source code commits and base image updates.
