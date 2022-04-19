@@ -118,3 +118,43 @@ If you stop and deallocate the VM, you can then select any size available in you
 - For availability of VM sizes in Azure regions, see [Products available by region](https://azure.microsoft.com/regions/services/).
 
 
+# Create a virtual machine by using the Azure CLI
+
+## Login to Azure
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163986410-d687aa2c-b717-4008-9e23-194cb12d0d1f.png)
+
+
+## Create a resource group and virtual machine
+
+Create a resource group with the ```az group create``` command. The command below creates a resource group named ```az204-vm-rg```. Replace ```<myLocation>``` with a region near you.
+
+```bash
+az group create --name az204-vm-rg --location <myLocation>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163986656-b9598a7b-a936-48d3-bd5e-eee5ea71b995.png)
+
+
+Create a VM with the ```az vm create``` command. The command below creates a Linux VM named **az204vm** with an admin user named **azureuser**. After executing the command you will need to supply a password that meets the password requirements.
+
+```bash
+az vm create \
+    --resource-group az204-vm-rg \
+    --name az204vm \
+    --image UbuntuLTS \
+    --generate-ssh-keys \
+    --admin-username azureuser
+```
+
+It will take a few minutes for the operation to complete. When it is finished note the **publicIpAddress** in the output, you'll use it in the next step.
+
+![image](https://user-images.githubusercontent.com/34960418/163987826-dabe6bb1-7c6a-42a2-b9b3-7bf062654fdb.png)
+
+**Note**
+
+When creating VMs with the Azure CLI passwords need to be between 12-123 characters, have both uppercase and lowercase characters, a digit, and have a special character (@, !, etc.). Be sure to remember the password.
