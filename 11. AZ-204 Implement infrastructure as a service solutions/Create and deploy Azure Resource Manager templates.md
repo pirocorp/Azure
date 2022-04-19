@@ -268,4 +268,43 @@ Your file should contain something similar to the example below.
 ```
 
 
+## Add an Azure resource to the template
+
+In this section you will add a snippet to support the creation of an Azure storage account to the template. Place the cursor in the template **resources** block, type in **storage**, and select the **arm-storage** snippet.
+
+![image](https://user-images.githubusercontent.com/34960418/164005437-48092ef7-b04f-4de3-b947-3c3f82018e9c.png)
+
+The resources block should look similar to the example below.
+
+```json
+"resources": [{
+    "name": "storageaccount1",
+    "type": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2021-04-01",
+    "tags": {
+        "displayName": "storageaccount1"
+    },
+    "location": "[resourceGroup().location]",
+    "kind": "StorageV2",
+    "sku": {
+        "name": "Premium_LRS",
+        "tier": "Premium"
+    }
+}],
+```
+
+## Add parameters to the template
+
+Now you will create and use a parameter to specify the storage account name.
+
+Place your cursor in the parameters block, type ", and then select the new-parameter snippet. This action adds a generic parameter to the template.
+
+![image](https://user-images.githubusercontent.com/34960418/164006141-02e2c6d5-db67-4214-9dd6-2a7a6e17a59a.png)
+
+
+
+
+
+
+
 
