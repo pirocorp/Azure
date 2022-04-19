@@ -236,3 +236,6 @@ az deployment group create \
   --resource-group ExampleResourceGroup \
   --template-file storage.json
 ```
+
+# Create and deploy Azure Resource Manager templates by using Visual Studio Code
+
