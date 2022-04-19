@@ -158,3 +158,17 @@ It will take a few minutes for the operation to complete. When it is finished no
 **Note**
 
 When creating VMs with the Azure CLI passwords need to be between 12-123 characters, have both uppercase and lowercase characters, a digit, and have a special character (@, !, etc.). Be sure to remember the password.
+
+
+## Install a web server
+
+By default, only SSH connections are opened when you create a Linux VM in Azure. Use ```az vm open-port``` to open TCP port 80 for use with the NGINX web server:
+
+```bash
+az vm open-port --port 80 --resource-group az204-vm-rg --name az204vm
+```
+
+![image](https://user-images.githubusercontent.com/34960418/163988328-e363c552-2c97-41b0-ae1b-16c73bb76fcd.png)
+
+
+Connect to your VM by using SSH. Replace ```<publicIPAddress>``` in the example with the public IP address of your VM as noted in the previous output:
