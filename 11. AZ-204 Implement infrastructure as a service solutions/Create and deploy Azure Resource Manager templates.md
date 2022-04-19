@@ -248,5 +248,24 @@ az deployment group create \
 
 ## Create an Azure Resource Manager template
 
-Create and open a new file named azuredeploy.json with Visual Studio Code.
+Create and open a new file named azuredeploy.json with Visual Studio Code. Enter **arm** in the **azuredeploy.json** file and select **arm!** from the autocomplete options. This will insert a snippet with the basic building blocks for an Azure resource group deployment.
+
+![image](https://user-images.githubusercontent.com/34960418/164004477-c3ae0e26-14c3-48c0-90de-386334e8ce29.png)
+
+
+Your file should contain something similar to the example below.
+
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [],
+    "outputs": {}
+}
+```
+
+
 
