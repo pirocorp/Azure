@@ -187,8 +187,18 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 ```
 
+
 ## View the web server in action
 
 Use a web browser of your choice to view the default NGINX welcome page. Use the public IP address of your VM as the web address. The following example shows the default NGINX web site:
 
 ![image](https://user-images.githubusercontent.com/34960418/163989053-f6abd58b-c16a-41e7-87c3-1a566e6396f9.png)
+
+
+## Clean up Azure resources
+
+You can now safely delete the **az204-vm-rg** resource group from your account by running the command below.
+
+```bash
+az group delete --name az204-vm-rg --no-wait
+```
