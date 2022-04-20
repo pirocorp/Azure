@@ -1,1 +1,4 @@
-
+- [Explore the Microsoft identity platform](Implement%20authentication%20by%20using%20the%20Microsoft%20Authentication%20Library.md)
+- [Implement authentication by using the Microsoft Authentication Library](Explore%20the%20Microsoft%20identity%20platform.md)
+- [Implement shared access signatures](Implement%20shared%20access%20signatures.md)
+- [Explore Microsoft Graph](Explore%20Microsoft%20Graph.md)
