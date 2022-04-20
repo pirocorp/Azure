@@ -191,7 +191,7 @@ az container create \
 
 ## Run to completion
 
-Azure Container Instances starts the container, and then stops it when its application, or script, exits. When Azure Container Instances stops a container whose restart policy is Never or OnFailure, the container's status is set to Terminated.
+Azure Container Instances starts the container, and then stops it when its application, or script, exits. When Azure Container Instances stops a container whose restart policy is **Never** or **OnFailure**, the container's status is set to **Terminated**.
 
 
 ## Delete container
@@ -220,7 +220,14 @@ az container create \
     --environment-variables 'NumWords'='5' 'MinLength'='8'
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/164239937-50b8aa21-534b-4a4f-943a-aa9c384e7b9f.png)
+![image](https://user-images.githubusercontent.com/34960418/164241689-86945a0a-18d0-41ce-a889-026a7bc37146.png)
+
+
+Result of container run to completion
+
+![image](https://user-images.githubusercontent.com/34960418/164241293-494877a6-ec9b-4d5f-a3aa-2533302a7bde.png)
+
+
 
 
 
