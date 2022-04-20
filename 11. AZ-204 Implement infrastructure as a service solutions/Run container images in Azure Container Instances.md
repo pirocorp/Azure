@@ -77,6 +77,33 @@ Example usage could include:
 
 ## Login to Azure and create the resource group
 
+Login in Azure
+
+```csharp
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164223072-d5d9b635-4bf6-4f6c-a6f9-15345eaa3289.png)
 
 
+Create a new resource group with the name az204-aci-rg so that it will be easier to clean up these resources when you are finished with the module. Replace ```<myLocation>``` with a region near you.
 
+```bash
+az group create --name az204-aci-rg --location <myLocation>
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164223244-c3f884a5-4714-4e9d-89ed-fd8dccb16a1a.png)
+
+
+## Create a container
+
+You create a container by providing a name, a Docker image, and an Azure resource group to the ```az container create``` command. You will expose the container to the Internet by specifying a DNS name label.
+
+
+Create a DNS name to expose your container to the Internet. Your DNS name must be unique, run this command from Cloud Shell to create a variable that holds a unique name.
+
+```bash
+$DNS_NAME_LABEL="aci-example-zrz"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/164224863-ef32f0e3-6715-4de9-bd72-15c7ab286079.png)
