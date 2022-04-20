@@ -145,5 +145,10 @@ From a browser, navigate to your container's FQDN to see it running. You may get
 ![image](https://user-images.githubusercontent.com/34960418/164226399-84567d47-e07f-4384-86bf-32a0b7002a37.png)
 
 
+## Clean up resources
 
+When no longer needed, you can use the ```az group delete``` command to remove the resource group, the container registry, and the container images stored there.
 
+```bash
+az group delete --name az204-aci-rg --no-wait
+```
