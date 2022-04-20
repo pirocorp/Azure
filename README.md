@@ -1,6 +1,6 @@
 # Azure Certifications Paths
 
-![Azure Certifications Paths](azure-certification-path-2020.jpg)
+![Azure Certifications Paths](./00.%20Resources/azure-certification-path-2020.jpg)
 
 
 # Guides
