@@ -253,13 +253,21 @@ properties:
         - name: 'SECRET'
           secureValue: 'my-secret-value'
       image: nginx
-      ports: []
+      ports: 
+      - protocol: TCP
+        port: 80
       resources:
         requests:
           cpu: 1.0
           memoryInGB: 1.5
   osType: Linux
   restartPolicy: Always
+  ipAddress:
+    ports:
+    - protocol: TCP
+      port: 80
+    dnsNameLabel: 'aci-example-zrz'
+    type: 'Public'
 tags: null
 type: Microsoft.ContainerInstance/containerGroups
 ```
