@@ -71,3 +71,6 @@ Example usage could include:
 - An application container and a logging container. The logging container collects the logs and metrics output by the main application and writes them to long-term storage.
 - An application container and a monitoring container. The monitoring container periodically makes a request to the application to ensure that it's running and responding correctly, and raises an alert if it's not.
 - A front-end container and a back-end container. The front end might serve a web application, with the back end running a service to retrieve data.
+
+
+# Deploy a container instance by using the Azure CLI
