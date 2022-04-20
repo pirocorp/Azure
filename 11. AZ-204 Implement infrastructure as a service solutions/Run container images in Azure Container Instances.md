@@ -186,6 +186,9 @@ az container create \
     --restart-policy OnFailure
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/164236794-f271f583-46e1-4948-892a-81eea64e338f.png)
+
+
 ## Run to completion
 
 Azure Container Instances starts the container, and then stops it when its application, or script, exits. When Azure Container Instances stops a container whose restart policy is Never or OnFailure, the container's status is set to Terminated.
