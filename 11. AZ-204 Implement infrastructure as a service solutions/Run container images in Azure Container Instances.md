@@ -99,11 +99,45 @@ az group create --name az204-aci-rg --location <myLocation>
 
 You create a container by providing a name, a Docker image, and an Azure resource group to the ```az container create``` command. You will expose the container to the Internet by specifying a DNS name label.
 
-
-Create a DNS name to expose your container to the Internet. Your DNS name must be unique, run this command from Cloud Shell to create a variable that holds a unique name.
+Create a DNS name to expose your container to the Internet. Your DNS name must be unique.
 
 ```bash
 $DNS_NAME_LABEL="aci-example-zrz"
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/164224863-ef32f0e3-6715-4de9-bd72-15c7ab286079.png)
+
+
+Run the following az container create command to start a container instance. Be sure to replace the ```<myLocation>``` with the region you specified earlier. It will take a few minutes for the operation to complete.
+  
+```bash
+az container create --resource-group az204-aci-rg \
+    --name mycontainer \
+    --image mcr.microsoft.com/azuredocs/aci-helloworld \
+    --ports 80 \
+    --dns-name-label $DNS_NAME_LABEL --location <myLocation> \
+```
+
+In the commands above, $DNS_NAME_LABEL specifies your DNS name. The image name, mcr.microsoft.com/azuredocs/aci-helloworld, refers to a Docker image hosted on Docker Hub that runs a basic Node.js web application.
+
+![image](https://user-images.githubusercontent.com/34960418/164225597-7f2c079d-7c4c-49ce-878e-5054775bdad0.png)
+
+
+## Verify the container is running
+
+When the ```az container create``` command completes, run ```az container show``` to check its status.
+
+```bash
+az container show --resource-group az204-aci-rg --name mycontainer --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
+```
+
+You see your container's fully qualified domain name (FQDN) and its provisioning state. Here's an example.
+
+**Note**
+
+If your container is in the Creating state, wait a few moments and run the command again until you see the Succeeded state.
+
+
+From a browser, navigate to your container's FQDN to see it running. You may get a warning that the site isn't safe.
+
+![image](https://user-images.githubusercontent.com/34960418/164225919-fa00d564-f197-44c0-85dc-0c980cde63d2.png)
