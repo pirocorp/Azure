@@ -217,7 +217,7 @@ az container create \
     --name mycontainer2 \
     --image mcr.microsoft.com/azuredocs/aci-wordcount:latest 
     --restart-policy OnFailure \
-    --environment-variables 'NumWords'='5' 'MinLength'='8'\
+    --environment-variables 'NumWords'='5' 'MinLength'='8'
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/164239937-50b8aa21-534b-4a4f-943a-aa9c384e7b9f.png)
