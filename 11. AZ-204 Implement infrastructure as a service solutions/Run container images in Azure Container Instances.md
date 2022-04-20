@@ -74,3 +74,9 @@ Example usage could include:
 
 
 # Deploy a container instance by using the Azure CLI
+
+## Login to Azure and create the resource group
+
+
+
+
