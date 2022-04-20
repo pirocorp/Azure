@@ -153,6 +153,8 @@ When no longer needed, you can use the ```az group delete``` command to remove t
 az group delete --name az204-aci-rg --no-wait
 ```
 
+![image](https://user-images.githubusercontent.com/34960418/164227467-02b5556c-c590-447d-876a-652243e233c5.png)
+
 
 # Run containerized tasks with restart policies
 
