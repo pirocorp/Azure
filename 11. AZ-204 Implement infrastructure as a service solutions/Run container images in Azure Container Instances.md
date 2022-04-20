@@ -131,13 +131,13 @@ When the ```az container create``` command completes, run ```az container show``
 az container show --resource-group az204-aci-rg --name mycontainer --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/164225919-fa00d564-f197-44c0-85dc-0c980cde63d2.png)
-
 You see your container's fully qualified domain name (FQDN) and its provisioning state. Here's an example.
 
 **Note**
 
 If your container is in the Creating state, wait a few moments and run the command again until you see the Succeeded state.
+
+![image](https://user-images.githubusercontent.com/34960418/164225919-fa00d564-f197-44c0-85dc-0c980cde63d2.png)
 
 
 From a browser, navigate to your container's FQDN to see it running. You may get a warning that the site isn't safe.
