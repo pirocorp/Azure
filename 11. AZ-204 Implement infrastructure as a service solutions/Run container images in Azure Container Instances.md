@@ -269,3 +269,9 @@ You would run the following command to deploy the container group with YAML:
 ```bash
 az container create --resource-group myResourceGroup --file secure-env.yaml
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/164244964-62cae7bd-e424-49ef-a68f-0aadc4214ac7.png)
+
+![image](https://user-images.githubusercontent.com/34960418/164246020-7510437c-1bbc-4925-9f4e-95088f2324e4.png)
+
+![image](https://user-images.githubusercontent.com/34960418/164246235-8d8b2c92-3c22-4616-bafe-95d5240a4586.png)
