@@ -299,6 +299,11 @@ By default, Azure Container Instances are stateless. If the container crashes or
 
 ## Deploy container and mount volume
 
+Create file share aci-demo
+
+![image](https://user-images.githubusercontent.com/34960418/164250892-eb1cb21d-87e3-4dd9-a7b4-5f3db69c3caa.png)
+
+
 To mount an Azure file share as a volume in a container by using the Azure CLI, specify the share and volume mount point when you create the container with ```az container create```. Below is an example of the command:
 
 ```bash
@@ -315,6 +320,13 @@ az container create \
 ```
 
 The ```--dns-name-label``` value must be unique within the Azure region where you create the container instance. Update the value in the preceding command if you receive a DNS name label error message when you execute the command.
+
+![image](https://user-images.githubusercontent.com/34960418/164251059-e40db580-27bf-4eb6-b752-b8ca2e604b0d.png)
+
+
+The input will be stored in file on file share.
+
+![image](https://user-images.githubusercontent.com/34960418/164253155-9b0b3d59-47a5-4bb6-ade2-b35189529ca4.png)
 
 
 ## Deploy container and mount volume - YAML
