@@ -239,3 +239,14 @@ Apply the following best practices for consent and authorization in your app:
   - Tenant administrators can set custom authorization policies such as blocking users from reading other user's profiles, or limiting self-service group creation to a limited set of users. In this case, your application should expect to handle 403 error response when acting on behalf of a user.
 
 
+# Handle responses effectively
+
+Depending on the requests you make to Microsoft Graph, your applications should be prepared to handle different types of responses. The following are some of the most important practices to follow to ensure that your application behaves reliably and predictably for your end users. For example:
+
+- Pagination: When querying a resource collection, you should expect that Microsoft Graph will the return result set in multiple pages, due to server-side page size limits. Your application should always handle the possibility that the responses are paged in nature, and use the @odata.nextLink property to obtain the next paged set of results, until all pages of the result set have been read. The final page will not contain an @odata.nextLink property. For more details, see paging.
+
+- Evolvable enumerations: Adding members to existing enumerations can break applications already using these enums. Evolvable enums is a mechanism that Microsoft Graph API uses to add new members to existing enumerations without causing a breaking change for applications. By default, a GET operation returns only known members for properties of evolvable enum types and your application needs to handle only the known members. If you design your application to handle unknown members as well, you can opt-in to receive those members by using an HTTP Prefer request header.
+
+# Storing data locally
+
+Your application should ideally make calls to Microsoft Graph to retrieve data in real time as necessary. You should only cache or store data locally if necessary for a specific scenario, and if that use case is covered by your terms of use and privacy policy, and does not violate the Microsoft APIs Terms of Use. Your application should also implement proper retention and deletion policies.
