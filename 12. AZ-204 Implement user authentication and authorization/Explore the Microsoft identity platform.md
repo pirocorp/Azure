@@ -192,3 +192,94 @@ namespace Msal_Demo
     }
 }
 ```
+
+## Add code for the interactive authentication
+
+We'll need two variables to hold the Application (client) and Directory (tenant) IDs. You can copy those values from the portal. Add the code below and replace the string values with the appropriate values from the portal.
+
+```csharp
+private const string _clientId = "APPLICATION_CLIENT_ID";
+private const string _tenantId = "DIRECTORY_TENANT_ID";
+```
+
+Use the ```PublicClientApplicationBuilder``` class to build out the authorization context.
+
+```csharp
+var app = PublicClientApplicationBuilder
+    .Create(_clientId)
+    .WithAuthority(AzureCloudInstance.AzurePublic, _tenantId)
+    .WithRedirectUri("http://localhost")
+    .Build();
+```
+
+| Code           	| Description                                                                                                                                            	|
+|----------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| .Create        	| Creates a PublicClientApplicationBuilder from a clientID.                                                                                              	|
+| .WithAuthority 	| Adds a known Authority corresponding to an ADFS server. In the code we're specifying the Public cloud, and using the tenant for the app we registered. 	|
+
+
+## Acquire a token
+
+When you registered the **_az204appreg_** app it automatically generated an API permission ```user.read``` for Microsoft Graph. We'll use that permission to acquire a token.
+
+Set the permission scope for the token request. Add the following code below the ```PublicClientApplicationBuilder```.
+
+```csharp
+string[] scopes = { "user.read" };
+```
+
+Add code to request the token and write the result out to the console.
+
+```csharp
+AuthenticationResult result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
+
+Console.WriteLine($"Token:\t{result.AccessToken}");
+```
+
+## Review completed application
+
+The contents of the Program.cs file should resemble the example below.
+
+```csharp
+using System;
+using System.Threading.Tasks;
+using Microsoft.Identity.Client;
+
+namespace az204_auth
+{
+    class Program
+    {
+        private const string _clientId = "APPLICATION_CLIENT_ID";
+        private const string _tenantId = "DIRECTORY_TENANT_ID";
+
+        public static async Task Main(string[] args)
+        {
+            var app = PublicClientApplicationBuilder
+                .Create(_clientId)
+                .WithAuthority(AzureCloudInstance.AzurePublic, _tenantId)
+                .WithRedirectUri("http://localhost")
+                .Build(); 
+            string[] scopes = { "user.read" };
+            AuthenticationResult result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
+
+            Console.WriteLine($"Token:\t{result.AccessToken}");
+        }
+    }
+}
+```
+
+## Run the application
+
+The app will open the default browser prompting you to select the account you want to authenticate with. If there are multiple accounts listed select the one associated with the tenant used in the app.
+
+![image](https://user-images.githubusercontent.com/34960418/164701165-f7d83b0b-da8b-4f45-b202-cf676aeb36bf.png)
+
+
+If this is the first time you've authenticated to the registered app you will receive a Permissions requested notification asking you to approve the app to read data associated with your account. Select Accept.
+
+![image](https://user-images.githubusercontent.com/34960418/164701220-a529ac04-7dee-4ea5-8fb2-6991efceab62.png)
+
+
+You should see the results similar to the example below in the console.
+
+![image](https://user-images.githubusercontent.com/34960418/164701869-70381b20-2d56-44fe-af02-079c2093d17c.png)
