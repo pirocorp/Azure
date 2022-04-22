@@ -1,1 +1,3 @@
-
+- [Implement Azure Key Vault](Implement%20Azure%20Key%20Vault.md)
+- [Implement managed identities](Implement%20managed%20identities.md)
+- [Implement Azure App Configuration](Implement%20Azure%20App%20Configuration.md)
