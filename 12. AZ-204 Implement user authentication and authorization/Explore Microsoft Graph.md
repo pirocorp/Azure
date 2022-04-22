@@ -229,10 +229,6 @@ Apply the following best practices for consent and authorization in your app:
 
 - Use the correct permission type based on scenarios. If you're building an interactive application where a signed in user is present, your application should use delegated permissions. If, however, your application runs without a signed-in user, such as a background service or daemon, your application should use application permissions.
 
-**Caution**
-
-Using application permissions for interactive scenarios can put your application at compliance and security risk. Be sure to check user's privileges to ensure they don't have undesired access to information, or are circumnavigating policies configured by an administrator.
-
 - Consider the end user and admin experience. This will directly affect end user and admin experiences. For example:
   - Consider who will be consenting to your application, either end users or administrators, and configure your application to request permissions appropriately.
   - Ensure that you understand the difference between static, dynamic and incremental consent.
@@ -240,3 +236,5 @@ Using application permissions for interactive scenarios can put your application
   - Tenant administrators can disable the ability for end users to consent to applications. In this case, an administrator would need to consent on behalf of their users.
   - Tenant administrators can set custom authorization policies such as blocking users from reading other user's profiles, or limiting self-service group creation to a limited set of users. In this case, your application should expect to handle 403 error response when acting on behalf of a user.
 
+> **Caution**
+> Using application permissions for interactive scenarios can put your application at compliance and security risk. Be sure to check user's privileges to ensure they don't have undesired access to information, or are circumnavigating policies configured by an administrator.
