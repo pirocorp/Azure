@@ -131,3 +131,43 @@ The modifiers you can set on a confidential client application builder are:
 |------------------------------------------------	|------------------------------------------------------------------------------------------------	|
 | .WithCertificate(X509Certificate2 certificate) 	| Sets the certificate identifying the application with Azure Active Directory.                  	|
 | .WithClientSecret(string clientSecret)         	| Sets the client secret (app password) identifying the application with Azure Active Directory. 	|
+
+
+# Implement interactive authentication by using MSAL.NET
+
+In this exercise you'll learn how to perform the following actions:
+
+- Register an application with the Microsoft identity platform
+- Use the ```PublicClientApplicationBuilder``` class in MSAL.NET
+- Acquire a token interactively in a console application
+
+
+## Register a new application
+
+Sign in to the portal: https://portal.azure.com. Search for and select **Azure Active Directory**. Under **Manage**, select **App registrations** > **New registration**.
+
+![image](https://user-images.githubusercontent.com/34960418/164684510-415daf18-6f04-467b-a06f-b2340f006935.png)
+
+
+When the Register an application page appears, enter your application's registration information:
+
+| Field                   	| Value                                                                                              	|
+|-------------------------	|----------------------------------------------------------------------------------------------------	|
+| Name                    	| az204appreg                                                                                        	|
+| Supported account types 	| Select Accounts in this organizational directory only                                              	|
+| Redirect URI (optional) 	| Select Public client/native (mobile & desktop) and enter http://localhost in the box to the right. 	|
+
+Select **Register**.
+
+![image](https://user-images.githubusercontent.com/34960418/164691227-64f3984b-9dae-4d6e-9fa6-ad5f57037096.png)
+
+
+Azure Active Directory assigns a unique application (client) ID to your app, and you're taken to your application's Overview page.
+
+![image](https://user-images.githubusercontent.com/34960418/164692274-0dae4c39-5949-4e3c-aba5-196c75fd6367.png)
+
+
+## Build the console app
+
+
+
