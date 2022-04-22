@@ -169,5 +169,26 @@ Azure Active Directory assigns a unique application (client) ID to your app, and
 
 ## Build the console app
 
+In this section you will add the necessary packages and code to the project.
 
+### Add packages and using statements
 
+Add the ```Microsoft.Identity.Client``` package to the project. Open the Program.cs file and add using statements to include ```Microsoft.Identity.Client``` and to enable async operations. Change the Main method to enable async.
+
+```csharp
+namespace Msal_Demo
+{
+    using System;
+    using System.Threading.Tasks;
+
+    using Microsoft.Identity.Client;
+
+    public static class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            
+        }
+    }
+}
+```
