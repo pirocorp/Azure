@@ -3,7 +3,6 @@
     using Azure.Identity;
 
     using Microsoft.Graph;
-    using Microsoft.Identity.Client;
 
     public static class Program
     {
