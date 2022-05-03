@@ -112,3 +112,75 @@ The parameters on the **WWW-Authenticate** header are:
 - [Azure Key Vault developer's guide](https://docs.microsoft.com/en-us/azure/key-vault/general/developers-guide)
 - [Azure Key Vault availability and redundancy](https://docs.microsoft.com/en-us/azure/key-vault/general/disaster-recovery-guidance)
 
+
+# Exercise: Set and retrieve a secret from Azure Key Vault by using Azure CLI
+
+## Log in to Azure
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166450798-438366c6-2bc5-4433-8b69-b103c28cca01.png)
+
+
+## Create a Key Vault
+
+Let's set some variables for the CLI commands to use to reduce the amount of retyping. Replace the ```<myLocation>``` variable string below with a region that makes sense for you. The Key Vault name needs to be a globally unique name, and the script below generates a random string.
+
+```bash
+$MY_KEY_VAULT="az204vault-zrz"
+$MY_LOCATION="westeurope"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166451331-af0c7608-bf32-4868-84af-2d443c977005.png)
+
+
+Create a resource group.
+
+```bash
+az group create --name az204-vault-rg --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166451480-b09a087b-c231-4cb3-b074-4cb816c824e1.png)
+
+
+Create a Key Vault by using the az keyvault create command.
+
+```bash
+az keyvault create --name $MY_KEY_VAULT --resource-group az204-vault-rg --location $MY_LOCATION
+```
+
+**Note**
+
+This can take a few minutes to run.
+
+![image](https://user-images.githubusercontent.com/34960418/166451971-f041fc97-ecdd-4b69-ab2c-b6bffa0f0c04.png)
+
+
+## Add and retrieve a secret
+
+Create a secret. Let's add a password that could be used by an app. The password will be called **ExamplePassword** and will store the value of **hVFkk965BuUv** in it.
+
+```bash
+az keyvault secret set --vault-name $MY_KEY_VAULT --name "ExamplePassword" --value "hVFkk965BuUv"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166452260-f9c8529f-b533-41c6-a669-eacd0a00ca2c.png)
+
+
+Use the az keyvault secret show command to retrieve the secret.
+
+```bash
+az keyvault secret show --name "ExamplePassword" --vault-name $MY_KEY_VAULT
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166452405-50a515df-1ff3-4f5e-9c6d-305078d87fef.png)
+
+This command will return some JSON. The last line will contain the password in plain text.
+
+```json
+"value": "hVFkk965BuUv"
+```
+
+You have created a Key Vault, stored a secret, and retrieved it.
