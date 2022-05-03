@@ -184,3 +184,6 @@ This command will return some JSON. The last line will contain the password in p
 ```
 
 You have created a Key Vault, stored a secret, and retrieved it.
+
+
+## Clean up resources
