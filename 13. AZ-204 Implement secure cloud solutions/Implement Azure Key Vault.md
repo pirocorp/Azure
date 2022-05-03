@@ -194,3 +194,11 @@ You have created a Key Vault, stored a secret, and retrieved it.
 
 
 ## Clean up resources
+
+When you no longer need the resources in this exercise use the following command to delete the resource group and associated Key Vault.
+
+```bash
+az group delete --name az204vault-rg --no-wait
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166453164-75750705-df8d-47a8-875f-7c447b28a307.png)
