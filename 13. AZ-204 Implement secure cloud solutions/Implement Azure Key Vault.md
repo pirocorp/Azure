@@ -1,3 +1,10 @@
+- [Exercise: Set and retrieve a secret from Azure Key Vault by using Azure CLI](https://github.com/pirocorp/Azure/blob/main/13.%20AZ-204%20Implement%20secure%20cloud%20solutions/Implement%20Azure%20Key%20Vault.md#exercise-set-and-retrieve-a-secret-from-azure-key-vault-by-using-azure-cli)
+  - [Log in to Azure](https://github.com/pirocorp/Azure/blob/main/13.%20AZ-204%20Implement%20secure%20cloud%20solutions/Implement%20Azure%20Key%20Vault.md#log-in-to-azure)
+  - [Create a Key Vault](https://github.com/pirocorp/Azure/blob/main/13.%20AZ-204%20Implement%20secure%20cloud%20solutions/Implement%20Azure%20Key%20Vault.md#create-a-key-vault)
+  - [Add and retrieve a secret](https://github.com/pirocorp/Azure/blob/main/13.%20AZ-204%20Implement%20secure%20cloud%20solutions/Implement%20Azure%20Key%20Vault.md#add-and-retrieve-a-secret)
+  - [Clean up resources](https://github.com/pirocorp/Azure/blob/main/13.%20AZ-204%20Implement%20secure%20cloud%20solutions/Implement%20Azure%20Key%20Vault.md#clean-up-resources)
+
+
 # Azure Key Vault
 
 Azure Key Vault is a cloud service for securely storing and accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, or cryptographic keys.
