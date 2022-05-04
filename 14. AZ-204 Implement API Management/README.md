@@ -433,3 +433,54 @@ This example checks the issuer and subject of the certificate passed in the requ
     </when>
 </choose>
 ```
+
+
+# Exercise: Create a backend API
+
+## Login to Azure
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166688618-2677574e-b73b-4198-a7ae-78514bff726f.png)
+
+
+## Create an API Management instance
+
+Let's set some variables for the CLI commands to use to reduce the amount of retyping. Replace ```<myLocation>``` with a region that makes sense for you. The APIM name needs to be a globally unique name, and the script below generates a random string. Replace ```<myEmail>``` with an email address you can access.
+
+```bash
+$MY_API_NAME="az204-apim-zrz"
+$MY_LOCATION="westeurope"
+$MY_EMAIL="postakalka@abv.bg"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166689239-e78ecec8-723d-4e4c-9bfc-26fe84330ac8.png)
+
+
+Create a resource group. The commands below will create a resource group named az204-apim-rg.
+
+```bash
+az group create --name az204-apim-rg --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166689370-da079565-6dbd-4577-a92e-1fdcdc0add2e.png)
+
+
+Create an APIM instance. The ```az apim create``` command is used to create the instance. The --sku-name Consumption option is used to speed up the process for the walkthrough.
+
+```bash
+az apim create -n $MY_API_NAME `
+    --location $MY_LOCATION `
+    --publisher-email $MY_EMAIL  `
+    --resource-group az204-apim-rg `
+    --publisher-name AZ204-APIM-Exercise `
+    --sku-name Consumption
+```
+
+**Note**
+
+The operation should complete in about five minutes.
+
+![image](https://user-images.githubusercontent.com/34960418/166690626-c9137dff-4c80-48df-a7a2-f2d6edbb70aa.png)
