@@ -90,3 +90,204 @@ Here are some examples of functionality that could be offloaded to a gateway:
 - Response caching
 - GZIP compression
 - Servicing static content
+
+
+# API Management policies
+
+In Azure API Management, policies are a powerful capability of the system that allow the publisher to change the behavior of the API through configuration. Policies are a collection of Statements that are executed sequentially on the request or response of an API.
+
+Policies are applied inside the gateway which sits between the API consumer and the managed API. The gateway receives all requests and usually forwards them unaltered to the underlying API. However a policy can apply changes to both the inbound request and outbound response. Policy expressions can be used as attribute values or text values in any of the API Management policies, unless the policy specifies otherwise.
+
+
+# Understanding policy configuration
+
+The policy definition is a simple XML document that describes a sequence of inbound and outbound statements. The XML can be edited directly in the definition window.
+
+The configuration is divided into inbound, backend, outbound, and on-error. The series of specified policy statements is executes in order for a request and a response.
+
+
+```xml
+<policies>
+  <inbound>
+    <!-- statements to be applied to the request go here -->
+  </inbound>
+  <backend>
+    <!-- statements to be applied before the request is forwarded to 
+         the backend service go here -->
+  </backend>
+  <outbound>
+    <!-- statements to be applied to the response go here -->
+  </outbound>
+  <on-error>
+    <!-- statements to be applied if there is an error condition go here -->
+  </on-error>
+</policies>
+```
+
+If there is an error during the processing of a request, any remaining steps in the inbound, backend, or outbound sections are skipped and execution jumps to the statements in the on-error section. By placing policy statements in the on-error section you can review the error by using the context.LastError property, inspect and customize the error response using the set-body policy, and configure what happens if an error occurs.
+
+
+## Examples
+
+### Apply policies specified at different scopes
+
+If you have a policy at the global level and a policy configured for an API, then whenever that particular API is used both policies will be applied. API Management allows for deterministic ordering of combined policy statements via the base element.
+
+```xml
+<policies>
+    <inbound>
+        <cross-domain />
+        <base />
+        <find-and-replace from="xyz" to="abc" />
+    </inbound>
+</policies>
+```
+
+In the example policy definition above, the cross-domain statement would execute before any higher policies which would in turn, be followed by the find-and-replace policy.
+
+
+### Filter response content
+
+The policy defined in example below demonstrates how to filter data elements from the response payload based on the product associated with the request.
+
+The snippet assumes that response content is formatted as JSON and contains root-level properties named "minutely", "hourly", "daily", "flags".
+
+```xml
+<policies>
+  <inbound>
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+    <choose>
+      <when condition="@(context.Response.StatusCode == 200 && context.Product.Name.Equals("Starter"))">
+        <!-- NOTE that we are not using preserveContent=true when deserializing response body stream into a JSON object since we don't intend to access it again. See details on https://docs.microsoft.com/azure/api-management/api-management-transformation-policies#SetBody -->
+        <set-body>
+          @{
+            var response = context.Response.Body.As<JObject>();
+            foreach (var key in new [] {"minutely", "hourly", "daily", "flags"}) {
+            response.Property (key).Remove ();
+           }
+          return response.ToString();
+          }
+    </set-body>
+      </when>
+    </choose>    
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>
+```
+
+# Create advanced policies
+
+This unit provides a reference for the following API Management policies:
+
+- Control flow - Conditionally applies policy statements based on the results of the evaluation of Boolean expressions.
+- Forward request - Forwards the request to the backend service.
+- Limit concurrency - Prevents enclosed policies from executing by more than the specified number of requests at a time.
+- Log to Event Hub - Sends messages in the specified format to an Event Hub defined by a Logger entity.
+- Mock response - Aborts pipeline execution and returns a mocked response directly to the caller.
+- Retry - Retries execution of the enclosed policy statements, if and until the condition is met. Execution will repeat at the specified time intervals and up to the specified retry count.
+
+
+## Control flow
+
+The choose policy applies enclosed policy statements based on the outcome of evaluation of boolean expressions, similar to an if-then-else or a switch construct in a programming language.
+
+```xml
+<choose>
+    <when condition="Boolean expression | Boolean constant">
+        <!— one or more policy statements to be applied if the above condition is true  -->
+    </when>
+    <when condition="Boolean expression | Boolean constant">
+        <!— one or more policy statements to be applied if the above condition is true  -->
+    </when>
+    <otherwise>
+        <!— one or more policy statements to be applied if none of the above conditions are true  -->
+</otherwise>
+</choose>
+```
+
+The control flow policy must contain at least one <when/> element. The <otherwise/> element is optional. Conditions in <when/> elements are evaluated in order of their appearance within the policy. Policy statement(s) enclosed within the first <when/> element with condition attribute equals true will be applied. Policies enclosed within the <otherwise/> element, if present, will be applied if all of the <when/> element condition attributes are false.
+
+
+## Forward request
+
+The forward-request policy forwards the incoming request to the backend service specified in the request context. The backend service URL is specified in the API settings and can be changed using the set backend service policy.
+
+Removing this policy results in the request not being forwarded to the backend service and the policies in the outbound section are evaluated immediately upon the successful completion of the policies in the inbound section.
+
+```xml
+<forward-request timeout="time in seconds" follow-redirects="true | false"/>
+```
+
+
+## Limit concurrency
+
+The limit-concurrency policy prevents enclosed policies from executing by more than the specified number of requests at any time. Upon exceeding that number, new requests will fail immediately with a 429 Too Many Requests status code.
+
+```xml
+<limit-concurrency key="expression" max-count="number">
+  <!— nested policy statements -->
+</limit-concurrency>
+```
+
+
+## Log to Event Hub
+
+The log-to-eventhub policy sends messages in the specified format to an Event Hub defined by a Logger entity. As its name implies, the policy is used for saving selected request or response context information for online or offline analysis.
+
+```xml
+<log-to-eventhub logger-id="id of the logger entity" partition-id="index of the partition where messages are sent" partition-key="value used for partition assignment">
+  Expression returning a string to be logged
+</log-to-eventhub>
+```
+
+
+## Mock response
+
+The mock-response, as the name implies, is used to mock APIs and operations. It aborts normal pipeline execution and returns a mocked response to the caller. The policy always tries to return responses of highest fidelity. It prefers response content examples, whenever available. It generates sample responses from schemas, when schemas are provided and examples are not. If neither examples or schemas are found, responses with no content are returned.
+
+```xml
+<mock-response status-code="code" content-type="media type"/>
+```
+
+
+## Retry
+
+The retry policy executes its child policies once and then retries their execution until the retry condition becomes false or retry count is exhausted.
+
+```xml
+<retry
+    condition="boolean expression or literal"
+    count="number of retry attempts"
+    interval="retry interval in seconds"
+    max-interval="maximum retry interval in seconds"
+    delta="retry interval delta in seconds"
+    first-fast-retry="boolean expression or literal">
+        <!-- One or more child policies. No restrictions -->
+</retry>
+```
+
+
+## Return response
+
+The return-response policy aborts pipeline execution and returns either a default or custom response to the caller. Default response is 200 OK with no body. Custom response can be specified via a context variable or policy statements. When both are provided, the response contained within the context variable is modified by the policy statements before being returned to the caller.
+
+```xml
+<return-response response-variable-name="existing context variable">
+  <set-header/>
+  <set-body/>
+  <set-status/>
+</return-response>
+```
+
+## Additional resources
+
+- Visit [API Management policies](https://docs.microsoft.com/en-us/azure/api-management/api-management-policies) for more policy examples.
+- [Error handling in API Management policies](https://docs.microsoft.com/en-us/azure/api-management/api-management-error-handling-policies)
