@@ -484,3 +484,27 @@ az apim create -n $MY_API_NAME `
 The operation should complete in about five minutes.
 
 ![image](https://user-images.githubusercontent.com/34960418/166690626-c9137dff-4c80-48df-a7a2-f2d6edbb70aa.png)
+
+
+## Import a backend API
+
+This section shows how to import and publish an OpenAPI specification backend API.
+
+In the Azure portal, search for and select API Management services. On the API Management screen, select the API Management instance you created. Select APIs in the API management service navigation pane.
+
+![image](https://user-images.githubusercontent.com/34960418/166691654-fd684147-6b8b-4bc6-85b2-d973545624cb.png)
+
+
+Use the values from the table below to fill out the form. You can leave any fields not mentioned their default value. Select **Create**.
+
+
+| Setting               	| Value                                               	| Description                                                                                                                                                                                           	|
+|-----------------------	|-----------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| OpenAPI Specification 	| https://conferenceapi.azurewebsites.net?format=json 	| References the service implementing the API, requests are forwarded to this address. Most of the necessary information in the form is automatically populated after you enter this.                   	|
+| Display name          	| Demo Conference API                                 	| This name is displayed in the Developer portal.                                                                                                                                                       	|
+| Name                  	| demo-conference-api                                 	| Provides a unique name for the API.                                                                                                                                                                   	|
+| Description           	| Automatically populated                             	| Provide an optional description of the API.                                                                                                                                                           	|
+| API URL suffix        	| conference                                          	| The suffix is appended to the base URL for the API management service. API Management distinguishes APIs by their suffix and therefore the suffix must be unique for every API for a given publisher. 	|
+
+![image](https://user-images.githubusercontent.com/34960418/166692321-b111e96d-1929-44f1-9caf-f04b5a8c9aba.png)
+
