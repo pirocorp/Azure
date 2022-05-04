@@ -1,3 +1,12 @@
+- [Exercise: Create a backend API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#exercise-create-a-backend-api)
+  - [Login to Azure](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#login-to-azure)
+  - [Create an API Management instance](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#create-an-api-management-instance)
+  - [Import a backend API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#import-a-backend-api)
+  - [Configure the backend settings](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#configure-the-backend-settings)
+  - [Test the API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#test-the-api)
+  - [Clean up Azure resources](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#clean-up-azure-resources)
+
+
 # API Management service
 
 API Management provides the core functionality to ensure a successful API program through developer engagement, business insights, analytics, security, and protection. Each API consists of one or more operations, and each API can be added to one or more products. To use an API, developers subscribe to a product that contains that API, and then they can call the API's operation, subject to any usage policies that may be in effect.
