@@ -508,3 +508,30 @@ Use the values from the table below to fill out the form. You can leave any fiel
 
 ![image](https://user-images.githubusercontent.com/34960418/166692321-b111e96d-1929-44f1-9caf-f04b5a8c9aba.png)
 
+
+## Configure the backend settings
+
+The Demo Conference API is created and a backend needs to be specified. Select **Settings** in the blade to the right and enter https://conferenceapi.azurewebsites.net/ in the **Web service URL** field. Deselect the **Subscription required** checkbox. Select **Save**.
+
+![image](https://user-images.githubusercontent.com/34960418/166696281-7f44e6f0-3adb-4a5c-a009-34c8fabcb64c.png)
+
+
+## Test the API
+
+Now that the API has been imported and the backend configured it is time to test the API. Select **Test**. Select **GetSpeakers**. The page shows **Query parameters** and **Headers**, if any. The **Ocp-Apim-Subscription-Key** is filled in automatically for the subscription key associated with this API. 
+
+![image](https://user-images.githubusercontent.com/34960418/166696871-ed439dc5-4fab-468a-80f2-7dbae631d461.png)
+
+
+Select **Send**. Backend responds with **200 OK** and some data.
+
+![image](https://user-images.githubusercontent.com/34960418/166697060-8ffeddf3-e96c-4706-953e-a12ad2d71604.png)
+
+
+## Clean up Azure resources
+
+When you are finished with the resources you created in this exercise you can use the command below to delete the resource group and all related resources.
+
+```bash
+az group delete --name az204-apim-rg --no-wait
+```
