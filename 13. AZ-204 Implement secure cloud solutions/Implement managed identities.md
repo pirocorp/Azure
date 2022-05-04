@@ -105,7 +105,7 @@ az vm identity assign -g myResourceGroup -n myVm
 
 # User-assigned managed identity
 
-To assign a user-assigned identity to a virtual machine during its creation, your account needs the Virtual Machine Contributor and Managed Identity Operator role assignments. No additional Azure AD directory role assignments are required.
+To assign a user-assigned identity to a virtual machine during its creation, your account needs the **Virtual Machine Contributor** and Managed Identity Operator role assignments. No additional Azure AD directory role assignments are required.
 
 Enabling user-assigned managed identities is a two-step process:
 
@@ -162,3 +162,6 @@ Azure supports multiple programming platforms through a series of Azure SDKs. Se
 | Ruby    	| [Create Azure virtual machine with an system-assigned identity enabled](https://github.com/Azure-Samples/compute-ruby-msi-vm/)                              	|
 
 
+# Acquire an access token
+
+ 
