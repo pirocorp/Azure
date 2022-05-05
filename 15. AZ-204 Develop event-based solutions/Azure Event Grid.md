@@ -389,7 +389,7 @@ $R_NUMBER=Get-Random
 $MY_LOCATON="westeurope"
 $MY_TOPIC_NAME="az204-egtopic-${R_NUMBER}"
 $MY_SITE_NAME="az204-egsite-${R_NUMBER}"
-$MY_SITE_URL="https://${mySiteName}.azurewebsites.net"
+$MY_SITE_URL="https://${MY_SITE_NAME}.azurewebsites.net"
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/166926727-341f8a12-5e26-484f-a01c-466808627a0c.png)
@@ -421,5 +421,31 @@ az provider register --namespace Microsoft.EventGrid
 ![image](https://user-images.githubusercontent.com/34960418/166927783-77ef1d58-87cc-4f3e-b7cb-9d1f8741df5e.png)
 
 
+## Create a custom topic
 
+Create a custom topic by using the az eventgrid topic create command. The name must be unique because it is part of the DNS entry.
+
+```bash
+az eventgrid topic create --name $MY_TOPIC_NAME `
+    --location $MY_LOCATON `
+    --resource-group az204-evgrid-rg
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166928127-00a39f27-3b71-4f3d-9806-1fac2490dc60.png)
+
+
+## Create a message endpoint
+
+Before subscribing to the custom topic, we need to create the endpoint for the event message. Typically, the endpoint takes actions based on the event data. The script below uses a pre-built web app that displays the event messages. The deployed solution includes an App Service plan, an App Service web app, and source code from GitHub. It also generates a unique name for the site.
+
+Create a message endpoint. The deployment may take a few minutes to complete.
+
+```bash
+az deployment group create `
+    --resource-group az204-evgrid-rg `
+    --template-uri "https://raw.githubusercontent.com/Azure-Samples/azure-event-grid-viewer/main/azuredeploy.json" `
+    --parameters siteName=$MY_SITE_NAME hostingPlanName=viewerhost
+
+echo "Your web app URL: ${mySiteURL}"
+```
 
