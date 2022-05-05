@@ -1,3 +1,19 @@
+- [Exercise: Route custom events to web endpoint by using Azure CLI](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#exercise-route-custom-events-to-web-endpoint-by-using-azure-cli)
+  - [Login to Azure](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#login-to-azure)
+  - [Create Variables](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#create-variables)
+  - [Create a resource group](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#create-a-resource-group)
+  - [Enable an Event Grid resource provider](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#enable-an-event-grid-resource-provider)
+  - [Create a custom topic](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#create-a-custom-topic)
+  - [Create a message endpoint](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#create-a-message-endpoint)
+  - [Subscribe to a custom topic](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#subscribe-to-a-custom-topic)
+  - [Validating endpoint](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#validating-endpoint)
+  - [Send an event to your custom topic](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#send-an-event-to-your-custom-topic)
+    - [Retrieve URL and key for the custom topic](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#retrieve-url-and-key-for-the-custom-topic)
+    - [Create event data to send](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#create-event-data-to-send)
+    - [Use Invoke-WebRequest/curl to send the event to the topic](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#use-invoke-webrequestcurl-to-send-the-event-to-the-topic)
+  - [Clean up resources](https://github.com/pirocorp/Azure/blob/main/15.%20AZ-204%20Develop%20event-based%20solutions/Azure%20Event%20Grid.md#clean-up-resources)
+
+
 # Azure Event Grid
 
 Azure Event Grid is an eventing backplane that enables event-driven, reactive programming. It uses the publish-subscribe model. Publishers emit events, but have no expectation about how the events are handled. Subscribers decide on which events they want to handle.
@@ -499,7 +515,7 @@ View your web app again, and notice that a subscription validation event has bee
 Trigger an event to see how Event Grid distributes the message to your endpoint.
 
 
-### Retrieve URL and key for the custom topic.
+### Retrieve URL and key for the custom topic
 
 ```bash
 $TOPIC_ENDPOINT=$(az eventgrid topic show --name $MY_TOPIC_NAME -g az204-evgrid-rg --query "endpoint" --output tsv)
@@ -509,7 +525,7 @@ $KEY=$(az eventgrid topic key list --name $MY_TOPIC_NAME -g az204-evgrid-rg --qu
 ![image](https://user-images.githubusercontent.com/34960418/166932697-20d1b7bd-0467-4801-8df0-7a0034c08bd9.png)
 
 
-### Create event data to send. 
+### Create event data to send
 
 Typically, an application or Azure service would send the event data, we're creating data for the purposes of the exercise.
 
@@ -523,7 +539,7 @@ $EVENT
 ![image](https://user-images.githubusercontent.com/34960418/166938916-04a846a9-5569-41a0-81c2-d94a690c313c.png)
 
 
-### Use Invoke-WebRequest/curl to send the event to the topic.
+### Use Invoke-WebRequest/curl to send the event to the topic
 
 ```bash
 Invoke-WebRequest -Method POST -Headers @{"aeg-sas-key"="${KEY}"} -BODY "${EVENT}" -URI $TOPIC_ENDPOINT
