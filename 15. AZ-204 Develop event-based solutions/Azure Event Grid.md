@@ -369,3 +369,55 @@ The JSON syntax for using advanced filters is:
 }
 ```
 
+
+# Exercise: Route custom events to web endpoint by using Azure CLI
+
+## Login to Azure
+
+```bash
+az login
+```
+
+In this section you will open your terminal and create some variables that will be used throughout the rest of the exercise to make command entry, and unique resource name creation, a bit easier. 
+
+## Create Variables
+
+Run the commands below to create the variables.
+
+```bash
+$R_NUMBER=Get-Random
+$MY_LOCATON="westeurope"
+$MY_TOPIC_NAME="az204-egtopic-${R_NUMBER}"
+$MY_SITE_NAME="az204-egsite-${R_NUMBER}"
+$MY_SITE_URL="https://${mySiteName}.azurewebsites.net"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166926727-341f8a12-5e26-484f-a01c-466808627a0c.png)
+
+
+## Create a resource group
+
+```bash
+az group create --name az204-evgrid-rg --location $MY_LOCATON
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166926906-af88ee25-7b34-4e2f-8054-9e5b829b67f3.png)
+
+
+## Enable an Event Grid resource provider
+
+**Note**
+
+This step is only needed on subscriptions that haven't previously used Event Grid.
+
+Register the Event Grid resource provider by using the az provider register command.
+
+```bash
+az provider register --namespace Microsoft.EventGrid
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166927515-ae1411e5-9b31-4ce5-a833-05a3604d8953.png)
+![image](https://user-images.githubusercontent.com/34960418/166927634-039d3d36-a0d6-4421-9497-a77030841615.png)
+
+
+
