@@ -519,3 +519,34 @@ $EVENT
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/166938916-04a846a9-5569-41a0-81c2-d94a690c313c.png)
+
+
+### Use Invoke-WebRequest/curl to send the event to the topic.
+
+```bash
+Invoke-WebRequest -Method POST -Headers @{"aeg-sas-key"="${KEY}"} -BODY "${EVENT}" -URI $TOPIC_ENDPOINT
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166943001-4fb8abaa-11b2-46cb-8a79-a96227e5bc17.png)
+
+
+View your web app to see the event you just sent. Select the eye icon to expand the event data. Event Grid sends the validation event so the endpoint can verify that it wants to receive event data. The web app includes code to validate the subscription.
+
+![image](https://user-images.githubusercontent.com/34960418/166943118-e425ed3a-d53e-494f-9b76-961d775608b6.png)
+
+```json
+{
+  "id": "806028563",
+  "eventType": "recordInserted",
+  "subject": "myapp/vehicles/motorcycles",
+  "data": {
+    "make": "Contoso",
+    "model": "Monster"
+  },
+  "dataVersion": "1.0",
+  "metadataVersion": "1",
+  "eventTime": "2022-05-05T13:54:00+00:00",
+  "topic": "/subscriptions/33e23a19-cae1-4e0b-b148-986d17e09547/resourceGroups/az204-evgrid-rg/providers/Microsoft.EventGrid/topics/az204-egtopic-897532171"
+}
+```
+
