@@ -444,6 +444,73 @@ az deployment group create `
     --template-uri "https://raw.githubusercontent.com/Azure-Samples/azure-event-grid-viewer/main/azuredeploy.json" `
     --parameters siteName=$MY_SITE_NAME hostingPlanName=viewerhost
 
-echo "Your web app URL: ${mySiteURL}"
+echo "Your web app URL: ${MY_SITE_URL}"
 ```
 
+**Note**
+
+This command may take a few minutes to complete.
+
+![image](https://user-images.githubusercontent.com/34960418/166929794-cbee74e9-6859-4b3e-9f76-a8e3b29aef5d.png)
+
+![image](https://user-images.githubusercontent.com/34960418/166929871-9ad7e680-090d-406a-bc51-1d7fafcde65e.png)
+
+
+In a new tab navigate to the URL generated at the end of the script above to ensure the web app is running. You should see the site with no messages currently displayed.
+
+![image](https://user-images.githubusercontent.com/34960418/166929963-688151cd-ef6d-40ab-a1ba-248410d24e03.png)
+
+**Tip**
+
+Leave the browser running, it is used to show updates.
+
+
+## Subscribe to a custom topic
+
+You subscribe to an event grid topic to tell Event Grid which events you want to track and where to send those events.
+
+Subscribe to a custom topic by using the az eventgrid event-subscription create command. The script below will grab the needed subscription ID from your account and use in the creation of the event subscription.
+
+```bash
+$ENDPOINT="${MY_SITE_URL}/api/updates"
+$SUB_ID=$(az account show --subscription "Education Subscription" --query "id")
+
+az eventgrid event-subscription create `
+    --source-resource-id "/subscriptions/$SUB_ID/resourceGroups/az204-evgrid-rg/providers/Microsoft.EventGrid/topics/$MY_TOPIC_NAME" `
+    --name az204ViewerSub `
+    --endpoint $ENDPOINT
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166931384-7014f83f-7188-4520-a685-a93fc2b6b881.png)
+
+
+View your web app again, and notice that a subscription validation event has been sent to it. Select the eye icon to expand the event data. Event Grid sends the validation event so the endpoint can verify that it wants to receive event data. The web app includes code to validate the subscription.
+
+![image](https://user-images.githubusercontent.com/34960418/166931569-6e79aeb8-584d-4643-a7a2-1f46443d1a5f.png)
+
+
+## Validating endpoint
+
+![image](https://user-images.githubusercontent.com/34960418/166932034-028bfe13-f705-48f9-8dd2-343a5f3a1804.png)
+
+
+## Send an event to your custom topic
+
+Trigger an event to see how Event Grid distributes the message to your endpoint.
+
+
+### Retrieve URL and key for the custom topic.
+
+```bash
+$TOPIC_ENDPOINT=$(az eventgrid topic show --name $MY_TOPIC_NAME -g az204-evgrid-rg --query "endpoint" --output tsv)
+$KEY=$(az eventgrid topic key list --name $MY_TOPIC_NAME -g az204-evgrid-rg --query "key1" --output tsv)
+```
+
+![image](https://user-images.githubusercontent.com/34960418/166932697-20d1b7bd-0467-4801-8df0-7a0034c08bd9.png)
+
+
+### Create event data to send. Typically, an application or Azure service would send the event data, we're creating data for the purposes of the exercise.
+
+```bash
+
+```
