@@ -392,8 +392,6 @@ $MY_SITE_NAME="az204-egsite-${R_NUMBER}"
 $MY_SITE_URL="https://${MY_SITE_NAME}.azurewebsites.net"
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/166926727-341f8a12-5e26-484f-a01c-466808627a0c.png)
-
 
 ## Create a resource group
 
@@ -401,7 +399,7 @@ $MY_SITE_URL="https://${MY_SITE_NAME}.azurewebsites.net"
 az group create --name az204-evgrid-rg --location $MY_LOCATON
 ```
 
-![image](https://user-images.githubusercontent.com/34960418/166926906-af88ee25-7b34-4e2f-8054-9e5b829b67f3.png)
+![image](https://user-images.githubusercontent.com/34960418/166928843-91049e55-f766-404a-b018-8dba2b842647.png)
 
 
 ## Enable an Event Grid resource provider
