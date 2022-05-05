@@ -509,7 +509,9 @@ $KEY=$(az eventgrid topic key list --name $MY_TOPIC_NAME -g az204-evgrid-rg --qu
 ![image](https://user-images.githubusercontent.com/34960418/166932697-20d1b7bd-0467-4801-8df0-7a0034c08bd9.png)
 
 
-### Create event data to send. Typically, an application or Azure service would send the event data, we're creating data for the purposes of the exercise.
+### Create event data to send. 
+
+Typically, an application or Azure service would send the event data, we're creating data for the purposes of the exercise.
 
 ```bash
 $ID=GET-RANDOM
