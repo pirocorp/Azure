@@ -512,5 +512,10 @@ $KEY=$(az eventgrid topic key list --name $MY_TOPIC_NAME -g az204-evgrid-rg --qu
 ### Create event data to send. Typically, an application or Azure service would send the event data, we're creating data for the purposes of the exercise.
 
 ```bash
-
+$ID=GET-RANDOM
+$DATE=Get-Date -Format "yyyy-MM-ddTHH:mmK"
+$EVENT="[ {""id"": ""${ID}"", ""eventType"": ""recordInserted"", ""subject"": ""myapp/vehicles/motorcycles"", ""eventTime"": ""${DATE}"", ""data"": { ""make"": ""Contoso"", ""model"": ""Monster""}, ""dataVersion"": ""1.0""} ]"
+$EVENT
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/166938916-04a846a9-5569-41a0-81c2-d94a690c313c.png)
