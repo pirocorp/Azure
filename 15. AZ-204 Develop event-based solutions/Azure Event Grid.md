@@ -417,7 +417,9 @@ az provider register --namespace Microsoft.EventGrid
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/166927515-ae1411e5-9b31-4ce5-a833-05a3604d8953.png)
-![image](https://user-images.githubusercontent.com/34960418/166927634-039d3d36-a0d6-4421-9497-a77030841615.png)
+
+![image](https://user-images.githubusercontent.com/34960418/166927783-77ef1d58-87cc-4f3e-b7cb-9d1f8741df5e.png)
+
 
 
 
