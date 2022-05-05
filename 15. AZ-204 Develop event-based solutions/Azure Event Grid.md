@@ -551,7 +551,7 @@ View your web app to see the event you just sent. Select the eye icon to expand 
 ```
 
 
-### Clean up resources
+## Clean up resources
 
 When you no longer need the resources in this exercise use the following command to delete the resource group and associated resources.
 
