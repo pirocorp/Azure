@@ -1,10 +1,10 @@
-- [Exercise: Create a backend API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#exercise-create-a-backend-api)
-  - [Login to Azure](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#login-to-azure)
-  - [Create an API Management instance](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#create-an-api-management-instance)
-  - [Import a backend API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#import-a-backend-api)
-  - [Configure the backend settings](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#configure-the-backend-settings)
-  - [Test the API](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#test-the-api)
-  - [Clean up Azure resources](https://github.com/pirocorp/Azure/blob/main/14.%20AZ-204%20Implement%20API%20Management/README.md#clean-up-azure-resources)
+- [Exercise: Create a backend API](#exercise-create-a-backend-api)
+  - [Login to Azure](#login-to-azure)
+  - [Create an API Management instance](#create-an-api-management-instance)
+  - [Import a backend API](#import-a-backend-api)
+  - [Configure the backend settings](#configure-the-backend-settings)
+  - [Test the API](#test-the-api)
+  - [Clean up Azure resources](#clean-up-azure-resources)
 
 
 # API Management service
