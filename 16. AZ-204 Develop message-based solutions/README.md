@@ -237,3 +237,206 @@ While this hidden serialization magic is convenient, applications should take ex
 
 # Send and receive message from a Service Bus queue by using .NET.
 
+## Login to Azure
+
+``` bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167149233-8edaf29c-a774-4e3a-9251-b04427e88562.png)
+
+
+## Create variables used in the Azure CLI commands. 
+
+```bash
+$RANDOM=Get-Random
+$MY_LOCATION="westeurope"
+$MY_NAME_SPACE_NAME="az204svcbus$RANDOM"
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167150618-85b4b703-9909-44bc-86d8-73aaf53391fa.png)
+
+
+## Create Azure resources
+
+### Create a resource group to hold the Azure resources you will be creating.
+
+```bash
+az group create --name az204-svcbus-rg --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167151029-004321b0-4300-4393-b69b-0ecdbac4eaa2.png)
+
+
+### Create a Service Bus messaging namespace. 
+
+The command below will create a namespace using the variable you created earlier. The operation will take a few minutes to complete.
+
+```bash
+az servicebus namespace create `
+    --resource-group az204-svcbus-rg `
+    --name $MY_NAME_SPACE_NAME `
+    --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167152315-3c83b80a-e841-4ea3-bb20-4b3e8b9dec90.png)
+
+
+### Create a Service Bus queue
+
+```bash
+az servicebus queue create --resource-group az204-svcbus-rg `
+    --namespace-name $MY_NAME_SPACE_NAME `
+    --name az204-queue
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167152635-ad18a75d-b056-4e4c-ad6d-08913e4282ed.png)
+
+
+## Retrieve the connection string for the Service Bus Namespace
+
+Open the Azure portal and navigate to the **az204-svcbus-rg** resource group. Select the **az204svcbus** resource you just created. Select **Shared access policies** in the **Settings** section, then select the **RootManageSharedAccessKey** policy. Copy the **Primary Connection String** from the dialog box that opens up and save it to a file, or leave the portal open and copy the key when needed.
+
+![image](https://user-images.githubusercontent.com/34960418/167153314-2f6576c8-b9d7-488b-876b-c73b50e10a72.png)
+
+
+## Create console app to send messages to the queue
+
+Add package ```Azure.Messaging.ServiceBus```.
+
+In Program.cs, add the following using statements at the top of the file after the current using statement.
+
+```csharp
+using System.Threading.Tasks;    
+using Azure.Messaging.ServiceBus;
+```
+
+In the Program class, add the following two static properties. Set the ServiceBusConnectionString variable to the connection string that you obtained earlier.
+
+```csharp
+// connection string to your Service Bus namespace
+static string connectionString = "<NAMESPACE CONNECTION STRING>";
+
+// name of your Service Bus topic
+static string queueName = "az204-queue";
+```
+
+Declare the following static properties in the Program class. See code comments for details.
+
+```csharp
+// the client that owns the connection and can be used to create senders and receivers
+static ServiceBusClient client;
+
+// the sender used to publish messages to the queue
+static ServiceBusSender sender;
+
+// number of messages to be sent to the queue
+private const int numOfMessages = 3;
+```
+
+Run the program and wait for the confirmation message.
+
+```bash
+A batch of 3 messages has been published to the queu
+```
+
+Login to the Azure portal and navigate to your Service Bus namespace. On the Overview page, select the az204-queue queue in the bottom-middle pane.
+
+![image](https://user-images.githubusercontent.com/34960418/167159879-6e4795f7-ac21-4103-8943-312b15e6a68a.png)
+
+
+## Update project to receive messages to the queue
+
+In this section you'll modify the program to receive messages from the queue.
+
+In the Program class, delete the static properties that follow ServiceBusClient. We'll keep using connectionString, queueName, and ServiceBusClient for the rest of the exercise. Add the following after the ServiceBusClient static property.
+
+```csharp
+// the processor that reads and processes messages from the queue
+static ServiceBusProcessor processor;
+```
+
+Add the following methods to the Program class to handle messages and any errors.
+
+```csharp
+// handle received messages
+static async Task MessageHandler(ProcessMessageEventArgs args)
+{
+    string body = args.Message.Body.ToString();
+    Console.WriteLine($"Received: {body}");
+
+    // complete the message. messages is deleted from the queue. 
+    await args.CompleteMessageAsync(args.Message);
+}
+
+// handle any errors when receiving messages
+static Task ErrorHandler(ProcessErrorEventArgs args)
+{
+    Console.WriteLine(args.Exception.ToString());
+    return Task.CompletedTask;
+}
+```
+
+Replace the Main() method. It calls the ReceiveMessages method to receive messages from the queue.
+
+```csharp
+static async Task Main()
+{
+    // Create the client object that will be used to create sender and receiver objects
+    client = new ServiceBusClient(connectionString);
+
+    // create a processor that we can use to process the messages
+    processor = client.CreateProcessor(queueName, new ServiceBusProcessorOptions());
+
+    try
+    {
+        // add handler to process messages
+        processor.ProcessMessageAsync += MessageHandler;
+
+        // add handler to process any errors
+        processor.ProcessErrorAsync += ErrorHandler;
+
+        // start processing 
+        await processor.StartProcessingAsync();
+
+        Console.WriteLine("Wait for a minute and then press any key to end the processing");
+        Console.ReadKey();
+
+        // stop processing 
+        Console.WriteLine("\nStopping the receiver...");
+        await processor.StopProcessingAsync();
+        Console.WriteLine("Stopped receiving messages");
+    }
+    finally
+    {
+        // Calling DisposeAsync on client types is required to ensure that network
+        // resources and other unmanaged objects are properly cleaned up.
+        await processor.DisposeAsync();
+        await client.DisposeAsync();
+    }
+}
+```
+
+Run the program and wait for the received message. Press any key to stop the receiver and the application.
+
+```bsah
+Wait for a minute and then press any key to end the processing
+Received: Message 1
+Received: Message 2
+Received: Message 3
+
+Stopping the receiver...
+Stopped receiving messages
+```
+
+
+Check the portal again. Notice that the Active Message Count value is now 0. You may need to refresh the portal page.
+
+![image](https://user-images.githubusercontent.com/34960418/167162614-13d4c138-600a-4bef-bf6e-ce5a3e4d944e.png)
+
+
+## Clean up resources
+
+```bash
+az group delete --name az204-svcbus-rg --no-wait
+```
