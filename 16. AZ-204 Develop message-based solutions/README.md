@@ -237,3 +237,17 @@ While this hidden serialization magic is convenient, applications should take ex
 
 # Send and receive message from a Service Bus queue by using .NET.
 
+## Login to Azure
+
+``` bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167149233-8edaf29c-a774-4e3a-9251-b04427e88562.png)
+
+
+## Create variables used in the Azure CLI commands. 
+
+```bash
+
+```
