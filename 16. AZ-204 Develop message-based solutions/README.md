@@ -249,5 +249,20 @@ az login
 ## Create variables used in the Azure CLI commands. 
 
 ```bash
-
+$RANDOM=Get-Random
+$MY_LOCATION="westeurope"
+$MY_NAME_SPACE_NAME="az204svcbus$RANDOM"
 ```
+
+![image](https://user-images.githubusercontent.com/34960418/167150618-85b4b703-9909-44bc-86d8-73aaf53391fa.png)
+
+
+## Create Azure resources
+
+### Create a resource group to hold the Azure resources you will be creating.
+
+```bash
+az group create --name az204-svcbus-rg --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167151029-004321b0-4300-4393-b69b-0ecdbac4eaa2.png)
