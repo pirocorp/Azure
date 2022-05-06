@@ -266,3 +266,35 @@ az group create --name az204-svcbus-rg --location $MY_LOCATION
 ```
 
 ![image](https://user-images.githubusercontent.com/34960418/167151029-004321b0-4300-4393-b69b-0ecdbac4eaa2.png)
+
+
+### Create a Service Bus messaging namespace. 
+
+The command below will create a namespace using the variable you created earlier. The operation will take a few minutes to complete.
+
+```bash
+az servicebus namespace create `
+    --resource-group az204-svcbus-rg `
+    --name $MY_NAME_SPACE_NAME `
+    --location $MY_LOCATION
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167152315-3c83b80a-e841-4ea3-bb20-4b3e8b9dec90.png)
+
+
+### Create a Service Bus queue
+
+```bash
+az servicebus queue create --resource-group az204-svcbus-rg `
+    --namespace-name $MY_NAME_SPACE_NAME `
+    --name az204-queue
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167152635-ad18a75d-b056-4e4c-ad6d-08913e4282ed.png)
+
+
+## Retrieve the connection string for the Service Bus Namespace
+
+Open the Azure portal and navigate to the **az204-svcbus-rg** resource group. Select the **az204svcbus** resource you just created. Select **Shared access policies** in the **Settings** section, then select the **RootManageSharedAccessKey** policy. Copy the **Primary Connection String** from the dialog box that opens up and save it to a file, or leave the portal open and copy the key when needed.
+
+![image](https://user-images.githubusercontent.com/34960418/167153314-2f6576c8-b9d7-488b-876b-c73b50e10a72.png)
