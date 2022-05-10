@@ -371,3 +371,48 @@ Console.WriteLine(stat.Sport); // displays "Soccer"
 redisConnection.Dispose();
 redisConnection = null;
 ```
+
+
+# Exercise: Connect an app to Azure Cache for Redis by using .NET Core
+
+## Create Azure resources
+
+### Sign in to the portal
+
+```bash
+az login
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167663930-342076df-b74c-41f0-aa55-353ce8cc2cd2.png)
+
+
+### Create a resource group for Azure resources. 
+
+```bash
+az group create --name az204-redis-rg --location westeurope
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167664123-debff482-ba68-490e-9400-038a986d377d.png)
+
+
+### Create an Azure Cache for Redis instance by using the az redis create command. 
+
+The instance name needs to be unique and the script below will attempt to generate one for you. This command will take a few minutes to complete.
+
+```bash
+$REDIS_NAME="zrz-az204redis"
+az redis create --location westeurope `
+    --resource-group az204-redis-rg `
+    --name $REDIS_NAME `
+    --sku Basic --vm-size c0
+```
+
+![image](https://user-images.githubusercontent.com/34960418/167667544-13db53ae-f382-4401-b1cc-ed45e6b3c5f0.png)
+
+
+### Copy primary connection string
+
+In the Azure portal navigate to the new Redis Cache you created. Select Access keys in the Settings section of the Navigation Pane and leave the portal open. We'll copy the Primary connection string (StackExchange.Redis) value to use in the app later.
+
+![image](https://user-images.githubusercontent.com/34960418/167667952-6c3ad817-970a-4dcc-80f9-c898e5e65875.png)
+
