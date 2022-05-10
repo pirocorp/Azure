@@ -480,3 +480,9 @@ PING = SimpleString : PONG
 SET: True
 GET: 100
 ```
+
+## Clean up resources
+
+```bash
+az group delete -n az204-redis-rg --no-wait
+```
