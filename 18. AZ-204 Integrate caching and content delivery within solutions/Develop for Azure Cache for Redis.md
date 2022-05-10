@@ -416,3 +416,67 @@ In the Azure portal navigate to the new Redis Cache you created. Select Access k
 
 ![image](https://user-images.githubusercontent.com/34960418/167667952-6c3ad817-970a-4dcc-80f9-c898e5e65875.png)
 
+
+## Create the console application
+
+
+### Create a console app
+
+
+### Add the StackExchange.Redis package to the project.
+
+
+### In the Program.cs file add the using statement below at the top.
+
+```csharp
+using StackExchange.Redis;
+using System.Threading.Tasks;
+```
+
+
+### Add the following variable to the Program class
+
+Replace <REDIS_CONNECTION_STRING> with the Primary connection string (StackExchange.Redis) from the portal.
+
+```csharp
+// connection string to your Redis Cache    
+static string connectionString = "REDIS_CONNECTION_STRING";
+```
+
+
+### Replace the Main method with the following code.
+
+```csharp
+static async Task Main(string[] args)
+{
+    // The connection to the Azure Cache for Redis is managed by the ConnectionMultiplexer class.
+    using (var cache = ConnectionMultiplexer.Connect(connectionString))
+    {
+        IDatabase db = cache.GetDatabase();
+
+        // Snippet below executes a PING to test the server connection
+        var result = await db.ExecuteAsync("ping");
+        Console.WriteLine($"PING = {result.Type} : {result}");
+
+        // Call StringSetAsync on the IDatabase object to set the key "test:key" to the value "100"
+        bool setValue = await db.StringSetAsync("test:key", "100");
+        Console.WriteLine($"SET: {setValue}");
+
+        // StringGetAsync takes the key to retrieve and return the value
+        string getValue = await db.StringGetAsync("test:key");
+        Console.WriteLine($"GET: {getValue}");
+
+    }
+}
+```
+
+
+### Run the program
+
+The output should be similar to the following:
+
+```
+PING = SimpleString : PONG
+SET: True
+GET: 100
+```
