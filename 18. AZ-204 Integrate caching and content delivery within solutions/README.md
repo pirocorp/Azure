@@ -1,1 +1,2 @@
-
+- [Develop for Azure Cache for Redis](Develop%20for%20Azure%20Cache%20for%20Redis.md)
+- [Develop for storage on CDNs](Develop%20for%20storage%20on%20CDNs.md)
