@@ -1,1 +1,1 @@
-- [01. Build a web application on Azure platform as a service offering](Build%20a%20web%20application%20on%20Azure%20platform%20as%20a%20service%20offering.md)
+- [01. Build a web application on Azure platform as a service offering](01.%20Build%20a%20web%20application%20on%20Azure%20platform%20as%20a%20service%20offering.md)
