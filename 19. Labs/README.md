@@ -1,1 +1,2 @@
 - [01. Build a web application on Azure platform as a service offering](01.%20Build%20a%20web%20application%20on%20Azure%20platform%20as%20a%20service%20offering.md)
+- [02. 02. Implement task processing logic by using Azure Functions](02.%20Implement%20task%20processing%20logic%20by%20using%20Azure%20Functions.md)
