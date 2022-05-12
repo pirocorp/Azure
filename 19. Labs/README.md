@@ -1,3 +1,4 @@
 - [01. Build a web application on Azure platform as a service offering](01.%20Build%20a%20web%20application%20on%20Azure%20platform%20as%20a%20service%20offering.md)
 - [02. Implement task processing logic by using Azure Functions](02.%20Implement%20task%20processing%20logic%20by%20using%20Azure%20Functions.md)
 - [03. Retrieve Azure Storage resources and metadata by using the Azure Storage SDK for .NET](03.%20Retrieve%20Azure%20Storage%20resources%20and%20metadata%20by%20using%20the%20Azure%20Storage%20SDK%20for%20.NET.md)
+- [04. Construct a polyglot data solution](04.%20Construct%20a%20polyglot%20data%20solution.md)
