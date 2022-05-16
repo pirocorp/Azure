@@ -3,3 +3,4 @@
 - [03. Retrieve Azure Storage resources and metadata by using the Azure Storage SDK for .NET](03.%20Retrieve%20Azure%20Storage%20resources%20and%20metadata%20by%20using%20the%20Azure%20Storage%20SDK%20for%20.NET.md)
 - [04. Construct a polyglot data solution](04.%20Construct%20a%20polyglot%20data%20solution.md)
 - [05. Deploy compute workloads by using images and containers](05.%20Deploy%20compute%20workloads%20by%20using%20images%20and%20containers.md)
+- [06. Authenticate by using OpenID Connect MSAL and .NET SDKs](06.%20Authenticate%20by%20using%20OpenID%20Connect%20MSAL%20and%20.NET%20SDKs.md)
