@@ -1,10 +1,11 @@
-﻿using AdventureWorks.Models;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace AdventureWorks.Context
+﻿namespace AdventureWorks.Context
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
+    using AdventureWorks.Models;
+
     public interface IAdventureWorksProductContext
     {
         Task<Model> FindModelAsync(Guid id);

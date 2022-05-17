@@ -1,4 +1,5 @@
-﻿namespace AdventureWorks.Upload
+﻿// ReSharper disable ClassNeverInstantiated.Global
+namespace AdventureWorks.Upload
 {
     using System;
     using System.Collections.Generic;
@@ -11,31 +12,31 @@
 
     public class Program
     {
-        private const string EndpointUrl = "";
-        private const string AuthorizationKey = "";
+        private const string EndpointUrl = "https://polycosmoszrz.documents.azure.com:443/";
+        private const string AuthorizationKey = "WGvYgFf1dKosujOC7WjnXg4cxcBwjkfltDQDnFInPxjWzISi0gNybNdDALl0WmGzZKGFkjN3ehIaCsUS3Sl4BQ==";
         private const string DatabaseName = "Retail";
         private const string ContainerName = "Online";
-        private const string PartitionKey = "";
-        private const string JsonFilePath = "";
+        private const string PartitionKey = "/Category";
+        private const string JsonFilePath = "D:\\source\\repos\\Azure\\19. Labs\\04\\Starter\\AdventureWorks\\AdventureWorks.Upload\\models.json";
 
-        static private int amountToInsert;
-        static List<Model> models;
+        private static int amountToInsert;
+        private static List<Model> models;
 
-        static async Task Main(string[] args)
+        public static async Task Main(string[] args)
         {
             try
             {
                 // <CreateClient>
-                CosmosClient cosmosClient = new CosmosClient(EndpointUrl, AuthorizationKey, new CosmosClientOptions() { AllowBulkExecution = true });
+                var cosmosClient = new CosmosClient(EndpointUrl, AuthorizationKey, new CosmosClientOptions() { AllowBulkExecution = true });
                 // </CreateClient>
 
                 // <Initialize>
                 Console.WriteLine($"Creating a database if not already exists...");
-                Database database = await cosmosClient.CreateDatabaseIfNotExistsAsync(Program.DatabaseName);
+                Database database = await cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseName);
 
                 // Configure indexing policy to exclude all attributes to maximize RU/s usage
                 Console.WriteLine($"Creating a container if not already exists...");
-                await database.DefineContainer(Program.ContainerName, PartitionKey)
+                await database.DefineContainer(ContainerName, PartitionKey)
                         .WithIndexingPolicy()
                             .WithIndexingMode(IndexingMode.Consistent)
                             .WithIncludedPaths()
@@ -47,9 +48,9 @@
                     .CreateAsync();
                 // </Initialize>
 
-                using (StreamReader reader = new StreamReader(File.OpenRead(JsonFilePath)))
+                using (var reader = new StreamReader(File.OpenRead(JsonFilePath)))
                 {
-                    string json = await reader.ReadToEndAsync();
+                    var json = await reader.ReadToEndAsync();
                     models = JsonSerializer.Deserialize<List<Model>>(json);
                     amountToInsert = models.Count;
                 }
@@ -59,33 +60,42 @@
 
                 // Create the list of Tasks
                 Console.WriteLine($"Starting...");
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                // <ConcurrentTasks>
-                Container container = database.GetContainer(ContainerName);
 
-                List<Task> tasks = new List<Task>(amountToInsert);
-                foreach (Model model in models)
+                var stopwatch = Stopwatch.StartNew();
+
+                // <ConcurrentTasks>
+                var container = database.GetContainer(ContainerName);
+
+                var tasks = new List<Task>(amountToInsert);
+
+                foreach (var model in models)
                 {
-                    tasks.Add(container.CreateItemAsync(model, new PartitionKey(model.Category))
-                        .ContinueWith(itemResponse =>
-                        {
-                            if (!itemResponse.IsCompletedSuccessfully)
+                    tasks
+                        .Add(container
+                            .CreateItemAsync(model, new PartitionKey(model.Category))
+                            .ContinueWith(itemResponse =>
                             {
-                                AggregateException innerExceptions = itemResponse.Exception.Flatten();
-                                if (innerExceptions.InnerExceptions.FirstOrDefault(innerEx => innerEx is CosmosException) is CosmosException cosmosException)
+                                if (!itemResponse.IsCompletedSuccessfully)
                                 {
-                                    Console.WriteLine($"Received {cosmosException.StatusCode} ({cosmosException.Message}).");
+                                    var innerExceptions = itemResponse.Exception.Flatten();
+                                    
+                                    if (innerExceptions.InnerExceptions
+                                            .FirstOrDefault(innerEx => innerEx is CosmosException) 
+                                        is CosmosException cosmosException)
+                                    {
+                                        Console.WriteLine($"Received {cosmosException.StatusCode} ({cosmosException.Message}).");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"Exception {innerExceptions.InnerExceptions.FirstOrDefault()}.");
+                                    }
                                 }
-                                else
-                                {
-                                    Console.WriteLine($"Exception {innerExceptions.InnerExceptions.FirstOrDefault()}.");
-                                }
-                            }
-                        }));
+                            }));
                 }
 
                 // Wait until all are done
                 await Task.WhenAll(tasks);
+
                 // </ConcurrentTasks>
                 stopwatch.Stop();
 
@@ -100,23 +110,36 @@
         public class Model
         {
             public string id { get; set; }
+
             public string Name { get; set; }
+
             public string Category { get; set; }
+
             public string Description { get; set; }
+
             public string Photo { get; set; }
+
             public IList<Product> Products { get; set; }
         }
 
         public class Product
         {
             public string id { get; set; }
+
             public string Name { get; set; }
+
             public string Number { get; set; }
+
             public string Category { get; set; }
+
             public string Color { get; set; }
+
             public string Size { get; set; }
+
             public decimal? Weight { get; set; }
+
             public decimal ListPrice { get; set; }
+
             public string Photo { get; set; }
         }
     }
