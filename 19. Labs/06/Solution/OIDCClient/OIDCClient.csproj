@@ -1,15 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId></UserSecretsId>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>aspnet-OIDCClient-B4D36C4A-8D4E-44DC-AC6F-AA4DF7878A55</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" NoWarn="NU1605" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="3.1.18" NoWarn="NU1605" />
-    <PackageReference Include="Microsoft.Identity.Web" Version="0.3.1-preview" />
-    <PackageReference Include="Microsoft.Identity.Web.UI" Version="0.3.1-preview" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.5" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
   </ItemGroup>
 
 </Project>
