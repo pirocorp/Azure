@@ -6,3 +6,4 @@
 - [06. Authenticate by using OpenID Connect MSAL and .NET SDKs](06.%20Authenticate%20by%20using%20OpenID%20Connect%20MSAL%20and%20.NET%20SDKs.md)
 - [07. Access resource secrets more securely across services](07.%20Access%20resource%20secrets%20more%20securely%20across%20services.md)
 - [08. Create a multi-tier solution by using Azure services](08.%20Create%20a%20multi-tier%20solution%20by%20using%20Azure%20services.md)
+- [09. Publish and subscribe to Event Grid events](09.%20Publish%20and%20subscribe%20to%20Event%20Grid%20events.md)
