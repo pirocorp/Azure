@@ -8,3 +8,4 @@
 - [08. Create a multi-tier solution by using Azure services](08.%20Create%20a%20multi-tier%20solution%20by%20using%20Azure%20services.md)
 - [09. Publish and subscribe to Event Grid events](09.%20Publish%20and%20subscribe%20to%20Event%20Grid%20events.md)
 - [10. Asynchronously process messages by using Azure Service Bus Queues](10.%20Asynchronously%20process%20messages%20by%20using%20Azure%20Service%20Bus%20Queues.md)
+- [11. Monitor services that are deployed to Azure](11.%20Monitor%20services%20that%20are%20deployed%20to%20Azure.md)
