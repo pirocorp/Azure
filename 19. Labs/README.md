@@ -9,3 +9,4 @@
 - [09. Publish and subscribe to Event Grid events](09.%20Publish%20and%20subscribe%20to%20Event%20Grid%20events.md)
 - [10. Asynchronously process messages by using Azure Service Bus Queues](10.%20Asynchronously%20process%20messages%20by%20using%20Azure%20Service%20Bus%20Queues.md)
 - [11. Monitor services that are deployed to Azure](11.%20Monitor%20services%20that%20are%20deployed%20to%20Azure.md)
+- [12. Enhance a web application by using the Azure Content Delivery Network](12.%20Enhance%20a%20web%20application%20by%20using%20the%20Azure%20Content%20Delivery%20Network.md)
