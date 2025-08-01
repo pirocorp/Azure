@@ -29,3 +29,8 @@
 	- **Private Connections**: Private connections can be established through providers like Equinex. These connections offer secure and dedicated access to Azure services, ensuring data privacy and reliability.
 
    <img width="748" height="525" alt="image" src="https://github.com/user-attachments/assets/2d34e6ee-6dcf-4081-8c32-aa9884bd5ea6" />
+
+From On-Prem to Azure (Result of private line):
+
+<img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/1015179a-36bb-45d9-aa8a-33b1a57680e0" />
+
