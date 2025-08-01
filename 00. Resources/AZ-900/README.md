@@ -19,3 +19,13 @@
 	-  **Software as a service (SaaS)** involves providing fully managed applications that require minimal configuration and management. He highlighted the ease of use and scalability of SaaS offerings.
 
 <img width="826" height="576" alt="image" src="https://github.com/user-attachments/assets/9c560881-51d6-40ec-87bb-f262ed6b62bc" />
+
+- **Azure Governance**: The importance of governance in managing these services. He mentioned the role of subscriptions, resource providers, and the Azure Resource Manager (ARM) in managing and securing the environment.
+	- **Governance**: Role of subscriptions, resource providers, and the Azure Resource Manager (ARM) in ensuring security and compliance.
+	- **Resource Management**:  Azure Resource Manager (ARM) is used to manage resources in Azure. It provides a unified interface for managing services and ensures that policies and permissions are enforced.
+- **Networking and Connectivity**: Importance of secure and reliable connections between data centers and regions.
+	- **Microsoft Global Network (backbone)**: Microsoft Global Network consists of Microsoft's cables and leased lines, providing connectivity between regions and data centres. Emphasized the reliability and security of this network.
+	- **Edge Locations**: Edge locations are points where users can connect to the Microsoft Global Network. These locations provide access to Azure services and ensure low latency and high performance.
+	- **Private Connections**: Private connections can be established through providers like Equinex. These connections offer secure and dedicated access to Azure services, ensuring data privacy and reliability.
+
+   <img width="748" height="525" alt="image" src="https://github.com/user-attachments/assets/2d34e6ee-6dcf-4081-8c32-aa9884bd5ea6" />
