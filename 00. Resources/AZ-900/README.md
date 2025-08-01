@@ -34,3 +34,7 @@ From On-Prem to Azure (Result of private line):
 
 <img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/1015179a-36bb-45d9-aa8a-33b1a57680e0" />
 
+- **Management and Governance Tools**: Management and governance tools available in Azure, such as role-based access control (RBAC), policies, and monitoring tools like Azure Defender and Sentinel. Emphasized the importance of these tools in maintaining security and compliance.
+	- **RBAC**: Tim explained role-based access control (RBAC) as a tool for managing permissions in Azure. RBAC allows administrators to define roles and assign permissions to users, ensuring that only authorized individuals can access resources.
+	- **Policies**: Use of policies in Azure to enforce compliance and security standards. Policies can be used to restrict actions, enforce configurations, and ensure that resources are managed according to organizational guidelines.
+	- **Monitoring Tools**: Monitoring tools like Azure Defender and Sentinel, which provide security and monitoring capabilities. These tools help detect and respond to threats, ensuring the security of Azure environments.
