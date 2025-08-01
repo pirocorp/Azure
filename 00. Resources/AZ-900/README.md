@@ -139,8 +139,98 @@ Choosing the right cloud model can be a challenge. The best approach is to list 
 
 What that means is that you pay only for those resources that are allocated to you. Now, the use of the word "allocated" is vital because you can have a cloud resource that's allocated to you even though you aren't using that resource. In the cloud, if something is assigned to you, you're consuming it even if you aren't actively using it.
 
-First of all, don't allocate more resources than you need. That seems obvious. And it doesn't just apply to the number of resources. It also applies to the level of resources. Ensure that you fully utilize the resources you allocate. Don't let resources sit unused, because that means you're paying for something you aren't getting any benefit from.
+- First of all, don't allocate more resources than you need. That seems obvious. And it doesn't just apply to the number of resources. It also applies to the level of resources.
+- Ensure that you fully utilize the resources you allocate. Don't let resources sit unused, because that means you're paying for something you aren't getting any benefit from.
 
 
+## Benefits of using cloud Services
 
+### High availability and scalability
+
+- **High Availability**: This means that applications and systems are accessible by users most of the time. The cloud offers high availability, typically 99% or higher, by accounting for various factors that might impact availability, such as network outages, application failures, and power outages.
+- **Scalability**: The cloud provides two types of scalability:
+- **Vertical Scaling (Scaling Up/Down)**: Moving to a more powerful machine or service (scaling up) or to a less powerful one (scaling down) based on needs.
+- **Horizontal Scaling (Scaling Out/In)**: Adding more instances of a resource like virtual machines (scaling out) or reducing the number of instances that are no longer needed (scaling in).
+- **Elasticity**: The ability to easily scale resources up and down or out and in, making the cloud highly adaptable to changing needs.
+ 
+These concepts are crucial for ensuring that your applications remain available and can handle varying loads efficiently.
+
+
+### Reliability and Predictability
+
+- **Fault Tolerance**: The ability to maintain availability even when a fault occurs, such as a networking problem, power outage, or hardware failure. The cloud offers features that provide fault tolerance.
+- **Disaster Recovery**: Planning for large-scale events like natural disasters (e.g., hurricanes, forest fires, floods) that can impact availability. This involves creating a Business Continuity & Disaster Recovery (BCDR) plan, with tools and information provided by cloud providers to help develop a robust strategy.
+
+These concepts are essential for ensuring that your systems remain reliable and predictable, even in the face of faults or disasters.
+
+ 
+
+### Security and governance
+
+- **Security**: Refers to restricting access to your resources to only those people you allow. Cloud providers offer documentation and services to help configure security properly.
+- **Governance**: Involves the level of access someone has once they gain access, including what they can do and how they can do it. Governance helps comply with regulations and company policies, and can save money by optimizing resource usage.
+- **Cloud Provider Assistance**: Azure provides features and services to identify and correct security and governance concerns easily, often before they impact you.
+
+These concepts are crucial for managing access and ensuring compliance with regulations and company policies.
+
+
+### Manageability in the cloud
+
+- **Ongoing Management**: Deploying to the cloud requires continuous monitoring and management to ensure everything runs smoothly and costs are controlled.
+- **Monitoring Tools**: The cloud provides tools to monitor resources, including performance and cost management, easily.
+- **Scaling Resources**: Tools are available to scale resources as needed, including automatic scaling based on configurable rules.
+- **Budgeting**: Cloud tools help you budget and manage spending, alerting you proactively if you are about to exceed your budget.
+
+These points highlight the importance of active management and the tools available to simplify this process in the cloud. 
+
+
+#### **Cloud Service Types**: There are three different cloud service types, each with its benefits and drawbacks. 
+
+- **Infrastructure as a Service (IaaS)**: Provides flexibility in managing and controlling computing resources.
+- **Platform as a Service (PaaS)**: Simplifies adding powerful functionality to applications.
+- **Software as a Service (SaaS)**: The easiest way to take advantage of the cloud, offering ready-to-use applications.
+
+
+#### Infrastructure as a service (IaaS)
+
+- **Infrastructure Provided by Cloud Provider**: IaaS involves the cloud provider supplying the infrastructure, such as computers, networking components, and storage.
+- **Consumption-Based Costs**: Costs in IaaS are typically based on consumption, meaning you pay for what you use.
+- **High Responsibility and Control**: IaaS gives you the most significant level of responsibility for managing the infrastructure but also provides the highest level of control over it.
+
+Azure Virtual Machines are a good example of an IaaS service in Microsoft Azure. 
+
+These points highlight the flexibility and control offered by IaaS, along with the responsibility it entails.
+
+
+#### Platform as a service (PaaS) 
+
+- **Definition**: PaaS provides not just the infrastructure but also the operating system and middleware components needed for the service.
+- **Ease of Use**: PaaS services offer many easy-to-use, turnkey features that require minimal configuration.
+- **Management Burden**: PaaS reduces the management burden compared to IaaS, offering a balance between responsibility and control.
+
+Example: Azure App Service is an example of a PaaS offering in Microsoft Azure.
+
+These points highlight how PaaS simplifies application development and management by providing essential components and reducing the need for extensive configuration.
+
+
+#### Software as a service (SaaS)
+
+**Comprehensive Service**: SaaS includes the infrastructure, operating system, and the software itself, all provided by the cloud provider.
+**Ease of Access**: SaaS services are typically accessed via web browsers or apps on various devices, and they often operate on a pay-as-you-go or free basis.
+**Minimal Responsibility**: Users have the least responsibility in managing the service compared to other cloud models, but also have limited control over the service.
+
+Common Usage: SaaS is widely used, often without users realizing it, for services like web-based email (e.g., Outlook.com) and online storage (e.g., OneDrive).
+
+These points highlight the convenience and widespread use of SaaS, along with its minimal user management requirements.
+ 
+
+#### Thought experiment: Analyzing cloud types 
+
+- **Public Cloud**: Offers easy management, fault tolerance, and agility but uses shared infrastructure, which may not meet strict privacy requirements.
+- **Hybrid Cloud**: Provides more control over data by keeping some resources on-premises, but can involve complex networking issues.
+- **Private Cloud**: Ensures data privacy and compliance by using dedicated infrastructure, managed by a private cloud provider, though it may be more costly.
+
+These points help in understanding the trade-offs between different cloud deployment models based on specific requirements.
+
+ 
 
