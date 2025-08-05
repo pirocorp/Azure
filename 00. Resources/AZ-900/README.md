@@ -262,6 +262,9 @@ These points help in understanding the trade-offs between different cloud deploy
 - **Benefits of Resource Groups**: Simplify deletion of multiple resources, improve billing experiences with tags, and facilitate redeployment using ARM Templates.
 
 
+### Management Groups
 
-
+- **Purpose of Management Groups**: Management groups are used to organize multiple Azure subscriptions, providing a way to manage them collectively.
+- **Hierarchy**: You can only place Azure subscriptions or other management groups within a management group, creating a hierarchical structure.
+- **Example Structure**: A company might have top-level management groups for different departments (e.g., Sales, IT, Training), with each containing relevant subscriptions. This helps in organizing and managing resources effectively.
 
