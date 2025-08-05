@@ -255,4 +255,13 @@ These points help in understanding the trade-offs between different cloud deploy
 - **Data Flow**: All data flowing into and out of a datacenter uses cables owned or leased exclusively by Microsoft, enhancing reliability and predictability.
 
 
+### Azure Resources and Resource Groups
+
+- **Azure Resources**: Any entity created within Azure, such as web apps, virtual machines, databases, and storage.
+- **Resource Groups**: Logical containers designed to help with resource management, cost control, and organization.
+- **Benefits of Resource Groups**: Simplify deletion of multiple resources, improve billing experiences with tags, and facilitate redeployment using ARM Templates.
+
+
+
+
 
