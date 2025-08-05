@@ -236,11 +236,20 @@ These points help in understanding the trade-offs between different cloud deploy
 ## Core Architectural Components of Azure
 
 
-### Azure regions, region pairs, and sovereign regions
+### Azure Regions, Region Pairs, and Sovereign Regions
 
 - **Azure Geographies**: Azure is divided into geographies, which are boundaries defined for compliance with regulations. These can be based on countries, continents, or other criteria.
 - **Azure Regions and Region Pairs**: A region is a physical location within a geography that contains data centers. Each region is paired with another for disaster recovery, ensuring high availability and minimal impact during updates.
 - **Sovereign Regions**: There are three special regions called sovereign regions: Azure Government (for US government and affiliated entities), Azure Germany (for compliance with EU regulations), and Azure China (for compliance with Chinese regulations).
+
+### Availability zones
+
+- **Availability Zones**: These are unique physical locations within an Azure region, each containing one or more data centers. They are designed to protect applications from data center failures.
+- **Zonal vs. Zone Redundant Services**: Zonal services, like Azure virtual machines, require manual deployment across multiple zones. Zone redundant services, like Azure storage, automatically replicate data across zones.
+- **Fault Tolerance**: Availability Zones provide fault tolerance within a region but are not suitable for disaster recovery, as a disaster could affect all zones within a region.
+
+
+
 
 
 
