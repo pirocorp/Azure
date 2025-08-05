@@ -233,4 +233,15 @@ These points highlight the convenience and widespread use of SaaS, along with it
 These points help in understanding the trade-offs between different cloud deployment models based on specific requirements.
 
  
+## Core Architectural Components of Azure
+
+
+### Azure regions, region pairs, and sovereign regions
+
+- **Azure Geographies**: Azure is divided into geographies, which are boundaries defined for compliance with regulations. These can be based on countries, continents, or other criteria.
+- **Azure Regions and Region Pairs**: A region is a physical location within a geography that contains data centers. Each region is paired with another for disaster recovery, ensuring high availability and minimal impact during updates.
+- **Sovereign Regions**: There are three special regions called sovereign regions: Azure Government (for US government and affiliated entities), Azure Germany (for compliance with EU regulations), and Azure China (for compliance with Chinese regulations).
+
+
+
 
