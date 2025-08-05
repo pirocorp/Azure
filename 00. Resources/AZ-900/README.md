@@ -248,9 +248,11 @@ These points help in understanding the trade-offs between different cloud deploy
 - **Zonal vs. Zone Redundant Services**: Zonal services, like Azure virtual machines, require manual deployment across multiple zones. Zone redundant services, like Azure storage, automatically replicate data across zones.
 - **Fault Tolerance**: Availability Zones provide fault tolerance within a region but are not suitable for disaster recovery, as a disaster could affect all zones within a region.
 
+### Azure datacenters
 
-
-
+- **Physical Infrastructure**: Azure datacenters are physical buildings within an Azure region, containing hardware like network switches, server racks, and servers.
+- **Isolation and Independence**: Each datacenter has its own climate control, dedicated network infrastructure, isolated power supply, and power generators to ensure fault tolerance.
+- **Data Flow**: All data flowing into and out of a datacenter uses cables owned or leased exclusively by Microsoft, enhancing reliability and predictability.
 
 
 
