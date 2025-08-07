@@ -313,5 +313,16 @@ Containers are isolated virtual environments for applications, created using ima
 - **Azure VPN Gateway**: Provides secure connections between Azure virtual networks and other networks, with different types of VPN gateways for various connection needs.
 - **Azure Express Route**: Offers high-speed, dedicated connections between Azure resources and on-premises resources, bypassing the internet for enhanced performance and security.
 
+### Public and Private endpoints
+
+- **Public Endpoint**: A resource with an IP address that is reachable over the internet.
+- **Private Endpoint**: A resource with an IP address that is only reachable over a private network.
+- **Dual Endpoints**: A resource can have both a public and a private endpoint, providing flexibility in access.
+
+
+
+
+
+
 
 
