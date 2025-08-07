@@ -355,4 +355,17 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Azure Storage Explorer**: A graphical interface for managing Azure Storage, allowing you to copy data, generate SAS tokens, and manage storage tiers.
 - **Azure File Sync**: A utility to sync Azure Files with on-premises servers, improving access speed by eliminating the need to transfer data over the internet.
 
+### Migration options
+
+- **Azure Migrate**: Helps migrate servers, databases, and web apps to Azure, including from other cloud providers. It involves three steps: discovery, assessment, and migration.
+- **Azure Data Box**: Offers solutions for migrating large amounts of data to Azure storage. It comes in three types:
+	- **Data Box Disk**: Up to five SSDs with around 7 TB each.
+	- **Data Box**: A ruggedized appliance with up to 80 TB of disk space.
+	- **Data Box Heavy**: A large device with up to 1 PB of disk space, suitable for massive data migrations.
+
+
+
+
+
+
 
