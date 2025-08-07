@@ -298,8 +298,11 @@ Containers are isolated virtual environments for applications, created using ima
 - **Essential Resources**: Creating a virtual machine automatically generates several resources, including a virtual network, public IP address, network security group, virtual network interface, and an operating system disk.
 - **SSH Key**: If using a Linux operating system with SSH for remote access, an SSH key is also generated.
 
+### Application hosting options
 
-
+- **Azure App Service**: A PaaS service used to create and host web apps in the cloud. It offers various tiers for hosting, with higher tiers providing more features and power. It supports easy scaling and includes built-in features like authentication providers.
+- **Azure Kubernetes Service (AKS)**: A powerful container orchestration service for managing and scaling containers. It simplifies the adoption of Kubernetes by managing the infrastructure for you.
+- **Virtual Machines (VMs)**: The most flexible hosting option, allowing full control over the environment. However, it requires more responsibility for installation, configuration, and security.
 
 
 
