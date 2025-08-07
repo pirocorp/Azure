@@ -292,6 +292,12 @@ Containers are isolated virtual environments for applications, created using ima
 - **Virtual Machine Scale Sets (VMSS)**: VMSS allows you to scale VMs automatically, using identical VMs for fault tolerance.
 - **Azure Virtual Desktop**: This service provides desktop virtualization, allowing applications to run in a virtualized environment without being installed on the user's device.
 
+### Resources required for virtual machines
+
+- **Resource Group**: When creating a virtual machine, a resource group is created to organize and manage related resources.
+- **Essential Resources**: Creating a virtual machine automatically generates several resources, including a virtual network, public IP address, network security group, virtual network interface, and an operating system disk.
+- **SSH Key**: If using a Linux operating system with SSH for remote access, an SSH key is also generated.
+
 
 
 
