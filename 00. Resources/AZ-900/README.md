@@ -349,6 +349,10 @@ Containers are isolated virtual environments for applications, created using ima
 
 Performance: Premium storage accounts use solid-state drives (SSDs) for maximum performance.
 
+### Options for moving files
 
+- **AzCopy**: A command-line tool for copying blobs and files to and from Azure Storage. It supports scripting and automating tasks.
+- **Azure Storage Explorer**: A graphical interface for managing Azure Storage, allowing you to copy data, generate SAS tokens, and manage storage tiers.
+- **Azure File Sync**: A utility to sync Azure Files with on-premises servers, improving access speed by eliminating the need to transfer data over the internet.
 
 
