@@ -304,5 +304,14 @@ Containers are isolated virtual environments for applications, created using ima
 - **Azure Kubernetes Service (AKS)**: A powerful container orchestration service for managing and scaling containers. It simplifies the adoption of Kubernetes by managing the infrastructure for you.
 - **Virtual Machines (VMs)**: The most flexible hosting option, allowing full control over the environment. However, it requires more responsibility for installation, configuration, and security.
 
+### Virtual networking
+
+- **Azure Virtual Networks**: These enable you to configure your networking in Azure similarly to on-premises setups, without the need for physical hardware.
+- **Subnet Configuration**: You can create multiple subnets within a virtual network, each serving different purposes (e.g., web tier, middle tier, data tier).
+- **Virtual Network Peering**: This allows you to connect two Azure virtual networks, with traffic traveling over Microsoft's private backbone network.
+- **Azure DNS**: Facilitates easy management of DNS records in Azure, with public zones for internet-facing domains and private zones for internal use.
+- **Azure VPN Gateway**: Provides secure connections between Azure virtual networks and other networks, with different types of VPN gateways for various connection needs.
+- **Azure Express Route**: Offers high-speed, dedicated connections between Azure resources and on-premises resources, bypassing the internet for enhanced performance and security.
+
 
 
