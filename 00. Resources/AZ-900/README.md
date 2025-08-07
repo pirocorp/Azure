@@ -339,9 +339,15 @@ Containers are isolated virtual environments for applications, created using ima
 - **Geo-Redundant Storage (GRS)**: Combines LRS in the primary region with three additional copies in a secondary region, offering protection from regional disasters.
 - **Geo-Zone-Redundant Storage (GZRS)**: Combines ZRS in the primary region with three additional copies in a secondary region, providing the highest level of durability and disaster recovery.
 
+### Storage account options
 
+- **General-Purpose v2 Storage Account**: Recommended for most purposes, supporting blob storage, Azure files, queue storage, and table storage with all redundancy options.
+- **Premium Storage Accounts**:
+	- **Premium Block Blobs**: For block blobs and append blobs, with LRS and ZRS redundancy options.
+	- **Premium File Shares**: For file shares in Azure files, supporting LRS and ZRS redundancy.
+	- **Premium Page Blobs**: For storage of page blobs, supporting LRS redundancy.
 
-
+Performance: Premium storage accounts use solid-state drives (SSDs) for maximum performance.
 
 
 
