@@ -332,8 +332,12 @@ Containers are isolated virtual environments for applications, created using ima
 - **Cool Tier**: For data stored for longer periods. Lower storage cost than the hot tier but higher access costs. Data must be stored for at least 30 days.
 - **Archive Tier**: For long-term storage. Lowest storage cost but highest access costs. Data must be stored for at least 180 days and requires hydration to access.
 
+### Redundancy options
 
-
+- **Locally-Redundant Storage (LRS)**: Creates three copies of your data within the same data center. Least expensive but also the least durable.
+- **Zone-Redundant Storage (ZRS)**: Creates three copies of your data across different availability zones within the same region, providing higher durability.
+- **Geo-Redundant Storage (GRS)**: Combines LRS in the primary region with three additional copies in a secondary region, offering protection from regional disasters.
+- **Geo-Zone-Redundant Storage (GZRS)**: Combines ZRS in the primary region with three additional copies in a secondary region, providing the highest level of durability and disaster recovery.
 
 
 
