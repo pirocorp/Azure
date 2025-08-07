@@ -320,9 +320,11 @@ Containers are isolated virtual environments for applications, created using ima
 - **Dual Endpoints**: A resource can have both a public and a private endpoint, providing flexibility in access.
 
 
+## Azure Storage Services
 
-
-
+- **Azure Blob Storage**: Designed for storing unstructured files like pictures, audio files, videos, and documents. It includes block blobs, append blobs, and page blobs.
+- **Azure Disks**: Used for storing disks in virtual machines, available as either spinning platter disks or solid-state drives.
+- **Azure Files**: An SMB-based service providing disk space in the cloud, accessible via a mapped drive or network share. Azure File Sync can be used to synchronize files locally for faster access.
 
 
 
