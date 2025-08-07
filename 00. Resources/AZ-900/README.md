@@ -268,3 +268,31 @@ These points help in understanding the trade-offs between different cloud deploy
 - **Hierarchy**: You can only place Azure subscriptions or other management groups within a management group, creating a hierarchical structure.
 - **Example Structure**: A company might have top-level management groups for different departments (e.g., Sales, IT, Training), with each containing relevant subscriptions. This helps in organizing and managing resources effectively.
 
+
+## Azure Compute and Networking services
+
+### Compute Definition: 
+
+Compute refers to cloud services that consume resources like CPU and memory.
+
+### Containers: 
+
+Containers are isolated virtual environments for applications, created using images that include everything the application needs.
+
+### Azure Compute Types:
+
+- **Azure Virtual Machines (VMs)**: Allow creation of VMs with pre-installed operating systems, requiring configuration and deployment by the user.
+- **Azure Container Instances (ACI)**: Run containers directly without needing a VM, paying only for the memory and CPU used.
+- **Azure Functions**: Designed for microservices that perform quick operations, running in a consumption-based model where you pay only for the compute resources used.
+
+
+
+
+
+
+
+
+
+
+
+
