@@ -285,11 +285,12 @@ Containers are isolated virtual environments for applications, created using ima
 - **Azure Container Instances (ACI)**: Run containers directly without needing a VM, paying only for the memory and CPU used.
 - **Azure Functions**: Designed for microservices that perform quick operations, running in a consumption-based model where you pay only for the compute resources used.
 
+### VM options
 
-
-
-
-
+- **Azure Virtual Machines (VMs)**: VMs are available for both Windows and Linux, and you are only billed when they are running.
+- **Availability Sets**: These consist of fault domains and update domains to ensure high availability and fault tolerance.
+- **Virtual Machine Scale Sets (VMSS)**: VMSS allows you to scale VMs automatically, using identical VMs for fault tolerance.
+- **Azure Virtual Desktop**: This service provides desktop virtualization, allowing applications to run in a virtualized environment without being installed on the user's device.
 
 
 
