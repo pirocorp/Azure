@@ -326,5 +326,19 @@ Containers are isolated virtual environments for applications, created using ima
 - **Azure Disks**: Used for storing disks in virtual machines, available as either spinning platter disks or solid-state drives.
 - **Azure Files**: An SMB-based service providing disk space in the cloud, accessible via a mapped drive or network share. Azure File Sync can be used to synchronize files locally for faster access.
 
+### Storage tiers
+
+- **Hot Tier**: For data accessed frequently. Highest storage cost but lowest access costs.
+- **Cool Tier**: For data stored for longer periods. Lower storage cost than the hot tier but higher access costs. Data must be stored for at least 30 days.
+- **Archive Tier**: For long-term storage. Lowest storage cost but highest access costs. Data must be stored for at least 180 days and requires hydration to access.
+
+
+
+
+
+
+
+
+
 
 
