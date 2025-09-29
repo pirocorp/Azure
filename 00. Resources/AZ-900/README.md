@@ -423,3 +423,16 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Storage and Security**: For storing images, Cara recommends Azure Blob storage with different tiers for frequently used and archived images. She also suggests Passwordless authentication with the Microsoft Authenticator app and biometrics for securing the application.
 - **Disaster Recovery**: To protect against natural disasters and Azure data center issues, Cara advises deploying the application to multiple regions using region pairs.
 
+
+### Cost management in Azure
+
+- **Cost Factors**: Understand the factors that can affect your costs in Azure and how to minimize them.
+- **Planning Tools**: Learn about online calculators provided by Microsoft to help plan your Azure deployments for cost savings.
+- **Cost Monitoring**: Discover how to monitor your costs after deployment, including forecasting monthly spending and using tags to categorize expenses on your Azure invoice.
+
+
+
+
+
+
+
