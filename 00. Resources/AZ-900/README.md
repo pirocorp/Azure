@@ -404,5 +404,18 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Scope**: Defines where the RBAC assignment is made, such as at the resource group level, and is important because RBAC rules are additive.
 
 
+### Zero Trust and Defense in Depth
+
+- **Zero Trust**: Assumes every access or behavior in a system is a potential security breach. It uses multifactor authentication and conditional access to apply policies that secure the environment by granting the lowest level of access necessary.
+- **Defense in Depth**: A layered security approach, likened to a medieval castle's defenses, which includes multiple layers of security measures to protect against breaches. This includes high walls, moats, and archers as analogies for different security layers.
+
+
+
+
+
+
+
+
+
 
 
