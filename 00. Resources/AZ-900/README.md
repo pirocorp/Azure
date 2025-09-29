@@ -397,9 +397,11 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Importance in Modern Business**: With the rise of bring-your-own-device (BYOD) policies, Conditional Access is crucial for maintaining a secure environment when accessing sensitive resources.
  
 
+### Azure role-based access control (RBAC)
 
-
-
+- **Security Principle**: This can be a user, group, service principle, or managed identity representing an Azure resource.
+- **Role Definition**: Specifies the permissions that the security principle has. Azure includes many predefined roles, but you can also create custom roles.
+- **Scope**: Defines where the RBAC assignment is made, such as at the resource group level, and is important because RBAC rules are additive.
 
 
 
