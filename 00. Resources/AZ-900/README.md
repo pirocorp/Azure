@@ -424,15 +424,17 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Disaster Recovery**: To protect against natural disasters and Azure data center issues, Cara advises deploying the application to multiple regions using region pairs.
 
 
-### Cost management in Azure
+## Cost management in Azure
 
 - **Cost Factors**: Understand the factors that can affect your costs in Azure and how to minimize them.
 - **Planning Tools**: Learn about online calculators provided by Microsoft to help plan your Azure deployments for cost savings.
 - **Cost Monitoring**: Discover how to monitor your costs after deployment, including forecasting monthly spending and using tags to categorize expenses on your Azure invoice.
 
 
+### Factors that can affect costs
 
-
-
+- **Metered Charges**: Costs are based on usage, such as storage and data transfer, with different rates for operations and data transfer.
+- **Purchase Options**: Savings can be achieved through Azure Reservations, Spot VMs, and hybrid use benefits.
+- **Regional Pricing**: Costs vary by region due to differences in infrastructure and operational expenses.
 
 
