@@ -383,5 +383,11 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Service Principles and Managed Identities**: Service principles represent applications in Azure AD, and managed identities represent Azure resources, allowing secure access between resources.
 - **Integration with Other Services**: Azure AD can integrate with other cloud services like Amazon Web Services, enabling unified access management.
 
+### Describe authentication methods in Azure
+
+- **Single Sign-On (SSO)**: Allows users to authenticate using the credentials they used to sign into their operating system. It uses methods like password hash synchronization and pass-through authentication.
+- **Multifactor Authentication (MFA)**: Enhances security by requiring multiple authentication factors, such as something you know (password), something you have (mobile device), and something you are (biometrics). Azure MFA typically uses two-factor authentication.
+- **Passwordless Authentication**: Eliminates the need for passwords by using methods like FIDO2 security keys, Microsoft Authenticator app, text message authentication, temporary access passes (TAP), and Windows Hello for Business.
+
 
 
