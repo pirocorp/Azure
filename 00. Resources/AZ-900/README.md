@@ -390,4 +390,8 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Passwordless Authentication**: Eliminates the need for passwords by using methods like FIDO2 security keys, Microsoft Authenticator app, text message authentication, temporary access passes (TAP), and Windows Hello for Business.
 
 
+### Azure AD Conditional Access
 
+- **Conditional Access Policies**: These policies are applied when resources are accessed, using signals from users, applications, and other sources to make decisions on actions.
+- **Security Enhancements**: Conditional Access can block access, require multi-factor authentication, or enforce specific device or application requirements to enhance security.
+- **Importance in Modern Business**: With the rise of bring-your-own-device (BYOD) policies, Conditional Access is crucial for maintaining a secure environment when accessing sensitive resources.
