@@ -437,4 +437,14 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Purchase Options**: Savings can be achieved through Azure Reservations, Spot VMs, and hybrid use benefits.
 - **Regional Pricing**: Costs vary by region due to differences in infrastructure and operational expenses.
 
-https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-factors-that-can-affect-costs?autoSkip=true&dApp=213738130&focused=true&leis=AICC&resume=false&u=141178306
+### Comparing the pricing calculator and the total cost of ownership (TCO) calculator
+
+- **Pricing Calculator**: Estimates the cost of Azure resources based on selected configurations. It provides a way to see "what-if" pricing scenarios and allows you to save, export, or share the estimates.
+- **TCO Calculator**: Helps forecast savings by moving from on-premises to Azure. It requires defining workloads and adjusting assumptions to provide a detailed cost comparison between on-premises and Azure deployments.
+
+
+
+
+
+
+
