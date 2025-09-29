@@ -378,7 +378,7 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 
 ### Directory services in Azure
 
-- **Azure Active Directory (Azure AD)**: A cloud-based identity service that authenticates and authorizes users and resources. It provides access to Azure resources, third-party resources, and on-premises resources.
+- **Azure Active Directory (Azure AD/ Entra ID)**: A cloud-based identity service that authenticates and authorizes users and resources. It provides access to Azure resources, third-party resources, and on-premises resources.
 - **Authentication and Authorization**: Authentication identifies who or what is accessing a resource, while authorization determines what actions the authenticated entity can perform.
 - **Service Principles and Managed Identities**: Service principles represent applications in Azure AD, and managed identities represent Azure resources, allowing secure access between resources.
 - **Integration with Other Services**: Azure AD can integrate with other cloud services like Amazon Web Services, enabling unified access management.
