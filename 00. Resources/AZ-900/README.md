@@ -437,4 +437,4 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Purchase Options**: Savings can be achieved through Azure Reservations, Spot VMs, and hybrid use benefits.
 - **Regional Pricing**: Costs vary by region due to differences in infrastructure and operational expenses.
 
-
+https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-factors-that-can-affect-costs?autoSkip=true&dApp=213738130&focused=true&leis=AICC&resume=false&u=141178306
