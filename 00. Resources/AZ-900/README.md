@@ -365,6 +365,17 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 
 
 
+## Azure Identity, Access, and Security
+
+- **Identity, Access, and Security**: Covers how to implement authentication, authorization, and access control in Azure.
+- **Azure Active Directory**: Discusses directory services in Azure, including expanding these services to on-premises and other clouds.
+- **Authentication Methods**: Explains various authentication methods in Azure, such as multifactor and passwordless authentication.
+- **Conditional Access**: Highlights how conditional access can secure environments with personal devices.
+- **Role-Based Access Control (RBAC)**: Explains controlling access levels for authenticated users using RBAC.
+- **Zero-Trust and Defense in Depth**: Discusses concepts of Zero-Trust and defense in depth.
+- **Microsoft Defender for Cloud**: Covers how this tool helps ensure a secure posture for resources in Azure, other clouds, and on-premises.
+
+
 
 
 
