@@ -417,7 +417,9 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Proactive and Reactive Security**: It monitors and assesses security posture, provides real-time protection, activates alerts, and offers guidance to follow best practices for a secure environment.
 
 
+### Thought experiment: Simple to complex: Considering multiple requirements
 
-
-
+- **Fault Tolerance and Availability**: Cara suggests deploying VMs in an availability set to ensure fault tolerance and protect against server rack faults and machine reboots.
+- **Storage and Security**: For storing images, Cara recommends Azure Blob storage with different tiers for frequently used and archived images. She also suggests Passwordless authentication with the Microsoft Authenticator app and biometrics for securing the application.
+- **Disaster Recovery**: To protect against natural disasters and Azure data center issues, Cara advises deploying the application to multiple regions using region pairs.
 
