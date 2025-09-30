@@ -454,7 +454,7 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Filtering and Invoicing**: Tags can be used to filter views in the Azure portal and are visible on Azure invoices, making it easier to separate expenses by categories.
 - **Tag Management**: You can add, edit, and remove tags directly in the Azure portal, and use them to filter and view resources based on specific tag values.
 
-### Feature and Tools for Governance and Compliance
+## Feature and Tools for Governance and Compliance
 
 - **Governance and Compliance**: Emphasizes the importance of managing cloud consumption to avoid potential issues.
 - **Azure Blueprints**: Discusses using Azure Blueprints to ensure deployments are predictable and meet company policies.
@@ -481,6 +481,17 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Application**: Locks apply to all users and can be managed through the Azure Portal, providing an extra layer of protection for critical resources.
 
 
+## Managing and Deploying Resources
+
+- **Azure Portal Customization**: Learn how to customize the Azure portal to your liking, including creating dashboard views that show only what you want to see.
+- **Command Line Tools**: Understand how to use command line tools for creating and managing Azure resources on any computer, smartphone, or tablet.
+- **Management and Governance**: Explore how to extend management and governance features in Azure to on-premises environments and other clouds, ensuring consistency and predictability with Azure Resource Manager.
+
+### Azure portal
+
+- **Customizable Interface**: The Azure portal is highly customizable, allowing you to personalize your view with dashboards and various themes.
+- **Favorites and Navigation**: You can mark resources as favorites for quick access and use the search function or all services menu to find other resources.
+- **Persistent Settings**: Customizations and configurations are saved to your Azure subscription, making them accessible from any computer you log into.
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
