@@ -442,6 +442,12 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Pricing Calculator**: Estimates the cost of Azure resources based on selected configurations. It provides a way to see "what-if" pricing scenarios and allows you to save, export, or share the estimates.
 - **TCO Calculator**: Helps forecast savings by moving from on-premises to Azure. It requires defining workloads and adjusting assumptions to provide a detailed cost comparison between on-premises and Azure deployments.
 
+### Azure cost management and billing tool
+
+- **Azure Cost Management**: This tool helps analyze costs, create budgets, and set spend alerts to manage Azure spending effectively.
+- **Cost Analysis**: You can view forecasts for usage, see accumulated costs, and identify where your spending is coming from.
+- **Budget and Alerts**: The tool allows you to set up budgets and configure alerts to notify you if your spending is nearing budget thresholds.
+
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
