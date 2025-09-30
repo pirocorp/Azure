@@ -443,8 +443,10 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **TCO Calculator**: Helps forecast savings by moving from on-premises to Azure. It requires defining workloads and adjusting assumptions to provide a detailed cost comparison between on-premises and Azure deployments.
 
 
+https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
+li_ep_auth_context 
 
-
+AG5hcHA9bGVhcm5pbmcsYWlkPTE0MTE3ODMwNixpaWQ9MTUxNzk5Mjk4LHBpZD0yMjk5MDMwMjMsZXhwPTE3NzQ2OTA3MTUyNDQsY3VyPXRydWUsc2lkPTg3MzA3MTk0NCxjaWQ9MTk5OTUxMzYxNgGSjUN_wGgoXt_qXXz73c9CZnIjbw
 
 
