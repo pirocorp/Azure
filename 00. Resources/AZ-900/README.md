@@ -454,6 +454,12 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Filtering and Invoicing**: Tags can be used to filter views in the Azure portal and are visible on Azure invoices, making it easier to separate expenses by categories.
 - **Tag Management**: You can add, edit, and remove tags directly in the Azure portal, and use them to filter and view resources based on specific tag values.
 
+### Feature and Tools for Governance and Compliance
+
+- **Governance and Compliance**: Emphasizes the importance of managing cloud consumption to avoid potential issues.
+- **Azure Blueprints**: Discusses using Azure Blueprints to ensure deployments are predictable and meet company policies.
+- **Policy Enforcement**: Covers how to automatically enforce company policies with minimal hassle and prevent unauthorized changes or deletions of Azure resources.
+
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
