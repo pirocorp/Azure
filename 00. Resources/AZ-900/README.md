@@ -460,6 +460,19 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Azure Blueprints**: Discusses using Azure Blueprints to ensure deployments are predictable and meet company policies.
 - **Policy Enforcement**: Covers how to automatically enforce company policies with minimal hassle and prevent unauthorized changes or deletions of Azure resources.
 
+### Azure Blueprints
+
+- **Agility in Deployment**: Azure Blueprints allow for the deployment of resources in multiple places predictably and reliably.
+- **Reusable Configurations**: Blueprints make it easy to reuse configurations, policies, and governance for complex deployments.
+- **Workflow**: The process involves creating, publishing, and assigning blueprints to subscriptions or management groups, which then automatically deploy the specified resources.
+
+
+### Azure policy
+
+- **Policy Enforcement**: Azure Policy allows you to define and enforce rules for Azure resources, ensuring they comply with your organization's standards.
+- **Policy Effects**: There are six effects that can be applied: append, audit, audit if not exists, deploy if not exists, deny, and disable.
+- **Automation**: Policies can automate actions like adding tags, logging warnings, deploying additional resources, or denying non-compliant operations.
+
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
