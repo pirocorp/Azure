@@ -493,6 +493,14 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Favorites and Navigation**: You can mark resources as favorites for quick access and use the search function or all services menu to find other resources.
 - **Persistent Settings**: Customizations and configurations are saved to your Azure subscription, making them accessible from any computer you log into.
 
+### Command-line tools
+
+- **Azure PowerShell and Azure CLI**: Both are multi-platform command-line tools for managing Azure resources. Azure PowerShell uses the AZ module, while Azure CLI is an installable interface that runs from any console.
+- **Cloud Shell**: This web-based tool integrates both PowerShell and CLI into the Azure portal, allowing you to run command-line operations from any device, including mobile.
+- **Scripting and Automation**: These tools support scripting, enabling complex deployments and management operations to be performed quickly and efficiently using scripts.
+
+
+
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
 li_ep_auth_context 
