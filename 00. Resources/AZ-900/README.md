@@ -472,6 +472,14 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Policy Enforcement**: Azure Policy allows you to define and enforce rules for Azure resources, ensuring they comply with your organization's standards.
 - **Policy Effects**: There are six effects that can be applied: append, audit, audit if not exists, deploy if not exists, deny, and disable.
 - **Automation**: Policies can automate actions like adding tags, logging warnings, deploying additional resources, or denying non-compliant operations.
+ 
+
+### Resource locks
+
+- **Purpose of Locks**: Resource locks prevent changes or deletion of Azure resources, ensuring important resources are not accidentally modified or removed.
+- **Types of Locks**: There are two types of locks: read-only (prevents any changes) and delete (prevents deletion but allows modifications).
+- **Application**: Locks apply to all users and can be managed through the Azure Portal, providing an extra layer of protection for critical resources.
+
 
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
