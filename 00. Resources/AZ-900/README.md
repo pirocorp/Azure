@@ -499,7 +499,11 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Cloud Shell**: This web-based tool integrates both PowerShell and CLI into the Azure portal, allowing you to run command-line operations from any device, including mobile.
 - **Scripting and Automation**: These tools support scripting, enabling complex deployments and management operations to be performed quickly and efficiently using scripts.
 
+### Azure arc
 
+- **Extends Azure Management**: Azure Arc extends Azure management and governance capabilities to resources outside of Azure, including on-premises and other cloud providers.
+- **Hybrid Machines**: Resources brought into Azure Arc are considered hybrid machines and can be managed as Azure resources.
+- **Kubernetes and Data Services**: Azure Arc supports Kubernetes clusters and data services, allowing you to manage SQL managed instances, PostgreSQL, and Azure application services across different environments.
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
