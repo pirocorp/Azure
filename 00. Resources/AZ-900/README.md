@@ -448,6 +448,12 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Cost Analysis**: You can view forecasts for usage, see accumulated costs, and identify where your spending is coming from.
 - **Budget and Alerts**: The tool allows you to set up budgets and configure alerts to notify you if your spending is nearing budget thresholds.
 
+### Tags
+
+- **Tags in Azure**: Tags are name-value pairs that can be applied to any Azure resource to help organize and manage resources.
+- **Filtering and Invoicing**: Tags can be used to filter views in the Azure portal and are visible on Azure invoices, making it easier to separate expenses by categories.
+- **Tag Management**: You can add, edit, and remove tags directly in the Azure portal, and use them to filter and view resources based on specific tag values.
+
 
 https://www.linkedin.com/learning/microsoft-azure-fundamentals-az-900-cert-prep-by-microsoft-press/describe-the-azure-cost-management-and-billing-tool?dApp=213738130&focused=true&leis=AICC&u=141178306
 
