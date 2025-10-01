@@ -511,4 +511,32 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Declarative Syntax**: ARM uses a declarative syntax, meaning you only need to specify what you want to do, and ARM handles the execution.
 - **ARM Templates**: These are JSON or XML files that define the resources and configurations needed for deployment. They ensure reliability and can be customized for specific needs.
 
+## Monitoring Tools
+
+- **Importance of Monitoring**: Monitoring your deployments is crucial to avoid availability problems.
+- **Azure Advisor**: This tool helps you proactively monitor resources and fix problems before they impact you negatively.
+- **Azure Monitor**: It provides an extensive toolset for real-time and historical analysis of your Azure virtual machines and web apps.
+
+
+### Azure Advisor
+
+- **High Availability and Efficiency**: Azure Advisor helps ensure the high availability and efficiency of your resources by providing recommendations and tools to resolve issues.
+- **Advisor Score**: It offers an advisor score to indicate the overall health of your resources, highlighting areas for improvement, especially in categories like security.
+- **Remediation Steps**: Azure Advisor provides both manual and automated remediation steps to fix identified issues, with detailed instructions for manual fixes and a "fix it" button for automated solutions.
+
+### Azure Service Health
+
+- **Azure Service Health**: This tool provides information on Azure service incidents and planned maintenance that might impact your Azure resources.
+- **Region-Specific Information**: The information is automatically scoped to regions where you have Azure resources deployed.
+- **Incident Tracking**: You can track service incidents, view summaries, root cause analysis, and even share incident details via a direct link or QR code for mobile tracking.
+
+
+
+
+
+
+
+
+
+
 
