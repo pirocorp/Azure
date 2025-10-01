@@ -511,12 +511,12 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Declarative Syntax**: ARM uses a declarative syntax, meaning you only need to specify what you want to do, and ARM handles the execution.
 - **ARM Templates**: These are JSON or XML files that define the resources and configurations needed for deployment. They ensure reliability and can be customized for specific needs.
 
+
 ## Monitoring Tools
 
 - **Importance of Monitoring**: Monitoring your deployments is crucial to avoid availability problems.
 - **Azure Advisor**: This tool helps you proactively monitor resources and fix problems before they impact you negatively.
 - **Azure Monitor**: It provides an extensive toolset for real-time and historical analysis of your Azure virtual machines and web apps.
-
 
 ### Azure Advisor
 
@@ -530,13 +530,18 @@ Performance: Premium storage accounts use solid-state drives (SSDs) for maximum 
 - **Region-Specific Information**: The information is automatically scoped to regions where you have Azure resources deployed.
 - **Incident Tracking**: You can track service incidents, view summaries, root cause analysis, and even share incident details via a direct link or QR code for mobile tracking.
 
+### Azure Monitor
+
+- **Real-Time and Historical Monitoring**: Azure Monitor allows you to monitor your resources in real time and analyze historical data to identify and address anomalies.
+- **Custom Views and Metrics**: You can create custom views and track specific metrics for Azure virtual machines, web apps, and more, using tools like Application Insights and Log Analytics.
+- **Kusto Query Language (KQL)**: Log Analytics within Azure Monitor uses KQL to build complex views of performance data, providing powerful insights into your resources.
 
 
+### Thought experiment: Three Ps; pricing, performance, and protection
 
-
-
-
-
-
+- **Cost Estimation**: Use the Azure Pricing Calculator to estimate expenses for deploying applications in Azure, which helps in budgeting and planning.
+- **Resource Protection**: Implement a "Do Not Delete" lock on web apps to prevent accidental deletions, ensuring the security and integrity of your applications.
+- **Consistent Deployments**: Utilize ARM templates to ensure identical deployments across different regions, making the process efficient and reliable.
+- **Performance Monitoring:** Use Azure Monitor to keep track of web app performance and set up alerts to notify the appropriate personnel of any issues.
 
 
